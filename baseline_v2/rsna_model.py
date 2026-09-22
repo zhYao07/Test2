@@ -1,12 +1,23 @@
 """DINOv2-based hierarchical model for RSNA Knee."""
 
 from contextlib import nullcontext
-import warnings
+from pathlib import Path
 
 import torch
 import torch.nn as nn
+from transformers import AutoModel
 
 from rsna_data import LABELS, SERIES_FEATURES, SLOTS
+
+
+def load_backbone(model_dir):
+    """Load the local Kaggle/Hugging Face DINOv2 model without network access."""
+    model_dir = Path(model_dir)
+    required = [model_dir / "config.json", model_dir / "pytorch_model.bin"]
+    missing = [path.name for path in required if not path.is_file()]
+    if missing:
+        raise FileNotFoundError(f"DINOv2 model directory {model_dir} is missing {missing}")
+    return AutoModel.from_pretrained(str(model_dir), local_files_only=True)
 
 
 class RSNADINOv2(nn.Module):
@@ -14,10 +25,7 @@ class RSNADINOv2(nn.Module):
 
     def __init__(
         self,
-        backbone_name="dinov2_vits14",
-        pretrained=True,
-        local_repo=None,
-        weights_path=None,
+        model_dir=None,
         hidden_dim=256,
         num_slices=24,
         num_heads=8,
@@ -28,19 +36,12 @@ class RSNADINOv2(nn.Module):
         encoder_chunk_size=24,
     ):
         super().__init__()
-        source = "local" if local_repo else "github"
-        repo = local_repo or "facebookresearch/dinov2"
-        with warnings.catch_warnings():
-            warnings.filterwarnings("ignore", message=r"xFormers is available.*", category=UserWarning)
-            self.backbone = torch.hub.load(repo, backbone_name, source=source, pretrained=pretrained and weights_path is None)
-        if weights_path:
-            state = torch.load(weights_path, map_location="cpu", weights_only=True)
-            self.backbone.load_state_dict(state)
+        self.backbone = load_backbone(model_dir)
 
         self.num_slices = num_slices
         self.encoder_chunk_size = encoder_chunk_size
         self.freeze_backbone(freeze_backbone)
-        backbone_dim = self.backbone.embed_dim
+        backbone_dim = self.backbone.config.hidden_size
 
         self.register_buffer("image_mean", torch.tensor([0.485, 0.456, 0.406]).view(1, 3, 1, 1), persistent=False)
         self.register_buffer("image_std", torch.tensor([0.229, 0.224, 0.225]).view(1, 3, 1, 1), persistent=False)
@@ -75,10 +76,10 @@ class RSNADINOv2(nn.Module):
 
     def unfreeze_last_blocks(self, num_blocks=2):
         self.freeze_backbone(True)
-        for block in self.backbone.blocks[-num_blocks:]:
+        for block in self.backbone.encoder.layer[-num_blocks:]:
             for parameter in block.parameters():
                 parameter.requires_grad = True
-        for parameter in self.backbone.norm.parameters():
+        for parameter in self.backbone.layernorm.parameters():
             parameter.requires_grad = True
 
     @staticmethod
@@ -100,7 +101,7 @@ class RSNADINOv2(nn.Module):
         use_grad = any(parameter.requires_grad for parameter in self.backbone.parameters())
         context = nullcontext() if use_grad else torch.no_grad()
         with context:
-            chunks = [self.backbone(chunk) for chunk in images.split(self.encoder_chunk_size)]
+            chunks = [self.backbone(pixel_values=chunk).last_hidden_state[:, 0] for chunk in images.split(self.encoder_chunk_size)]
         encoded = torch.cat(chunks)
         all_encoded = encoded.new_zeros(batch * slots * slices, encoded.shape[-1])
         all_encoded = all_encoded.index_copy(0, valid_indices, encoded)

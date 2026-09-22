@@ -30,7 +30,7 @@ SCRIPT_DIR = Path(__file__).resolve().parent
 def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument("--data-root", type=Path, default=DEFAULT_ROOT)
-    parser.add_argument("--labels-csv", type=Path, default=SCRIPT_DIR / "llm_labels_v4_blend.csv", help="13列公开软标签文件")
+    parser.add_argument("--labels-csv", type=Path, default=SCRIPT_DIR / "label.csv", help="训练软标签 CSV（含 StudyInstanceUID 和 12 个标签列）")
     parser.add_argument("--output-dir", type=Path, default=SCRIPT_DIR / "outputs")
     parser.add_argument("--epochs", type=int, default=8)
     parser.add_argument("--batch-size", type=int, default=1, help="每张GPU的batch size")
@@ -39,10 +39,8 @@ def parse_args():
     parser.add_argument("--num-slices", type=int, default=32)
     parser.add_argument("--image-size", type=int, default=DEFAULT_IMAGE_SIZE)
     parser.add_argument("--crop-mm", type=float, default=DEFAULT_CROP_MM, help="中心 physical crop 的边长（毫米）")
-    parser.add_argument("--backbone", default="dinov2_vits14")
-    parser.add_argument("--local-dinov2-repo", type=Path, default=SCRIPT_DIR / "dinov2", help="本地DINOv2源码目录，不访问GitHub")
-    parser.add_argument("--backbone-weights", type=Path, default=SCRIPT_DIR / "dinov2_pretrain_weights" / "dinov2_vits14_pretrain.pth", help="本地DINOv2预训练权重")
-    parser.add_argument("--backbone-mode", choices=["frozen", "last2", "last4", "full"], default="frozen")
+    parser.add_argument("--dinov2-model-dir", type=Path, default=SCRIPT_DIR / "dinov2-pytorch-small-v1", help="Kaggle DINOv2 模型目录，包含 config.json 和 pytorch_model.bin")
+    parser.add_argument("--backbone-mode", choices=["frozen", "last2", "last4", "last6", "full"], default="frozen")
     parser.add_argument("--head-lr", type=float, default=3e-4)
     parser.add_argument("--backbone-lr", type=float, default=1e-5)
     parser.add_argument("--weight-decay", type=float, default=0.05)
@@ -130,8 +128,7 @@ def make_loader(dataset, batch_size, workers, sampler, shuffle, drop_last):
 
 def build_model(args, distributed, rank):
     kwargs = dict(
-        backbone_name=args.backbone, pretrained=False,
-        local_repo=str(args.local_dinov2_repo), weights_path=args.backbone_weights,
+        model_dir=str(args.dinov2_model_dir),
         num_slices=args.num_slices, freeze_backbone=True,
         encoder_chunk_size=args.encoder_chunk_size,
     )
@@ -145,6 +142,8 @@ def build_model(args, distributed, rank):
         model.unfreeze_last_blocks(2)
     elif args.backbone_mode == "last4":
         model.unfreeze_last_blocks(4)
+    elif args.backbone_mode == "last6":
+        model.unfreeze_last_blocks(6)
     elif args.backbone_mode == "full":
         model.freeze_backbone(False)
     if args.init_checkpoint:
@@ -294,12 +293,10 @@ def main():
     metadata = distributed_metadata(args.data_root, distributed, rank)
     train_df, train_series_df = metadata[0], metadata[1]
     args.labels_csv = resolve_labels_csv(args.labels_csv, args.data_root)
-    args.local_dinov2_repo = args.local_dinov2_repo.expanduser().resolve()
-    args.backbone_weights = args.backbone_weights.expanduser().resolve()
-    if not args.local_dinov2_repo.is_dir():
-        raise FileNotFoundError(f"Local DINOv2 repository not found: {args.local_dinov2_repo}")
-    if not args.backbone_weights.is_file():
-        raise FileNotFoundError(f"Local DINOv2 weights not found: {args.backbone_weights}")
+    args.dinov2_model_dir = args.dinov2_model_dir.expanduser().resolve()
+    for filename in ("config.json", "pytorch_model.bin"):
+        if not (args.dinov2_model_dir / filename).is_file():
+            raise FileNotFoundError(f"DINOv2 model file not found: {args.dinov2_model_dir / filename}")
     studies = prepare_studies(train_df, args.labels_csv)
     gold_columns = [f"gold__{label}" for label in LABELS]
     is_gold = studies[gold_columns].notna().all(axis=1)
@@ -311,8 +308,7 @@ def main():
         raise ValueError(f"Expected 58 fully labeled validation studies, found {len(valid_studies)}")
     if rank == 0:
         print(f"labels={args.labels_csv}")
-        print(f"DINOv2 code={args.local_dinov2_repo}")
-        print(f"DINOv2 weights={args.backbone_weights}")
+        print(f"DINOv2 Hugging Face model={args.dinov2_model_dir}")
         print(f"split: weak-label train={len(train_studies)} | gold-label valid={len(valid_studies)} | total={len(studies)}")
         print(f"input: crop={args.crop_mm:g} mm | resize={args.image_size}x{args.image_size} | slices={args.num_slices}")
 

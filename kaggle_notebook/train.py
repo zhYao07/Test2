@@ -36,7 +36,7 @@ def parse_args():
     parser.add_argument("--num-slices", type=int, default=32)
     parser.add_argument("--image-size", type=int, default=224)
     parser.add_argument("--dinov2-model-dir", type=Path, default=None, help="Attached Hugging Face DINOv2 directory with config.json and pytorch_model.bin; auto-detected when omitted")
-    parser.add_argument("--backbone-mode", choices=["frozen", "last2", "last4", "full"], default="frozen")
+    parser.add_argument("--backbone-mode", choices=["frozen", "last2", "last4", "last6", "full"], default="frozen")
     parser.add_argument("--head-lr", type=float, default=3e-4)
     parser.add_argument("--backbone-lr", type=float, default=1e-5)
     parser.add_argument("--weight-decay", type=float, default=0.05)
@@ -167,6 +167,8 @@ def build_model(args, distributed, rank):
         model.unfreeze_last_blocks(2)
     elif args.backbone_mode == "last4":
         model.unfreeze_last_blocks(4)
+    elif args.backbone_mode == "last6":
+        model.unfreeze_last_blocks(6)
     elif args.backbone_mode == "full":
         model.freeze_backbone(False)
     if args.init_checkpoint:
