@@ -1,0 +1,20 @@
+# Keep repository text files consistent across Windows, Linux, VS Code, and Kaggle.
+* text=auto eol=lf
+
+# Windows command scripts conventionally require CRLF.
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+# Never apply text conversion to binary artifacts.
+*.xlsx binary
+*.xls binary
+*.pt binary
+*.pth binary
+*.bin binary
+*.dcm binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.pdf binary
+*.zip binary

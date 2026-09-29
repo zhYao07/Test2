@@ -10,8 +10,8 @@ from transformers import AutoModel
 from rsna_data import LABELS, SERIES_FEATURES, SLOTS
 
 
-# 整个模型的数据流：Study 内各序列的切片 → DINOv2 → 切片聚合 → 序列融合 → 12 个标签的 logit。
-# 这里的“切片注意力”“序列 Transformer”“标签交叉注意力”是三个不同层级的操作。
+# A2 消融：Study 内各序列的切片 → DINOv2 → 切片聚合 → 直接加入槽位身份 → 标签交叉注意力。
+# 仅移除槽位/序列间 Transformer；切片注意力池化与标签交叉注意力保持不变。
 def load_backbone(model_dir):
     """Load the local Kaggle/Hugging Face DINOv2 model without network access."""
     model_dir = Path(model_dir)
@@ -59,7 +59,8 @@ class RSNADINOv2(nn.Module):
         # 切片级自注意力：同一序列内的切片可以交换信息，输入形状为 [B×槽位数, S, hidden_dim]。
         slice_layer = nn.TransformerEncoderLayer(hidden_dim, num_heads, hidden_dim * 4, dropout, batch_first=True, norm_first=True)
         self.slice_encoder = nn.TransformerEncoder(slice_layer, slice_layers, enable_nested_tensor=False)
-        # A1：去掉切片注意力池化模块，后续对所有切片做等权平均。
+        # 切片注意力池化：为每张切片打一个分数，softmax 后加权求和成一个序列向量。
+        self.slice_attention = nn.Sequential(nn.LayerNorm(hidden_dim), nn.Linear(hidden_dim, 1))
 
         # 将 TE/TR、像素间距等 11 维序列元数据映射到和图像特征相同的维度。
         self.metadata_projection = nn.Sequential(
@@ -68,9 +69,7 @@ class RSNADINOv2(nn.Module):
         )
         # 每个序列槽位各有一个可学习身份向量，用于区分方位和是否脂肪抑制。
         self.slot_embedding = nn.Parameter(torch.zeros(1, len(SLOTS), hidden_dim))
-        # 序列级自注意力：让同一 Study 中有效的不同序列相互交换信息。
-        slot_layer = nn.TransformerEncoderLayer(hidden_dim, num_heads, hidden_dim * 4, dropout, batch_first=True, norm_first=True)
-        self.slot_encoder = nn.TransformerEncoder(slot_layer, slot_layers, enable_nested_tensor=False)
+        # A2：移除槽位/序列间 Transformer，不在标签查询前进行序列间自注意力。
 
         # 每个异常标签都有独立 query，用交叉注意力从各序列读取与该标签有关的信息。
         self.label_queries = nn.Parameter(torch.empty(len(LABELS), hidden_dim))
@@ -141,14 +140,15 @@ class RSNADINOv2(nn.Module):
         # 每个槽位的 S 张切片做自注意力（相当于序列级），形状 [B×6, S, hidden_dim]。
         features = self.slice_projection(features).view(batch * slots, slices, -1)
         features = self.slice_encoder(features + self.slice_position)
-        # A1：每张采样切片等权，平均后得到 [B, 6, hidden_dim]。
-        slot_features = features.mean(dim=1).view(batch, slots, -1)
+        # 对 S 张切片归一化权重并求和，得到 [B, 6, hidden_dim]。
+        attention = self.slice_attention(features).softmax(dim=1)
+        slot_features = (features * attention).sum(dim=1).view(batch, slots, -1)
 
         if series_features is not None:
             # 元数据作为加性特征融入对应序列，而不是直接输入 DINOv2。
             slot_features = slot_features + self.metadata_projection(series_features)
-        # padding mask 中 True 表示忽略缺失槽位，与 slot_mask 的语义相反。 做slot级注意力
-        slot_features = self.slot_encoder(slot_features + self.slot_embedding, src_key_padding_mask=~slot_mask.bool())
+        # A2：仅加入槽位身份；缺失槽位仍由后面的标签交叉注意力 key_padding_mask 排除。
+        slot_features = slot_features + self.slot_embedding
 
         # 12 个 query 对 6 个序列特征做交叉注意力，输出 [B, 12, hidden_dim]。
         queries = self.label_queries.unsqueeze(0).expand(batch, -1, -1)
