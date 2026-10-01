@@ -26,8 +26,8 @@ from torch.optim.lr_scheduler import LambdaLR
 from torch.utils.data import DataLoader
 from torch.utils.data.distributed import DistributedSampler
 
-from rsna_data import DEFAULT_CROP_MM, DEFAULT_IMAGE_SIZE, DEFAULT_ROOT, LABELS, KneeDataset, load_metadata
-from rsna_model import RSNADINOv2
+from rsna_data import DEFAULT_CROP_MM, DEFAULT_IMAGE_SIZE, DEFAULT_ROOT, LABELS, KneeDataset, collate_studies, load_metadata
+from rsna_model import ARCHITECTURE, RSNADINOv2, predict_batch
 
 
 SCRIPT_DIR = Path(__file__).resolve().parent
@@ -51,10 +51,9 @@ def parse_args():
     parser.add_argument("--batch-size", type=int, default=2, help="每张GPU的batch size")
     parser.add_argument("--accum-steps", type=int, default=2)
     parser.add_argument("--num-workers", type=int, default=4, help="每个DDP进程的worker数量")
-    parser.add_argument("--num-slices", type=int, default=32)
     parser.add_argument("--image-size", type=int, default=DEFAULT_IMAGE_SIZE)
     parser.add_argument("--crop-mm", type=float, default=DEFAULT_CROP_MM, help="中心 physical crop 的边长（毫米）")
-    parser.add_argument("--dinov2-model-dir", type=Path, default=SCRIPT_DIR / "dinov2-pytorch-small-v1", help="Kaggle DINOv2 模型目录，包含 config.json 和 pytorch_model.bin")
+    parser.add_argument("--dinov2-model-dir", type=Path, default=SCRIPT_DIR.parent / "dinov2-pytorch-small-v1", help="Kaggle DINOv2 模型目录，包含 config.json 和 pytorch_model.bin")
     parser.add_argument("--backbone-mode", choices=["frozen", "last2", "last4", "last6", "full"], default="frozen")
     parser.add_argument("--head-lr", type=float, default=3e-4)
     parser.add_argument("--backbone-lr", type=float, default=1e-5)
@@ -149,7 +148,7 @@ def make_loader(dataset, batch_size, workers, sampler, shuffle, drop_last):
     return DataLoader(
         dataset, batch_size=batch_size, sampler=sampler, shuffle=shuffle if sampler is None else False,
         num_workers=workers, pin_memory=True, persistent_workers=workers > 0,
-        prefetch_factor=2 if workers > 0 else None, drop_last=drop_last,
+        prefetch_factor=2 if workers > 0 else None, drop_last=drop_last, collate_fn=collate_studies,
     )
 
 
@@ -157,7 +156,7 @@ def build_model(args, distributed, rank):
     # 模型构造先从冻结 DINOv2 开始，随后按 backbone_mode 决定解冻范围。
     kwargs = dict(
         model_dir=str(args.dinov2_model_dir),
-        num_slices=args.num_slices, freeze_backbone=True,
+        freeze_backbone=True,
         encoder_chunk_size=args.encoder_chunk_size,
     )
     if distributed and rank != 0:
@@ -178,7 +177,9 @@ def build_model(args, distributed, rank):
     if args.init_checkpoint:
         # 阶段性微调仅继承模型权重；不会继承旧优化器状态或 epoch。
         checkpoint = torch.load(args.init_checkpoint, map_location="cpu", weights_only=False)
-        model.load_state_dict(checkpoint.get("model", checkpoint))
+        if checkpoint.get("architecture") != ARCHITECTURE:
+            raise ValueError("--init-checkpoint requires a Baseline_v5 checkpoint; v1-v4 have a different input/position architecture")
+        model.load_state_dict(checkpoint["model"])
     if args.no_metadata:
         # metadata 不参与前向时冻结该模块，避免 DDP 将其视为未使用的可训练参数。
         for parameter in model.metadata_projection.parameters():
@@ -256,9 +257,8 @@ def train_epoch(model, loader, sampler, optimizer, scheduler, scaler, pos_weight
         batch = move_batch(batch, device)
         with autocast_context(args, device):
             # --no-metadata 时传入 None，模型不会执行 metadata_projection 或特征相加。
-            series_features = None if args.no_metadata else batch["series_features"]
             # 模型输出 [B,12] logits；targets/mask/权重与 12 个标签一一对应。
-            logits = model(batch["images"], batch["slot_mask"], series_features)
+            logits = predict_batch(model, batch, use_metadata=not args.no_metadata)
             loss = masked_bce(logits, batch["targets"], batch["label_mask"], batch["label_weight"], pos_weight)
             # 累积多次小 batch 的梯度，近似更大的有效 batch。
             scaled_loss = loss / args.accum_steps
@@ -287,6 +287,7 @@ def train_epoch(model, loader, sampler, optimizer, scheduler, scaler, pos_weight
             eta = seconds_per_step * (len(loader) - steps)
             print(
                 f"epoch={epoch + 1} step={step + 1}/{len(loader)} "
+                f"series={len(batch['group_counts'])} groups={len(batch['images'])} "
                 f"loss={total_loss / steps:.5f} elapsed={format_duration(elapsed)} "
                 f"step_time={seconds_per_step:.2f}s eta={format_duration(eta)}",
                 flush=True,
@@ -307,8 +308,7 @@ def validate(model, loader, device, args, distributed, world_size):
     for batch in loader:
         batch = move_batch(batch, device)
         with autocast_context(args, device):
-            series_features = None if args.no_metadata else batch["series_features"]
-            logits = model(batch["images"], batch["slot_mask"], series_features)
+            logits = predict_batch(model, batch, use_metadata=not args.no_metadata)
         # AUC 使用概率排序；sigmoid 不改变同一标签内的排序。
         local["uid"].extend(batch["study_uid"])
         local["pred"].append(torch.sigmoid(logits).float().cpu().numpy())
@@ -394,6 +394,7 @@ def save_checkpoint(path, model, optimizer, scheduler, scaler, epoch, best_auc, 
     # DDP 外壳不属于模型权重，存内部 module 方便单卡/多卡读取。
     raw_model = model.module if isinstance(model, DDP) else model
     torch.save({
+        "architecture": ARCHITECTURE,
         "model": raw_model.state_dict(), "optimizer": optimizer.state_dict(),
         "scheduler": scheduler.state_dict(), "scaler": scaler.state_dict(),
         "epoch": epoch, "best_auc": best_auc, "args": vars(args),
@@ -435,11 +436,11 @@ def main():
         print(f"labels={args.labels_csv}")
         print(f"DINOv2 Hugging Face model={args.dinov2_model_dir}")
         print(f"split: weak-label train={len(train_studies)} | gold-label valid={len(valid_studies)} | total={len(studies)}")
-        print(f"input: crop={args.crop_mm:g} mm | resize={args.image_size}x{args.image_size} | slices={args.num_slices}")
+        print(f"input: crop={args.crop_mm:g} mm | resize={args.image_size}x{args.image_size} | all series, all original slices, non-overlapping triplets, variable groups")
 
     # Dataset 在取样时才加载 DICOM；验证与训练采用相同的图像预处理。
-    train_dataset = KneeDataset(train_studies, train_series_df, args.num_slices, args.image_size, args.crop_mm)
-    valid_dataset = KneeDataset(valid_studies, train_series_df, args.num_slices, args.image_size, args.crop_mm)
+    train_dataset = KneeDataset(train_studies, train_series_df, args.image_size, args.crop_mm)
+    valid_dataset = KneeDataset(valid_studies, train_series_df, args.image_size, args.crop_mm)
     # DDP 中每个 rank 只处理一部分 Study；drop_last=False 保证不丢弃尾部样本。
     train_sampler = DistributedSampler(train_dataset, shuffle=True, drop_last=False) if distributed else None
     valid_sampler = DistributedSampler(valid_dataset, shuffle=False, drop_last=False) if distributed else None
@@ -450,6 +451,8 @@ def main():
     model = build_model(args, distributed, rank).to(device)
     resume_checkpoint = torch.load(args.resume, map_location="cpu", weights_only=False) if args.resume else None
     if resume_checkpoint:
+        if resume_checkpoint.get("architecture") != ARCHITECTURE:
+            raise ValueError("--resume requires a Baseline_v5 checkpoint")
         model.load_state_dict(resume_checkpoint["model"])
     if distributed:
         # 包装为 DDP 后，各 rank 的梯度会在反向传播时同步。
