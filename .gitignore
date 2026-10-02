@@ -1,3 +1,9 @@
 dinov2_pretrain_weights/
 dinov2-pytorch-small-v1/
 weights/
+
+# Model checkpoints and temporary checkpoint files stay local.
+*.pt
+*.pth
+*.pt.crswap
+*.pth.crswap

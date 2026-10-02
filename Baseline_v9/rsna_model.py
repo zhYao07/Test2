@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """v1 骨干及层次 Transformer，五slot原始相邻候选与逐标签聚合。"""
 
 from contextlib import nullcontext
@@ -9,7 +10,7 @@ from transformers import AutoModel
 
 from rsna_data import LABELS, SERIES_FEATURES, SLOTS
 
-ARCHITECTURE = "baseline_v8_64_candidates_random12"
+ARCHITECTURE = "baseline_v9_80_candidates_random12"
 
 
 # 整个模型的数据流：Study 内各序列的切片 → DINOv2 → 切片聚合 → 序列融合 → 12 个标签的 logit。
@@ -107,141 +108,93 @@ class RSNADINOv2(nn.Module):
                       for chunk in images.split(self.encoder_chunk_size)]
         return torch.cat(chunks)
 
-    # 定义窗口聚合函数：把属于同一个 study、同一个 slot 的多个窗口聚合成“逐标签”的 slot 特征。
     def aggregate_windows(self, features, positions, batch_indices, slot_indices, batch_size):
-        # 说明只处理有效 slot，并屏蔽 padding
         """仅有效 slot 进入 slice Transformer，特征补齐处同时屏蔽 Transformer 和池化。"""
-        # 给每个 batch-slot 组合生成唯一分组编号
+        # 输入 features: [N,256]；其余三个索引/位置张量均为 [N]，N 是整个 batch 的有效窗口总数。
+        # 用 Study 编号和 slot 编号确定分组；不同 Study 或不同 slot 的窗口不在这里交换信息。
         group_ids = batch_indices * len(SLOTS) + slot_indices
-        # 先按窗口的物理位置排序
+        # 即使调用方重排窗口，也恢复序列内空间顺序。
         order = positions.argsort(stable=True)
-        # 再按分组排序，同时保持组内物理顺序
+        # 稳定排序先按物理位置、再按分组，使同组窗口连续排列并保留组内空间顺序。
         order = order[group_ids[order].argsort(stable=True)]
-        # 按排序结果重新排列分组编号
         group_ids = group_ids[order]
-        # 给窗口特征加入对应的物理位置编码
+        # 原始 anchor 的归一化物理深度 [N,1] 经 MLP 变为 [N,256]，与图像特征相加。
         positioned = features + self.window_position(positions.to(features.dtype).unsqueeze(-1))
-        # 按分组和物理位置重新排列窗口特征
         positioned = positioned[order]
-        # 统计每个 batch-slot 分组中有多少个窗口
+        # 每个 Study-slot 的窗口数可能不同；只让至少有一个窗口的 R 个分组进入 Transformer。
         counts = torch.bincount(group_ids, minlength=batch_size * len(SLOTS))
-        # 找出至少包含一个窗口的有效分组
         active = counts.nonzero(as_tuple=False).squeeze(1)
-        # 取出每个有效分组的窗口数量
         active_counts = counts[active]
-        # 取当前 batch 中最大的窗口数量作为 padding 长度
+        # W 是当前 batch 中单个 slot 的最大窗口数，仅把特征补齐到 W，不补齐或编码图像。
         width = int(active_counts.max())
-        # 计算每个有效分组在连续窗口数组中的起始位置
+        # 根据每组起点，将连续的窗口特征映射到二维的“分组行号、组内列号”。
         starts = active_counts.cumsum(0) - active_counts
-        # 为每个窗口生成它所属的有效分组行号
         row_indices = torch.repeat_interleave(torch.arange(len(active), device=features.device), active_counts)
-        # 计算每个窗口在自己分组中的局部位置
         local_indices = torch.arange(len(features), device=features.device) - torch.repeat_interleave(starts, active_counts)
-        # 将分组行号和局部位置转换成扁平索引
         flat_indices = row_indices * width + local_indices
-        # 创建 padding 后的窗口特征缓存
+        # 补齐后的特征为 [R,W,256]；mask: [R,W]，True 表示真实窗口。
         padded = features.new_zeros(len(active) * width, features.shape[-1])
-        # 把真实窗口填入对应位置并恢复成三维张量
         padded = padded.index_copy(0, flat_indices, positioned).view(len(active), width, -1)
-        # 生成真实窗口位置的有效 mask
         mask = torch.arange(width, device=features.device)[None, :] < active_counts[:, None]
-        # 在每个 slot 内对窗口执行 Transformer 编码
+        # 两层 slice Transformer 在各 slot 内建模窗口关系；padding 不参与注意力读取。
         contextual = self.slice_encoder(padded, src_key_padding_mask=~mask)
-        # 为每个窗口计算每个标签对应的注意力分数，并屏蔽 padding
+        # 每个窗口输出 12 个标签分数 [R,W,12]；padding 设为 -inf，池化权重为零。
         scores = self.slice_attention(contextual).masked_fill(~mask[..., None], -torch.inf)
-        # 对窗口注意力加权求和，得到每个标签对应的 slot 特征
+        # 每个标签独立在窗口维 W 上做 softmax，再加权求和，得到 [R,12,256]。
+        # 同一 slot 因而有 12 个向量，而不是所有标签共用一个序列向量。
         pooled = torch.einsum("rwl,rwd->rld", scores.softmax(dim=1), contextual)
-        # 创建包含所有 batch-slot 的完整输出张量
+        # 将有效分组放回完整结构 [B,5,12,256]；缺失 slot 保留零特征并返回有效 mask [B,5]。
         slots = features.new_zeros(batch_size * len(SLOTS), len(LABELS), features.shape[-1])
-        # 把有效 slot 的特征写回对应位置并恢复 batch 维度
         slots = slots.index_copy(0, active, pooled).view(batch_size, len(SLOTS), len(LABELS), -1)
-        # 返回逐标签 slot 特征以及每个 slot 是否存在
         return slots, counts.view(batch_size, len(SLOTS)) > 0
 
-
-    # 定义模型的完整前向传播
     def forward(self, images, slot_mask, series_features=None, *, window_positions,
-                # 接收每个窗口所属的 batch 和 slot 索引
                 window_batch_indices, window_slot_indices):
-        # 检查输入图像必须是非空的三通道四维张量
+        # images: [N,3,H,W]，三通道是原始相邻切片；slot_mask: [B,5]；元数据: [B,5,11]。
+        # 窗口以紧凑形式拼接，三个 [N] 张量分别记录物理位置、所属 Study 和所属 slot。
         if images.ndim != 4 or images.shape[1] != 3 or not len(images):
             raise ValueError("Expected nonempty packed windows [N,3,H,W]")
-
-        # 检查 slot_mask 是否为 [B,5]
         if slot_mask.ndim != 2 or slot_mask.shape[1] != len(SLOTS):
             raise ValueError("Expected slot_mask [B,5]")
-
-        # 获取当前 batch 中的 study 数量
         batch_size = len(slot_mask)
-        # 检查每个 study 是否至少有一个有效 slot
+        # 每个 Study 至少有一个有效 slot，且每张图像都必须有完整、合法的窗口映射。
         if not bool(slot_mask.bool().any(dim=1).all()):
             raise ValueError("Every study must have at least one valid slot")
-
-        # 依次检查三个窗口映射张量
         for values in (window_positions, window_batch_indices, window_slot_indices):
-
-            # 检查每个映射张量长度是否和窗口数一致
             if values.shape != (len(images),):
-
-                # 窗口映射数量不一致时抛出异常
                 raise ValueError("Window maps must match the packed images")
-
-        # 检查 batch 索引和 slot 索引是否越界
         if (bool((window_batch_indices < 0).any()) or bool((window_batch_indices >= batch_size).any()) or
-            # 继续检查 slot 索引范围是否合法
             bool((window_slot_indices < 0).any()) or bool((window_slot_indices >= len(SLOTS)).any())):
-
-            # 存在非法窗口索引时抛出异常
             raise ValueError("Invalid window batch/slot index")
-
-        # 使用 DINOv2 编码窗口并投影到 hidden_dim
+        # DINOv2 独立编码每个窗口的 CLS，再通过 LayerNorm + Linear 投影为 [N,256]。
         features = self.slice_projection(self.encode_images(images))
-
-        # 将多个窗口聚合成逐标签的 slot 特征
+        # 序列内 Transformer + 逐标签窗口池化，得到 slot_features: [B,5,12,256]。
         slot_features, present = self.aggregate_windows(
-
-            # 传入窗口特征、位置和对应的 batch-slot 映射
             features, window_positions, window_batch_indices, window_slot_indices, batch_size
-
-        # 完成窗口聚合函数调用
         )
-
-        # 检查实际存在的 slot 是否与 slot_mask 一致
+        # 核对实际窗口分组与数据提供的 slot_mask，防止有效 slot 没有窗口或缺失 slot 混入窗口。
         if not torch.equal(present, slot_mask.bool()):
-
-            # slot_mask 和真实窗口分布不一致时抛出异常
             raise ValueError("Every valid slot must have a window; invalid slots cannot contain windows")
         if series_features is not None:
+            # 11 维元数据投影为 [B,5,256]，扩展标签维后加到该 slot 的全部 12 个标签特征上。
             slot_features = slot_features + self.metadata_projection(series_features).unsqueeze(2)
-
-        # 给每个 slot 加入对应的 slot 身份向量
+        # slot 身份向量区分五种序列角色，同一个 slot 的身份信息由各标签共享。
         slot_features = slot_features + self.slot_embedding.unsqueeze(2)
-
-        # 调整维度，使每个 study-label 的多个 slot 成为一个序列
+        # [B,5,12,256] → [B,12,5,256] → [B×12,5,256]，每个 Study-label 独立融合五个 slot。
         label_slots = slot_features.permute(0, 2, 1, 3).reshape(batch_size * len(LABELS), len(SLOTS), -1)
-
-        # 为无效 slot 构造 Transformer padding mask
+        # 缺失 slot 的 mask 扩展到所有标签，True 表示 Transformer/交叉注意力应忽略该 slot。
         label_mask = (~present)[:, None].expand(batch_size, len(LABELS), len(SLOTS))
-
-        # 将 mask 的 batch 和标签维合并
         label_mask = label_mask.reshape(batch_size * len(LABELS), len(SLOTS))
-
-        # 让同一标签下的多个 slot 通过 Transformer 交换信息
+        # 一层 slot Transformer：各标签的五个 slot 分别交换信息，但共用同一套网络参数。
         label_slots = self.slot_encoder(label_slots, src_key_padding_mask=label_mask)
-
-        # 为每个 study 和标签生成对应的 label query
+        # 12 个 query 是可学习参数；每个标签取自己的 query，形成 [B×12,1,256]。
         queries = self.label_queries[None, :, None].expand(batch_size, -1, -1, -1)
-
-        # 合并 batch 和标签维度以便执行交叉注意力
         queries = queries.reshape(batch_size * len(LABELS), 1, -1)
-
-        # 用标签 query 从多个 slot 中读取与该标签相关的信息
-        label_features, _ = self.label_attention(queries, label_slots, label_slots,key_padding_mask=label_mask, need_weights=False)
-
-        # 恢复 batch-label 结构并对最终标签特征做归一化
+        # 标签 query 通过交叉注意力读取自己的五个 slot，输出 [B×12,1,256] 标签特征。
+        label_features, _ = self.label_attention(queries, label_slots, label_slots,
+                                                key_padding_mask=label_mask, need_weights=False)
+        # 恢复 [B,12,256] 并归一化，再与逐标签分类权重做点积，返回 logits [B,12]。
         label_features = self.output_norm(label_features.view(batch_size, len(LABELS), -1))
-
-        # 用每个标签独立的权重计算最终 logits
         return (label_features * self.label_weight[None]).sum(-1) + self.label_bias
 
 
