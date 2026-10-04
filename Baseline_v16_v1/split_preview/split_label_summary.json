@@ -1,0 +1,156 @@
+{
+  "train": {
+    "studies": 3966,
+    "labels": {
+      "ACL": {
+        "positive": 822,
+        "negative": 3139,
+        "excluded": 5,
+        "auc_available": true
+      },
+      "MCL": {
+        "positive": 600,
+        "negative": 3363,
+        "excluded": 3,
+        "auc_available": true
+      },
+      "Medial Meniscus": {
+        "positive": 1603,
+        "negative": 2361,
+        "excluded": 2,
+        "auc_available": true
+      },
+      "Lateral Meniscus": {
+        "positive": 626,
+        "negative": 3339,
+        "excluded": 1,
+        "auc_available": true
+      },
+      "Medial OA": {
+        "positive": 1469,
+        "negative": 2493,
+        "excluded": 4,
+        "auc_available": true
+      },
+      "Lateral OA": {
+        "positive": 1075,
+        "negative": 2885,
+        "excluded": 6,
+        "auc_available": true
+      },
+      "PF OA": {
+        "positive": 1812,
+        "negative": 2150,
+        "excluded": 4,
+        "auc_available": true
+      },
+      "Effusion": {
+        "positive": 2357,
+        "negative": 1609,
+        "excluded": 0,
+        "auc_available": true
+      },
+      "Synovitis": {
+        "positive": 513,
+        "negative": 3453,
+        "excluded": 0,
+        "auc_available": true
+      },
+      "Baker's": {
+        "positive": 977,
+        "negative": 2989,
+        "excluded": 0,
+        "auc_available": true
+      },
+      "Contusion": {
+        "positive": 687,
+        "negative": 3277,
+        "excluded": 2,
+        "auc_available": true
+      },
+      "Fracture": {
+        "positive": 283,
+        "negative": 3682,
+        "excluded": 1,
+        "auc_available": true
+      }
+    }
+  },
+  "valid": {
+    "studies": 441,
+    "labels": {
+      "ACL": {
+        "positive": 91,
+        "negative": 350,
+        "excluded": 0,
+        "auc_available": true
+      },
+      "MCL": {
+        "positive": 67,
+        "negative": 374,
+        "excluded": 0,
+        "auc_available": true
+      },
+      "Medial Meniscus": {
+        "positive": 178,
+        "negative": 263,
+        "excluded": 0,
+        "auc_available": true
+      },
+      "Lateral Meniscus": {
+        "positive": 70,
+        "negative": 371,
+        "excluded": 0,
+        "auc_available": true
+      },
+      "Medial OA": {
+        "positive": 164,
+        "negative": 277,
+        "excluded": 0,
+        "auc_available": true
+      },
+      "Lateral OA": {
+        "positive": 119,
+        "negative": 321,
+        "excluded": 1,
+        "auc_available": true
+      },
+      "PF OA": {
+        "positive": 202,
+        "negative": 239,
+        "excluded": 0,
+        "auc_available": true
+      },
+      "Effusion": {
+        "positive": 263,
+        "negative": 178,
+        "excluded": 0,
+        "auc_available": true
+      },
+      "Synovitis": {
+        "positive": 57,
+        "negative": 384,
+        "excluded": 0,
+        "auc_available": true
+      },
+      "Baker's": {
+        "positive": 109,
+        "negative": 332,
+        "excluded": 0,
+        "auc_available": true
+      },
+      "Contusion": {
+        "positive": 76,
+        "negative": 365,
+        "excluded": 0,
+        "auc_available": true
+      },
+      "Fracture": {
+        "positive": 32,
+        "negative": 409,
+        "excluded": 0,
+        "auc_available": true
+      }
+    }
+  }
+}

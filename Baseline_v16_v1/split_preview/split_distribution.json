@@ -1,0 +1,1142 @@
+{
+  "method": "gold58_multilabel_confidence_case_mix_441_v1",
+  "full_studies": 4407,
+  "valid_studies": 441,
+  "full_quality_mean": 0.7842114070166579,
+  "valid_quality_mean": 0.7910452918261281,
+  "confidence_bins": {
+    "low": "<0.4",
+    "medium": "[0.4,0.8)",
+    "high": ">=0.8"
+  },
+  "features": [
+    {
+      "feature": "positive:ACL",
+      "full_count": 913,
+      "valid_count": 91,
+      "target_count": 91.36215112321307,
+      "deviation": -0.3621511232130672,
+      "full_fraction": 0.20717041071023373,
+      "valid_fraction": 0.20634920634920634
+    },
+    {
+      "feature": "positive:MCL",
+      "full_count": 667,
+      "valid_count": 67,
+      "target_count": 66.74540503744043,
+      "deviation": 0.2545949625595654,
+      "full_fraction": 0.15135012480145224,
+      "valid_fraction": 0.15192743764172337
+    },
+    {
+      "feature": "positive:Medial Meniscus",
+      "full_count": 1781,
+      "valid_count": 178,
+      "target_count": 178.2212389380531,
+      "deviation": -0.2212389380530908,
+      "full_fraction": 0.40412979351032446,
+      "valid_fraction": 0.4036281179138322
+    },
+    {
+      "feature": "positive:Lateral Meniscus",
+      "full_count": 696,
+      "valid_count": 70,
+      "target_count": 69.64737916950307,
+      "deviation": 0.3526208304969316,
+      "full_fraction": 0.15793056501021102,
+      "valid_fraction": 0.15873015873015872
+    },
+    {
+      "feature": "positive:Medial OA",
+      "full_count": 1633,
+      "valid_count": 164,
+      "target_count": 163.41116405718176,
+      "deviation": 0.5888359428182355,
+      "full_fraction": 0.370546857272521,
+      "valid_fraction": 0.37188208616780044
+    },
+    {
+      "feature": "positive:Lateral OA",
+      "full_count": 1194,
+      "valid_count": 119,
+      "target_count": 119.48127978216473,
+      "deviation": -0.48127978216473366,
+      "full_fraction": 0.27093260721579304,
+      "valid_fraction": 0.2698412698412698
+    },
+    {
+      "feature": "positive:PF OA",
+      "full_count": 2014,
+      "valid_count": 202,
+      "target_count": 201.53710006807353,
+      "deviation": 0.46289993192647216,
+      "full_fraction": 0.4570002269117313,
+      "valid_fraction": 0.4580498866213152
+    },
+    {
+      "feature": "positive:Effusion",
+      "full_count": 2620,
+      "valid_count": 263,
+      "target_count": 262.1783526208305,
+      "deviation": 0.8216473791695194,
+      "full_fraction": 0.5945087361016564,
+      "valid_fraction": 0.5963718820861678
+    },
+    {
+      "feature": "positive:Synovitis",
+      "full_count": 570,
+      "valid_count": 57,
+      "target_count": 57.038801906058545,
+      "deviation": -0.038801906058544944,
+      "full_fraction": 0.12933968686181074,
+      "valid_fraction": 0.1292517006802721
+    },
+    {
+      "feature": "positive:Baker's",
+      "full_count": 1086,
+      "valid_count": 109,
+      "target_count": 108.67392784206943,
+      "deviation": 0.3260721579305681,
+      "full_fraction": 0.24642614023144996,
+      "valid_fraction": 0.2471655328798186
+    },
+    {
+      "feature": "positive:Contusion",
+      "full_count": 763,
+      "valid_count": 76,
+      "target_count": 76.35194009530292,
+      "deviation": -0.3519400953029219,
+      "full_fraction": 0.1731336510097572,
+      "valid_fraction": 0.17233560090702948
+    },
+    {
+      "feature": "positive:Fracture",
+      "full_count": 315,
+      "valid_count": 32,
+      "target_count": 31.5214431586113,
+      "deviation": 0.4785568413886985,
+      "full_fraction": 0.07147719537100068,
+      "valid_fraction": 0.07256235827664399
+    },
+    {
+      "feature": "negative:ACL",
+      "full_count": 3489,
+      "valid_count": 350,
+      "target_count": 349.1375085091899,
+      "deviation": 0.8624914908101005,
+      "full_fraction": 0.7916950306330838,
+      "valid_fraction": 0.7936507936507936
+    },
+    {
+      "feature": "negative:MCL",
+      "full_count": 3737,
+      "valid_count": 374,
+      "target_count": 373.95439074200135,
+      "deviation": 0.0456092579986489,
+      "full_fraction": 0.8479691400045383,
+      "valid_fraction": 0.8480725623582767
+    },
+    {
+      "feature": "negative:Medial Meniscus",
+      "full_count": 2624,
+      "valid_count": 263,
+      "target_count": 262.5786249149081,
+      "deviation": 0.4213750850918814,
+      "full_fraction": 0.5954163830270025,
+      "valid_fraction": 0.5963718820861678
+    },
+    {
+      "feature": "negative:Lateral Meniscus",
+      "full_count": 3710,
+      "valid_count": 371,
+      "target_count": 371.25255275697754,
+      "deviation": -0.2525527569775363,
+      "full_fraction": 0.8418425232584524,
+      "valid_fraction": 0.8412698412698413
+    },
+    {
+      "feature": "negative:Medial OA",
+      "full_count": 2770,
+      "valid_count": 277,
+      "target_count": 277.1885636487406,
+      "deviation": -0.18856364874062592,
+      "full_fraction": 0.6285454958021329,
+      "valid_fraction": 0.6281179138321995
+    },
+    {
+      "feature": "negative:Lateral OA",
+      "full_count": 3206,
+      "valid_count": 321,
+      "target_count": 320.81824370319947,
+      "deviation": 0.18175629680052907,
+      "full_fraction": 0.7274790106648513,
+      "valid_fraction": 0.7278911564625851
+    },
+    {
+      "feature": "negative:PF OA",
+      "full_count": 2389,
+      "valid_count": 239,
+      "target_count": 239.06262763784886,
+      "deviation": -0.0626276378488626,
+      "full_fraction": 0.5420921261629226,
+      "valid_fraction": 0.5419501133786848
+    },
+    {
+      "feature": "negative:Effusion",
+      "full_count": 1787,
+      "valid_count": 178,
+      "target_count": 178.8216473791695,
+      "deviation": -0.8216473791694909,
+      "full_fraction": 0.40549126389834356,
+      "valid_fraction": 0.4036281179138322
+    },
+    {
+      "feature": "negative:Synovitis",
+      "full_count": 3837,
+      "valid_count": 384,
+      "target_count": 383.96119809394145,
+      "deviation": 0.03880190605855205,
+      "full_fraction": 0.8706603131381893,
+      "valid_fraction": 0.8707482993197279
+    },
+    {
+      "feature": "negative:Baker's",
+      "full_count": 3321,
+      "valid_count": 332,
+      "target_count": 332.3260721579306,
+      "deviation": -0.3260721579305823,
+      "full_fraction": 0.7535738597685501,
+      "valid_fraction": 0.7528344671201814
+    },
+    {
+      "feature": "negative:Contusion",
+      "full_count": 3642,
+      "valid_count": 365,
+      "target_count": 364.44792375765826,
+      "deviation": 0.5520762423417409,
+      "full_fraction": 0.8264125255275698,
+      "valid_fraction": 0.8276643990929705
+    },
+    {
+      "feature": "negative:Fracture",
+      "full_count": 4091,
+      "valid_count": 409,
+      "target_count": 409.37848876786927,
+      "deviation": -0.3784887678692712,
+      "full_fraction": 0.9282958928976628,
+      "valid_fraction": 0.927437641723356
+    },
+    {
+      "feature": "excluded:ACL",
+      "full_count": 5,
+      "valid_count": 0,
+      "target_count": 0.5003403675970047,
+      "deviation": -0.5003403675970047,
+      "full_fraction": 0.0011345586566825505,
+      "valid_fraction": 0.0
+    },
+    {
+      "feature": "excluded:MCL",
+      "full_count": 3,
+      "valid_count": 0,
+      "target_count": 0.30020422055820284,
+      "deviation": -0.30020422055820284,
+      "full_fraction": 0.0006807351940095302,
+      "valid_fraction": 0.0
+    },
+    {
+      "feature": "excluded:Medial Meniscus",
+      "full_count": 2,
+      "valid_count": 0,
+      "target_count": 0.2001361470388019,
+      "deviation": -0.2001361470388019,
+      "full_fraction": 0.0004538234626730202,
+      "valid_fraction": 0.0
+    },
+    {
+      "feature": "excluded:Lateral Meniscus",
+      "full_count": 1,
+      "valid_count": 0,
+      "target_count": 0.10006807351940095,
+      "deviation": -0.10006807351940095,
+      "full_fraction": 0.0002269117313365101,
+      "valid_fraction": 0.0
+    },
+    {
+      "feature": "excluded:Medial OA",
+      "full_count": 4,
+      "valid_count": 0,
+      "target_count": 0.4002722940776038,
+      "deviation": -0.4002722940776038,
+      "full_fraction": 0.0009076469253460404,
+      "valid_fraction": 0.0
+    },
+    {
+      "feature": "excluded:Lateral OA",
+      "full_count": 7,
+      "valid_count": 1,
+      "target_count": 0.7004765146358066,
+      "deviation": 0.2995234853641934,
+      "full_fraction": 0.0015883821193555707,
+      "valid_fraction": 0.0022675736961451248
+    },
+    {
+      "feature": "excluded:PF OA",
+      "full_count": 4,
+      "valid_count": 0,
+      "target_count": 0.4002722940776038,
+      "deviation": -0.4002722940776038,
+      "full_fraction": 0.0009076469253460404,
+      "valid_fraction": 0.0
+    },
+    {
+      "feature": "excluded:Effusion",
+      "full_count": 0,
+      "valid_count": 0,
+      "target_count": 0.0,
+      "deviation": 0.0,
+      "full_fraction": 0.0,
+      "valid_fraction": 0.0
+    },
+    {
+      "feature": "excluded:Synovitis",
+      "full_count": 0,
+      "valid_count": 0,
+      "target_count": 0.0,
+      "deviation": 0.0,
+      "full_fraction": 0.0,
+      "valid_fraction": 0.0
+    },
+    {
+      "feature": "excluded:Baker's",
+      "full_count": 0,
+      "valid_count": 0,
+      "target_count": 0.0,
+      "deviation": 0.0,
+      "full_fraction": 0.0,
+      "valid_fraction": 0.0
+    },
+    {
+      "feature": "excluded:Contusion",
+      "full_count": 2,
+      "valid_count": 0,
+      "target_count": 0.2001361470388019,
+      "deviation": -0.2001361470388019,
+      "full_fraction": 0.0004538234626730202,
+      "valid_fraction": 0.0
+    },
+    {
+      "feature": "excluded:Fracture",
+      "full_count": 1,
+      "valid_count": 0,
+      "target_count": 0.10006807351940095,
+      "deviation": -0.10006807351940095,
+      "full_fraction": 0.0002269117313365101,
+      "valid_fraction": 0.0
+    },
+    {
+      "feature": "positive_low:ACL",
+      "full_count": 99,
+      "valid_count": 10,
+      "target_count": 9.906739278420694,
+      "deviation": 0.09326072157930554,
+      "full_fraction": 0.0224642614023145,
+      "valid_fraction": 0.022675736961451247
+    },
+    {
+      "feature": "positive_low:MCL",
+      "full_count": 69,
+      "valid_count": 7,
+      "target_count": 6.904697072838665,
+      "deviation": 0.0953029271613346,
+      "full_fraction": 0.015656909462219197,
+      "valid_fraction": 0.015873015873015872
+    },
+    {
+      "feature": "positive_low:Medial Meniscus",
+      "full_count": 94,
+      "valid_count": 9,
+      "target_count": 9.40639891082369,
+      "deviation": -0.4063989108236896,
+      "full_fraction": 0.021329702745631948,
+      "valid_fraction": 0.02040816326530612
+    },
+    {
+      "feature": "positive_low:Lateral Meniscus",
+      "full_count": 59,
+      "valid_count": 6,
+      "target_count": 5.904016337644657,
+      "deviation": 0.09598366235534339,
+      "full_fraction": 0.013387792148854097,
+      "valid_fraction": 0.013605442176870748
+    },
+    {
+      "feature": "positive_low:Medial OA",
+      "full_count": 66,
+      "valid_count": 7,
+      "target_count": 6.604492852280463,
+      "deviation": 0.3955071477195373,
+      "full_fraction": 0.014976174268209666,
+      "valid_fraction": 0.015873015873015872
+    },
+    {
+      "feature": "positive_low:Lateral OA",
+      "full_count": 91,
+      "valid_count": 9,
+      "target_count": 9.106194690265486,
+      "deviation": -0.106194690265486,
+      "full_fraction": 0.02064896755162242,
+      "valid_fraction": 0.02040816326530612
+    },
+    {
+      "feature": "positive_low:PF OA",
+      "full_count": 49,
+      "valid_count": 5,
+      "target_count": 4.903335602450647,
+      "deviation": 0.09666439754935308,
+      "full_fraction": 0.011118674835488994,
+      "valid_fraction": 0.011337868480725623
+    },
+    {
+      "feature": "positive_low:Effusion",
+      "full_count": 27,
+      "valid_count": 3,
+      "target_count": 2.701837985023826,
+      "deviation": 0.2981620149761741,
+      "full_fraction": 0.006126616746085773,
+      "valid_fraction": 0.006802721088435374
+    },
+    {
+      "feature": "positive_low:Synovitis",
+      "full_count": 9,
+      "valid_count": 1,
+      "target_count": 0.9006126616746086,
+      "deviation": 0.09938733832539137,
+      "full_fraction": 0.0020422055820285907,
+      "valid_fraction": 0.0022675736961451248
+    },
+    {
+      "feature": "positive_low:Baker's",
+      "full_count": 9,
+      "valid_count": 1,
+      "target_count": 0.9006126616746086,
+      "deviation": 0.09938733832539137,
+      "full_fraction": 0.0020422055820285907,
+      "valid_fraction": 0.0022675736961451248
+    },
+    {
+      "feature": "positive_low:Contusion",
+      "full_count": 80,
+      "valid_count": 8,
+      "target_count": 8.005445881552076,
+      "deviation": -0.005445881552075704,
+      "full_fraction": 0.018152938506920808,
+      "valid_fraction": 0.018140589569160998
+    },
+    {
+      "feature": "positive_low:Fracture",
+      "full_count": 41,
+      "valid_count": 4,
+      "target_count": 4.102791014295439,
+      "deviation": -0.10279101429543935,
+      "full_fraction": 0.009303380984796914,
+      "valid_fraction": 0.009070294784580499
+    },
+    {
+      "feature": "positive_medium:ACL",
+      "full_count": 116,
+      "valid_count": 11,
+      "target_count": 11.60789652825051,
+      "deviation": -0.6078965282505102,
+      "full_fraction": 0.026321760835035173,
+      "valid_fraction": 0.024943310657596373
+    },
+    {
+      "feature": "positive_medium:MCL",
+      "full_count": 122,
+      "valid_count": 12,
+      "target_count": 12.208304969366916,
+      "deviation": -0.20830496936691567,
+      "full_fraction": 0.02768323122305423,
+      "valid_fraction": 0.027210884353741496
+    },
+    {
+      "feature": "positive_medium:Medial Meniscus",
+      "full_count": 89,
+      "valid_count": 9,
+      "target_count": 8.906058543226685,
+      "deviation": 0.09394145677331522,
+      "full_fraction": 0.020195144088949398,
+      "valid_fraction": 0.02040816326530612
+    },
+    {
+      "feature": "positive_medium:Lateral Meniscus",
+      "full_count": 59,
+      "valid_count": 6,
+      "target_count": 5.904016337644657,
+      "deviation": 0.09598366235534339,
+      "full_fraction": 0.013387792148854097,
+      "valid_fraction": 0.013605442176870748
+    },
+    {
+      "feature": "positive_medium:Medial OA",
+      "full_count": 255,
+      "valid_count": 26,
+      "target_count": 25.517358747447243,
+      "deviation": 0.4826412525527566,
+      "full_fraction": 0.057862491490810075,
+      "valid_fraction": 0.05895691609977324
+    },
+    {
+      "feature": "positive_medium:Lateral OA",
+      "full_count": 231,
+      "valid_count": 23,
+      "target_count": 23.11572498298162,
+      "deviation": -0.1157249829816216,
+      "full_fraction": 0.05241660993873383,
+      "valid_fraction": 0.05215419501133787
+    },
+    {
+      "feature": "positive_medium:PF OA",
+      "full_count": 245,
+      "valid_count": 25,
+      "target_count": 24.516678012253234,
+      "deviation": 0.48332198774676627,
+      "full_fraction": 0.055593374177444976,
+      "valid_fraction": 0.05668934240362812
+    },
+    {
+      "feature": "positive_medium:Effusion",
+      "full_count": 646,
+      "valid_count": 65,
+      "target_count": 64.64397549353302,
+      "deviation": 0.35602450646698003,
+      "full_fraction": 0.14658497844338553,
+      "valid_fraction": 0.1473922902494331
+    },
+    {
+      "feature": "positive_medium:Synovitis",
+      "full_count": 32,
+      "valid_count": 3,
+      "target_count": 3.2021783526208303,
+      "deviation": -0.20217835262083028,
+      "full_fraction": 0.007261175402768323,
+      "valid_fraction": 0.006802721088435374
+    },
+    {
+      "feature": "positive_medium:Baker's",
+      "full_count": 199,
+      "valid_count": 20,
+      "target_count": 19.91354663036079,
+      "deviation": 0.08645336963920869,
+      "full_fraction": 0.04515543453596551,
+      "valid_fraction": 0.045351473922902494
+    },
+    {
+      "feature": "positive_medium:Contusion",
+      "full_count": 159,
+      "valid_count": 16,
+      "target_count": 15.91082368958475,
+      "deviation": 0.0891763104152492,
+      "full_fraction": 0.03607896528250511,
+      "valid_fraction": 0.036281179138321996
+    },
+    {
+      "feature": "positive_medium:Fracture",
+      "full_count": 27,
+      "valid_count": 3,
+      "target_count": 2.701837985023826,
+      "deviation": 0.2981620149761741,
+      "full_fraction": 0.006126616746085773,
+      "valid_fraction": 0.006802721088435374
+    },
+    {
+      "feature": "positive_high:ACL",
+      "full_count": 698,
+      "valid_count": 70,
+      "target_count": 69.84751531654186,
+      "deviation": 0.15248468345814103,
+      "full_fraction": 0.15838438847288405,
+      "valid_fraction": 0.15873015873015872
+    },
+    {
+      "feature": "positive_high:MCL",
+      "full_count": 476,
+      "valid_count": 48,
+      "target_count": 47.632402995234855,
+      "deviation": 0.3675970047651447,
+      "full_fraction": 0.1080099841161788,
+      "valid_fraction": 0.10884353741496598
+    },
+    {
+      "feature": "positive_high:Medial Meniscus",
+      "full_count": 1598,
+      "valid_count": 160,
+      "target_count": 159.90878148400273,
+      "deviation": 0.09121851599726938,
+      "full_fraction": 0.3626049466757431,
+      "valid_fraction": 0.36281179138321995
+    },
+    {
+      "feature": "positive_high:Lateral Meniscus",
+      "full_count": 578,
+      "valid_count": 58,
+      "target_count": 57.83934649421375,
+      "deviation": 0.16065350578625015,
+      "full_fraction": 0.13115498071250284,
+      "valid_fraction": 0.13151927437641722
+    },
+    {
+      "feature": "positive_high:Medial OA",
+      "full_count": 1312,
+      "valid_count": 131,
+      "target_count": 131.28931245745406,
+      "deviation": -0.2893124574540593,
+      "full_fraction": 0.29770819151350125,
+      "valid_fraction": 0.29705215419501135
+    },
+    {
+      "feature": "positive_high:Lateral OA",
+      "full_count": 872,
+      "valid_count": 87,
+      "target_count": 87.25936010891763,
+      "deviation": -0.25936010891763317,
+      "full_fraction": 0.1978670297254368,
+      "valid_fraction": 0.19727891156462585
+    },
+    {
+      "feature": "positive_high:PF OA",
+      "full_count": 1720,
+      "valid_count": 172,
+      "target_count": 172.11708645336964,
+      "deviation": -0.11708645336963741,
+      "full_fraction": 0.3902881778987974,
+      "valid_fraction": 0.3900226757369615
+    },
+    {
+      "feature": "positive_high:Effusion",
+      "full_count": 1947,
+      "valid_count": 195,
+      "target_count": 194.83253914227365,
+      "deviation": 0.1674608577263541,
+      "full_fraction": 0.44179714091218514,
+      "valid_fraction": 0.4421768707482993
+    },
+    {
+      "feature": "positive_high:Synovitis",
+      "full_count": 529,
+      "valid_count": 53,
+      "target_count": 52.936010891763104,
+      "deviation": 0.06398910823689619,
+      "full_fraction": 0.12003630587701385,
+      "valid_fraction": 0.12018140589569161
+    },
+    {
+      "feature": "positive_high:Baker's",
+      "full_count": 878,
+      "valid_count": 88,
+      "target_count": 87.85976855003403,
+      "deviation": 0.1402314499659667,
+      "full_fraction": 0.19922850011345586,
+      "valid_fraction": 0.19954648526077098
+    },
+    {
+      "feature": "positive_high:Contusion",
+      "full_count": 524,
+      "valid_count": 52,
+      "target_count": 52.4356705241661,
+      "deviation": -0.43567052416609897,
+      "full_fraction": 0.1189017472203313,
+      "valid_fraction": 0.11791383219954649
+    },
+    {
+      "feature": "positive_high:Fracture",
+      "full_count": 247,
+      "valid_count": 25,
+      "target_count": 24.716814159292035,
+      "deviation": 0.28318584070796504,
+      "full_fraction": 0.05604719764011799,
+      "valid_fraction": 0.05668934240362812
+    },
+    {
+      "feature": "negative_low:ACL",
+      "full_count": 94,
+      "valid_count": 9,
+      "target_count": 9.40639891082369,
+      "deviation": -0.4063989108236896,
+      "full_fraction": 0.021329702745631948,
+      "valid_fraction": 0.02040816326530612
+    },
+    {
+      "feature": "negative_low:MCL",
+      "full_count": 39,
+      "valid_count": 4,
+      "target_count": 3.9026548672566372,
+      "deviation": 0.09734513274336276,
+      "full_fraction": 0.008849557522123894,
+      "valid_fraction": 0.009070294784580499
+    },
+    {
+      "feature": "negative_low:Medial Meniscus",
+      "full_count": 571,
+      "valid_count": 57,
+      "target_count": 57.13886997957795,
+      "deviation": -0.13886997957794733,
+      "full_fraction": 0.12956659859314726,
+      "valid_fraction": 0.1292517006802721
+    },
+    {
+      "feature": "negative_low:Lateral Meniscus",
+      "full_count": 439,
+      "valid_count": 44,
+      "target_count": 43.92988427501702,
+      "deviation": 0.07011572498298335,
+      "full_fraction": 0.09961425005672793,
+      "valid_fraction": 0.09977324263038549
+    },
+    {
+      "feature": "negative_low:Medial OA",
+      "full_count": 45,
+      "valid_count": 5,
+      "target_count": 4.503063308373043,
+      "deviation": 0.4969366916269573,
+      "full_fraction": 0.010211027910142955,
+      "valid_fraction": 0.011337868480725623
+    },
+    {
+      "feature": "negative_low:Lateral OA",
+      "full_count": 99,
+      "valid_count": 10,
+      "target_count": 9.906739278420694,
+      "deviation": 0.09326072157930554,
+      "full_fraction": 0.0224642614023145,
+      "valid_fraction": 0.022675736961451247
+    },
+    {
+      "feature": "negative_low:PF OA",
+      "full_count": 34,
+      "valid_count": 3,
+      "target_count": 3.4023144996596324,
+      "deviation": -0.4023144996596324,
+      "full_fraction": 0.007714998865441343,
+      "valid_fraction": 0.006802721088435374
+    },
+    {
+      "feature": "negative_low:Effusion",
+      "full_count": 30,
+      "valid_count": 3,
+      "target_count": 3.0020422055820286,
+      "deviation": -0.002042205582028611,
+      "full_fraction": 0.0068073519400953025,
+      "valid_fraction": 0.006802721088435374
+    },
+    {
+      "feature": "negative_low:Synovitis",
+      "full_count": 2035,
+      "valid_count": 196,
+      "target_count": 203.63852961198094,
+      "deviation": -7.6385296119809425,
+      "full_fraction": 0.46176537326979805,
+      "valid_fraction": 0.4444444444444444
+    },
+    {
+      "feature": "negative_low:Baker's",
+      "full_count": 7,
+      "valid_count": 1,
+      "target_count": 0.7004765146358066,
+      "deviation": 0.2995234853641934,
+      "full_fraction": 0.0015883821193555707,
+      "valid_fraction": 0.0022675736961451248
+    },
+    {
+      "feature": "negative_low:Contusion",
+      "full_count": 385,
+      "valid_count": 39,
+      "target_count": 38.526208304969366,
+      "deviation": 0.47379169503063423,
+      "full_fraction": 0.08736101656455639,
+      "valid_fraction": 0.08843537414965986
+    },
+    {
+      "feature": "negative_low:Fracture",
+      "full_count": 22,
+      "valid_count": 2,
+      "target_count": 2.201497617426821,
+      "deviation": -0.20149761742682104,
+      "full_fraction": 0.004992058089403222,
+      "valid_fraction": 0.0045351473922902496
+    },
+    {
+      "feature": "negative_medium:ACL",
+      "full_count": 382,
+      "valid_count": 38,
+      "target_count": 38.226004084411166,
+      "deviation": -0.2260040844111657,
+      "full_fraction": 0.08668028137054686,
+      "valid_fraction": 0.08616780045351474
+    },
+    {
+      "feature": "negative_medium:MCL",
+      "full_count": 457,
+      "valid_count": 46,
+      "target_count": 45.73110959836624,
+      "deviation": 0.26889040163376166,
+      "full_fraction": 0.10369866122078511,
+      "valid_fraction": 0.10430839002267574
+    },
+    {
+      "feature": "negative_medium:Medial Meniscus",
+      "full_count": 251,
+      "valid_count": 25,
+      "target_count": 25.11708645336964,
+      "deviation": -0.11708645336964096,
+      "full_fraction": 0.056954844565464034,
+      "valid_fraction": 0.05668934240362812
+    },
+    {
+      "feature": "negative_medium:Lateral Meniscus",
+      "full_count": 439,
+      "valid_count": 44,
+      "target_count": 43.92988427501702,
+      "deviation": 0.07011572498298335,
+      "full_fraction": 0.09961425005672793,
+      "valid_fraction": 0.09977324263038549
+    },
+    {
+      "feature": "negative_medium:Medial OA",
+      "full_count": 874,
+      "valid_count": 87,
+      "target_count": 87.45949625595644,
+      "deviation": -0.45949625595643795,
+      "full_fraction": 0.19832085318810982,
+      "valid_fraction": 0.19727891156462585
+    },
+    {
+      "feature": "negative_medium:Lateral OA",
+      "full_count": 1062,
+      "valid_count": 106,
+      "target_count": 106.27229407760382,
+      "deviation": -0.2722940776038172,
+      "full_fraction": 0.24098025867937373,
+      "valid_fraction": 0.24036281179138322
+    },
+    {
+      "feature": "negative_medium:PF OA",
+      "full_count": 749,
+      "valid_count": 75,
+      "target_count": 74.95098706603132,
+      "deviation": 0.049012933968683114,
+      "full_fraction": 0.16995688677104606,
+      "valid_fraction": 0.17006802721088435
+    },
+    {
+      "feature": "negative_medium:Effusion",
+      "full_count": 433,
+      "valid_count": 43,
+      "target_count": 43.32947583390061,
+      "deviation": -0.3294758339006094,
+      "full_fraction": 0.09825277966870888,
+      "valid_fraction": 0.09750566893424037
+    },
+    {
+      "feature": "negative_medium:Synovitis",
+      "full_count": 1622,
+      "valid_count": 157,
+      "target_count": 162.31041524846836,
+      "deviation": -5.3104152484683596,
+      "full_fraction": 0.36805082822781937,
+      "valid_fraction": 0.35600907029478457
+    },
+    {
+      "feature": "negative_medium:Baker's",
+      "full_count": 2097,
+      "valid_count": 209,
+      "target_count": 209.8427501701838,
+      "deviation": -0.8427501701837912,
+      "full_fraction": 0.4758339006126617,
+      "valid_fraction": 0.47392290249433106
+    },
+    {
+      "feature": "negative_medium:Contusion",
+      "full_count": 1020,
+      "valid_count": 102,
+      "target_count": 102.06943498978897,
+      "deviation": -0.06943498978897367,
+      "full_fraction": 0.2314499659632403,
+      "valid_fraction": 0.23129251700680273
+    },
+    {
+      "feature": "negative_medium:Fracture",
+      "full_count": 1862,
+      "valid_count": 186,
+      "target_count": 186.32675289312456,
+      "deviation": -0.32675289312456357,
+      "full_fraction": 0.4225096437485818,
+      "valid_fraction": 0.4217687074829932
+    },
+    {
+      "feature": "negative_high:ACL",
+      "full_count": 3013,
+      "valid_count": 303,
+      "target_count": 301.5051055139551,
+      "deviation": 1.4948944860449274,
+      "full_fraction": 0.6836850465169049,
+      "valid_fraction": 0.6870748299319728
+    },
+    {
+      "feature": "negative_high:MCL",
+      "full_count": 3241,
+      "valid_count": 324,
+      "target_count": 324.3206262763785,
+      "deviation": -0.3206262763785048,
+      "full_fraction": 0.7354209212616293,
+      "valid_fraction": 0.7346938775510204
+    },
+    {
+      "feature": "negative_high:Medial Meniscus",
+      "full_count": 1802,
+      "valid_count": 181,
+      "target_count": 180.3226684819605,
+      "deviation": 0.6773315180394945,
+      "full_fraction": 0.4088949398683912,
+      "valid_fraction": 0.41043083900226757
+    },
+    {
+      "feature": "negative_high:Lateral Meniscus",
+      "full_count": 2832,
+      "valid_count": 283,
+      "target_count": 283.3927842069435,
+      "deviation": -0.3927842069434746,
+      "full_fraction": 0.6426140231449966,
+      "valid_fraction": 0.6417233560090703
+    },
+    {
+      "feature": "negative_high:Medial OA",
+      "full_count": 1851,
+      "valid_count": 185,
+      "target_count": 185.22600408441116,
+      "deviation": -0.2260040844111586,
+      "full_fraction": 0.4200136147038802,
+      "valid_fraction": 0.41950113378684806
+    },
+    {
+      "feature": "negative_high:Lateral OA",
+      "full_count": 2045,
+      "valid_count": 205,
+      "target_count": 204.63921034717495,
+      "deviation": 0.3607896528250478,
+      "full_fraction": 0.46403449058316315,
+      "valid_fraction": 0.46485260770975056
+    },
+    {
+      "feature": "negative_high:PF OA",
+      "full_count": 1606,
+      "valid_count": 161,
+      "target_count": 160.70932607215792,
+      "deviation": 0.2906739278420787,
+      "full_fraction": 0.36442024052643524,
+      "valid_fraction": 0.36507936507936506
+    },
+    {
+      "feature": "negative_high:Effusion",
+      "full_count": 1324,
+      "valid_count": 132,
+      "target_count": 132.49012933968686,
+      "deviation": -0.49012933968685957,
+      "full_fraction": 0.3004311322895394,
+      "valid_fraction": 0.29931972789115646
+    },
+    {
+      "feature": "negative_high:Synovitis",
+      "full_count": 180,
+      "valid_count": 31,
+      "target_count": 18.01225323349217,
+      "deviation": 12.98774676650783,
+      "full_fraction": 0.04084411164057182,
+      "valid_fraction": 0.07029478458049887
+    },
+    {
+      "feature": "negative_high:Baker's",
+      "full_count": 1217,
+      "valid_count": 122,
+      "target_count": 121.78284547311095,
+      "deviation": 0.2171545268890469,
+      "full_fraction": 0.2761515770365328,
+      "valid_fraction": 0.2766439909297052
+    },
+    {
+      "feature": "negative_high:Contusion",
+      "full_count": 2237,
+      "valid_count": 224,
+      "target_count": 223.85228046289993,
+      "deviation": 0.14771953710007324,
+      "full_fraction": 0.5076015429997731,
+      "valid_fraction": 0.5079365079365079
+    },
+    {
+      "feature": "negative_high:Fracture",
+      "full_count": 2207,
+      "valid_count": 221,
+      "target_count": 220.8502382573179,
+      "deviation": 0.1497617426821023,
+      "full_fraction": 0.5007941910596778,
+      "valid_fraction": 0.5011337868480725
+    },
+    {
+      "feature": "case_positive_count:0-0",
+      "full_count": 716,
+      "valid_count": 74,
+      "target_count": 71.64874063989109,
+      "deviation": 2.3512593601089122,
+      "full_fraction": 0.16246879963694122,
+      "valid_fraction": 0.16780045351473924
+    },
+    {
+      "feature": "case_positive_count:1-1",
+      "full_count": 637,
+      "valid_count": 65,
+      "target_count": 63.743362831858406,
+      "deviation": 1.2566371681415944,
+      "full_fraction": 0.14454277286135694,
+      "valid_fraction": 0.1473922902494331
+    },
+    {
+      "feature": "case_positive_count:2-2",
+      "full_count": 590,
+      "valid_count": 59,
+      "target_count": 59.040163376446564,
+      "deviation": -0.040163376446564314,
+      "full_fraction": 0.13387792148854097,
+      "valid_fraction": 0.13378684807256236
+    },
+    {
+      "feature": "case_positive_count:3-4",
+      "full_count": 1126,
+      "valid_count": 112,
+      "target_count": 112.67665078284547,
+      "deviation": -0.6766507828454706,
+      "full_fraction": 0.2555026094849104,
+      "valid_fraction": 0.25396825396825395
+    },
+    {
+      "feature": "case_positive_count:5-12",
+      "full_count": 1338,
+      "valid_count": 131,
+      "target_count": 133.89108236895848,
+      "deviation": -2.891082368958479,
+      "full_fraction": 0.3036078965282505,
+      "valid_fraction": 0.29705215419501135
+    },
+    {
+      "feature": "pair:PF OA+Effusion",
+      "full_count": 1468,
+      "valid_count": 146,
+      "target_count": 146.8999319264806,
+      "deviation": -0.8999319264806047,
+      "full_fraction": 0.3331064216019968,
+      "valid_fraction": 0.3310657596371882
+    },
+    {
+      "feature": "pair:Medial Meniscus+Effusion",
+      "full_count": 1387,
+      "valid_count": 137,
+      "target_count": 138.79441797140913,
+      "deviation": -1.794417971409132,
+      "full_fraction": 0.3147265713637395,
+      "valid_fraction": 0.31065759637188206
+    },
+    {
+      "feature": "pair:Medial OA+PF OA",
+      "full_count": 1360,
+      "valid_count": 135,
+      "target_count": 136.0925799863853,
+      "deviation": -1.0925799863852887,
+      "full_fraction": 0.3085999546176537,
+      "valid_fraction": 0.30612244897959184
+    },
+    {
+      "feature": "pair:Medial OA+Effusion",
+      "full_count": 1311,
+      "valid_count": 130,
+      "target_count": 131.18924438393464,
+      "deviation": -1.1892443839346356,
+      "full_fraction": 0.29748127978216476,
+      "valid_fraction": 0.2947845804988662
+    },
+    {
+      "feature": "pair:Medial Meniscus+Medial OA",
+      "full_count": 1134,
+      "valid_count": 113,
+      "target_count": 113.47719537100068,
+      "deviation": -0.47719537100067555,
+      "full_fraction": 0.25731790333560245,
+      "valid_fraction": 0.2562358276643991
+    },
+    {
+      "feature": "pair:Medial Meniscus+PF OA",
+      "full_count": 1075,
+      "valid_count": 108,
+      "target_count": 107.57317903335603,
+      "deviation": 0.42682096664397307,
+      "full_fraction": 0.24393011118674834,
+      "valid_fraction": 0.24489795918367346
+    },
+    {
+      "feature": "pair:Lateral OA+PF OA",
+      "full_count": 1036,
+      "valid_count": 104,
+      "target_count": 103.67052416609938,
+      "deviation": 0.3294758339006165,
+      "full_fraction": 0.23508055366462446,
+      "valid_fraction": 0.23582766439909297
+    },
+    {
+      "feature": "pair:Medial OA+Lateral OA",
+      "full_count": 984,
+      "valid_count": 99,
+      "target_count": 98.46698434309054,
+      "deviation": 0.5330156569094555,
+      "full_fraction": 0.22328114363512594,
+      "valid_fraction": 0.22448979591836735
+    },
+    {
+      "feature": "pair:Lateral OA+Effusion",
+      "full_count": 928,
+      "valid_count": 90,
+      "target_count": 92.86317222600408,
+      "deviation": -2.8631722260040817,
+      "full_fraction": 0.21057408668028138,
+      "valid_fraction": 0.20408163265306123
+    },
+    {
+      "feature": "pair:Effusion+Baker's",
+      "full_count": 850,
+      "valid_count": 84,
+      "target_count": 85.05786249149081,
+      "deviation": -1.057862491490809,
+      "full_fraction": 0.1928749716360336,
+      "valid_fraction": 0.19047619047619047
+    },
+    {
+      "feature": "pair:ACL+Effusion",
+      "full_count": 773,
+      "valid_count": 75,
+      "target_count": 77.35262083049693,
+      "deviation": -2.3526208304969316,
+      "full_fraction": 0.1754027683231223,
+      "valid_fraction": 0.17006802721088435
+    },
+    {
+      "feature": "pair:PF OA+Baker's",
+      "full_count": 708,
+      "valid_count": 71,
+      "target_count": 70.84819605173587,
+      "deviation": 0.15180394826413135,
+      "full_fraction": 0.16065350578624915,
+      "valid_fraction": 0.16099773242630386
+    }
+  ],
+  "seed": 42,
+  "locked_gold_studies": 58,
+  "selected_weak_studies": 383
+}
