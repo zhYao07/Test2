@@ -1,0 +1,12 @@
+{
+  "base_url": "SET_PROVIDER_BASE_URL_WITH_V1",
+  "model": "SET_FIXED_MULTILINGUAL_MODEL_ID",
+  "model_version": "SET_PROVIDER_SNAPSHOT_OR_LOCAL_REVISION",
+  "context_window_tokens": 65536,
+  "api_key_env": "RSNA_LLM_API_KEY",
+  "auth_required": true,
+  "response_format": "json_schema",
+  "max_input_chars": 24000,
+  "max_output_tokens": 10000,
+  "timeout_seconds": 180
+}

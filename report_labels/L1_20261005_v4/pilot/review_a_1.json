@@ -1,0 +1,14 @@
+{"1":[
+{"notes":"交叉韧带无病理发现，ACL阴性充分；同句内侧半月板矛盾不影响ACL。"},
+{"notes":"内侧副韧带无病理发现，直接阴性支持。"},
+{"notes":"内侧后角异常信号轻度半脱位/单纯退变与另一句无病理冲突，两类证据都保留；critical安全MASK。","disposition":"MASK"},
+{"notes":"盘状外侧半月板体垂直裂及后角径向复杂裂直接确诊，YES。"},
+{"notes":"泛称关节软骨无值得注意病理但未单列内侧间室，保守UNKNOWN解剖忠实；critical要求MASK。","disposition":"MASK"},
+{"notes":"软骨泛称负面信息未单列外侧胫股，UNKNOWN为保守排除；critical要求MASK。","disposition":"MASK"},
+{"notes":"泛称软骨无显著病理未单列髌股，保守UNKNOWN；critical合同MASK。","disposition":"MASK"},
+{"notes":"中量关节液明确而未描述扩张，UNKNOWN与低权重0.8符合未校准估计。"},
+{"notes":"未谈滑膜炎，不从hydrops推断。"},
+{"notes":"未提及Baker囊肿，保持未知。"},
+{"notes":"骨髓未见值得注意/显著病理只是否定显著异常，不能排除轻度骨挫伤；class_absence_supported=true与NO范围过强，MASK。","disposition":"MASK","dims":{"negation_correct":"FAIL","criteria_correct":"FAIL"}},
+{"notes":"未直接描述骨折，泛称骨髓无显著病理未硬推骨折阴性。"}
+]}

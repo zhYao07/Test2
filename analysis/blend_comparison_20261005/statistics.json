@@ -1,0 +1,1886 @@
+{
+  "overview": {
+    "total": 4407,
+    "weak": 4349,
+    "gold": 58,
+    "soft_source": "Inferred (blend-0.2*old)/0.8; per-class saved summary checks all pass; source soft file unavailable",
+    "soft_blend_flips": 322,
+    "soft_blend_flip_pct": 0.6170000766459722,
+    "studies_with_flip": 308,
+    "soft_old_binary_disagreements": 6352,
+    "blend_old_binary_disagreements": 6030,
+    "soft_old_mae": 0.1506895742316241,
+    "blend_old_mae": 0.12055165938529931,
+    "soft_positive_per_study": 2.238215681765923,
+    "blend_positive_per_study": 2.3122556909634397,
+    "soft_mean_confidence": 0.7516417567256842,
+    "blend_mean_confidence": 0.7261590403924274,
+    "blend_neutral_count": 5
+  },
+  "per_class": [
+    {
+      "label": "ACL",
+      "soft": {
+        "mean": 0.19355024143481261,
+        "positive": 565,
+        "positive_pct": 12.991492297079787,
+        "negative": 3784,
+        "missing": 0,
+        "neutral": 0,
+        "uncertain_pct": 0.0,
+        "confidence_mean": 0.8246723384686134,
+        "weight_sum": 3586.5,
+        "positive_weight": 460.5,
+        "negative_weight": 3126.0,
+        "weighted_soft_positive": 0.184930991217064,
+        "pos_weight": 6.78827428817749,
+        "quantiles": [
+          0.05,
+          0.05,
+          0.05,
+          0.05,
+          0.2,
+          0.8,
+          0.95
+        ],
+        "common_values": [
+          [
+            0.05,
+            2852
+          ],
+          [
+            0.2,
+            932
+          ],
+          [
+            0.95,
+            405
+          ],
+          [
+            0.8,
+            160
+          ]
+        ]
+      },
+      "blend": {
+        "mean": 0.20131340538054723,
+        "positive": 565,
+        "positive_pct": 12.991492297079787,
+        "negative": 3784,
+        "missing": 0,
+        "neutral": 0,
+        "uncertain_pct": 0.8047827086686594,
+        "confidence_mean": 0.813770521959071,
+        "weight_sum": 3539.0879999999997,
+        "positive_weight": 470.55600000000004,
+        "negative_weight": 3068.532,
+        "weighted_soft_positive": 0.1876148016099063,
+        "pos_weight": 6.5210771560668945,
+        "quantiles": [
+          0.04200000000000001,
+          0.04300000000000001,
+          0.044000000000000004,
+          0.045000000000000005,
+          0.21000000000000002,
+          0.8360000000000001,
+          0.96
+        ],
+        "common_values": [
+          [
+            0.045000000000000005,
+            1611
+          ],
+          [
+            0.04300000000000001,
+            944
+          ],
+          [
+            0.21000000000000002,
+            320
+          ],
+          [
+            0.959,
+            237
+          ],
+          [
+            0.04200000000000001,
+            136
+          ],
+          [
+            0.16500000000000004,
+            103
+          ]
+        ]
+      },
+      "old": {
+        "mean": 0.23236606116348585,
+        "positive": 889,
+        "positive_pct": 20.44148080018395,
+        "negative": 3456,
+        "missing": 0,
+        "neutral": 4,
+        "uncertain_pct": 3.702000459875834,
+        "confidence_mean": 0.8711427914463095,
+        "weight_sum": 3788.6,
+        "positive_weight": 730.3599999999999,
+        "negative_weight": 3058.24,
+        "weighted_soft_positive": 0.21384238900913263,
+        "pos_weight": 4.187304973602295,
+        "quantiles": [
+          0.01,
+          0.015,
+          0.02,
+          0.025,
+          0.25,
+          0.97,
+          1.0
+        ],
+        "common_values": [
+          [
+            0.025,
+            1720
+          ],
+          [
+            0.015,
+            948
+          ],
+          [
+            0.25,
+            359
+          ],
+          [
+            0.995,
+            247
+          ],
+          [
+            0.01,
+            136
+          ],
+          [
+            0.05,
+            82
+          ]
+        ]
+      },
+      "soft_negative_blend_positive": 0,
+      "soft_positive_blend_negative": 0,
+      "soft_blend_flips": 0,
+      "inferred_soft_old_mae": 0.09564037709818347,
+      "blend_old_mae": 0.07651230167854679,
+      "soft_old_binary_disagreements": 356,
+      "blend_old_binary_disagreements": 356
+    },
+    {
+      "label": "MCL",
+      "soft": {
+        "mean": 0.11752126925730054,
+        "positive": 214,
+        "positive_pct": 4.920671418716947,
+        "negative": 4135,
+        "missing": 0,
+        "neutral": 0,
+        "uncertain_pct": 0.0,
+        "confidence_mean": 0.8304897677627041,
+        "weight_sum": 3611.8,
+        "positive_weight": 142.49999999999994,
+        "negative_weight": 3469.3,
+        "weighted_soft_positive": 0.10361038817210255,
+        "pos_weight": 10.0,
+        "quantiles": [
+          0.05,
+          0.05,
+          0.05,
+          0.05,
+          0.15,
+          0.2,
+          0.95
+        ],
+        "common_values": [
+          [
+            0.05,
+            3136
+          ],
+          [
+            0.2,
+            524
+          ],
+          [
+            0.15,
+            475
+          ],
+          [
+            0.8,
+            167
+          ],
+          [
+            0.95,
+            47
+          ]
+        ]
+      },
+      "blend": {
+        "mean": 0.12977742009657395,
+        "positive": 214,
+        "positive_pct": 4.920671418716947,
+        "negative": 4135,
+        "missing": 0,
+        "neutral": 0,
+        "uncertain_pct": 0.7358013336399173,
+        "confidence_mean": 0.8099121637157968,
+        "weight_sum": 3522.308,
+        "positive_weight": 151.05600000000004,
+        "negative_weight": 3371.2520000000004,
+        "weighted_soft_positive": 0.1057108466948376,
+        "pos_weight": 10.0,
+        "quantiles": [
+          0.04200000000000001,
+          0.04300000000000001,
+          0.04300000000000001,
+          0.045000000000000005,
+          0.16500000000000004,
+          0.34199999999999997,
+          0.959
+        ],
+        "common_values": [
+          [
+            0.045000000000000005,
+            1781
+          ],
+          [
+            0.04300000000000001,
+            1063
+          ],
+          [
+            0.16999999999999998,
+            237
+          ],
+          [
+            0.34199999999999997,
+            161
+          ],
+          [
+            0.04200000000000001,
+            136
+          ],
+          [
+            0.21000000000000002,
+            109
+          ]
+        ]
+      },
+      "old": {
+        "mean": 0.1788020234536675,
+        "positive": 658,
+        "positive_pct": 15.129914922970796,
+        "negative": 3688,
+        "missing": 0,
+        "neutral": 3,
+        "uncertain_pct": 1.9314785008047828,
+        "confidence_mean": 0.8732030351805012,
+        "weight_sum": 3797.56,
+        "positive_weight": 501.89,
+        "negative_weight": 3295.67,
+        "weighted_soft_positive": 0.1533194143081347,
+        "pos_weight": 6.566518306732178,
+        "quantiles": [
+          0.01,
+          0.015,
+          0.015,
+          0.025,
+          0.25,
+          0.91,
+          0.995
+        ],
+        "common_values": [
+          [
+            0.025,
+            1931
+          ],
+          [
+            0.015,
+            1074
+          ],
+          [
+            0.25,
+            439
+          ],
+          [
+            0.91,
+            202
+          ],
+          [
+            0.01,
+            136
+          ],
+          [
+            0.97,
+            54
+          ]
+        ]
+      },
+      "soft_negative_blend_positive": 0,
+      "soft_positive_blend_negative": 0,
+      "soft_blend_flips": 0,
+      "inferred_soft_old_mae": 0.11430673718096113,
+      "blend_old_mae": 0.09144538974476892,
+      "soft_old_binary_disagreements": 456,
+      "blend_old_binary_disagreements": 456
+    },
+    {
+      "label": "Medial Meniscus",
+      "soft": {
+        "mean": 0.4240744998850311,
+        "positive": 1661,
+        "positive_pct": 38.19268797424695,
+        "negative": 2688,
+        "missing": 0,
+        "neutral": 0,
+        "uncertain_pct": 14.164175672568408,
+        "confidence_mean": 0.7005288572085537,
+        "weight_sum": 3046.6000000000004,
+        "positive_weight": 1193.1,
+        "negative_weight": 1853.5000000000002,
+        "weighted_soft_positive": 0.38800301975973206,
+        "pos_weight": 1.553515911102295,
+        "quantiles": [
+          0.05,
+          0.05,
+          0.05,
+          0.45,
+          0.8,
+          0.95,
+          0.95
+        ],
+        "common_values": [
+          [
+            0.05,
+            1829
+          ],
+          [
+            0.8,
+            1006
+          ],
+          [
+            0.95,
+            655
+          ],
+          [
+            0.45,
+            616
+          ],
+          [
+            0.2,
+            243
+          ]
+        ]
+      },
+      "blend": {
+        "mean": 0.4312030351805013,
+        "positive": 1777,
+        "positive_pct": 40.85996780869166,
+        "negative": 2570,
+        "missing": 0,
+        "neutral": 2,
+        "uncertain_pct": 14.210163255920902,
+        "confidence_mean": 0.711954472292481,
+        "weight_sum": 3096.29,
+        "positive_weight": 1248.9470000000001,
+        "negative_weight": 1847.343,
+        "weighted_soft_positive": 0.4026454963843827,
+        "pos_weight": 1.4791202545166016,
+        "quantiles": [
+          0.04200000000000001,
+          0.04300000000000001,
+          0.045000000000000005,
+          0.41000000000000003,
+          0.8340000000000001,
+          0.956,
+          0.959
+        ],
+        "common_values": [
+          [
+            0.045000000000000005,
+            891
+          ],
+          [
+            0.04300000000000001,
+            502
+          ],
+          [
+            0.8340000000000001,
+            291
+          ],
+          [
+            0.958,
+            195
+          ],
+          [
+            0.8350000000000001,
+            193
+          ],
+          [
+            0.442,
+            163
+          ]
+        ]
+      },
+      "old": {
+        "mean": 0.45971717636238213,
+        "positive": 1755,
+        "positive_pct": 40.35410439181421,
+        "negative": 2592,
+        "missing": 0,
+        "neutral": 2,
+        "uncertain_pct": 14.256150839273396,
+        "confidence_mean": 0.8005794435502414,
+        "weight_sum": 3481.72,
+        "positive_weight": 1565.6699999999998,
+        "negative_weight": 1916.0500000000002,
+        "weighted_soft_positive": 0.46541339481635513,
+        "pos_weight": 1.2237892150878906,
+        "quantiles": [
+          0.01,
+          0.015,
+          0.025,
+          0.4,
+          0.97,
+          0.98,
+          0.995
+        ],
+        "common_values": [
+          [
+            0.025,
+            995
+          ],
+          [
+            0.015,
+            502
+          ],
+          [
+            0.97,
+            374
+          ],
+          [
+            0.975,
+            285
+          ],
+          [
+            0.41,
+            256
+          ],
+          [
+            0.25,
+            241
+          ]
+        ]
+      },
+      "soft_negative_blend_positive": 116,
+      "soft_positive_blend_negative": 0,
+      "soft_blend_flips": 116,
+      "inferred_soft_old_mae": 0.11006553230627728,
+      "blend_old_mae": 0.08805242584502183,
+      "soft_old_binary_disagreements": 270,
+      "blend_old_binary_disagreements": 154
+    },
+    {
+      "label": "Lateral Meniscus",
+      "soft": {
+        "mean": 0.21484249252701773,
+        "positive": 585,
+        "positive_pct": 13.451368130604738,
+        "negative": 3764,
+        "missing": 0,
+        "neutral": 0,
+        "uncertain_pct": 10.462175212692573,
+        "confidence_mean": 0.7604276845251783,
+        "weight_sum": 3307.1000000000004,
+        "positive_weight": 413.4,
+        "negative_weight": 2893.7000000000007,
+        "weighted_soft_positive": 0.1695307066614254,
+        "pos_weight": 6.999758720397949,
+        "quantiles": [
+          0.05,
+          0.05,
+          0.05,
+          0.05,
+          0.2,
+          0.8,
+          0.95
+        ],
+        "common_values": [
+          [
+            0.05,
+            2876
+          ],
+          [
+            0.45,
+            455
+          ],
+          [
+            0.2,
+            433
+          ],
+          [
+            0.8,
+            377
+          ],
+          [
+            0.95,
+            208
+          ]
+        ]
+      },
+      "blend": {
+        "mean": 0.21660565647275237,
+        "positive": 657,
+        "positive_pct": 15.106921131294552,
+        "negative": 3689,
+        "missing": 0,
+        "neutral": 3,
+        "uncertain_pct": 10.600137962750058,
+        "confidence_mean": 0.7652917912163716,
+        "weight_sum": 3328.254,
+        "positive_weight": 431.6450000000001,
+        "negative_weight": 2896.609,
+        "weighted_soft_positive": 0.17300956146976765,
+        "pos_weight": 6.710628032684326,
+        "quantiles": [
+          0.04200000000000001,
+          0.04300000000000001,
+          0.045000000000000005,
+          0.045000000000000005,
+          0.24000000000000002,
+          0.8320000000000001,
+          0.959
+        ],
+        "common_values": [
+          [
+            0.045000000000000005,
+            1521
+          ],
+          [
+            0.04300000000000001,
+            886
+          ],
+          [
+            0.21000000000000002,
+            231
+          ],
+          [
+            0.04200000000000001,
+            152
+          ],
+          [
+            0.09,
+            137
+          ],
+          [
+            0.442,
+            136
+          ]
+        ]
+      },
+      "old": {
+        "mean": 0.2236583122556909,
+        "positive": 673,
+        "positive_pct": 15.47482179811451,
+        "negative": 3675,
+        "missing": 0,
+        "neutral": 1,
+        "uncertain_pct": 10.738100712807542,
+        "confidence_mean": 0.8151896987813291,
+        "weight_sum": 3545.26,
+        "positive_weight": 570.8199999999999,
+        "negative_weight": 2974.44,
+        "weighted_soft_positive": 0.1944148525072914,
+        "pos_weight": 5.210818767547607,
+        "quantiles": [
+          0.01,
+          0.015,
+          0.025,
+          0.025,
+          0.39,
+          0.96,
+          0.995
+        ],
+        "common_values": [
+          [
+            0.025,
+            1630
+          ],
+          [
+            0.015,
+            888
+          ],
+          [
+            0.25,
+            434
+          ],
+          [
+            0.41,
+            207
+          ],
+          [
+            0.01,
+            152
+          ],
+          [
+            0.97,
+            126
+          ]
+        ]
+      },
+      "soft_negative_blend_positive": 72,
+      "soft_positive_blend_negative": 0,
+      "soft_blend_flips": 72,
+      "inferred_soft_old_mae": 0.07913658312255693,
+      "blend_old_mae": 0.06330926649804555,
+      "soft_old_binary_disagreements": 172,
+      "blend_old_binary_disagreements": 100
+    },
+    {
+      "label": "Medial OA",
+      "soft": {
+        "mean": 0.27553920441480806,
+        "positive": 1072,
+        "positive_pct": 24.649344676937226,
+        "negative": 3277,
+        "missing": 0,
+        "neutral": 0,
+        "uncertain_pct": 0.0,
+        "confidence_mean": 0.8153506553230628,
+        "weight_sum": 3545.9600000000005,
+        "positive_weight": 796.8,
+        "negative_weight": 2749.16,
+        "weighted_soft_positive": 0.2563422035217543,
+        "pos_weight": 3.450251579284668,
+        "quantiles": [
+          0.05,
+          0.05,
+          0.05,
+          0.07,
+          0.2,
+          0.95,
+          0.95
+        ],
+        "common_values": [
+          [
+            0.05,
+            1790
+          ],
+          [
+            0.07,
+            946
+          ],
+          [
+            0.8,
+            560
+          ],
+          [
+            0.2,
+            541
+          ],
+          [
+            0.95,
+            512
+          ]
+        ]
+      },
+      "blend": {
+        "mean": 0.30183398482409746,
+        "positive": 1072,
+        "positive_pct": 24.649344676937226,
+        "negative": 3277,
+        "missing": 0,
+        "neutral": 0,
+        "uncertain_pct": 0.9427454587261439,
+        "confidence_mean": 0.777197516670499,
+        "weight_sum": 3380.032,
+        "positive_weight": 828.192,
+        "negative_weight": 2551.84,
+        "weighted_soft_positive": 0.28479542885984516,
+        "pos_weight": 3.0812177658081055,
+        "quantiles": [
+          0.04200000000000001,
+          0.04300000000000001,
+          0.045000000000000005,
+          0.106,
+          0.352,
+          0.952,
+          0.96
+        ],
+        "common_values": [
+          [
+            0.045000000000000005,
+            862
+          ],
+          [
+            0.106,
+            534
+          ],
+          [
+            0.04300000000000001,
+            525
+          ],
+          [
+            0.061000000000000006,
+            246
+          ],
+          [
+            0.09,
+            232
+          ],
+          [
+            0.34199999999999997,
+            118
+          ]
+        ]
+      },
+      "old": {
+        "mean": 0.40701310646125544,
+        "positive": 1618,
+        "positive_pct": 37.203954932168315,
+        "negative": 2727,
+        "missing": 0,
+        "neutral": 4,
+        "uncertain_pct": 1.9544722924810303,
+        "confidence_mean": 0.8144814899977005,
+        "weight_sum": 3542.18,
+        "positive_weight": 1366.6899999999998,
+        "negative_weight": 2175.49,
+        "weighted_soft_positive": 0.40477050149907684,
+        "pos_weight": 1.5917948484420776,
+        "quantiles": [
+          0.01,
+          0.015,
+          0.025,
+          0.25,
+          0.91,
+          0.975,
+          1.0
+        ],
+        "common_values": [
+          [
+            0.025,
+            1114
+          ],
+          [
+            0.25,
+            867
+          ],
+          [
+            0.015,
+            543
+          ],
+          [
+            0.91,
+            208
+          ],
+          [
+            0.97,
+            160
+          ],
+          [
+            0.99,
+            118
+          ]
+        ]
+      },
+      "soft_negative_blend_positive": 0,
+      "soft_positive_blend_negative": 0,
+      "soft_blend_flips": 0,
+      "inferred_soft_old_mae": 0.16494136583122554,
+      "blend_old_mae": 0.13195309266498043,
+      "soft_old_binary_disagreements": 582,
+      "blend_old_binary_disagreements": 582
+    },
+    {
+      "label": "Lateral OA",
+      "soft": {
+        "mean": 0.19742009657392506,
+        "positive": 649,
+        "positive_pct": 14.922970797884572,
+        "negative": 3700,
+        "missing": 0,
+        "neutral": 0,
+        "uncertain_pct": 0.0,
+        "confidence_mean": 0.8214853989422857,
+        "weight_sum": 3572.6400000000003,
+        "positive_weight": 470.40000000000003,
+        "negative_weight": 3102.2400000000007,
+        "weighted_soft_positive": 0.18044840790004027,
+        "pos_weight": 6.594898223876953,
+        "quantiles": [
+          0.05,
+          0.05,
+          0.05,
+          0.08,
+          0.2,
+          0.8,
+          0.95
+        ],
+        "common_values": [
+          [
+            0.05,
+            2000
+          ],
+          [
+            0.08,
+            1176
+          ],
+          [
+            0.2,
+            524
+          ],
+          [
+            0.8,
+            379
+          ],
+          [
+            0.95,
+            270
+          ]
+        ]
+      },
+      "blend": {
+        "mean": 0.22306415267877672,
+        "positive": 649,
+        "positive_pct": 14.922970797884572,
+        "negative": 3700,
+        "missing": 0,
+        "neutral": 0,
+        "uncertain_pct": 1.0347206254311336,
+        "confidence_mean": 0.778322372959301,
+        "weight_sum": 3384.924,
+        "positive_weight": 488.068,
+        "negative_weight": 2896.856,
+        "weighted_soft_positive": 0.20227000074447757,
+        "pos_weight": 5.9353532791137695,
+        "quantiles": [
+          0.04200000000000001,
+          0.04300000000000001,
+          0.045000000000000005,
+          0.09,
+          0.24599999999999997,
+          0.8320000000000001,
+          0.959
+        ],
+        "common_values": [
+          [
+            0.045000000000000005,
+            975
+          ],
+          [
+            0.11399999999999999,
+            706
+          ],
+          [
+            0.04300000000000001,
+            593
+          ],
+          [
+            0.09,
+            261
+          ],
+          [
+            0.069,
+            253
+          ],
+          [
+            0.04200000000000001,
+            104
+          ]
+        ]
+      },
+      "old": {
+        "mean": 0.3256403770981835,
+        "positive": 1183,
+        "positive_pct": 27.20165555300069,
+        "negative": 3159,
+        "missing": 0,
+        "neutral": 7,
+        "uncertain_pct": 3.656012876523339,
+        "confidence_mean": 0.7830213842262589,
+        "weight_sum": 3405.36,
+        "positive_weight": 944.3899999999999,
+        "negative_weight": 2460.9700000000003,
+        "weighted_soft_positive": 0.30974190687621866,
+        "pos_weight": 2.6058833599090576,
+        "quantiles": [
+          0.01,
+          0.015,
+          0.025,
+          0.25,
+          0.71,
+          0.95,
+          0.995
+        ],
+        "common_values": [
+          [
+            0.025,
+            1235
+          ],
+          [
+            0.25,
+            1056
+          ],
+          [
+            0.015,
+            603
+          ],
+          [
+            0.91,
+            172
+          ],
+          [
+            0.97,
+            116
+          ],
+          [
+            0.01,
+            105
+          ]
+        ]
+      },
+      "soft_negative_blend_positive": 0,
+      "soft_positive_blend_negative": 0,
+      "soft_blend_flips": 0,
+      "inferred_soft_old_mae": 0.16517360312715562,
+      "blend_old_mae": 0.13213888250172454,
+      "soft_old_binary_disagreements": 570,
+      "blend_old_binary_disagreements": 570
+    },
+    {
+      "label": "PF OA",
+      "soft": {
+        "mean": 0.35626580823177745,
+        "positive": 1459,
+        "positive_pct": 33.547942055644974,
+        "negative": 2890,
+        "missing": 0,
+        "neutral": 0,
+        "uncertain_pct": 0.0,
+        "confidence_mean": 0.7983444469993102,
+        "weight_sum": 3472.0,
+        "positive_weight": 1110.9,
+        "negative_weight": 2361.1000000000004,
+        "weighted_soft_positive": 0.34352534562211984,
+        "pos_weight": 2.125393867492676,
+        "quantiles": [
+          0.05,
+          0.05,
+          0.05,
+          0.1,
+          0.8,
+          0.95,
+          0.95
+        ],
+        "common_values": [
+          [
+            0.05,
+            1557
+          ],
+          [
+            0.1,
+            800
+          ],
+          [
+            0.95,
+            785
+          ],
+          [
+            0.8,
+            674
+          ],
+          [
+            0.2,
+            533
+          ]
+        ]
+      },
+      "blend": {
+        "mean": 0.3817164865486319,
+        "positive": 1459,
+        "positive_pct": 33.547942055644974,
+        "negative": 2890,
+        "missing": 0,
+        "neutral": 0,
+        "uncertain_pct": 1.057714417107381,
+        "confidence_mean": 0.7650287422395954,
+        "weight_sum": 3327.11,
+        "positive_weight": 1149.14,
+        "negative_weight": 2177.9700000000003,
+        "weighted_soft_positive": 0.37487625506821226,
+        "pos_weight": 1.8953043222427368,
+        "quantiles": [
+          0.04200000000000001,
+          0.04300000000000001,
+          0.045000000000000005,
+          0.16199999999999998,
+          0.8320000000000001,
+          0.956,
+          0.959
+        ],
+        "common_values": [
+          [
+            0.045000000000000005,
+            769
+          ],
+          [
+            0.04300000000000001,
+            454
+          ],
+          [
+            0.13,
+            421
+          ],
+          [
+            0.958,
+            209
+          ],
+          [
+            0.09,
+            190
+          ],
+          [
+            0.08500000000000002,
+            181
+          ]
+        ]
+      },
+      "old": {
+        "mean": 0.4835191998160496,
+        "positive": 1993,
+        "positive_pct": 45.8266268107611,
+        "negative": 2352,
+        "missing": 0,
+        "neutral": 4,
+        "uncertain_pct": 1.6095654173373188,
+        "confidence_mean": 0.8325799034260748,
+        "weight_sum": 3620.8899999999994,
+        "positive_weight": 1738.77,
+        "negative_weight": 1882.12,
+        "weighted_soft_positive": 0.4903204115562749,
+        "pos_weight": 1.082443356513977,
+        "quantiles": [
+          0.01,
+          0.015,
+          0.025,
+          0.25,
+          0.95,
+          0.98,
+          0.995
+        ],
+        "common_values": [
+          [
+            0.025,
+            967
+          ],
+          [
+            0.25,
+            744
+          ],
+          [
+            0.015,
+            466
+          ],
+          [
+            0.99,
+            226
+          ],
+          [
+            0.97,
+            209
+          ],
+          [
+            0.91,
+            204
+          ]
+        ]
+      },
+      "soft_negative_blend_positive": 0,
+      "soft_positive_blend_negative": 0,
+      "soft_blend_flips": 0,
+      "inferred_soft_old_mae": 0.16283973327201653,
+      "blend_old_mae": 0.1302717866176132,
+      "soft_old_binary_disagreements": 592,
+      "blend_old_binary_disagreements": 592
+    },
+    {
+      "label": "Effusion",
+      "soft": {
+        "mean": 0.32524718326051966,
+        "positive": 1112,
+        "positive_pct": 25.569096343987123,
+        "negative": 3237,
+        "missing": 0,
+        "neutral": 0,
+        "uncertain_pct": 0.0,
+        "confidence_mean": 0.7249482639687285,
+        "weight_sum": 3152.8,
+        "positive_weight": 816.4000000000001,
+        "negative_weight": 2336.4,
+        "weighted_soft_positive": 0.3174733570159857,
+        "pos_weight": 2.8618321418762207,
+        "quantiles": [
+          0.05,
+          0.05,
+          0.05,
+          0.2,
+          0.85,
+          0.85,
+          0.95
+        ],
+        "common_values": [
+          [
+            0.2,
+            1923
+          ],
+          [
+            0.05,
+            1314
+          ],
+          [
+            0.85,
+            922
+          ],
+          [
+            0.95,
+            190
+          ]
+        ]
+      },
+      "blend": {
+        "mean": 0.37697700620832375,
+        "positive": 1112,
+        "positive_pct": 25.569096343987123,
+        "negative": 3237,
+        "missing": 0,
+        "neutral": 0,
+        "uncertain_pct": 0.9427454587261439,
+        "confidence_mean": 0.6401655553000689,
+        "weight_sum": 2784.08,
+        "positive_weight": 857.0130000000001,
+        "negative_weight": 1927.067,
+        "weighted_soft_positive": 0.371942388868136,
+        "pos_weight": 2.2485852241516113,
+        "quantiles": [
+          0.04100000000000001,
+          0.04300000000000001,
+          0.046000000000000006,
+          0.33999999999999997,
+          0.862,
+          0.874,
+          0.959
+        ],
+        "common_values": [
+          [
+            0.045000000000000005,
+            633
+          ],
+          [
+            0.34199999999999997,
+            617
+          ],
+          [
+            0.21000000000000002,
+            321
+          ],
+          [
+            0.33799999999999997,
+            282
+          ],
+          [
+            0.33999999999999997,
+            268
+          ],
+          [
+            0.87,
+            247
+          ]
+        ]
+      },
+      "old": {
+        "mean": 0.5838962979995401,
+        "positive": 2585,
+        "positive_pct": 59.438951483099565,
+        "negative": 1764,
+        "missing": 0,
+        "neutral": 0,
+        "uncertain_pct": 1.1726833754886181,
+        "confidence_mean": 0.8412945504713727,
+        "weight_sum": 3658.79,
+        "positive_weight": 2194.26,
+        "negative_weight": 1464.5300000000002,
+        "weighted_soft_positive": 0.5811870112796852,
+        "pos_weight": 1.0,
+        "quantiles": [
+          0.005,
+          0.015,
+          0.025,
+          0.9,
+          0.94,
+          0.97,
+          0.995
+        ],
+        "common_values": [
+          [
+            0.025,
+            707
+          ],
+          [
+            0.91,
+            668
+          ],
+          [
+            0.25,
+            426
+          ],
+          [
+            0.89,
+            303
+          ],
+          [
+            0.9,
+            276
+          ],
+          [
+            0.95,
+            272
+          ]
+        ]
+      },
+      "soft_negative_blend_positive": 0,
+      "soft_positive_blend_negative": 0,
+      "soft_blend_flips": 0,
+      "inferred_soft_old_mae": 0.28582777650034485,
+      "blend_old_mae": 0.22866222120027593,
+      "soft_old_binary_disagreements": 1481,
+      "blend_old_binary_disagreements": 1481
+    },
+    {
+      "label": "Synovitis",
+      "soft": {
+        "mean": 0.44869855139112436,
+        "positive": 1065,
+        "positive_pct": 24.488388135203497,
+        "negative": 3284,
+        "missing": 0,
+        "neutral": 0,
+        "uncertain_pct": 69.4412508622672,
+        "confidence_mean": 0.37801333639917223,
+        "weight_sum": 1643.98,
+        "positive_weight": 598.88,
+        "negative_weight": 1045.1,
+        "weighted_soft_positive": 0.4947791335661017,
+        "pos_weight": 1.7450907230377197,
+        "quantiles": [
+          0.05,
+          0.35,
+          0.35,
+          0.35,
+          0.35,
+          0.8,
+          0.95
+        ],
+        "common_values": [
+          [
+            0.35,
+            3020
+          ],
+          [
+            0.76,
+            608
+          ],
+          [
+            0.8,
+            322
+          ],
+          [
+            0.3,
+            197
+          ],
+          [
+            0.82,
+            123
+          ],
+          [
+            0.05,
+            67
+          ]
+        ]
+      },
+      "blend": {
+        "mean": 0.42668877902966196,
+        "positive": 1065,
+        "positive_pct": 24.488388135203497,
+        "negative": 3284,
+        "missing": 0,
+        "neutral": 0,
+        "uncertain_pct": 4.161876293400782,
+        "confidence_mean": 0.38585008047827096,
+        "weight_sum": 1678.0620000000004,
+        "positive_weight": 520.2005000000001,
+        "negative_weight": 1157.8615000000002,
+        "weighted_soft_positive": 0.45297505083244843,
+        "pos_weight": 2.2257986068725586,
+        "quantiles": [
+          0.04200000000000001,
+          0.3065,
+          0.3075,
+          0.344,
+          0.43199999999999994,
+          0.7406000000000009,
+          0.959
+        ],
+        "common_values": [
+          [
+            0.3075,
+            627
+          ],
+          [
+            0.3459999999999999,
+            543
+          ],
+          [
+            0.32999999999999996,
+            408
+          ],
+          [
+            0.344,
+            303
+          ],
+          [
+            0.345,
+            246
+          ],
+          [
+            0.3065,
+            210
+          ]
+        ]
+      },
+      "old": {
+        "mean": 0.33864968958381236,
+        "positive": 543,
+        "positive_pct": 12.485628880202345,
+        "negative": 3806,
+        "missing": 0,
+        "neutral": 0,
+        "uncertain_pct": 14.876983214532077,
+        "confidence_mean": 0.5435490917452289,
+        "weight_sum": 2363.8950000000004,
+        "positive_weight": 480.2349999999999,
+        "negative_weight": 1883.66,
+        "weighted_soft_positive": 0.3604800974662579,
+        "pos_weight": 3.9223713874816895,
+        "quantiles": [
+          0.01,
+          0.1325,
+          0.1375,
+          0.325,
+          0.35,
+          0.91,
+          0.995
+        ],
+        "common_values": [
+          [
+            0.1375,
+            644
+          ],
+          [
+            0.3299999999999999,
+            598
+          ],
+          [
+            0.25,
+            416
+          ],
+          [
+            0.32,
+            310
+          ],
+          [
+            0.325,
+            255
+          ],
+          [
+            0.1325,
+            211
+          ]
+        ]
+      },
+      "soft_negative_blend_positive": 0,
+      "soft_positive_blend_negative": 0,
+      "soft_blend_flips": 0,
+      "inferred_soft_old_mae": 0.1755570246033571,
+      "blend_old_mae": 0.14044561968268565,
+      "soft_old_binary_disagreements": 734,
+      "blend_old_binary_disagreements": 734
+    },
+    {
+      "label": "Baker's",
+      "soft": {
+        "mean": 0.17005058634168774,
+        "positive": 532,
+        "positive_pct": 12.232697171763624,
+        "negative": 3817,
+        "missing": 0,
+        "neutral": 0,
+        "uncertain_pct": 0.0,
+        "confidence_mean": 0.8456886640607038,
+        "weight_sum": 3677.9000000000005,
+        "positive_weight": 404.0,
+        "negative_weight": 3273.9000000000005,
+        "weighted_soft_positive": 0.15490769188939335,
+        "pos_weight": 8.103713035583496,
+        "quantiles": [
+          0.05,
+          0.05,
+          0.05,
+          0.05,
+          0.05,
+          0.85,
+          0.95
+        ],
+        "common_values": [
+          [
+            0.05,
+            3279
+          ],
+          [
+            0.2,
+            538
+          ],
+          [
+            0.85,
+            374
+          ],
+          [
+            0.95,
+            158
+          ]
+        ]
+      },
+      "blend": {
+        "mean": 0.20748792825936999,
+        "positive": 532,
+        "positive_pct": 12.232697171763624,
+        "negative": 3817,
+        "missing": 0,
+        "neutral": 0,
+        "uncertain_pct": 0.6438261669349276,
+        "confidence_mean": 0.7789611404920672,
+        "weight_sum": 3387.702,
+        "positive_weight": 421.716,
+        "negative_weight": 2965.9860000000003,
+        "weighted_soft_positive": 0.18984516052474512,
+        "pos_weight": 7.033135414123535,
+        "quantiles": [
+          0.04200000000000001,
+          0.04300000000000001,
+          0.045000000000000005,
+          0.09,
+          0.21000000000000002,
+          0.87,
+          0.959
+        ],
+        "common_values": [
+          [
+            0.09,
+            2061
+          ],
+          [
+            0.045000000000000005,
+            642
+          ],
+          [
+            0.04300000000000001,
+            257
+          ],
+          [
+            0.04200000000000001,
+            242
+          ],
+          [
+            0.34199999999999997,
+            214
+          ],
+          [
+            0.33799999999999997,
+            89
+          ]
+        ]
+      },
+      "old": {
+        "mean": 0.3572372959300989,
+        "positive": 1074,
+        "positive_pct": 24.69533226028972,
+        "negative": 3275,
+        "missing": 0,
+        "neutral": 0,
+        "uncertain_pct": 0.27592550011496897,
+        "confidence_mean": 0.7140836974017015,
+        "weight_sum": 3105.5499999999997,
+        "positive_weight": 931.9000000000001,
+        "negative_weight": 2173.6499999999996,
+        "weighted_soft_positive": 0.37357482571525175,
+        "pos_weight": 2.3324925899505615,
+        "quantiles": [
+          0.01,
+          0.015,
+          0.025,
+          0.25,
+          0.25,
+          0.95,
+          0.995
+        ],
+        "common_values": [
+          [
+            0.25,
+            2094
+          ],
+          [
+            0.025,
+            643
+          ],
+          [
+            0.015,
+            257
+          ],
+          [
+            0.01,
+            244
+          ],
+          [
+            0.91,
+            239
+          ],
+          [
+            0.89,
+            105
+          ]
+        ]
+      },
+      "soft_negative_blend_positive": 0,
+      "soft_positive_blend_negative": 0,
+      "soft_blend_flips": 0,
+      "inferred_soft_old_mae": 0.20419521729133133,
+      "blend_old_mae": 0.16335617383306508,
+      "soft_old_binary_disagreements": 546,
+      "blend_old_binary_disagreements": 546
+    },
+    {
+      "label": "Contusion",
+      "soft": {
+        "mean": 0.24410209243504252,
+        "positive": 661,
+        "positive_pct": 15.19889629799954,
+        "negative": 3688,
+        "missing": 0,
+        "neutral": 0,
+        "uncertain_pct": 12.140722005058633,
+        "confidence_mean": 0.7016325592090137,
+        "weight_sum": 3051.4000000000005,
+        "positive_weight": 412.8,
+        "negative_weight": 2638.6,
+        "weighted_soft_positive": 0.1903880186144065,
+        "pos_weight": 6.3919572830200195,
+        "quantiles": [
+          0.05,
+          0.05,
+          0.05,
+          0.15,
+          0.45,
+          0.8,
+          0.95
+        ],
+        "common_values": [
+          [
+            0.05,
+            1869
+          ],
+          [
+            0.15,
+            1291
+          ],
+          [
+            0.8,
+            607
+          ],
+          [
+            0.45,
+            528
+          ],
+          [
+            0.95,
+            54
+          ]
+        ]
+      },
+      "blend": {
+        "mean": 0.2472531616463555,
+        "positive": 795,
+        "positive_pct": 18.280064382616693,
+        "negative": 3554,
+        "missing": 0,
+        "neutral": 0,
+        "uncertain_pct": 12.485628880202345,
+        "confidence_mean": 0.6926212922510923,
+        "weight_sum": 3012.21,
+        "positive_weight": 406.9090000000001,
+        "negative_weight": 2605.3010000000004,
+        "weighted_soft_positive": 0.19152617911765785,
+        "pos_weight": 6.4026618003845215,
+        "quantiles": [
+          0.04200000000000001,
+          0.04300000000000001,
+          0.045000000000000005,
+          0.125,
+          0.41000000000000003,
+          0.7952000000000004,
+          0.958
+        ],
+        "common_values": [
+          [
+            0.045000000000000005,
+            929
+          ],
+          [
+            0.16999999999999998,
+            633
+          ],
+          [
+            0.04300000000000001,
+            479
+          ],
+          [
+            0.125,
+            338
+          ],
+          [
+            0.04200000000000001,
+            172
+          ],
+          [
+            0.09,
+            157
+          ]
+        ]
+      },
+      "old": {
+        "mean": 0.25985743849160725,
+        "positive": 744,
+        "positive_pct": 17.107381007128076,
+        "negative": 3603,
+        "missing": 0,
+        "neutral": 2,
+        "uncertain_pct": 10.094274545872613,
+        "confidence_mean": 0.7445527707518969,
+        "weight_sum": 3238.0599999999995,
+        "positive_weight": 574.6499999999999,
+        "negative_weight": 2663.41,
+        "weighted_soft_positive": 0.22486900335386004,
+        "pos_weight": 4.634838104248047,
+        "quantiles": [
+          0.01,
+          0.015,
+          0.025,
+          0.05,
+          0.41,
+          0.925,
+          0.995
+        ],
+        "common_values": [
+          [
+            0.025,
+            1329
+          ],
+          [
+            0.25,
+            1016
+          ],
+          [
+            0.015,
+            558
+          ],
+          [
+            0.01,
+            187
+          ],
+          [
+            0.97,
+            88
+          ],
+          [
+            0.05,
+            80
+          ]
+        ]
+      },
+      "soft_negative_blend_positive": 134,
+      "soft_positive_blend_negative": 0,
+      "soft_blend_flips": 134,
+      "inferred_soft_old_mae": 0.1353828466314095,
+      "blend_old_mae": 0.10830627730512761,
+      "soft_old_binary_disagreements": 457,
+      "blend_old_binary_disagreements": 323
+    },
+    {
+      "label": "Fracture",
+      "soft": {
+        "mean": 0.11487698321453209,
+        "positive": 159,
+        "positive_pct": 3.656012876523339,
+        "negative": 4190,
+        "missing": 0,
+        "neutral": 0,
+        "uncertain_pct": 3.1501494596458954,
+        "confidence_mean": 0.8181191078408829,
+        "weight_sum": 3558.0,
+        "positive_weight": 104.10000000000001,
+        "negative_weight": 3453.9000000000005,
+        "weighted_soft_positive": 0.10291736930860035,
+        "pos_weight": 10.0,
+        "quantiles": [
+          0.05,
+          0.05,
+          0.05,
+          0.1,
+          0.1,
+          0.1,
+          0.95
+        ],
+        "common_values": [
+          [
+            0.1,
+            2349
+          ],
+          [
+            0.05,
+            1704
+          ],
+          [
+            0.35,
+            137
+          ],
+          [
+            0.8,
+            130
+          ],
+          [
+            0.95,
+            29
+          ]
+        ]
+      },
+      "blend": {
+        "mean": 0.12831225569096344,
+        "positive": 159,
+        "positive_pct": 3.656012876523339,
+        "negative": 4190,
+        "missing": 0,
+        "neutral": 0,
+        "uncertain_pct": 2.828236376178432,
+        "confidence_mean": 0.7948328351345137,
+        "weight_sum": 3456.7280000000005,
+        "positive_weight": 111.89400000000002,
+        "negative_weight": 3344.834,
+        "weighted_soft_positive": 0.1125757670259274,
+        "pos_weight": 10.0,
+        "quantiles": [
+          0.04100000000000001,
+          0.04300000000000001,
+          0.045000000000000005,
+          0.09,
+          0.13,
+          0.13,
+          0.959
+        ],
+        "common_values": [
+          [
+            0.13,
+            1506
+          ],
+          [
+            0.045000000000000005,
+            806
+          ],
+          [
+            0.08500000000000002,
+            680
+          ],
+          [
+            0.09,
+            337
+          ],
+          [
+            0.04300000000000001,
+            336
+          ],
+          [
+            0.04200000000000001,
+            195
+          ]
+        ]
+      },
+      "old": {
+        "mean": 0.18205334559668887,
+        "positive": 297,
+        "positive_pct": 6.829156127845481,
+        "negative": 4051,
+        "missing": 0,
+        "neutral": 1,
+        "uncertain_pct": 1.057714417107381,
+        "confidence_mean": 0.7468475511611865,
+        "weight_sum": 3248.04,
+        "positive_weight": 241.26999999999987,
+        "negative_weight": 3006.7699999999995,
+        "weighted_soft_positive": 0.15636462297262343,
+        "pos_weight": 10.0,
+        "quantiles": [
+          0.005,
+          0.015,
+          0.025,
+          0.25,
+          0.25,
+          0.25,
+          0.995
+        ],
+        "common_values": [
+          [
+            0.25,
+            1857
+          ],
+          [
+            0.025,
+            1487
+          ],
+          [
+            0.015,
+            410
+          ],
+          [
+            0.01,
+            215
+          ],
+          [
+            0.97,
+            44
+          ],
+          [
+            0.975,
+            42
+          ]
+        ]
+      },
+      "soft_negative_blend_positive": 0,
+      "soft_positive_blend_negative": 0,
+      "soft_blend_flips": 0,
+      "inferred_soft_old_mae": 0.11520809381467004,
+      "blend_old_mae": 0.09216647505173603,
+      "soft_old_binary_disagreements": 140,
+      "blend_old_binary_disagreements": 140
+    }
+  ]
+}

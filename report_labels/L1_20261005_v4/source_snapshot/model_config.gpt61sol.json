@@ -1,0 +1,13 @@
+{
+  "backend": "codex_cli",
+  "model": "gpt-6.1-sol",
+  "model_version": "gpt-6.1-sol; codex-cli 0.160.0; provider snapshot not exposed",
+  "codex_executable": "C:/Users/86188/AppData/Local/OpenAI/Codex/bin/8aaf1547b825b104/codex.exe",
+  "context_window_tokens": 1050000,
+  "max_input_chars": 24000,
+  "max_output_tokens": 10000,
+  "reasoning_effort": "medium",
+  "timeout_seconds": 900,
+  "workers": 3,
+  "allow_agent_execution": true
+}

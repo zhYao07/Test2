@@ -1,0 +1,13 @@
+{
+  "updated_at": "2026-10-05T07:03:18.203873+00:00",
+  "status": "STOPPED_BY_USER_SCOPE_CORRECTION",
+  "expected_pilot_reports": 180,
+  "completed_reports": 109,
+  "full_started": false,
+  "model": "gpt-6.1-sol",
+  "authentication": "Existing ChatGPT login; no credentials exported",
+  "previous_diagnostic": "L1_20261005_v4/pilot_diagnostic; 57 reports/684 reviewed items; no prior extraction or approval reused",
+  "reviewed_items": 708,
+  "masked_items": 38,
+  "semantic_failed_items": 6
+}

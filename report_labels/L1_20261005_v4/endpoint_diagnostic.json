@@ -1,0 +1,13 @@
+{
+  "checked_at": "2026-10-05T05:07:01.882067+00:00",
+  "returncode": 0,
+  "markers": [],
+  "response_ready": true,
+  "event_types": [
+    "thread.started",
+    "item.completed",
+    "turn.started",
+    "item.completed",
+    "turn.completed"
+  ]
+}

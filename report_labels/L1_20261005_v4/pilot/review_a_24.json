@@ -1,0 +1,14 @@
+{"24":[
+{"notes":"前交叉韧带完整，扫描目的半月板疑问非当前ACL病变。"},
+{"notes":"双侧副韧带完整，MCL阴性有明确支持。"},
+{"notes":"仅外侧半月板病变，未提及内侧，保持未知。"},
+{"notes":"外侧体部横裂伸及前后角并旁半月板小囊肿，结论确定撕裂YES。"},
+{"notes":"胫股内侧关节关系保持未评价软骨厚度，NOT_MENTIONED不补陰性。"},
+{"notes":"髌骨外侧面软骨损伤属髌股而非外侧胫股，未误归外侧OA。"},
+{"notes":"髌骨内侧面四级病变和外侧表浅灶，分级体系及长度不明，UNKNOWN合理。"},
+{"notes":"仅无髌上滑囊扩张，未全面否定其他关节液，absence=null且UNKNOWN。"},
+{"notes":"未直接讨论滑膜炎，保持未知。"},
+{"notes":"Baker/后交叉附近多房ganglion斜线措辞存在歧义，未知解剖和大小归属合理；critical合同MASK。","disposition":"MASK"},
+{"notes":"软骨下骨水肿伴髌骨软骨病只证明伴随关系，不明确全部为退变性；degenerative_only=true缺充分证据且mapper因此NO，应保持UNKNOWN，MASK。","disposition":"MASK","dims":{"criteria_correct":"FAIL"}},
+{"notes":"无骨折描述，未从软骨下水肿推骨折。"}
+]}

@@ -1,0 +1,155 @@
+{
+  "created_at": "2026-10-05T04:27:39.495345+00:00",
+  "scope": "FULL_PREPARED_SOURCE_DIRECT_ANATOMY_SCREEN_ONLY",
+  "source_file": "report_labels/L1_20261005_v2/reports_source.jsonl",
+  "source_sha256": "c788c64a68276ae896f2247842630d29a6441e9a170e22440482c47fba3cdb19",
+  "reports_scanned": 4407,
+  "scan_method": "Word-boundary multilingual non-knee joint/structure terms; all seven matching reports manually inspected in context. Supplemental shoulder/ankle anatomical terms included. Normal ACL/PCL/MCL words were not non-knee triggers.",
+  "scan_regex": "\\b(?:shoulder|rotator|supraspinat\\w*|infraspinat\\w*|subscapular\\w*|glenoid\\w*|humer\\w*|hip|acetabul\\w*|ankle|talus|achilles|elbow|wrist|Schulter\\w*|H[uü]ft\\w*|Sprunggelenk\\w*|Ellenbogen\\w*|Handgelenk\\w*|cadera|hombro|tobillo|codo|mu[nñ]eca|[ée]paule|cheville|hanche|coude|poignet|schouder|enkelgewricht|heup|polsgewricht|omuz|kal[cç]a|dirsek|рамен\\w*|хумер\\w*|супраспин\\w*|субскап\\w*|гленоид\\w*|тазобед\\w*|глезен\\w*|плеч\\w*|локт\\w*|голеност\\w*|βραχι[όο]\\w*|αστρ[άα]γαλ\\w*|αγκ[ώω]ν\\w*|ručn\\w*|rame|ramena|ramenog|glež\\w*|lakta|lakat|skočni|subcorac\\w*|scapul\\w*|glenohumer\\w*|talocrural\\w*|talar\\w*|calcane\\w*|femoral head|femurkopf|rotatoren\\w*|labrum|labral|субкорако\\w*|инфраспин\\w*|лопат\\w*|радиус\\w*|улна\\w*|ταρσ\\w*|ωλέν\\w*|олекран\\w*)\\b|ayak bile|\\b[ώω]μο\\w*\\b|\\bισχ[ίι]ο\\w*\\b",
+  "matching_reports": 7,
+  "confirmed_non_knee_count": 1,
+  "ambiguous_source_wording_count": 1,
+  "rejected_history_or_indication_count": 5,
+  "candidates": [
+    {
+      "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.52010826440192227660457107121818389761",
+      "report_hash": "320650a24b78193b8e82c1cd81e53fec5e7bd9942570c55a3cc2563ad41f9923",
+      "prepared_language_hint": "bg",
+      "candidate_status": "CONFIRMED_NON_KNEE_SHOULDER",
+      "reason": "Findings and conclusion describe subscapularis, humerus, subcoracoid bursa, supraspinatus and glenoid labrum; these direct anatomic terms identify a shoulder examination.",
+      "evidence": [
+        {
+          "text": "сухожилието на м. субскапуларис",
+          "char_start": 40,
+          "char_end": 71
+        },
+        {
+          "text": "към хумеруса",
+          "char_start": 177,
+          "char_end": 189
+        },
+        {
+          "text": "субкоракоидната бурса",
+          "char_start": 258,
+          "char_end": 279
+        },
+        {
+          "text": "Лабрум гленоидале е интактен.",
+          "char_start": 452,
+          "char_end": 481
+        }
+      ],
+      "action": "REVIEW_ONLY_NO_SOURCE_OR_LABEL_CHANGE"
+    }
+  ],
+  "ambiguous_source_wording": [
+    {
+      "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.81495303185504163367736663647489556517",
+      "report_hash": "3cdb66d69e3bba1fcf2f6f897fa8319ed4e7c6348d70b3c4ecc9bc68893b67be",
+      "prepared_language_hint": "en",
+      "candidate_status": "KNEE_REPORT_WITH_INCONSISTENT_SHOULDER_WORDING",
+      "reason": "Exam title, technique and detailed findings identify the knee. Conclusion says prior shoulder injury while discussing femoral condyles. This is a probable transcription/template error, not sufficient evidence to classify the entire exam as OTHER.",
+      "evidence": [
+        {
+          "text": "LEFT KNEE MRI",
+          "char_start": 0,
+          "char_end": 13
+        },
+        {
+          "text": "imaging was acquired through the knee.",
+          "char_start": 179,
+          "char_end": 217
+        },
+        {
+          "text": "These may represent sequela of prior shoulder injury",
+          "char_start": 1341,
+          "char_end": 1393
+        }
+      ],
+      "action": "REVIEW_ONLY_NO_SOURCE_OR_LABEL_CHANGE"
+    }
+  ],
+  "excluded_history_or_indication_hits": [
+    {
+      "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.12189863023888657759738596583562992408",
+      "report_hash": "240707f2210e7abfa91db54e04620e67c2b6f09eff20d9425fd783c113053226",
+      "prepared_language_hint": "en",
+      "candidate_status": "NOT_NON_KNEE_INDICATION_OR_HISTORY_ONLY",
+      "reason": "Non-knee term appears in indication/history; exam technique and current findings are knee. Excluded from non-knee candidates.",
+      "evidence": [
+        {
+          "text": "Left knee pain since getting left total hip arthroplasty.",
+          "char_start": 83,
+          "char_end": 140
+        }
+      ],
+      "action": "REVIEW_ONLY_NO_SOURCE_OR_LABEL_CHANGE"
+    },
+    {
+      "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.13207489724395276840990928372610055495",
+      "report_hash": "cab5d91f53950b4ab5b2dbc0d451e515aef75a48f8f743f0d0fc3b2c47a0340c",
+      "prepared_language_hint": "en",
+      "candidate_status": "NOT_NON_KNEE_INDICATION_OR_HISTORY_ONLY",
+      "reason": "Non-knee term appears in indication/history; exam technique and current findings are knee. Excluded from non-knee candidates.",
+      "evidence": [
+        {
+          "text": "The hip mostly is fixed, but the knee got worse and worse.",
+          "char_start": 188,
+          "char_end": 246
+        }
+      ],
+      "action": "REVIEW_ONLY_NO_SOURCE_OR_LABEL_CHANGE"
+    },
+    {
+      "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.36924091633099385100942228071545017565",
+      "report_hash": "2ab23b248ae3f1fa97b47b684e0b8e644ae22aa0f580ca077ea9d1cfb39c0609",
+      "prepared_language_hint": "en",
+      "candidate_status": "NOT_NON_KNEE_INDICATION_OR_HISTORY_ONLY",
+      "reason": "Non-knee term appears in indication/history; exam technique and current findings are knee. Excluded from non-knee candidates.",
+      "evidence": [
+        {
+          "text": "Recent total hip arthroplasty. Right knee pain.",
+          "char_start": 66,
+          "char_end": 113
+        }
+      ],
+      "action": "REVIEW_ONLY_NO_SOURCE_OR_LABEL_CHANGE"
+    },
+    {
+      "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.87680825247567493080163504511649789348",
+      "report_hash": "96334492b1ef5f12907709b8d0ccd277443101022462a850d28de3233ca137a8",
+      "prepared_language_hint": "es",
+      "candidate_status": "NOT_NON_KNEE_INDICATION_OR_HISTORY_ONLY",
+      "reason": "Non-knee term appears in indication/history; exam technique and current findings are knee. Excluded from non-knee candidates.",
+      "evidence": [
+        {
+          "text": "Contusión cadera, esguince medial de rodilla izquierda.",
+          "char_start": 23,
+          "char_end": 78
+        }
+      ],
+      "action": "REVIEW_ONLY_NO_SOURCE_OR_LABEL_CHANGE"
+    },
+    {
+      "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.97353980946516912216109392482235435606",
+      "report_hash": "8a181b43d74e8d6f9b550656927bb1889ec0062db87e0cb18797ebc27863e1c8",
+      "prepared_language_hint": "en",
+      "candidate_status": "NOT_NON_KNEE_INDICATION_OR_HISTORY_ONLY",
+      "reason": "Non-knee term appears in indication/history; exam technique and current findings are knee. Excluded from non-knee candidates.",
+      "evidence": [
+        {
+          "text": "please assess for meniscal tear and/or left hip labral tear.",
+          "char_start": 81,
+          "char_end": 141
+        },
+        {
+          "text": "imaging was performed through the knee",
+          "char_start": 275,
+          "char_end": 313
+        }
+      ],
+      "action": "REVIEW_ONLY_NO_SOURCE_OR_LABEL_CHANGE"
+    }
+  ],
+  "limitations": "Lexical screen is not exhaustive multilingual anatomy validation. Absence of a trigger is not proof of a knee exam. No gold values, images, extraction API or CLI were used. No labels were generated or modified."
+}

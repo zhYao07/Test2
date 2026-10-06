@@ -1,0 +1,23 @@
+{
+  "created_at": "2026-10-05T05:50:02.786378+00:00",
+  "scope": "pilot",
+  "run_fingerprint": "9342b834671ceedf3b2437abc946025af72a67373a89cc4899fd641c0517f4b5",
+  "config": {
+    "backend": "codex_cli",
+    "model": "gpt-6.1-sol",
+    "model_version": "gpt-6.1-sol; codex-cli 0.160.0; provider snapshot not exposed",
+    "codex_executable": "C:/Users/86188/AppData/Local/OpenAI/Codex/bin/8aaf1547b825b104/codex.exe",
+    "context_window_tokens": 1050000,
+    "max_input_chars": 24000,
+    "max_output_tokens": 10000,
+    "reasoning_effort": "medium",
+    "timeout_seconds": 900,
+    "workers": 3,
+    "allow_agent_execution": true
+  },
+  "expected_studies": 180,
+  "status": "STOPPED_BY_USER_SCOPE_CORRECTION",
+  "updated_at": "2026-10-05T07:03:18.204871+00:00",
+  "completed_reports": 109,
+  "full_started": false
+}

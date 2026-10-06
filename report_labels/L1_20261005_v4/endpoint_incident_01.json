@@ -1,0 +1,27 @@
+{
+  "run_record": {
+    "created_at": "2026-10-05T05:04:30.448765+00:00",
+    "scope": "pilot",
+    "run_fingerprint": "77b8d605567b80317d480f9b14bb27a1a5e2f5967e2a43b7315eac221b0b99e6",
+    "status": "BLOCKED_ENDPOINT",
+    "error": "Codex CLI exited 1; check normal user login/runtime and model access",
+    "cached_reports": 13
+  },
+  "diagnostic": {
+    "checked_at": "2026-10-05T05:07:01.882067+00:00",
+    "returncode": 0,
+    "markers": [],
+    "response_ready": true,
+    "event_types": [
+      "thread.started",
+      "item.completed",
+      "turn.started",
+      "item.completed",
+      "turn.completed"
+    ]
+  },
+  "login_status": "Logged in using ChatGPT",
+  "account_usage_allowed": true,
+  "account_weekly_used_percent_at_check": 38,
+  "action": "Resume same frozen run/cache; minimal probe recovered; failure cause not established"
+}

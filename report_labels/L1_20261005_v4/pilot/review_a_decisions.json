@@ -1,0 +1,52 @@
+{
+  "33": [
+    {
+      "notes": "前交叉韧带股骨附着处完全撕裂，当前完整断裂直接支持YES，未凭胫骨前移单独推断。"
+    },
+    {
+      "notes": "MCL仅作半月板囊分离的解剖参照，未实际评价MCL完整性或损伤，未知合理。"
+    },
+    {
+      "notes": "内侧鹦鹉嘴复杂撕裂延至后角带瓣，确定撕裂不因旁侧可能囊分离而变不确定。"
+    },
+    {
+      "notes": "外侧前角及体前部纵裂达双面，直接满足撕裂文字标准。"
+    },
+    {
+      "notes": "Generic cartilage statement; conservative UNKNOWN is faithful, critical exclusion requires MASK.",
+      "disposition": "MASK",
+      "dims": {
+        "anatomy_correct": "PASS"
+      }
+    },
+    {
+      "notes": "Generic cartilage statement; conservative UNKNOWN is faithful, critical exclusion requires MASK.",
+      "disposition": "MASK",
+      "dims": {
+        "anatomy_correct": "PASS"
+      }
+    },
+    {
+      "notes": "Generic cartilage statement; conservative UNKNOWN is faithful, critical exclusion requires MASK.",
+      "disposition": "MASK",
+      "dims": {
+        "anatomy_correct": "PASS"
+      }
+    },
+    {
+      "notes": "髌上隐窝外侧积液未定量且无扩张，未强行中大量YES。"
+    },
+    {
+      "notes": "未提及滑膜炎，维持未知而不从积液推断。"
+    },
+    {
+      "notes": "未提及典型腘窝囊肿，保留未知。"
+    },
+    {
+      "notes": "内侧股骨髁与外侧胫骨平台骨水肿但创伤归因和局部无骨折线均未明确，不凭ACL断裂推成挫伤。"
+    },
+    {
+      "notes": "未提及骨折线或骨折诊断，保留未知。"
+    }
+  ]
+}

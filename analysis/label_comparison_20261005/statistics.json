@@ -1,0 +1,2750 @@
+{
+  "overview": {
+    "total": 4407,
+    "weak": 4349,
+    "gold": 58,
+    "all_uid_sets_equal": true,
+    "new_gold_equals_official": true,
+    "old_gold_different_cells": 696,
+    "old_gold_threshold_disagreements": 106,
+    "comparable_cells": 52160,
+    "flip_cells": 6352,
+    "flip_cell_pct": 12.177914110429448,
+    "studies_with_flip": 3138,
+    "old_positive_per_study": 3.2218900896757874,
+    "new_positive_per_study": 2.238215681765923,
+    "old_weight_sum": 40795.905,
+    "new_weight_sum": 39226.68000000001,
+    "old_missing": 0,
+    "new_missing": 0,
+    "old_neutral": 28,
+    "new_neutral": 0
+  },
+  "per_class": [
+    {
+      "label": "ACL",
+      "old": {
+        "mean": 0.23236606116348585,
+        "positive": 889,
+        "positive_pct": 20.44148080018395,
+        "negative": 3456,
+        "missing": 0,
+        "neutral": 4,
+        "uncertain_pct": 3.702000459875834,
+        "confidence_mean": 0.8711427914463095,
+        "weight_sum": 3788.6,
+        "positive_weight": 730.3599999999999,
+        "negative_weight": 3058.24,
+        "weighted_soft_positive": 0.21384238900913263,
+        "pos_weight": 4.187304973602295,
+        "quantiles": [
+          0.01,
+          0.015,
+          0.02,
+          0.025,
+          0.25,
+          0.97,
+          1.0
+        ],
+        "common_values": [
+          [
+            0.025,
+            1720
+          ],
+          [
+            0.015,
+            948
+          ],
+          [
+            0.25,
+            359
+          ],
+          [
+            0.995,
+            247
+          ],
+          [
+            0.01,
+            136
+          ],
+          [
+            0.05,
+            82
+          ]
+        ]
+      },
+      "new": {
+        "mean": 0.19355024143481261,
+        "positive": 565,
+        "positive_pct": 12.991492297079787,
+        "negative": 3784,
+        "missing": 0,
+        "neutral": 0,
+        "uncertain_pct": 0.0,
+        "confidence_mean": 0.8246723384686134,
+        "weight_sum": 3586.5,
+        "positive_weight": 460.5,
+        "negative_weight": 3126.0,
+        "weighted_soft_positive": 0.184930991217064,
+        "pos_weight": 6.78827428817749,
+        "quantiles": [
+          0.05,
+          0.05,
+          0.05,
+          0.05,
+          0.2,
+          0.8,
+          0.95
+        ],
+        "common_values": [
+          [
+            0.05,
+            2852
+          ],
+          [
+            0.2,
+            932
+          ],
+          [
+            0.95,
+            405
+          ],
+          [
+            0.8,
+            160
+          ]
+        ]
+      },
+      "gold_positive": 24,
+      "gold_positive_pct": 41.37931034482759,
+      "comparable": 4345,
+      "old_negative_new_positive": 15,
+      "old_positive_new_negative": 340,
+      "flip_pct": 8.170310701956272,
+      "old_high_new_low": 199,
+      "mean_abs_difference": 0.09564037709818347
+    },
+    {
+      "label": "MCL",
+      "old": {
+        "mean": 0.1788020234536675,
+        "positive": 658,
+        "positive_pct": 15.129914922970796,
+        "negative": 3688,
+        "missing": 0,
+        "neutral": 3,
+        "uncertain_pct": 1.9314785008047828,
+        "confidence_mean": 0.8732030351805012,
+        "weight_sum": 3797.56,
+        "positive_weight": 501.89,
+        "negative_weight": 3295.67,
+        "weighted_soft_positive": 0.1533194143081347,
+        "pos_weight": 6.566518306732178,
+        "quantiles": [
+          0.01,
+          0.015,
+          0.015,
+          0.025,
+          0.25,
+          0.91,
+          0.995
+        ],
+        "common_values": [
+          [
+            0.025,
+            1931
+          ],
+          [
+            0.015,
+            1074
+          ],
+          [
+            0.25,
+            439
+          ],
+          [
+            0.91,
+            202
+          ],
+          [
+            0.01,
+            136
+          ],
+          [
+            0.97,
+            54
+          ]
+        ]
+      },
+      "new": {
+        "mean": 0.11752126925730054,
+        "positive": 214,
+        "positive_pct": 4.920671418716947,
+        "negative": 4135,
+        "missing": 0,
+        "neutral": 0,
+        "uncertain_pct": 0.0,
+        "confidence_mean": 0.8304897677627041,
+        "weight_sum": 3611.8,
+        "positive_weight": 142.49999999999994,
+        "negative_weight": 3469.3,
+        "weighted_soft_positive": 0.10361038817210255,
+        "pos_weight": 10.0,
+        "quantiles": [
+          0.05,
+          0.05,
+          0.05,
+          0.05,
+          0.15,
+          0.2,
+          0.95
+        ],
+        "common_values": [
+          [
+            0.05,
+            3136
+          ],
+          [
+            0.2,
+            524
+          ],
+          [
+            0.15,
+            475
+          ],
+          [
+            0.8,
+            167
+          ],
+          [
+            0.95,
+            47
+          ]
+        ]
+      },
+      "gold_positive": 9,
+      "gold_positive_pct": 15.517241379310345,
+      "comparable": 4346,
+      "old_negative_new_positive": 6,
+      "old_positive_new_negative": 450,
+      "flip_pct": 10.492406810860562,
+      "old_high_new_low": 323,
+      "mean_abs_difference": 0.11430673718096113
+    },
+    {
+      "label": "Medial Meniscus",
+      "old": {
+        "mean": 0.45971717636238213,
+        "positive": 1755,
+        "positive_pct": 40.35410439181421,
+        "negative": 2592,
+        "missing": 0,
+        "neutral": 2,
+        "uncertain_pct": 14.256150839273396,
+        "confidence_mean": 0.8005794435502414,
+        "weight_sum": 3481.72,
+        "positive_weight": 1565.6699999999998,
+        "negative_weight": 1916.0500000000002,
+        "weighted_soft_positive": 0.46541339481635513,
+        "pos_weight": 1.2237892150878906,
+        "quantiles": [
+          0.01,
+          0.015,
+          0.025,
+          0.4,
+          0.97,
+          0.98,
+          0.995
+        ],
+        "common_values": [
+          [
+            0.025,
+            995
+          ],
+          [
+            0.015,
+            502
+          ],
+          [
+            0.97,
+            374
+          ],
+          [
+            0.975,
+            285
+          ],
+          [
+            0.41,
+            256
+          ],
+          [
+            0.25,
+            241
+          ]
+        ]
+      },
+      "new": {
+        "mean": 0.4240744998850311,
+        "positive": 1661,
+        "positive_pct": 38.19268797424695,
+        "negative": 2688,
+        "missing": 0,
+        "neutral": 0,
+        "uncertain_pct": 14.164175672568408,
+        "confidence_mean": 0.7005288572085537,
+        "weight_sum": 3046.6000000000004,
+        "positive_weight": 1193.1,
+        "negative_weight": 1853.5000000000002,
+        "weighted_soft_positive": 0.38800301975973206,
+        "pos_weight": 1.553515911102295,
+        "quantiles": [
+          0.05,
+          0.05,
+          0.05,
+          0.45,
+          0.8,
+          0.95,
+          0.95
+        ],
+        "common_values": [
+          [
+            0.05,
+            1829
+          ],
+          [
+            0.8,
+            1006
+          ],
+          [
+            0.95,
+            655
+          ],
+          [
+            0.45,
+            616
+          ],
+          [
+            0.2,
+            243
+          ]
+        ]
+      },
+      "gold_positive": 26,
+      "gold_positive_pct": 44.827586206896555,
+      "comparable": 4347,
+      "old_negative_new_positive": 86,
+      "old_positive_new_negative": 182,
+      "flip_pct": 6.165171382562687,
+      "old_high_new_low": 19,
+      "mean_abs_difference": 0.11006553230627728
+    },
+    {
+      "label": "Lateral Meniscus",
+      "old": {
+        "mean": 0.2236583122556909,
+        "positive": 673,
+        "positive_pct": 15.47482179811451,
+        "negative": 3675,
+        "missing": 0,
+        "neutral": 1,
+        "uncertain_pct": 10.738100712807542,
+        "confidence_mean": 0.8151896987813291,
+        "weight_sum": 3545.26,
+        "positive_weight": 570.8199999999999,
+        "negative_weight": 2974.44,
+        "weighted_soft_positive": 0.1944148525072914,
+        "pos_weight": 5.210818767547607,
+        "quantiles": [
+          0.01,
+          0.015,
+          0.025,
+          0.025,
+          0.39,
+          0.96,
+          0.995
+        ],
+        "common_values": [
+          [
+            0.025,
+            1630
+          ],
+          [
+            0.015,
+            888
+          ],
+          [
+            0.25,
+            434
+          ],
+          [
+            0.41,
+            207
+          ],
+          [
+            0.01,
+            152
+          ],
+          [
+            0.97,
+            126
+          ]
+        ]
+      },
+      "new": {
+        "mean": 0.21484249252701773,
+        "positive": 585,
+        "positive_pct": 13.451368130604738,
+        "negative": 3764,
+        "missing": 0,
+        "neutral": 0,
+        "uncertain_pct": 10.462175212692573,
+        "confidence_mean": 0.7604276845251783,
+        "weight_sum": 3307.1000000000004,
+        "positive_weight": 413.4,
+        "negative_weight": 2893.7000000000007,
+        "weighted_soft_positive": 0.1695307066614254,
+        "pos_weight": 6.999758720397949,
+        "quantiles": [
+          0.05,
+          0.05,
+          0.05,
+          0.05,
+          0.2,
+          0.8,
+          0.95
+        ],
+        "common_values": [
+          [
+            0.05,
+            2876
+          ],
+          [
+            0.45,
+            455
+          ],
+          [
+            0.2,
+            433
+          ],
+          [
+            0.8,
+            377
+          ],
+          [
+            0.95,
+            208
+          ]
+        ]
+      },
+      "gold_positive": 23,
+      "gold_positive_pct": 39.6551724137931,
+      "comparable": 4348,
+      "old_negative_new_positive": 42,
+      "old_positive_new_negative": 130,
+      "flip_pct": 3.9558417663293466,
+      "old_high_new_low": 17,
+      "mean_abs_difference": 0.07913658312255693
+    },
+    {
+      "label": "Medial OA",
+      "old": {
+        "mean": 0.40701310646125544,
+        "positive": 1618,
+        "positive_pct": 37.203954932168315,
+        "negative": 2727,
+        "missing": 0,
+        "neutral": 4,
+        "uncertain_pct": 1.9544722924810303,
+        "confidence_mean": 0.8144814899977005,
+        "weight_sum": 3542.18,
+        "positive_weight": 1366.6899999999998,
+        "negative_weight": 2175.49,
+        "weighted_soft_positive": 0.40477050149907684,
+        "pos_weight": 1.5917948484420776,
+        "quantiles": [
+          0.01,
+          0.015,
+          0.025,
+          0.25,
+          0.91,
+          0.975,
+          1.0
+        ],
+        "common_values": [
+          [
+            0.025,
+            1114
+          ],
+          [
+            0.25,
+            867
+          ],
+          [
+            0.015,
+            543
+          ],
+          [
+            0.91,
+            208
+          ],
+          [
+            0.97,
+            160
+          ],
+          [
+            0.99,
+            118
+          ]
+        ]
+      },
+      "new": {
+        "mean": 0.27553920441480806,
+        "positive": 1072,
+        "positive_pct": 24.649344676937226,
+        "negative": 3277,
+        "missing": 0,
+        "neutral": 0,
+        "uncertain_pct": 0.0,
+        "confidence_mean": 0.8153506553230628,
+        "weight_sum": 3545.9600000000005,
+        "positive_weight": 796.8,
+        "negative_weight": 2749.16,
+        "weighted_soft_positive": 0.2563422035217543,
+        "pos_weight": 3.450251579284668,
+        "quantiles": [
+          0.05,
+          0.05,
+          0.05,
+          0.07,
+          0.2,
+          0.95,
+          0.95
+        ],
+        "common_values": [
+          [
+            0.05,
+            1790
+          ],
+          [
+            0.07,
+            946
+          ],
+          [
+            0.8,
+            560
+          ],
+          [
+            0.2,
+            541
+          ],
+          [
+            0.95,
+            512
+          ]
+        ]
+      },
+      "gold_positive": 15,
+      "gold_positive_pct": 25.862068965517242,
+      "comparable": 4345,
+      "old_negative_new_positive": 18,
+      "old_positive_new_negative": 564,
+      "flip_pct": 13.394706559263522,
+      "old_high_new_low": 423,
+      "mean_abs_difference": 0.16494136583122554
+    },
+    {
+      "label": "Lateral OA",
+      "old": {
+        "mean": 0.3256403770981835,
+        "positive": 1183,
+        "positive_pct": 27.20165555300069,
+        "negative": 3159,
+        "missing": 0,
+        "neutral": 7,
+        "uncertain_pct": 3.656012876523339,
+        "confidence_mean": 0.7830213842262589,
+        "weight_sum": 3405.36,
+        "positive_weight": 944.3899999999999,
+        "negative_weight": 2460.9700000000003,
+        "weighted_soft_positive": 0.30974190687621866,
+        "pos_weight": 2.6058833599090576,
+        "quantiles": [
+          0.01,
+          0.015,
+          0.025,
+          0.25,
+          0.71,
+          0.95,
+          0.995
+        ],
+        "common_values": [
+          [
+            0.025,
+            1235
+          ],
+          [
+            0.25,
+            1056
+          ],
+          [
+            0.015,
+            603
+          ],
+          [
+            0.91,
+            172
+          ],
+          [
+            0.97,
+            116
+          ],
+          [
+            0.01,
+            105
+          ]
+        ]
+      },
+      "new": {
+        "mean": 0.19742009657392506,
+        "positive": 649,
+        "positive_pct": 14.922970797884572,
+        "negative": 3700,
+        "missing": 0,
+        "neutral": 0,
+        "uncertain_pct": 0.0,
+        "confidence_mean": 0.8214853989422857,
+        "weight_sum": 3572.6400000000003,
+        "positive_weight": 470.40000000000003,
+        "negative_weight": 3102.2400000000007,
+        "weighted_soft_positive": 0.18044840790004027,
+        "pos_weight": 6.594898223876953,
+        "quantiles": [
+          0.05,
+          0.05,
+          0.05,
+          0.08,
+          0.2,
+          0.8,
+          0.95
+        ],
+        "common_values": [
+          [
+            0.05,
+            2000
+          ],
+          [
+            0.08,
+            1176
+          ],
+          [
+            0.2,
+            524
+          ],
+          [
+            0.8,
+            379
+          ],
+          [
+            0.95,
+            270
+          ]
+        ]
+      },
+      "gold_positive": 11,
+      "gold_positive_pct": 18.96551724137931,
+      "comparable": 4342,
+      "old_negative_new_positive": 18,
+      "old_positive_new_negative": 552,
+      "flip_pct": 13.12759097190235,
+      "old_high_new_low": 386,
+      "mean_abs_difference": 0.16517360312715562
+    },
+    {
+      "label": "PF OA",
+      "old": {
+        "mean": 0.4835191998160496,
+        "positive": 1993,
+        "positive_pct": 45.8266268107611,
+        "negative": 2352,
+        "missing": 0,
+        "neutral": 4,
+        "uncertain_pct": 1.6095654173373188,
+        "confidence_mean": 0.8325799034260748,
+        "weight_sum": 3620.8899999999994,
+        "positive_weight": 1738.77,
+        "negative_weight": 1882.12,
+        "weighted_soft_positive": 0.4903204115562749,
+        "pos_weight": 1.082443356513977,
+        "quantiles": [
+          0.01,
+          0.015,
+          0.025,
+          0.25,
+          0.95,
+          0.98,
+          0.995
+        ],
+        "common_values": [
+          [
+            0.025,
+            967
+          ],
+          [
+            0.25,
+            744
+          ],
+          [
+            0.015,
+            466
+          ],
+          [
+            0.99,
+            226
+          ],
+          [
+            0.97,
+            209
+          ],
+          [
+            0.91,
+            204
+          ]
+        ]
+      },
+      "new": {
+        "mean": 0.35626580823177745,
+        "positive": 1459,
+        "positive_pct": 33.547942055644974,
+        "negative": 2890,
+        "missing": 0,
+        "neutral": 0,
+        "uncertain_pct": 0.0,
+        "confidence_mean": 0.7983444469993102,
+        "weight_sum": 3472.0,
+        "positive_weight": 1110.9,
+        "negative_weight": 2361.1000000000004,
+        "weighted_soft_positive": 0.34352534562211984,
+        "pos_weight": 2.125393867492676,
+        "quantiles": [
+          0.05,
+          0.05,
+          0.05,
+          0.1,
+          0.8,
+          0.95,
+          0.95
+        ],
+        "common_values": [
+          [
+            0.05,
+            1557
+          ],
+          [
+            0.1,
+            800
+          ],
+          [
+            0.95,
+            785
+          ],
+          [
+            0.8,
+            674
+          ],
+          [
+            0.2,
+            533
+          ]
+        ]
+      },
+      "gold_positive": 21,
+      "gold_positive_pct": 36.206896551724135,
+      "comparable": 4345,
+      "old_negative_new_positive": 29,
+      "old_positive_new_negative": 563,
+      "flip_pct": 13.624856156501727,
+      "old_high_new_low": 467,
+      "mean_abs_difference": 0.16283973327201653
+    },
+    {
+      "label": "Effusion",
+      "old": {
+        "mean": 0.5838962979995401,
+        "positive": 2585,
+        "positive_pct": 59.438951483099565,
+        "negative": 1764,
+        "missing": 0,
+        "neutral": 0,
+        "uncertain_pct": 1.1726833754886181,
+        "confidence_mean": 0.8412945504713727,
+        "weight_sum": 3658.79,
+        "positive_weight": 2194.26,
+        "negative_weight": 1464.5300000000002,
+        "weighted_soft_positive": 0.5811870112796852,
+        "pos_weight": 1.0,
+        "quantiles": [
+          0.005,
+          0.015,
+          0.025,
+          0.9,
+          0.94,
+          0.97,
+          0.995
+        ],
+        "common_values": [
+          [
+            0.025,
+            707
+          ],
+          [
+            0.91,
+            668
+          ],
+          [
+            0.25,
+            426
+          ],
+          [
+            0.89,
+            303
+          ],
+          [
+            0.9,
+            276
+          ],
+          [
+            0.95,
+            272
+          ]
+        ]
+      },
+      "new": {
+        "mean": 0.32524718326051966,
+        "positive": 1112,
+        "positive_pct": 25.569096343987123,
+        "negative": 3237,
+        "missing": 0,
+        "neutral": 0,
+        "uncertain_pct": 0.0,
+        "confidence_mean": 0.7249482639687285,
+        "weight_sum": 3152.8,
+        "positive_weight": 816.4000000000001,
+        "negative_weight": 2336.4,
+        "weighted_soft_positive": 0.3174733570159857,
+        "pos_weight": 2.8618321418762207,
+        "quantiles": [
+          0.05,
+          0.05,
+          0.05,
+          0.2,
+          0.85,
+          0.85,
+          0.95
+        ],
+        "common_values": [
+          [
+            0.2,
+            1923
+          ],
+          [
+            0.05,
+            1314
+          ],
+          [
+            0.85,
+            922
+          ],
+          [
+            0.95,
+            190
+          ]
+        ]
+      },
+      "gold_positive": 35,
+      "gold_positive_pct": 60.3448275862069,
+      "comparable": 4349,
+      "old_negative_new_positive": 4,
+      "old_positive_new_negative": 1477,
+      "flip_pct": 34.05380547252242,
+      "old_high_new_low": 1420,
+      "mean_abs_difference": 0.28582777650034485
+    },
+    {
+      "label": "Synovitis",
+      "old": {
+        "mean": 0.33864968958381236,
+        "positive": 543,
+        "positive_pct": 12.485628880202345,
+        "negative": 3806,
+        "missing": 0,
+        "neutral": 0,
+        "uncertain_pct": 14.876983214532077,
+        "confidence_mean": 0.5435490917452289,
+        "weight_sum": 2363.8950000000004,
+        "positive_weight": 480.2349999999999,
+        "negative_weight": 1883.66,
+        "weighted_soft_positive": 0.3604800974662579,
+        "pos_weight": 3.9223713874816895,
+        "quantiles": [
+          0.01,
+          0.1325,
+          0.1375,
+          0.325,
+          0.35,
+          0.91,
+          0.995
+        ],
+        "common_values": [
+          [
+            0.1375,
+            644
+          ],
+          [
+            0.3299999999999999,
+            598
+          ],
+          [
+            0.25,
+            416
+          ],
+          [
+            0.32,
+            310
+          ],
+          [
+            0.325,
+            255
+          ],
+          [
+            0.1325,
+            211
+          ]
+        ]
+      },
+      "new": {
+        "mean": 0.44869855139112436,
+        "positive": 1065,
+        "positive_pct": 24.488388135203497,
+        "negative": 3284,
+        "missing": 0,
+        "neutral": 0,
+        "uncertain_pct": 69.4412508622672,
+        "confidence_mean": 0.37801333639917223,
+        "weight_sum": 1643.98,
+        "positive_weight": 598.88,
+        "negative_weight": 1045.1,
+        "weighted_soft_positive": 0.4947791335661018,
+        "pos_weight": 1.7450907230377197,
+        "quantiles": [
+          0.05,
+          0.35,
+          0.35,
+          0.35,
+          0.35,
+          0.8,
+          0.95
+        ],
+        "common_values": [
+          [
+            0.35,
+            3020
+          ],
+          [
+            0.76,
+            608
+          ],
+          [
+            0.8,
+            322
+          ],
+          [
+            0.3,
+            197
+          ],
+          [
+            0.8200000000000001,
+            123
+          ],
+          [
+            0.05,
+            67
+          ]
+        ]
+      },
+      "gold_positive": 27,
+      "gold_positive_pct": 46.55172413793103,
+      "comparable": 4349,
+      "old_negative_new_positive": 628,
+      "old_positive_new_negative": 106,
+      "flip_pct": 16.877443090365603,
+      "old_high_new_low": 0,
+      "mean_abs_difference": 0.1755570246033571
+    },
+    {
+      "label": "Baker's",
+      "old": {
+        "mean": 0.3572372959300989,
+        "positive": 1074,
+        "positive_pct": 24.69533226028972,
+        "negative": 3275,
+        "missing": 0,
+        "neutral": 0,
+        "uncertain_pct": 0.27592550011496897,
+        "confidence_mean": 0.7140836974017015,
+        "weight_sum": 3105.5499999999997,
+        "positive_weight": 931.9000000000001,
+        "negative_weight": 2173.6499999999996,
+        "weighted_soft_positive": 0.37357482571525175,
+        "pos_weight": 2.3324925899505615,
+        "quantiles": [
+          0.01,
+          0.015,
+          0.025,
+          0.25,
+          0.25,
+          0.95,
+          0.995
+        ],
+        "common_values": [
+          [
+            0.25,
+            2094
+          ],
+          [
+            0.025,
+            643
+          ],
+          [
+            0.015,
+            257
+          ],
+          [
+            0.01,
+            244
+          ],
+          [
+            0.91,
+            239
+          ],
+          [
+            0.89,
+            105
+          ]
+        ]
+      },
+      "new": {
+        "mean": 0.17005058634168774,
+        "positive": 532,
+        "positive_pct": 12.232697171763624,
+        "negative": 3817,
+        "missing": 0,
+        "neutral": 0,
+        "uncertain_pct": 0.0,
+        "confidence_mean": 0.8456886640607038,
+        "weight_sum": 3677.9000000000005,
+        "positive_weight": 404.0,
+        "negative_weight": 3273.9000000000005,
+        "weighted_soft_positive": 0.15490769188939335,
+        "pos_weight": 8.103713035583496,
+        "quantiles": [
+          0.05,
+          0.05,
+          0.05,
+          0.05,
+          0.05,
+          0.85,
+          0.95
+        ],
+        "common_values": [
+          [
+            0.05,
+            3279
+          ],
+          [
+            0.2,
+            538
+          ],
+          [
+            0.85,
+            374
+          ],
+          [
+            0.95,
+            158
+          ]
+        ]
+      },
+      "gold_positive": 12,
+      "gold_positive_pct": 20.689655172413794,
+      "comparable": 4349,
+      "old_negative_new_positive": 2,
+      "old_positive_new_negative": 544,
+      "flip_pct": 12.554610255231088,
+      "old_high_new_low": 529,
+      "mean_abs_difference": 0.20419521729133133
+    },
+    {
+      "label": "Contusion",
+      "old": {
+        "mean": 0.25985743849160725,
+        "positive": 744,
+        "positive_pct": 17.107381007128076,
+        "negative": 3603,
+        "missing": 0,
+        "neutral": 2,
+        "uncertain_pct": 10.094274545872613,
+        "confidence_mean": 0.7445527707518969,
+        "weight_sum": 3238.0599999999995,
+        "positive_weight": 574.6499999999999,
+        "negative_weight": 2663.41,
+        "weighted_soft_positive": 0.22486900335386004,
+        "pos_weight": 4.634838104248047,
+        "quantiles": [
+          0.01,
+          0.015,
+          0.025,
+          0.05,
+          0.41,
+          0.925,
+          0.995
+        ],
+        "common_values": [
+          [
+            0.025,
+            1329
+          ],
+          [
+            0.25,
+            1016
+          ],
+          [
+            0.015,
+            558
+          ],
+          [
+            0.01,
+            187
+          ],
+          [
+            0.97,
+            88
+          ],
+          [
+            0.05,
+            80
+          ]
+        ]
+      },
+      "new": {
+        "mean": 0.24410209243504252,
+        "positive": 661,
+        "positive_pct": 15.19889629799954,
+        "negative": 3688,
+        "missing": 0,
+        "neutral": 0,
+        "uncertain_pct": 12.140722005058633,
+        "confidence_mean": 0.7016325592090137,
+        "weight_sum": 3051.4000000000005,
+        "positive_weight": 412.8,
+        "negative_weight": 2638.6,
+        "weighted_soft_positive": 0.1903880186144065,
+        "pos_weight": 6.3919572830200195,
+        "quantiles": [
+          0.05,
+          0.05,
+          0.05,
+          0.15,
+          0.45,
+          0.8,
+          0.95
+        ],
+        "common_values": [
+          [
+            0.05,
+            1869
+          ],
+          [
+            0.15,
+            1291
+          ],
+          [
+            0.8,
+            607
+          ],
+          [
+            0.45,
+            528
+          ],
+          [
+            0.95,
+            54
+          ]
+        ]
+      },
+      "gold_positive": 19,
+      "gold_positive_pct": 32.758620689655174,
+      "comparable": 4347,
+      "old_negative_new_positive": 186,
+      "old_positive_new_negative": 270,
+      "flip_pct": 10.48999309868875,
+      "old_high_new_low": 67,
+      "mean_abs_difference": 0.1353828466314095
+    },
+    {
+      "label": "Fracture",
+      "old": {
+        "mean": 0.18205334559668887,
+        "positive": 297,
+        "positive_pct": 6.829156127845481,
+        "negative": 4051,
+        "missing": 0,
+        "neutral": 1,
+        "uncertain_pct": 1.057714417107381,
+        "confidence_mean": 0.7468475511611865,
+        "weight_sum": 3248.04,
+        "positive_weight": 241.26999999999987,
+        "negative_weight": 3006.7699999999995,
+        "weighted_soft_positive": 0.15636462297262343,
+        "pos_weight": 10.0,
+        "quantiles": [
+          0.005,
+          0.015,
+          0.025,
+          0.25,
+          0.25,
+          0.25,
+          0.995
+        ],
+        "common_values": [
+          [
+            0.25,
+            1857
+          ],
+          [
+            0.025,
+            1487
+          ],
+          [
+            0.015,
+            410
+          ],
+          [
+            0.01,
+            215
+          ],
+          [
+            0.97,
+            44
+          ],
+          [
+            0.975,
+            42
+          ]
+        ]
+      },
+      "new": {
+        "mean": 0.11487698321453209,
+        "positive": 159,
+        "positive_pct": 3.656012876523339,
+        "negative": 4190,
+        "missing": 0,
+        "neutral": 0,
+        "uncertain_pct": 3.1501494596458954,
+        "confidence_mean": 0.8181191078408829,
+        "weight_sum": 3558.0,
+        "positive_weight": 104.10000000000001,
+        "negative_weight": 3453.9000000000005,
+        "weighted_soft_positive": 0.10291736930860035,
+        "pos_weight": 10.0,
+        "quantiles": [
+          0.05,
+          0.05,
+          0.05,
+          0.1,
+          0.1,
+          0.1,
+          0.95
+        ],
+        "common_values": [
+          [
+            0.1,
+            2349
+          ],
+          [
+            0.05,
+            1704
+          ],
+          [
+            0.35,
+            137
+          ],
+          [
+            0.8,
+            130
+          ],
+          [
+            0.95,
+            29
+          ]
+        ]
+      },
+      "gold_positive": 18,
+      "gold_positive_pct": 31.03448275862069,
+      "comparable": 4348,
+      "old_negative_new_positive": 1,
+      "old_positive_new_negative": 139,
+      "flip_pct": 3.219871205151794,
+      "old_high_new_low": 6,
+      "mean_abs_difference": 0.11520809381467004
+    }
+  ],
+  "checkpoint_arg_differences": {
+    "labels_csv": {
+      "old": {
+        "opaque_args": [
+          "/",
+          "root",
+          "RSNA",
+          "Baseline_v21",
+          "label.csv"
+        ]
+      },
+      "new": {
+        "opaque_args": [
+          "/",
+          "root",
+          "RSNA",
+          "Baseline_v21",
+          "labels_llm_soft.csv"
+        ]
+      }
+    },
+    "output_dir": {
+      "old": {
+        "opaque_args": [
+          "outputs",
+          "layer34_backbone2e-3_imsz224"
+        ]
+      },
+      "new": {
+        "opaque_args": [
+          "outputs",
+          "layer34_backbone2e-3_imsz224_llm_soft"
+        ]
+      }
+    },
+    "swa": {
+      "old": null,
+      "new": false
+    },
+    "cache_dir": {
+      "old": {
+        "opaque_args": [
+          "..",
+          "Baseline_v20",
+          "input_cache"
+        ]
+      },
+      "new": {
+        "opaque_args": [
+          "/",
+          "root",
+          "RSNA",
+          "Baseline_v21",
+          "input_cache"
+        ]
+      }
+    }
+  },
+  "checkpoints": {
+    "old": {
+      "epoch": 17,
+      "best_auc": 0.9097262041688464,
+      "args": {
+        "data_root": {
+          "opaque_args": [
+            "/",
+            "root",
+            "RSNA",
+            "rsna-knee-abnormality-detection"
+          ]
+        },
+        "labels_csv": {
+          "opaque_args": [
+            "/",
+            "root",
+            "RSNA",
+            "Baseline_v21",
+            "label.csv"
+          ]
+        },
+        "output_dir": {
+          "opaque_args": [
+            "outputs",
+            "layer34_backbone2e-3_imsz224"
+          ]
+        },
+        "epochs": 20,
+        "batch_size": 2,
+        "accum_steps": 2,
+        "num_workers": 4,
+        "train_windows": 24,
+        "span_lo": 0.02,
+        "span_hi": 0.98,
+        "cache_dir": {
+          "opaque_args": [
+            "..",
+            "Baseline_v20",
+            "input_cache"
+          ]
+        },
+        "series_quality_cache_dir": {
+          "opaque_args": [
+            "/",
+            "root",
+            "RSNA",
+            "series_quality_cache"
+          ]
+        },
+        "no_cache": false,
+        "series_quality_workers": 8,
+        "coverage_quantile": 0.2,
+        "image_size": 224,
+        "crop_mm": 140.0,
+        "radimagenet_weights": {
+          "opaque_args": [
+            "/",
+            "root",
+            "RSNA",
+            "radimagenet",
+            "ResNet50.pt"
+          ]
+        },
+        "backbone_mode": "layer3+layer4",
+        "head_lr": 0.0003,
+        "backbone_lr": 0.002,
+        "weight_decay": 0.05,
+        "warmup_ratio": 0.1,
+        "amp": "bf16",
+        "encoder_chunk_size": 24,
+        "grad_clip": 1.0,
+        "no_pos_weight": false,
+        "no_metadata": true,
+        "init_checkpoint": null,
+        "resume": null,
+        "ema_decay": 0.9995,
+        "no_ema": false,
+        "seed": 42,
+        "log_interval": 20,
+        "radimagenet_sha256": "08629f7e7bd3e29b8ee9522ca3f65ce4d010a7ddf74f0ea3c7e3f3d0bbab0734",
+        "series_selection": {
+          "version": "header_quality_v1",
+          "coverage_quantile": 0.2,
+          "coverage_thresholds": {
+            "Sagittal": 92.0003,
+            "Coronal": 90.00000000000001,
+            "Axial": 101.5
+          }
+        }
+      },
+      "validation_history": [
+        {
+          "epoch": 1,
+          "ema_updates": 272,
+          "train_loss": 0.9479442050214857,
+          "val_macro_auc": 0.8101853617044249,
+          "val_auc_by_label": {
+            "ACL": 0.7757352941176471,
+            "MCL": 0.6054421768707483,
+            "Medial Meniscus": 0.7548076923076923,
+            "Lateral Meniscus": 0.7838509316770186,
+            "Medial OA": 0.9627906976744186,
+            "Lateral OA": 0.839458413926499,
+            "PF OA": 0.767052767052767,
+            "Effusion": 0.8608695652173912,
+            "Synovitis": 0.7694145758661888,
+            "Baker's": 0.8369565217391305,
+            "Contusion": 0.8852901484480432,
+            "Fracture": 0.8805555555555555
+          }
+        },
+        {
+          "epoch": 2,
+          "ema_updates": 544,
+          "train_loss": 0.8745526460903313,
+          "val_macro_auc": 0.8378725933772491,
+          "val_auc_by_label": {
+            "ACL": 0.7977941176470589,
+            "MCL": 0.7528344671201814,
+            "Medial Meniscus": 0.8305288461538461,
+            "Lateral Meniscus": 0.8111801242236024,
+            "Medial OA": 0.9550387596899225,
+            "Lateral OA": 0.8588007736943907,
+            "PF OA": 0.7593307593307594,
+            "Effusion": 0.8720496894409938,
+            "Synovitis": 0.7275985663082437,
+            "Baker's": 0.9039855072463768,
+            "Contusion": 0.8839406207827261,
+            "Fracture": 0.9013888888888889
+          }
+        },
+        {
+          "epoch": 3,
+          "ema_updates": 816,
+          "train_loss": 0.8373218385968357,
+          "val_macro_auc": 0.8568092519385102,
+          "val_auc_by_label": {
+            "ACL": 0.8370098039215687,
+            "MCL": 0.7619047619047619,
+            "Medial Meniscus": 0.8822115384615384,
+            "Lateral Meniscus": 0.7900621118012423,
+            "Medial OA": 0.9643410852713178,
+            "Lateral OA": 0.851063829787234,
+            "PF OA": 0.7683397683397685,
+            "Effusion": 0.9167701863354036,
+            "Synovitis": 0.7407407407407408,
+            "Baker's": 0.9528985507246377,
+            "Contusion": 0.9149797570850202,
+            "Fracture": 0.9013888888888889
+          }
+        },
+        {
+          "epoch": 4,
+          "ema_updates": 1088,
+          "train_loss": 0.7949381010908195,
+          "val_macro_auc": 0.8751000430550043,
+          "val_auc_by_label": {
+            "ACL": 0.875,
+            "MCL": 0.81859410430839,
+            "Medial Meniscus": 0.8737980769230769,
+            "Lateral Meniscus": 0.8347826086956522,
+            "Medial OA": 0.9612403100775193,
+            "Lateral OA": 0.8568665377176016,
+            "PF OA": 0.7915057915057915,
+            "Effusion": 0.9304347826086956,
+            "Synovitis": 0.7359617682198327,
+            "Baker's": 0.9818840579710144,
+            "Contusion": 0.9230769230769231,
+            "Fracture": 0.9180555555555556
+          }
+        },
+        {
+          "epoch": 5,
+          "ema_updates": 1360,
+          "train_loss": 0.7583328338942545,
+          "val_macro_auc": 0.8859835988658235,
+          "val_auc_by_label": {
+            "ACL": 0.9044117647058824,
+            "MCL": 0.8752834467120181,
+            "Medial Meniscus": 0.8942307692307692,
+            "Lateral Meniscus": 0.8260869565217391,
+            "Medial OA": 0.9658914728682171,
+            "Lateral OA": 0.8646034816247583,
+            "PF OA": 0.7940797940797941,
+            "Effusion": 0.9465838509316771,
+            "Synovitis": 0.7287933094384706,
+            "Baker's": 0.9909420289855073,
+            "Contusion": 0.9311740890688259,
+            "Fracture": 0.9097222222222222
+          }
+        },
+        {
+          "epoch": 6,
+          "ema_updates": 1632,
+          "train_loss": 0.7472845150212593,
+          "val_macro_auc": 0.8930802941751734,
+          "val_auc_by_label": {
+            "ACL": 0.9154411764705883,
+            "MCL": 0.9047619047619047,
+            "Medial Meniscus": 0.9074519230769231,
+            "Lateral Meniscus": 0.8347826086956522,
+            "Medial OA": 0.9658914728682171,
+            "Lateral OA": 0.8665377176015474,
+            "PF OA": 0.8043758043758045,
+            "Effusion": 0.9503105590062112,
+            "Synovitis": 0.7479091995221028,
+            "Baker's": 0.980072463768116,
+            "Contusion": 0.9338731443994601,
+            "Fracture": 0.9055555555555556
+          }
+        },
+        {
+          "epoch": 7,
+          "ema_updates": 1904,
+          "train_loss": 0.7205388603649814,
+          "val_macro_auc": 0.8967572831015304,
+          "val_auc_by_label": {
+            "ACL": 0.9166666666666665,
+            "MCL": 0.8956916099773242,
+            "Medial Meniscus": 0.9182692307692308,
+            "Lateral Meniscus": 0.8273291925465839,
+            "Medial OA": 0.965891472868217,
+            "Lateral OA": 0.8684719535783365,
+            "PF OA": 0.8172458172458172,
+            "Effusion": 0.9503105590062112,
+            "Synovitis": 0.7682198327359617,
+            "Baker's": 0.9909420289855073,
+            "Contusion": 0.9392712550607287,
+            "Fracture": 0.9027777777777778
+          }
+        },
+        {
+          "epoch": 8,
+          "ema_updates": 2176,
+          "train_loss": 0.7068100634085781,
+          "val_macro_auc": 0.9000153134139149,
+          "val_auc_by_label": {
+            "ACL": 0.9240196078431373,
+            "MCL": 0.9183673469387755,
+            "Medial Meniscus": 0.9206730769230769,
+            "Lateral Meniscus": 0.8322981366459629,
+            "Medial OA": 0.9689922480620154,
+            "Lateral OA": 0.8588007736943907,
+            "PF OA": 0.8069498069498069,
+            "Effusion": 0.9590062111801243,
+            "Synovitis": 0.7813620071684588,
+            "Baker's": 0.9836956521739131,
+            "Contusion": 0.9460188933873145,
+            "Fracture": 0.8999999999999999
+          }
+        },
+        {
+          "epoch": 9,
+          "ema_updates": 2448,
+          "train_loss": 0.6859316784231102,
+          "val_macro_auc": 0.902322707847021,
+          "val_auc_by_label": {
+            "ACL": 0.9313725490196079,
+            "MCL": 0.9229024943310657,
+            "Medial Meniscus": 0.9278846153846154,
+            "Lateral Meniscus": 0.8472049689440994,
+            "Medial OA": 0.9612403100775193,
+            "Lateral OA": 0.8665377176015474,
+            "PF OA": 0.8005148005148005,
+            "Effusion": 0.9552795031055901,
+            "Synovitis": 0.7765830346475507,
+            "Baker's": 0.9855072463768115,
+            "Contusion": 0.9500674763832658,
+            "Fracture": 0.9027777777777778
+          }
+        },
+        {
+          "epoch": 10,
+          "ema_updates": 2720,
+          "train_loss": 0.6718177459860111,
+          "val_macro_auc": 0.9045279593283482,
+          "val_auc_by_label": {
+            "ACL": 0.9264705882352942,
+            "MCL": 0.9319727891156462,
+            "Medial Meniscus": 0.9411057692307692,
+            "Lateral Meniscus": 0.8521739130434782,
+            "Medial OA": 0.9612403100775193,
+            "Lateral OA": 0.8723404255319149,
+            "PF OA": 0.806949806949807,
+            "Effusion": 0.9503105590062112,
+            "Synovitis": 0.7718040621266428,
+            "Baker's": 0.9873188405797102,
+            "Contusion": 0.9568151147098516,
+            "Fracture": 0.8958333333333333
+          }
+        },
+        {
+          "epoch": 11,
+          "ema_updates": 2992,
+          "train_loss": 0.6581237463773612,
+          "val_macro_auc": 0.9029808462563848,
+          "val_auc_by_label": {
+            "ACL": 0.9325980392156863,
+            "MCL": 0.9229024943310657,
+            "Medial Meniscus": 0.9375,
+            "Lateral Meniscus": 0.8546583850931677,
+            "Medial OA": 0.9643410852713178,
+            "Lateral OA": 0.8704061895551257,
+            "PF OA": 0.8159588159588159,
+            "Effusion": 0.9453416149068323,
+            "Synovitis": 0.7646356033452808,
+            "Baker's": 0.9873188405797101,
+            "Contusion": 0.9581646423751686,
+            "Fracture": 0.8819444444444444
+          }
+        },
+        {
+          "epoch": 12,
+          "ema_updates": 3264,
+          "train_loss": 0.6400378645014237,
+          "val_macro_auc": 0.9071205081952773,
+          "val_auc_by_label": {
+            "ACL": 0.9387254901960784,
+            "MCL": 0.9365079365079365,
+            "Medial Meniscus": 0.9362980769230769,
+            "Lateral Meniscus": 0.8596273291925466,
+            "Medial OA": 0.9643410852713178,
+            "Lateral OA": 0.8800773694390716,
+            "PF OA": 0.8185328185328186,
+            "Effusion": 0.9527950310559007,
+            "Synovitis": 0.7670250896057347,
+            "Baker's": 0.9873188405797101,
+            "Contusion": 0.9608636977058029,
+            "Fracture": 0.8833333333333333
+          }
+        },
+        {
+          "epoch": 13,
+          "ema_updates": 3536,
+          "train_loss": 0.627611171317232,
+          "val_macro_auc": 0.9079426256708136,
+          "val_auc_by_label": {
+            "ACL": 0.9399509803921569,
+            "MCL": 0.9410430839002268,
+            "Medial Meniscus": 0.9411057692307692,
+            "Lateral Meniscus": 0.867080745341615,
+            "Medial OA": 0.9643410852713178,
+            "Lateral OA": 0.8762088974854932,
+            "PF OA": 0.8288288288288288,
+            "Effusion": 0.9465838509316771,
+            "Synovitis": 0.7670250896057347,
+            "Baker's": 0.9873188405797101,
+            "Contusion": 0.9622132253711202,
+            "Fracture": 0.8736111111111111
+          }
+        },
+        {
+          "epoch": 14,
+          "ema_updates": 3808,
+          "train_loss": 0.616552543881185,
+          "val_macro_auc": 0.9092239013723157,
+          "val_auc_by_label": {
+            "ACL": 0.9448529411764707,
+            "MCL": 0.9410430839002268,
+            "Medial Meniscus": 0.9411057692307693,
+            "Lateral Meniscus": 0.8732919254658386,
+            "Medial OA": 0.9643410852713178,
+            "Lateral OA": 0.8800773694390716,
+            "PF OA": 0.83011583011583,
+            "Effusion": 0.9453416149068323,
+            "Synovitis": 0.7646356033452808,
+            "Baker's": 0.9873188405797101,
+            "Contusion": 0.9635627530364372,
+            "Fracture": 0.875
+          }
+        },
+        {
+          "epoch": 15,
+          "ema_updates": 4080,
+          "train_loss": 0.5993004596983904,
+          "val_macro_auc": 0.9085043647174295,
+          "val_auc_by_label": {
+            "ACL": 0.9509803921568627,
+            "MCL": 0.9387755102040817,
+            "Medial Meniscus": 0.9338942307692308,
+            "Lateral Meniscus": 0.8745341614906833,
+            "Medial OA": 0.9674418604651163,
+            "Lateral OA": 0.8781431334622825,
+            "PF OA": 0.8288288288288288,
+            "Effusion": 0.9440993788819876,
+            "Synovitis": 0.7598566308243727,
+            "Baker's": 0.9855072463768115,
+            "Contusion": 0.9622132253711201,
+            "Fracture": 0.8777777777777778
+          }
+        },
+        {
+          "epoch": 16,
+          "ema_updates": 4352,
+          "train_loss": 0.5855668746551279,
+          "val_macro_auc": 0.9092149578537939,
+          "val_auc_by_label": {
+            "ACL": 0.9571078431372548,
+            "MCL": 0.9433106575963719,
+            "Medial Meniscus": 0.9326923076923077,
+            "Lateral Meniscus": 0.8757763975155279,
+            "Medial OA": 0.9689922480620154,
+            "Lateral OA": 0.8762088974854932,
+            "PF OA": 0.8378378378378378,
+            "Effusion": 0.937888198757764,
+            "Synovitis": 0.7562724014336918,
+            "Baker's": 0.9873188405797101,
+            "Contusion": 0.9635627530364372,
+            "Fracture": 0.8736111111111111
+          }
+        },
+        {
+          "epoch": 17,
+          "ema_updates": 4624,
+          "train_loss": 0.5767783721470657,
+          "val_macro_auc": 0.9097076487542431,
+          "val_auc_by_label": {
+            "ACL": 0.9571078431372548,
+            "MCL": 0.9433106575963719,
+            "Medial Meniscus": 0.9326923076923077,
+            "Lateral Meniscus": 0.8745341614906833,
+            "Medial OA": 0.9720930232558139,
+            "Lateral OA": 0.8665377176015474,
+            "PF OA": 0.8416988416988416,
+            "Effusion": 0.9366459627329193,
+            "Synovitis": 0.7586618876941458,
+            "Baker's": 0.9891304347826086,
+            "Contusion": 0.9649122807017544,
+            "Fracture": 0.8791666666666667
+          }
+        },
+        {
+          "epoch": 18,
+          "ema_updates": 4896,
+          "train_loss": 0.56655350182315,
+          "val_macro_auc": 0.9097262041688464,
+          "val_auc_by_label": {
+            "ACL": 0.954656862745098,
+            "MCL": 0.9455782312925171,
+            "Medial Meniscus": 0.9350961538461539,
+            "Lateral Meniscus": 0.8770186335403727,
+            "Medial OA": 0.9736434108527131,
+            "Lateral OA": 0.862669245647969,
+            "PF OA": 0.8455598455598455,
+            "Effusion": 0.929192546583851,
+            "Synovitis": 0.7586618876941458,
+            "Baker's": 0.9891304347826086,
+            "Contusion": 0.9635627530364372,
+            "Fracture": 0.8819444444444444
+          }
+        }
+      ],
+      "weights_type": "ema",
+      "architecture": "baseline_v21_radimagenet_resnet50_quality_selection_ema"
+    },
+    "new": {
+      "epoch": 13,
+      "best_auc": 0.9146512994374322,
+      "args": {
+        "data_root": {
+          "opaque_args": [
+            "/",
+            "root",
+            "RSNA",
+            "rsna-knee-abnormality-detection"
+          ]
+        },
+        "labels_csv": {
+          "opaque_args": [
+            "/",
+            "root",
+            "RSNA",
+            "Baseline_v21",
+            "labels_llm_soft.csv"
+          ]
+        },
+        "output_dir": {
+          "opaque_args": [
+            "outputs",
+            "layer34_backbone2e-3_imsz224_llm_soft"
+          ]
+        },
+        "epochs": 20,
+        "batch_size": 2,
+        "accum_steps": 2,
+        "num_workers": 4,
+        "train_windows": 24,
+        "span_lo": 0.02,
+        "span_hi": 0.98,
+        "cache_dir": {
+          "opaque_args": [
+            "/",
+            "root",
+            "RSNA",
+            "Baseline_v21",
+            "input_cache"
+          ]
+        },
+        "series_quality_cache_dir": {
+          "opaque_args": [
+            "/",
+            "root",
+            "RSNA",
+            "series_quality_cache"
+          ]
+        },
+        "no_cache": false,
+        "series_quality_workers": 8,
+        "coverage_quantile": 0.2,
+        "image_size": 224,
+        "crop_mm": 140.0,
+        "radimagenet_weights": {
+          "opaque_args": [
+            "/",
+            "root",
+            "RSNA",
+            "radimagenet",
+            "ResNet50.pt"
+          ]
+        },
+        "backbone_mode": "layer3+layer4",
+        "head_lr": 0.0003,
+        "backbone_lr": 0.002,
+        "weight_decay": 0.05,
+        "warmup_ratio": 0.1,
+        "amp": "bf16",
+        "encoder_chunk_size": 24,
+        "grad_clip": 1.0,
+        "no_pos_weight": false,
+        "no_metadata": true,
+        "init_checkpoint": null,
+        "resume": null,
+        "ema_decay": 0.9995,
+        "no_ema": false,
+        "swa": false,
+        "seed": 42,
+        "log_interval": 20,
+        "radimagenet_sha256": "08629f7e7bd3e29b8ee9522ca3f65ce4d010a7ddf74f0ea3c7e3f3d0bbab0734",
+        "series_selection": {
+          "version": "header_quality_v1",
+          "coverage_quantile": 0.2,
+          "coverage_thresholds": {
+            "Sagittal": 92.0003,
+            "Coronal": 90.00000000000001,
+            "Axial": 101.5
+          }
+        }
+      },
+      "validation_history": [
+        {
+          "epoch": 1,
+          "ema_updates": 272,
+          "train_loss": 1.1711670424624838,
+          "val_macro_auc": 0.8137237349591171,
+          "val_auc_by_label": {
+            "ACL": 0.7941176470588236,
+            "MCL": 0.6213151927437641,
+            "Medial Meniscus": 0.7596153846153847,
+            "Lateral Meniscus": 0.7540372670807454,
+            "Medial OA": 0.9689922480620154,
+            "Lateral OA": 0.8143133462282399,
+            "PF OA": 0.7876447876447877,
+            "Effusion": 0.8981366459627329,
+            "Synovitis": 0.6606929510155316,
+            "Baker's": 0.894927536231884,
+            "Contusion": 0.9122807017543859,
+            "Fracture": 0.898611111111111
+          }
+        },
+        {
+          "epoch": 2,
+          "ema_updates": 544,
+          "train_loss": 1.126644244992777,
+          "val_macro_auc": 0.8361708702194894,
+          "val_auc_by_label": {
+            "ACL": 0.8529411764705882,
+            "MCL": 0.6281179138321995,
+            "Medial Meniscus": 0.828125,
+            "Lateral Meniscus": 0.7975155279503104,
+            "Medial OA": 0.9643410852713178,
+            "Lateral OA": 0.825918762088975,
+            "PF OA": 0.7876447876447876,
+            "Effusion": 0.9677018633540373,
+            "Synovitis": 0.7025089605734766,
+            "Baker's": 0.9293478260869565,
+            "Contusion": 0.8609986504723347,
+            "Fracture": 0.8888888888888888
+          }
+        },
+        {
+          "epoch": 3,
+          "ema_updates": 816,
+          "train_loss": 1.0972603720010203,
+          "val_macro_auc": 0.8605166928290977,
+          "val_auc_by_label": {
+            "ACL": 0.9276960784313726,
+            "MCL": 0.7006802721088435,
+            "Medial Meniscus": 0.8569711538461539,
+            "Lateral Meniscus": 0.7726708074534161,
+            "Medial OA": 0.9705426356589147,
+            "Lateral OA": 0.8762088974854931,
+            "PF OA": 0.7927927927927927,
+            "Effusion": 0.9788819875776398,
+            "Synovitis": 0.7001194743130228,
+            "Baker's": 0.9510869565217391,
+            "Contusion": 0.9068825910931174,
+            "Fracture": 0.8916666666666666
+          }
+        },
+        {
+          "epoch": 4,
+          "ema_updates": 1088,
+          "train_loss": 1.0760263221831445,
+          "val_macro_auc": 0.8786633991408331,
+          "val_auc_by_label": {
+            "ACL": 0.9301470588235294,
+            "MCL": 0.7687074829931972,
+            "Medial Meniscus": 0.905048076923077,
+            "Lateral Meniscus": 0.7937888198757763,
+            "Medial OA": 0.9612403100775193,
+            "Lateral OA": 0.8762088974854931,
+            "PF OA": 0.815958815958816,
+            "Effusion": 0.9900621118012423,
+            "Synovitis": 0.7001194743130228,
+            "Baker's": 0.9746376811594203,
+            "Contusion": 0.9433198380566802,
+            "Fracture": 0.8847222222222222
+          }
+        },
+        {
+          "epoch": 5,
+          "ema_updates": 1360,
+          "train_loss": 1.0599113520070471,
+          "val_macro_auc": 0.8914582643031332,
+          "val_auc_by_label": {
+            "ACL": 0.9276960784313725,
+            "MCL": 0.8571428571428571,
+            "Medial Meniscus": 0.9230769230769231,
+            "Lateral Meniscus": 0.8248447204968944,
+            "Medial OA": 0.951937984496124,
+            "Lateral OA": 0.9013539651837524,
+            "PF OA": 0.8262548262548263,
+            "Effusion": 0.9850931677018633,
+            "Synovitis": 0.7120669056152926,
+            "Baker's": 0.9746376811594203,
+            "Contusion": 0.921727395411606,
+            "Fracture": 0.8916666666666666
+          }
+        },
+        {
+          "epoch": 6,
+          "ema_updates": 1632,
+          "train_loss": 1.0514677169677966,
+          "val_macro_auc": 0.8984864159916358,
+          "val_auc_by_label": {
+            "ACL": 0.9362745098039216,
+            "MCL": 0.8752834467120181,
+            "Medial Meniscus": 0.9350961538461539,
+            "Lateral Meniscus": 0.8372670807453416,
+            "Medial OA": 0.958139534883721,
+            "Lateral OA": 0.9071566731141198,
+            "PF OA": 0.8391248391248392,
+            "Effusion": 0.986335403726708,
+            "Synovitis": 0.7168458781362007,
+            "Baker's": 0.9619565217391304,
+            "Contusion": 0.932523616734143,
+            "Fracture": 0.8958333333333333
+          }
+        },
+        {
+          "epoch": 7,
+          "ema_updates": 1904,
+          "train_loss": 1.0351256606278612,
+          "val_macro_auc": 0.9026106127380423,
+          "val_auc_by_label": {
+            "ACL": 0.9289215686274509,
+            "MCL": 0.9092970521541951,
+            "Medial Meniscus": 0.9338942307692308,
+            "Lateral Meniscus": 0.8347826086956521,
+            "Medial OA": 0.9565891472868217,
+            "Lateral OA": 0.9013539651837524,
+            "PF OA": 0.8185328185328185,
+            "Effusion": 0.9838509316770186,
+            "Synovitis": 0.7264038231780168,
+            "Baker's": 0.9873188405797102,
+            "Contusion": 0.9392712550607287,
+            "Fracture": 0.9111111111111111
+          }
+        },
+        {
+          "epoch": 8,
+          "ema_updates": 2176,
+          "train_loss": 1.0276255673345398,
+          "val_macro_auc": 0.9034627513560743,
+          "val_auc_by_label": {
+            "ACL": 0.9362745098039216,
+            "MCL": 0.9251700680272108,
+            "Medial Meniscus": 0.9290865384615385,
+            "Lateral Meniscus": 0.8236024844720498,
+            "Medial OA": 0.9612403100775193,
+            "Lateral OA": 0.8974854932301741,
+            "PF OA": 0.8365508365508365,
+            "Effusion": 0.9788819875776398,
+            "Synovitis": 0.7407407407407407,
+            "Baker's": 0.9746376811594203,
+            "Contusion": 0.9392712550607287,
+            "Fracture": 0.8986111111111111
+          }
+        },
+        {
+          "epoch": 9,
+          "ema_updates": 2448,
+          "train_loss": 1.0162446896600372,
+          "val_macro_auc": 0.9096863964622184,
+          "val_auc_by_label": {
+            "ACL": 0.9362745098039216,
+            "MCL": 0.9614512471655329,
+            "Medial Meniscus": 0.9375,
+            "Lateral Meniscus": 0.8186335403726709,
+            "Medial OA": 0.9612403100775193,
+            "Lateral OA": 0.8994197292069632,
+            "PF OA": 0.8519948519948519,
+            "Effusion": 0.9838509316770185,
+            "Synovitis": 0.7467144563918757,
+            "Baker's": 0.9782608695652173,
+            "Contusion": 0.9311740890688258,
+            "Fracture": 0.9097222222222223
+          }
+        },
+        {
+          "epoch": 10,
+          "ema_updates": 2720,
+          "train_loss": 1.0064426278147627,
+          "val_macro_auc": 0.9083953566834811,
+          "val_auc_by_label": {
+            "ACL": 0.9350490196078431,
+            "MCL": 0.9727891156462586,
+            "Medial Meniscus": 0.9399038461538461,
+            "Lateral Meniscus": 0.8161490683229813,
+            "Medial OA": 0.9612403100775193,
+            "Lateral OA": 0.8994197292069632,
+            "PF OA": 0.8429858429858429,
+            "Effusion": 0.9838509316770186,
+            "Synovitis": 0.7622461170848267,
+            "Baker's": 0.9655797101449275,
+            "Contusion": 0.9284750337381917,
+            "Fracture": 0.8930555555555556
+          }
+        },
+        {
+          "epoch": 11,
+          "ema_updates": 2992,
+          "train_loss": 0.9929860358893433,
+          "val_macro_auc": 0.9109277811752761,
+          "val_auc_by_label": {
+            "ACL": 0.9325980392156863,
+            "MCL": 0.9682539682539683,
+            "Medial Meniscus": 0.9399038461538461,
+            "Lateral Meniscus": 0.8472049689440994,
+            "Medial OA": 0.958139534883721,
+            "Lateral OA": 0.8916827852998066,
+            "PF OA": 0.8455598455598455,
+            "Effusion": 0.9838509316770186,
+            "Synovitis": 0.7694145758661888,
+            "Baker's": 0.9510869565217391,
+            "Contusion": 0.9392712550607287,
+            "Fracture": 0.9041666666666667
+          }
+        },
+        {
+          "epoch": 12,
+          "ema_updates": 3264,
+          "train_loss": 0.9832611571285216,
+          "val_macro_auc": 0.91374163480157,
+          "val_auc_by_label": {
+            "ACL": 0.9399509803921569,
+            "MCL": 0.9750566893424036,
+            "Medial Meniscus": 0.9375,
+            "Lateral Meniscus": 0.84472049689441,
+            "Medial OA": 0.9550387596899225,
+            "Lateral OA": 0.8897485493230175,
+            "PF OA": 0.8494208494208494,
+            "Effusion": 0.977639751552795,
+            "Synovitis": 0.7682198327359617,
+            "Baker's": 0.9692028985507246,
+            "Contusion": 0.9500674763832659,
+            "Fracture": 0.9083333333333332
+          }
+        },
+        {
+          "epoch": 13,
+          "ema_updates": 3536,
+          "train_loss": 0.9689530481803504,
+          "val_macro_auc": 0.9140500767669701,
+          "val_auc_by_label": {
+            "ACL": 0.9424019607843137,
+            "MCL": 0.9795918367346939,
+            "Medial Meniscus": 0.9350961538461539,
+            "Lateral Meniscus": 0.8484472049689441,
+            "Medial OA": 0.9565891472868217,
+            "Lateral OA": 0.8858800773694391,
+            "PF OA": 0.8468468468468469,
+            "Effusion": 0.968944099378882,
+            "Synovitis": 0.7753882915173238,
+            "Baker's": 0.9710144927536233,
+            "Contusion": 0.9500674763832659,
+            "Fracture": 0.9083333333333333
+          }
+        },
+        {
+          "epoch": 14,
+          "ema_updates": 3808,
+          "train_loss": 0.9609153775005218,
+          "val_macro_auc": 0.9146512994374322,
+          "val_auc_by_label": {
+            "ACL": 0.9424019607843137,
+            "MCL": 0.9773242630385487,
+            "Medial Meniscus": 0.9350961538461539,
+            "Lateral Meniscus": 0.853416149068323,
+            "Medial OA": 0.9596899224806201,
+            "Lateral OA": 0.8858800773694391,
+            "PF OA": 0.8558558558558558,
+            "Effusion": 0.9639751552795031,
+            "Synovitis": 0.7801672640382318,
+            "Baker's": 0.9692028985507246,
+            "Contusion": 0.9514170040485831,
+            "Fracture": 0.9013888888888889
+          }
+        }
+      ],
+      "weights_type": "ema",
+      "architecture": "baseline_v21_radimagenet_resnet50_quality_selection_ema"
+    }
+  },
+  "best_epochs": {
+    "old": {
+      "epoch": 18,
+      "ema_updates": 4896,
+      "train_loss": 0.56655350182315,
+      "val_macro_auc": 0.9097262041688464,
+      "val_auc_by_label": {
+        "ACL": 0.954656862745098,
+        "MCL": 0.9455782312925171,
+        "Medial Meniscus": 0.9350961538461539,
+        "Lateral Meniscus": 0.8770186335403727,
+        "Medial OA": 0.9736434108527131,
+        "Lateral OA": 0.862669245647969,
+        "PF OA": 0.8455598455598455,
+        "Effusion": 0.929192546583851,
+        "Synovitis": 0.7586618876941458,
+        "Baker's": 0.9891304347826086,
+        "Contusion": 0.9635627530364372,
+        "Fracture": 0.8819444444444444
+      }
+    },
+    "new": {
+      "epoch": 14,
+      "ema_updates": 3808,
+      "train_loss": 0.9609153775005218,
+      "val_macro_auc": 0.9146512994374322,
+      "val_auc_by_label": {
+        "ACL": 0.9424019607843137,
+        "MCL": 0.9773242630385487,
+        "Medial Meniscus": 0.9350961538461539,
+        "Lateral Meniscus": 0.853416149068323,
+        "Medial OA": 0.9596899224806201,
+        "Lateral OA": 0.8858800773694391,
+        "PF OA": 0.8558558558558558,
+        "Effusion": 0.9639751552795031,
+        "Synovitis": 0.7801672640382318,
+        "Baker's": 0.9692028985507246,
+        "Contusion": 0.9514170040485831,
+        "Fracture": 0.9013888888888889
+      }
+    }
+  },
+  "effusion_synovitis_pairs": {
+    "old": {
+      "Effusion=True,Synovitis=False": 2042,
+      "Effusion=False,Synovitis=False": 1764,
+      "Effusion=True,Synovitis=True": 543
+    },
+    "new": {
+      "Effusion=True,Synovitis=False": 84,
+      "Effusion=False,Synovitis=False": 3200,
+      "Effusion=True,Synovitis=True": 1028,
+      "Effusion=False,Synovitis=True": 37
+    }
+  },
+  "language_stats": [
+    {
+      "language_hint": "UNKNOWN",
+      "weak_count": 92,
+      "flip_pct": 7.071622846781506,
+      "old_effusion_positive_pct": 26.08695652173913,
+      "new_effusion_positive_pct": 6.521739130434782
+    },
+    {
+      "language_hint": "bg",
+      "weak_count": 217,
+      "flip_pct": 11.106840891621829,
+      "old_effusion_positive_pct": 57.14285714285714,
+      "new_effusion_positive_pct": 23.502304147465438
+    },
+    {
+      "language_hint": "de",
+      "weak_count": 260,
+      "flip_pct": 15.04169339320077,
+      "old_effusion_positive_pct": 74.61538461538461,
+      "new_effusion_positive_pct": 30.0
+    },
+    {
+      "language_hint": "el",
+      "weak_count": 316,
+      "flip_pct": 12.872592983381692,
+      "old_effusion_positive_pct": 77.21518987341773,
+      "new_effusion_positive_pct": 40.822784810126585
+    },
+    {
+      "language_hint": "en",
+      "weak_count": 1635,
+      "flip_pct": 11.52924379174953,
+      "old_effusion_positive_pct": 60.85626911314985,
+      "new_effusion_positive_pct": 25.565749235474005
+    },
+    {
+      "language_hint": "es",
+      "weak_count": 656,
+      "flip_pct": 9.266556501843143,
+      "old_effusion_positive_pct": 44.81707317073171,
+      "new_effusion_positive_pct": 21.341463414634145
+    },
+    {
+      "language_hint": "fr",
+      "weak_count": 77,
+      "flip_pct": 15.492957746478872,
+      "old_effusion_positive_pct": 57.14285714285714,
+      "new_effusion_positive_pct": 23.376623376623375
+    },
+    {
+      "language_hint": "hr_sr_bs",
+      "weak_count": 374,
+      "flip_pct": 17.064465759536024,
+      "old_effusion_positive_pct": 65.77540106951871,
+      "new_effusion_positive_pct": 24.86631016042781
+    },
+    {
+      "language_hint": "nl",
+      "weak_count": 174,
+      "flip_pct": 12.697652132247244,
+      "old_effusion_positive_pct": 64.9425287356322,
+      "new_effusion_positive_pct": 29.310344827586203
+    },
+    {
+      "language_hint": "pt",
+      "weak_count": 8,
+      "flip_pct": 17.708333333333336,
+      "old_effusion_positive_pct": 75.0,
+      "new_effusion_positive_pct": 62.5
+    },
+    {
+      "language_hint": "tr",
+      "weak_count": 540,
+      "flip_pct": 13.088439574008333,
+      "old_effusion_positive_pct": 55.74074074074075,
+      "new_effusion_positive_pct": 22.77777777777778
+    }
+  ],
+  "high_disagreement_examples": [
+    {
+      "uid": "1.2.826.0.1.3680043.8.498.56061505201159269536816810086342635391",
+      "label": "ACL",
+      "old": 0.995,
+      "new": 0.05,
+      "report": "In the medial compartment, there is bucket-handle tear of the medial meniscus, at the anterior horn, body and posterior horn of the meniscus is not torn and there is no focal chondrosis or chondral injury. \n The lateral compartment, there is radial tear at the posterior horn of the lateral meniscus. There is no focal chondrosis or chondral injury. \n The patellofemoral joint, the patellar and trochlear cartilage appears congruent without chondral lesion. The medial patellofemoral ligament is intact.  \n In the intercondylar notch, there is complete tear of the anterior cruciate ligament, at mid substance. The posterior cruciate ligament is intact.  \n The medial and lateral collateral ligament complexes are intact. The extensor mechanism is normal.  \n No knee effusion is present. The surrounding musculature is normal. There is no fracture or bone contusion.   -- Bucket-handle tear of the medial meniscus, left knee. \n -- Radial tear at the posterior horn of the lateral meniscus.  \n -- Complete tear of the anterior cruciate ligament, at mid substance.  "
+    },
+    {
+      "uid": "1.2.826.0.1.3680043.8.498.58261214953729037661916565473101636690",
+      "label": "ACL",
+      "old": 0.995,
+      "new": 0.05,
+      "report": "ΤΕΧΝΙΚΗ: Η εξέταση έγινε µε ακολουθίες παλµών Τ1, πυκνότητας πρωτονίων µε καταστολή του σήµατος του λίπους και Τ2 βαθµιδωτής ηχούς. ΕΥΡΗΜΑΤΑ Παρατηρείται παθολογικό σήµα στο σώµα και στο οπίσθιο κέρας του έσω µηνίσκου µε επέκταση στην κάτω αρθρική επιφάνεια. Ο πρόσθιος χιαστός παρουσιάζει οριζόντιο προσανατολισµό και τµηµατική ασυνέχεια των ινών του στο επίπεδο της πρόσφυσής του στο µηριαίο. Παρατηρείται οστικό οίδηµα στο οπίσθιο έξω τµήµα της κνήµης. Φυσιολογικοί απεικονίζονται οι πλάγιοι και ο οπίσθιος χιαστος σύνδεσµος καθώς και ο έξω µηνίσκος. Από τον έλεγχο του εκτατικού µηχανισµού παρατηρείται µορφολογία της επιγονατίδας Wiberg II καθώς και συγγενώς αβαθής τροχιλία. Μετρία συλλογή υγρού παρατηρείται ενδοαρθρικά. Εντός του φυσιολογικού ελέγχεται ο αρθρικός χόνδρος. Καλόηθες υπερπλασία παρατηρείται στον οστικό µυελό µε παρουσία υπερβάλλοντος ερυθρού στοιχείου στην άπω µεταδιάφυση του µηριαίου, της περόνης και της κνήµης. ΣΥΜΠΕΡΑΣΜΑ: 1. Ολική ρήξη του πρόσθιου χιαστού συνδέσµου µε συνοδό οστεοµυλικό οίδηµα (bone bruise) στο οπίσθιο και έξω τµήµα της κνήµης και αίµαρθρο σε φάση απορρόφησης. 2. Τραυµατική ρήξη του σώµατος και οπίσθιου κέρατος του έσω µηνίσκου (ramp lesion). 3. Ευρήµατα που συνηγορούντα υπέρ δυσλειτουργίας κύλισης της επιγονατίδας (patella maltracking)."
+    },
+    {
+      "uid": "1.2.826.0.1.3680043.8.498.37432328401993499374675847888297416449",
+      "label": "ACL",
+      "old": 0.98,
+      "new": 0.05,
+      "report": "Na seriji MR presjeka desnog koljena nalazi se uredna morfologija i intenziteti signala kolateralnih\nligamenata stražnjeg križnog ligamenta, iliotibijalnog traktusa, patelarne tetive i tetive m.\nkvadricepsa.\nStanje po kompletnoj rupturi prednjeg križnog ligamenta na hvatištu za femur.\nPovišeni su intenziteti signala stražnjeg roga medijalnog meniska, moguće u sklopu\ndegenerativnih promjena, bez jasnih znakova rupture.\nLateralni menisk uredne je morfologije i intenziteta signala.\nPatela je medioponirana, Wiberg 2 uz primjerenu debljinu artikulacijske hrskavice\nfemoropatelarnog zgloba.\nReducirana je debljina artikulacijske hrskvice femorotibijalnog zgloba medijalnog kompartmenta\nuz hondromalaciju I./II. stupnja.\nSitna Bakerova cista aksijalno dimenzija oko 8 x 3 mm.\nOstale prikazane koštane, mekotkivne i neurovaskularne strukture uredne su morfologije i\nintenziteta signala.\n"
+    },
+    {
+      "uid": "1.2.826.0.1.3680043.8.498.37057548998853865829402084168010676727",
+      "label": "ACL",
+      "old": 0.025,
+      "new": 0.95,
+      "report": "Antecedentes Clínicos:\nGonalgia en estudio.\nHallazgos:\nLigamentos cruzados y colaterales dentro de límites normales.\nEl menisco lateral es de morfología y señal conservada, sin signos de rotura.\nAumento de señal central del cuerno posterior y parte del cuerpo del menisco medial de manera\nperiférica que impresiona contactar la superficie articular inferior , sugiriendo una rotura, no\ndesplazada, con discreto edema las partes blandas regionales.\nCartílagos de los compartimentos femorotibiales y de la tróclea femoral sin alteraciones.\nCondropatía rotuliana superficial.\nMínimo derrame articular. No hay quistes poplíteos.\nLeve aumento de señal de la inserción distal del tendón cuadricipital, sin signos de rotura. Discreto\nedema el paquete adiposo retro cuadricipital suprarrotuliano.\nLeve aumento de señal del tercio proximal del tendón rotuliano, sin signos de rotura.\nTendones de la pata de ganso, bíceps femoral y banda iliotibial dentro de límites normales.\nDiscreto edema las partes blandas, profundo a los tendones de la pata de ganso.\nImpresión:\nSignos sugerentes de una rotura periférica del menisco medial con discreto edema las partes\nblandas regionales.\nMínimo derrame articular.\nLeve tendinosis cuadricipital distal. Edema del paquete adiposo retro cuadricipital suprarrotuliano,\nprobablemente reactivo.\nLeve tendinosis rotuliana proximal.\nDiscretos fenómenos de fricción profundo a los tendones de la pata de ganso"
+    },
+    {
+      "uid": "1.2.826.0.1.3680043.8.498.37438631765770807892914198396852544668",
+      "label": "ACL",
+      "old": 0.025,
+      "new": 0.95,
+      "report": "Findings: There is no significant knee effusion. Normal medial and lateral menisci. No evidence of tears.  Normal ACL, PCL, MCL and LCL. Normal extensor mechanism. The patella is high lying.  Normal tibiofemoral and patellofemoral articular cartilage. Normal visualized bones and surrounding soft tissues.  \nConclusion: High lying patella noted. No other abnormality identified."
+    },
+    {
+      "uid": "1.2.826.0.1.3680043.8.498.37879265071349098151803248077034280617",
+      "label": "MCL",
+      "old": 0.99,
+      "new": 0.05,
+      "report": "MRI of left Knee with \n-Locator, SG PD FatSat, SG T2W FS, SG T1W, CO T2W FS, AX T2W FS\n\n* The contour of ACL not in a straight line and increase signal intensity inside, in favor of tear.\n  Laxity contour of MCL with increased signal intensity on F/S T2WI, in favor of partial tear.\n> The contour of PCL and LCL in a straight line and increase signal intensity inside PCL and proximal LCL on F/S T2WI, in favor of grade 1 injury.\n> Some joint effusion and  suprapatellar bursitis with suprapatellar, lateral and medial plica; mild hypertrophy of the synovium, indicative of mild synovitis.\n> Abnormal signal intensity is noted in proximal tibia ( more prominent at posterior tibial plateau and intercondylar eminance) and distal femur, which shows low signal intensity on T1WI and high signal intensity on T2WI, in favor of bone contusion.\n  Suspicious of mild impaction of lateral femoral condyle. \n   > Linear signal intensity in posterior horn of lateral meniscus, and unclear contour of central portion, in favor of bucket handle tear of lateral meniscus.\n> Bone marrow edema over low pole of patella and mild increased signal intensity of patellar tendon on F/S T2WI, in favor of grade 1  injury.\n  Mild laxity of medial patellar retinuaculum with increased singal intensity on F/S T2WI, in favor of grade 2 injury.\n  Howevere, no dislocation of patella in this study.\n> Mild muscle edema over vastus lateralis and medialis muscle and subcutaneous edema.\nImpression: \n1. C/W ACL tear.\t\n2. High grade partial tear of MCL.\n3. Grade 1-2 injury of PCL and grade 1 injury of proximal LCL.\n4. C/W bucket handle tear of posterior horn of lateral meniscus. \n5. Bone contusion of left proximal tibia and distal femur and low pole patella.\n6. R/O transient patellar dislocation with impaction of lateral femoral condyle and low pole of patella and suspicious of partial tear of medial patellar retinaculum.\n7. Synovitis and patellar plicae of left knee and small Baker's cyst.  \n8. Mild muscle edema over vastus lateralis and medialis muscle and subcutaneous edema.  \nSuggest correlation with clinical manifestation\n"
+    },
+    {
+      "uid": "1.2.826.0.1.3680043.8.498.37885316830093262977685802809269466252",
+      "label": "MCL",
+      "old": 0.025,
+      "new": 0.95,
+      "report": "Antecedentes Clínicos:\nObs. Meniscopatía lateral.\nHallazgos:\nNo hay alteraciones en significativas de la médula ósea.\nLigamentos cruzados y colaterales dentro de límites normales.\nEl menisco medial es de morfología y señal conservada, sin signos de rotura.\nEl menisco lateral impresiona de morfología y señal conservada, sin criterios de una rotura\ncategórica.\nFinas úlceras condrales superficiales de platillo tibial lateral. El resto de los cartílagos\nfemorotibiales sin alteraciones significativas. Cartílago troclear dentro de límites normales. Úlceras\ncondrales de espesor parcial de distribución difusa de la rótula.\nMínimo derrame articular. No hay quistes poplíteos patológicos.\nLeve aumento de señal de la inserción distal del tendón cuadricipital y de la inserción proximal del\ntendón rotuliano, sin signos de rotura. Tendones de la pata de ganso, bíceps femoral y banda\niliotibial dentro de límites normales.\nDiscreto edema las partes blandas de la banda de tibial y el cóndilo femoral lateral.\nImpresión:\nCondropatía superficial de platillo tibial lateral.\nCondropatía lesiones grado 2 de la rótula.\nMínimo derrame articular.\nTendinosis cuadricipital distal y rotuliana proximal.\nFenómenos sugerentes de un síndrome de fricción de la banda iliotibial, correlacionar con clínica"
+    },
+    {
+      "uid": "1.2.826.0.1.3680043.8.498.46172451572836863687073454997158931662",
+      "label": "MCL",
+      "old": 0.92,
+      "new": 0.05,
+      "report": "Stanje nakon frakture lateralnog kondila tibije uz vidljiv slobodan koštani ulomak.\nKoštani edem anterolateralnog dijela tibije te lateralnog kondila femura.\nSubluksacija patele uz stanje nakon rupture medijalnog retinakuluma.\nPrikaže se hondromalacija III° hrskavice lateralnog tibijalnog platoa te IV° medijalnog tibijalnog\nplatoa. Znakovi OA medijalnog i lateralnog kompartmenta FT zgloba uz formirane osteofite.\nHondromalacija III° medijalne fasete patele uz pojačan intenzitet signala u području lateralne\nfasete, moguće uslijed artefakata uzrokovanih edemom/izljevom.\nPrednji križni ligament se ne prikaže.\nStražnji križni ligament se prikaže manjim dijelom hvatištu, u potpunosti izmjenjenog intenziteta\nsignala- stanje nakon potpune rupture.\nMedijalni menisk se ne prikaže jasno, promijenjenog je intenziteta signala - dif. dg. stanje nakon\nrupture.\nStanje nakon kompleksne rupture prednjeg roga lateralnog meniska.\nLateralni kolateralni ligament primjerenih intenziteta signala, održanog kontinuiteta.\nMedijalni kolateralni ligament se ne prikaže - stanje nakon komplentne rupture.\nTetiva kvadricepsa blaže imjenjenog intenziteta signala, prati se u kontinuitetu.\nPatelarni ligament zadebljani, izmjenjenog intenziteta signala, najizraženije u području tibijalnog\nhvatišta- tendinoza ili stanje nakon parcijalne rupture.\nUredan prikaz prikazanog dijela iliotibijalnog trakta.\nManji izljev u zglob.\nNe nalazi se znakova poplitealne ciste."
+    },
+    {
+      "uid": "1.2.826.0.1.3680043.8.498.10726624821670417064567481545750543282",
+      "label": "MCL",
+      "old": 0.91,
+      "new": 0.05,
+      "report": "Zentrierte Stellung im rechten Kniegelenk. Gering nach medial dezentrierte Stellung der Patella. Fokal oberflächliche Chondropathie retropatellar (7/13). Gering Knochenmarksödem an der medialen Tibiakondyle sowie der medialen femoralen Kondyle. Bone bruise der medialen Patella. Langstreckig vollschichtig aufgebrauchter retropatellarer Knorpel an der medialen Facette (7/15). \nKeine Ruptur der patellaren Retinacula.\nFlächig bis vollschichtige Chondropathie der medialen Femurkondyle (4/25).  Mäßig Gelenkerguss. Kräftige synoviale Proliferationen im suprapatellaren Recessus. Zu [DATE] langsam größenprogrediente rundliche Strukturvermehrung von max. 24 mm Größe, z.B. solide synoviale Proliferation, DD noduläre PVNS möglich (4/15, 9/19). Die Läsion ist in der T2 sowie PD inhomogen hypointens, in der Röntgen-VU ohne Kalzifikationen. \nVorderes und hinteres Kreuzband intakt, kein Shift der Tibia. Gering mucoide Degeneration am Außenmeniskushinterhorn. Horizontale Rissbildung des Innenmeniskushinterhornes (5/29). Laterales Kollateralband intakt. Mediales Kollateralband proximal mit Reizzustand, distal bei Auffaserung und Verdickung proximal der tibialen Insertion möglw. mit Partialruptur (4/20). \nÖdemsignal im Weichgewebe präpatellar. Ausgedehnte polylobulierte Baker-Zyste, cc mind. 12 cm.  Zu [DATE] langsam größenprogrediente rundliche Strukturvermehrung von max. 24 mm Größe, z.B. solide synoviale Proliferation, DD noduläre PVNS möglich (4/15, 9/19). Die Läsion ist in der T2 sowie PD inhomogen hypointens, in der Röntgen-VU ohne Kalzifikationen."
+    },
+    {
+      "uid": "1.2.826.0.1.3680043.8.498.11201589885283493748455257854104771618",
+      "label": "MCL",
+      "old": 0.91,
+      "new": 0.05,
+      "report": "U medijalnom kondilu femura vidljiv je konkavitet nosivog dijela kondila promjera oko 16 mm uz\nizraženi koštani edem. Delaminacija uz višefragmentarnu frakturu hrskavice medijalnog kondila\nfemura sa slobodnim hrskavičnim zglobnim tijelima. Opisano ide u prilog insuficijencijske\nsubhondralne frakture (SONK, mb. Ahlbäck).\nZone koštanog edema medijalnog kondila tibije te subkortikalno u području lateralnog kondila\nfemura.\nFokalno zone denudacije te hondromalacije 4. stupnja FT zgloba.\nPočetne degenerativne promjene FP zgloba s osteofitima i stanjenjem hrskavica te\nhondromalacijom 1.-2. stupnja hrskavice faseta patele.\nDegenerativne promjene prednjeg križnog ligamenta, bez znakova rupture.\nStražnji križni ligament je primjerenih intenziteta signala, bez znakova rupture.\nTeške degenerativne promjene medijalnog meniska s kompleksnom rupturom tijela i stražnjeg\nroga uz ekstruziju meniska. Posljedična distenzija medijalnog kolateralnog ligamenta, bez\nznakova rupture.\nUmjerene degenerativne promjene lateralnog meniska, bez znakova rupture.\nEntezopatske promjene proksimalnog hvatišta lateralnog kolateralnog ligamenta.\nEntezopatske promjene i burzitis tetive popliteusa.\nUredan prikaz iliotibijalnog trakta i pes anserinus.\nEntezopatske promjene hvatišta tetive kvadricepsa i tibijalnog hvatišta patelarnog ligamenta.\nDistenzija oba patelarna retinakuluma.\nUmjerena količina izljeva u zglobu, najizraženije suprapatelarno. Zadebljana kompletna\nsuprapatelarna plika.\nEdem potkožnog masnog tkiva.\nU distalnoj trećini naktoljenice u potkožnom masnom tkivu sprijeda lipom veličine oko 26x16 mm."
+    },
+    {
+      "uid": "1.2.826.0.1.3680043.8.498.36930256628357053046574486650916442047",
+      "label": "Medial Meniscus",
+      "old": 0.985,
+      "new": 0.05,
+      "report": "MRI ∆ΕΞΙΟΥ ΓΟΝΑΤΟΣ ΤΕΧΝΙΚΗ Η εξέταση έγινε µε ακολουθίες παλµών Τ1, Τ2 βαθµιδωτής ηχούς και πυκνότητας πρωτονίων µε καταστολή του σήµατος του λίπους. ΕΥΡΗΜΑΤΑ Από τον έλεγχο του έξω διαµερίσµατος παρατηρούνται µικρά επιχείλια οστεόφυτα καθώς επίσης και ήπια εκφύλιση του µηνίσκου χωρίς ρήξη. Στο έσω διαµέρισµα παρατηρείται σηµαντική εκφυλιστική οστεοαρθρίτιδα µε ολική διάβρωση του αρθρικού χόνδρου (ICRS grade 4), εκφυλιστική ρήξη του µηνίσκου και εξάρθρηµα του εναποµείναντος µηνισκικού υλικού, παρουσία επιχείλιων οστεοφύτων και υπαρθρικών αλλοιώσεων του εκατέρωθεν οστικού µυελού. Από τον έλεγχο του πρόσθιου διαµερίσµατος παρατηρείται ολική διάβρωση του αρθρικού χόνδρου στην έσω κάτω µοίρα της αρθρικής επιφάνειας της επιγονατίδας. Ενδαρθρικά παρατηρούνται πολλαπλά ξένα σώµατα οπισθίως του οπίσθιου χιαστού συνδέσµου καθώς επίσης και παρουσία εστιών φυλλόµορφου λιπώµατος το οποίο εκτείνεται στον υπερεπιγονατιδικό θύλακα. Από τον έλεγχο του οστικού µυελού παρατηρείται καλόηθες ενχόνδρωµα στην εγγύς µετά επίφυση της κνήµης. Παρεµπιπτόντως σηµειούται ενθεσόφυτα στη µεσογλήνια εντοµή το µεγαλύτερο των οποίων εφάπτεται στον πρόσθιο χιαστό σύνδεσµο ο οποίος απεικονίζεται µε βλεννοειδή εκφύλιση. Μικρές γαγγλιακές κύστεις παρατηρούνται στην πρόσθια αρθρική µοίρα και µεγαλύτερες γαγγλιακές κύστεις οπισθίως της άπω µετάφυσης του µηριαίου οστού."
+    },
+    {
+      "uid": "1.2.826.0.1.3680043.8.498.37782918081276484321055690005029111967",
+      "label": "Medial Meniscus",
+      "old": 0.98,
+      "new": 0.05,
+      "report": "No evidence of knee effusion. A small fluid-filled Baker's cyst is noted. There is undersurface tearing of the posterior horn and posteromedial corner of the medial meniscus with a fragment flipped into the midline as well as into the medial recess. Normal lateral meniscus.  Normal ACL, PCL, MCL and LCL. Normal extensor mechanism.  The tibiofemoral and patellofemoral articular cartilage is unremarkable. Normal visualized bones and surrounding soft tissues.  Conclusion: Flipped tear of the posterior horn and body of the medial meniscus."
+    },
+    {
+      "uid": "1.2.826.0.1.3680043.8.498.37005775889857426034942587344620888398",
+      "label": "Medial Meniscus",
+      "old": 0.025,
+      "new": 0.95,
+      "report": "Technique: MRI of the knee. ACL normal. MCL normal. Medial meniscus normal. Lateral meniscus normal.  Cartilages normal. No baker's cyst. No effusion. Patella alta and MRI signs of ventral PF impingement. Osgood Schlatter. Conclusion: Patella alta and MRI signs of ventral PF impingement. Osgood Schlatter."
+    },
+    {
+      "uid": "1.2.826.0.1.3680043.8.498.37591186611460576939009950935820113903",
+      "label": "Medial Meniscus",
+      "old": 0.975,
+      "new": 0.05,
+      "report": " Central supporting system  \n  Anterior cruciate ligament (ACL): Normal contour, orientation, signal intensity. \n  Posterior cruciate ligament (PCL): Normal contour, orientation, signal intensity. \n  Anterior tibial translation: Not presented. \n  \n Medial compartment  \n  Bone and cartilage: Thinning of cartilage at anterior weight bearing part of the medial femoral condyle, measured about 5.8 mm in width. Associated bone bruise at adjacent medial femoral condyle and bone bruise at corresponding adjacent proximal tibia are shown. Overall findings are suggestive for chondral injury. \n  Medial meniscus: Loss of normal triangular shape of anterior horn. Relatively enlarged and abnormal truncation of the posterior horn. Complex tear and buckethandle tear of the medial meniscus, at the anterior horn, body and posterior horn. There is displaced meniscal fragment into the intercondylar notch.  \n  Medial collateral ligament: Fluid between superficial and deep bundles; suggested medial collateral ligament bursitis. \n  \n Lateral compartment  \n  Lateral meniscus: No tear. No discoid meniscus. \n  Iliotibial band: Intact.  \n  Lateral collateral ligament: Intact.  \n  Popliteus tendon: Intact. \n  Popliteofibular ligament: Intact.  \n  Biceps femoris tendon : Intact.  \n  Lateral tibial plateau: Intact. \n  Lateral femoral condyle: Intact. \n  \n Patellofemoral compartment  \n  Quadriceps tendon: Intact.  \n  Patellar tendon: intact.  \n  Medial patellar retinaculum: Intact.  \n  Lateral patellar retinaculum: Intact.  \n  \n Others  \n  Muscle: Unremarkable.  \n  Neurovascular bundles: Intact.  \n  Moderate to severe effusion within patellofemoral and tibiofemoral joints.  \n  Subcutaneous edema of right knee is shown.  Chondral injury at anterior weight bearing part of the medial femoral condyle, size 5.8 mm. \n  Complex tear and buckethandle tear of the medial meniscus, involving the anterior horn, body and posterior horn. \n  Suggested medial collateral ligament bursitis."
+    },
+    {
+      "uid": "1.2.826.0.1.3680043.8.498.37833587429731221455928642963031995680",
+      "label": "Medial Meniscus",
+      "old": 0.025,
+      "new": 0.95,
+      "report": "Antecedentes Clínicos:\nGonalgia bilateral.\nHallazgos:\nNo hay alteraciones de señal significativas de la médula ósea.\nLigamentos cruzados y colaterales dentro de límites normales.\nMeniscos de morfología y señal conservada, sin signos de rotura.\nCartílagos de los compartimentos femorotibiales y de la tróclea femoral sin alteraciones.\nCondropatía rotuliana superficial difusa\nNo hay derrame articular ni quistes poplíteos.\nLeve aumento de señal del tercio proximal del tendón rotuliano, sin signos de rotura. Tendón\ncuadricipital, tendones de la pata de ganso, bíceps femoral y banda iliotibial dentro de límites\nnormales.\nDiscreto edema las partes blandas entre la banda iliotibial y el cóndilo femoral lateral.\nImpresión:\nProbables fenómenos de fricción de la banda iliotibial.\nLeve tendinosis rotuliana proximal.\nCondropatía rotuliana superficial difusa"
+    },
+    {
+      "uid": "1.2.826.0.1.3680043.8.498.37463970179664003092832463732043124908",
+      "label": "Lateral Meniscus",
+      "old": 0.98,
+      "new": 0.05,
+      "report": "Antecedentes Clínicos:\nRotura meniscal y lesión condral lateral de la rodilla derecha.\nHallazgos:\nLigamentos cruzados y colaterales sin alteraciones.\nMenisco medial de morfología y señal conservada, sin signos de rotura.\nRotura compleja del cuerno anterior y cuerpo del menisco lateral con segmento que se insinúa al\nreceso menisco tibial a nivel del cuerpo. Leve extrusión meniscal difusa.\nÚlceras condrales de espesor parcial y total de la zona de carga del compartimento femorotibial\nlateral, de hasta aproximadamente 7 x 5 mm en sus ejes anteroposterior y mediolateral\nrespectivamente a nivel de la región posterior de carga del cóndilo femoral lateral, con cambios\nóseos secundarios.\nCartílagos del compartimento femorotibial medial y patelofemoral sin alteraciones significativas.\nMínimo derrame articular. No hay quistes poplíteos.\nEdema del paquete adiposo retro cuadricipital suprarrotuliano.\nTendones cuadricipital, rotuliano, tendones de la pata de ganso, bíceps femoral y banda iliotibial\ndentro de límites normales.\nImpresión:\nRotura compleja del menisco lateral con segmento que se insinúa al receso menisco tibial a nivel\ndel cuerpo. Leve extrusión meniscal difusa.\nCondropatía lesiones grado 3 y 4 del compartimento femorotibial lateral.\nMínimo derrame articular.\nEdema del paquete adiposo retro cuadricipital suprarrotuliano, hallazgos que podría representar\nfenómenos de mal alineamiento rotuliano."
+    },
+    {
+      "uid": "1.2.826.0.1.3680043.8.498.37969790195791584440906553207150666923",
+      "label": "Lateral Meniscus",
+      "old": 0.98,
+      "new": 0.05,
+      "report": "MRI LEFT KNEE:\n\nINDICATION:    Clicking, locking, exclude meniscal tear..\n\nPRIOR IMAGING: None.\n.\nTECHNICAL INFORMATION AND PROTOCOL:\n\nProton density and T2 weighted sagittal, coronal and axial imaging was performed through the knee including a 3D Fat suppressed proton density weighted sequence. No contrast was administered.\n\nFINDINGS:\n\nThe 3-D proton density sequence was reformatted and manipulated to aid in the interpretation of this examination. The extensor mechanism is intact. There is patella alta. The Insall Salvati ratio measures about 1.6.\nThe finding is associated with advanced patellofemoral joint osteoarthritic change with extensive denuding of the articular cartilage and with extensive subcortical cyst formation particularly seen along the apex and lateral facet of patella. Prominent trochlear and patellar osteophytes are demonstrated.\n\nThe medial patellar retinaculum is attenuated likely related to previous lateral dislocation and partial disruption. The lateral patellar retinaculum is intact.\n\nThere is a degenerative medial meniscal tear. There is maceration and linear signal seen in the posterior horn extending into the body. An oblique inferiorly surfacing tear of the body and posterior horn is a demonstrated. The finding is associated with severe chondral denuding and exuberant marginal osteophyte formation seen to the medial joint compartment. There is also subcortical edema seen to the weightbearing surface of the medial femoral condyle and medial tibial plateau.\n\nThe lateral meniscus is macerated and not identified at the body and posterior horn. Findings are in keeping with extensive maceration and degenerative tearing of the body and the posterior horn of lateral meniscus. The finding is associated with denuding of the entire articular cartilage of lateral joint compartment associated with prominent lateral joint compartment osteophyte formation. There is also subcortical sclerosis and mild edema seen within the lateral joint compartment. An intraosseous cyst is seen to the lateral femoral condyle with 3 cm in keeping with subcortical tear.\n\nThe anterior cruciate ligament and posterior cruciate and medial collateral ligament are intact.\n\nThe lateral collateral ligament complex including the IT band, fibular collateral ligament, biceps femoris tendon and popliteus tendon appear intact.\n\nThere is a large knee effusion with reactive synovitis. There is no significant Baker's cyst. In the lateral popliteal fossa there is a large intraosseous loose body projecting anterior to the proximal fibers of the lateral head of the gastrocnemius measuring about 2.4 cm in maximum dimension. Smaller loose bodies are likely present in this region.\n\nINTERPRETATION: \n\nSevere tricompartmental osteoarthritic change most severely affecting patellofemoral and lateral compartments. Degenerative meniscal tears laterally and medially with cartilaginous denuding to the lateral medial and patellofemoral compartments.\n\nLoose bodies.\n\nPatella alta with attenuation of the medial patellar retinaculum likely related to prior transient lateral dislocation of the patella."
+    },
+    {
+      "uid": "1.2.826.0.1.3680043.8.498.13288244567806030859347115222642155186",
+      "label": "Lateral Meniscus",
+      "old": 0.975,
+      "new": 0.05,
+      "report": "Tεχνική: Η εξέταση έγινε µε ακολουθίες παλµών Τ1, πυκνότητας πρωτονίων µε καταστολή του σήµατος του λίπους και Τ2 βαθµιδωτής ηχούς. Ευρήµατα: - Aπό τον έλεγχο του εκτατικού µηχανισµού δεν σηµειώνονται αξιόλογα παθολογικά ευρήµατα. - Από τον έλεγχο του έξω διαµερίσµατος παρατηρείται στένωση του µεσάρθριου διαστήµατος, ήπιο οίδηµα υπαρθρικού οστικού µυελού και πλήρης εξάλειψη του αρθρικού χόνδρου (ICRS Grade IV) στον έξω κνηµιαίο κόνδυλο και στην επάλληλη µοίρα του έξω µηριαίου κονδύλου, ενώ συνυπάρχουν επιχείλια οστεόφυτα στον µηριαίο και κνηµιαίο κόνδυλο. Σηµειώνεται επίσης παθολογικό σήµα και µορφολογία του έξω µηνίσκου, µε υπεξάρθρηµα και µείωση της µάζας του. - Από τον έλεγχο του έσω διαµερίσµατος δεν σηµειώνονται παθολογικά ευρήµατα. - Χωρίς παθολογικά ευρήµατα από τον έλεγχο των χιαστών και των πλαγίων συνδέσµων. - Σηµειώνεται η παρουσία κυστικής αλλοίωσης εύρους 1.2 cm οπισθίως του οπίσθιου χιαστού µε περιεχόµενο µικρό οζόµορφο επασβεστωµένο σχηµατισµό. - Μικρή ενδοαρθρική συλλογή υγρού. - Με σήµα εντός του φυσιολογικού ελέγχεται ο λοιπός οστικός µυελός. Συµπέρασµα: Εκφυλιστική οστεοαρθρίτιδα του έξω διαµερίσµατος µε συνοδό εκφυλιστική ρήξη του έξω µηνίσκιου και ευρήµατα οστεοχονδρωµάτωσης."
+    },
+    {
+      "uid": "1.2.826.0.1.3680043.8.498.37413349933694832641902637847629969234",
+      "label": "Lateral Meniscus",
+      "old": 0.975,
+      "new": 0.05,
+      "report": "Diz eklemi içi sıvı miktarı normal. Gastroknemyus-semimembranozus bursasındaki küçük sıvı koleksiyonu sızdırmıyor. Çapraz ve yan bağlar normal. Posterolateral ve posteromedyal köşe yapıları korunmuş. Medyal menisküs yırtık içermiyor. Lateral menisküsün arka boynuzundaki horizontal yırtık serbest kenara ulaşıyor; alt eklem yüzeyi de yırtılıp medyale katlanmış. Menisküslerdeki ince kalsifikasyonlar kondrokalsinozis/psödogut ile uyumlu. Patella apeksindeki, tibyal platonun posterolateralindeki ve medyal femoral kondilde ağırlık taşıyan kesimdeki tam kat eklem kıkırdağı kayıplarına gerek bu kesimlerde, gerekse patellanın daha lateralinde subkondral medüller fibrokistik ve fibrovasküler değişiklikler eşlik ediyor. Ekstensör mekanizma korunmuş."
+    },
+    {
+      "uid": "1.2.826.0.1.3680043.8.498.37427993203943111265113924891058049338",
+      "label": "Lateral Meniscus",
+      "old": 0.025,
+      "new": 0.95,
+      "report": "Diz eklemi içi sıvı miktarı normal. Çapraz ve yan bağlar normal. Medyal ve lateral menisküs normal. Eklem kıkırdakları ve kemikler normal. Ekstensör mekanizma korunmuş. Proksimal tibyofibular eklem normal."
+    },
+    {
+      "uid": "1.2.826.0.1.3680043.8.498.36930256628357053046574486650916442047",
+      "label": "Medial OA",
+      "old": 0.995,
+      "new": 0.05,
+      "report": "MRI ∆ΕΞΙΟΥ ΓΟΝΑΤΟΣ ΤΕΧΝΙΚΗ Η εξέταση έγινε µε ακολουθίες παλµών Τ1, Τ2 βαθµιδωτής ηχούς και πυκνότητας πρωτονίων µε καταστολή του σήµατος του λίπους. ΕΥΡΗΜΑΤΑ Από τον έλεγχο του έξω διαµερίσµατος παρατηρούνται µικρά επιχείλια οστεόφυτα καθώς επίσης και ήπια εκφύλιση του µηνίσκου χωρίς ρήξη. Στο έσω διαµέρισµα παρατηρείται σηµαντική εκφυλιστική οστεοαρθρίτιδα µε ολική διάβρωση του αρθρικού χόνδρου (ICRS grade 4), εκφυλιστική ρήξη του µηνίσκου και εξάρθρηµα του εναποµείναντος µηνισκικού υλικού, παρουσία επιχείλιων οστεοφύτων και υπαρθρικών αλλοιώσεων του εκατέρωθεν οστικού µυελού. Από τον έλεγχο του πρόσθιου διαµερίσµατος παρατηρείται ολική διάβρωση του αρθρικού χόνδρου στην έσω κάτω µοίρα της αρθρικής επιφάνειας της επιγονατίδας. Ενδαρθρικά παρατηρούνται πολλαπλά ξένα σώµατα οπισθίως του οπίσθιου χιαστού συνδέσµου καθώς επίσης και παρουσία εστιών φυλλόµορφου λιπώµατος το οποίο εκτείνεται στον υπερεπιγονατιδικό θύλακα. Από τον έλεγχο του οστικού µυελού παρατηρείται καλόηθες ενχόνδρωµα στην εγγύς µετά επίφυση της κνήµης. Παρεµπιπτόντως σηµειούται ενθεσόφυτα στη µεσογλήνια εντοµή το µεγαλύτερο των οποίων εφάπτεται στον πρόσθιο χιαστό σύνδεσµο ο οποίος απεικονίζεται µε βλεννοειδή εκφύλιση. Μικρές γαγγλιακές κύστεις παρατηρούνται στην πρόσθια αρθρική µοίρα και µεγαλύτερες γαγγλιακές κύστεις οπισθίως της άπω µετάφυσης του µηριαίου οστού."
+    },
+    {
+      "uid": "1.2.826.0.1.3680043.8.498.37427993203943111265113924891058049338",
+      "label": "Medial OA",
+      "old": 0.015,
+      "new": 0.95,
+      "report": "Diz eklemi içi sıvı miktarı normal. Çapraz ve yan bağlar normal. Medyal ve lateral menisküs normal. Eklem kıkırdakları ve kemikler normal. Ekstensör mekanizma korunmuş. Proksimal tibyofibular eklem normal."
+    },
+    {
+      "uid": "1.2.826.0.1.3680043.8.498.45755198489211010290512228906807170657",
+      "label": "Medial OA",
+      "old": 0.98,
+      "new": 0.05,
+      "report": "MRI of right Knee with \n-SG PD FatSat, Locator, SG T2W FS, SG T1W, CO T2W FS, AX T2W FS\n\n> The contour of PCL is not in a straight line and increase signal intensity inside on F/S T2WI, in favor of tear.\n> Mild interstitial increased signal intensity of ACL, R/O grade 1 injury.\n> Linear signal intensity in posterior horn of medial meniscus, with extending into the surface, in favor of tear.\n> Linear signal intensity in posterior horn of lateral meniscus, without significant extending into the surface, in favor of  grade 2 intrasubstance signal of posterior horn of medial meniscus, maybe due to contusion.\n> Both medial & lateral collateral ligaments appear to be within normal.\n> No evidence of bone contusion is noted.\n> Increased fat stranding over infrapatellar fat pad\n> Focal increased signal intenisty of patellar cartilag with fissure,in favor of grade3 patellar chondromalacia \n> Wearing of articular cartilage of rigth knee, major at medial compartment and spur formation, reflecting osteoarthritis.\n> Joint effusion and suprapatellar bursitis with suprapatellar andlateral plicae; hypertrophy of the synovium, indicative of synovitis.\n\nImpression: \n1. Nearly full thickness tear of PCL; differential diagnosis of high grade partial tear of PCL with ganglion cyst.\n2. Tear of posterior horn of medial meniscus; R/O parameniscal cyst; differential diagnosis of  MCL bursitis.\n3. Grade 1 injury of ACL.\n4. C/W osteoarthritis of right knee joint and mild synovitis.\n5. Infrapatellar fat pad edema.\nSuggest correlation with clinical manifestation\n\n"
+    },
+    {
+      "uid": "1.2.826.0.1.3680043.8.498.37005775889857426034942587344620888398",
+      "label": "Medial OA",
+      "old": 0.025,
+      "new": 0.95,
+      "report": "Technique: MRI of the knee. ACL normal. MCL normal. Medial meniscus normal. Lateral meniscus normal.  Cartilages normal. No baker's cyst. No effusion. Patella alta and MRI signs of ventral PF impingement. Osgood Schlatter. Conclusion: Patella alta and MRI signs of ventral PF impingement. Osgood Schlatter."
+    },
+    {
+      "uid": "1.2.826.0.1.3680043.8.498.37921127120678939078868474340027123335",
+      "label": "Medial OA",
+      "old": 0.975,
+      "new": 0.05,
+      "report": "Kongruentna su zglobna tijela.\nMrljaste zone crvene rekonverzije koštane srži u metadijafizi femura.\nHondromalacija patelarne hrskavice I-II°. Denudacija trohlearne hrskavice u medijalnom dijelu uz\nmanji fokus koštanog edema (hondromalacija IV°).\nStanjenje zglobnih hrskavica femorotibijalnog zgloba uz disekacijske promjene i hondromalaciju\nIII° medijalnog femoralnog kondila te lateralnog tibijalnog platoa. Rubna osteofitoza svih\nzglobnih površina femorotibijalnog zgloba i FP zgloba.\nOpisano odgovara srednje teškoj gonartrozi.\nMinimalni zglobni izljev.\nPrednji i stražnji križni ligamenti su primjerenog intenziteta signala, bez znakova rupture.\nSeptirana ganglijska cista uz stražnji križni ligament veličine 14x5mm na sagitalnim presjecima.\nLateralni mensik je izmjenjenog intenziteta signala u smislu miksoidne degeneracije uz vidljivu\nkroničnu kompleksnu ruputuru korpusa na podlozi degenerativno promjenjenog meniska, koja\nseže do tibijalne artikulacijske površine. Također kompleksna ruptura stražnjeg roga i korijena.\nEkstruzija korpusa lateralnog meniska van zglobne površine za do 3mm.\nVidljiv je defekt donjih popliteomeniscealnih fascikla uz formiranje ganglion ciste duž tetive\nmuskulusa popliteusa, na aksijalnim presjecima veličine 20 × 8 mm.\nMedijalni menisk je izmjenjenog intenziteta signala u vidu miksoidne degeneracije, bez znakova\nrupture. Manja eksturzija u području korpusa za do 2mm.\nMedijalni kolateralni ligament je primjerenog intenziteta signala, bez znakova rupture.\nLateralni kolateralni ligament je smanjene napetosti uz izmjenjen intenzitet signala pri\nfemoralnom hvatištu, vjerojatno uslijed distenzije.\nManji izljev u ovojnici tetive m. popliteusa koja je izmjenjenog intenziteta signala pri femoralnom\nhvatištu u sklopu tendinopatskih promjena.\nU području insercije za tibiju manja parcijalna ruptura tetive muskulusa semimembranozusa.\nTetive pes anserinusa i iliotibijalni trakt su primjerenog intenziteta signala.\nTetiva m. kvadricepsa i ligg. patele su izmjenjenog intenzita signala u području hvatišta u smislu\nentezopatskih promjena.\nNeurovaskularne strukture su primjerenog prikaza."
+    },
+    {
+      "uid": "1.2.826.0.1.3680043.8.498.37558426555271635608942179071280432530",
+      "label": "Lateral OA",
+      "old": 0.98,
+      "new": 0.05,
+      "report": "Τεχνική: Η εξέταση έγινε µε ακολουθίες παλµών Τ1, Τ2/πυκνότητας πρωτονίων µε καταστολή του σήµατος του λίπους και Τ2 βαθµιδωτής ηχούς υψηλής ευκρινείας. Ευρήµατα: [DATE]. - Στο έξω και έσω διαµέρισµα της άρθρωσης του γόνατος παρατηρούνται στένωση του µεσάρθριου διαστήµατος, λέπτυνση του αρθρικού χόνδρου µε κατά τόπους ολική απώλεια αυτού, ιδίως στο έξω διαµέρισµα, καθώς και µικρά επιχείλια οστεόφυτα. Συνυπάρχει επιδείνωση του οστεοµυελικού οιδηµατος στον έξω κνηµιαίο κυρίως και µηριαίο κόνδυλο. Τα ευρήµατα προϋπήρχαν και συνηγορούν υπέρ εκφυλιστικής οστεοαρθρίτιδας. - Σηµειώνεται µείωση του όγκου του σώµατος του έξω µηνίσκου, εύρηµα που προϋπήρχε. - Μικρή οριζόντια ρήξη αναγνωρίζεται στο πρόσθιο κέρας του έσω µηνίσκου. - Μικρή συλλογή υγρού παρατηρείται ενδαρθρικά. - Στην άπω διάφυση του µηριαίου επανελέγχονται αλλοιώσεις συµβατές µε οστικά έµφρακτα, συνολικής έκτασης ~ 6.9 * 2.5 εκ (κο*εγκ). - Με φυσιολογικό σήµα ελέγχεται ο λοιπός οστικός µυελός. - ∆εν παρατηρούνται παθολογικά ευρήµατα από τον έλεγχο των χιαστών και πλαγίων συνδέσµων. - ∆εν παρατηρούνται παθολογικά ευρήµατα από τον έλεγχο του εκτατικού µηχανισµού."
+    },
+    {
+      "uid": "1.2.826.0.1.3680043.8.498.37427993203943111265113924891058049338",
+      "label": "Lateral OA",
+      "old": 0.025,
+      "new": 0.95,
+      "report": "Diz eklemi içi sıvı miktarı normal. Çapraz ve yan bağlar normal. Medyal ve lateral menisküs normal. Eklem kıkırdakları ve kemikler normal. Ekstensör mekanizma korunmuş. Proksimal tibyofibular eklem normal."
+    },
+    {
+      "uid": "1.2.826.0.1.3680043.8.498.37508036912473928281276902883575142611",
+      "label": "Lateral OA",
+      "old": 0.025,
+      "new": 0.95,
+      "report": "МР находка: МР данни за ставен излив, най-вероятно хеморагичен. МР данни за скъсване на предната кръстна връзка. Връзката е със силно уголемен напречник и повишен интензитет на сигнала. Находката е както при прясна субтотална руптура. Интактна е задната кръстна връзка. Костите, формиращи колянната става са с нормална форма. Визуализира се контузионен  костномозъчен едем в областта на медиалното тибиално плато и медиалния кондил на фемура. Нормално изобразяване на латералния и медиалния менискус. Ставният хрущял на фемура, тибията и пателата е интактен. Лигамент на пателата и сухожилие на мускулус квадрицепс феморис- нормално изобразяване. Ретинакулуми, колатерални лигаменти- б.о. Заключение: МР данни за прясна субтотална руптура на предната кръстна връзка. Хеморагичен ставен излив. "
+    },
+    {
+      "uid": "1.2.826.0.1.3680043.8.498.37413349933694832641902637847629969234",
+      "label": "Lateral OA",
+      "old": 0.97,
+      "new": 0.05,
+      "report": "Diz eklemi içi sıvı miktarı normal. Gastroknemyus-semimembranozus bursasındaki küçük sıvı koleksiyonu sızdırmıyor. Çapraz ve yan bağlar normal. Posterolateral ve posteromedyal köşe yapıları korunmuş. Medyal menisküs yırtık içermiyor. Lateral menisküsün arka boynuzundaki horizontal yırtık serbest kenara ulaşıyor; alt eklem yüzeyi de yırtılıp medyale katlanmış. Menisküslerdeki ince kalsifikasyonlar kondrokalsinozis/psödogut ile uyumlu. Patella apeksindeki, tibyal platonun posterolateralindeki ve medyal femoral kondilde ağırlık taşıyan kesimdeki tam kat eklem kıkırdağı kayıplarına gerek bu kesimlerde, gerekse patellanın daha lateralinde subkondral medüller fibrokistik ve fibrovasküler değişiklikler eşlik ediyor. Ekstensör mekanizma korunmuş."
+    },
+    {
+      "uid": "1.2.826.0.1.3680043.8.498.37969790195791584440906553207150666923",
+      "label": "Lateral OA",
+      "old": 0.99,
+      "new": 0.08,
+      "report": "MRI LEFT KNEE:\n\nINDICATION:    Clicking, locking, exclude meniscal tear..\n\nPRIOR IMAGING: None.\n.\nTECHNICAL INFORMATION AND PROTOCOL:\n\nProton density and T2 weighted sagittal, coronal and axial imaging was performed through the knee including a 3D Fat suppressed proton density weighted sequence. No contrast was administered.\n\nFINDINGS:\n\nThe 3-D proton density sequence was reformatted and manipulated to aid in the interpretation of this examination. The extensor mechanism is intact. There is patella alta. The Insall Salvati ratio measures about 1.6.\nThe finding is associated with advanced patellofemoral joint osteoarthritic change with extensive denuding of the articular cartilage and with extensive subcortical cyst formation particularly seen along the apex and lateral facet of patella. Prominent trochlear and patellar osteophytes are demonstrated.\n\nThe medial patellar retinaculum is attenuated likely related to previous lateral dislocation and partial disruption. The lateral patellar retinaculum is intact.\n\nThere is a degenerative medial meniscal tear. There is maceration and linear signal seen in the posterior horn extending into the body. An oblique inferiorly surfacing tear of the body and posterior horn is a demonstrated. The finding is associated with severe chondral denuding and exuberant marginal osteophyte formation seen to the medial joint compartment. There is also subcortical edema seen to the weightbearing surface of the medial femoral condyle and medial tibial plateau.\n\nThe lateral meniscus is macerated and not identified at the body and posterior horn. Findings are in keeping with extensive maceration and degenerative tearing of the body and the posterior horn of lateral meniscus. The finding is associated with denuding of the entire articular cartilage of lateral joint compartment associated with prominent lateral joint compartment osteophyte formation. There is also subcortical sclerosis and mild edema seen within the lateral joint compartment. An intraosseous cyst is seen to the lateral femoral condyle with 3 cm in keeping with subcortical tear.\n\nThe anterior cruciate ligament and posterior cruciate and medial collateral ligament are intact.\n\nThe lateral collateral ligament complex including the IT band, fibular collateral ligament, biceps femoris tendon and popliteus tendon appear intact.\n\nThere is a large knee effusion with reactive synovitis. There is no significant Baker's cyst. In the lateral popliteal fossa there is a large intraosseous loose body projecting anterior to the proximal fibers of the lateral head of the gastrocnemius measuring about 2.4 cm in maximum dimension. Smaller loose bodies are likely present in this region.\n\nINTERPRETATION: \n\nSevere tricompartmental osteoarthritic change most severely affecting patellofemoral and lateral compartments. Degenerative meniscal tears laterally and medially with cartilaginous denuding to the lateral medial and patellofemoral compartments.\n\nLoose bodies.\n\nPatella alta with attenuation of the medial patellar retinaculum likely related to prior transient lateral dislocation of the patella."
+    },
+    {
+      "uid": "1.2.826.0.1.3680043.8.498.37007302166102452703965686598524467188",
+      "label": "PF OA",
+      "old": 0.99,
+      "new": 0.05,
+      "report": "ΤΕΧΝΙΚΗ Η εξέταση έγινε µε ακολουθίες παλµών Τ1 και πυκνότητας πρωτονίων µε καταστολή του σήµατος του λίπους. ΕΥΡΗΜΑΤΑ - Ευρήµατα σοβαρής οστεοαρθρίτιδας της επιγονατιδοµηριαίας άρθρωσης µε µεγάλης έκτασης ολικού πάχους έλλειµµα του αρθρικού χόνδου της επιγονατίδας κατά το έξω τµήµα της µε πολλαπλές περιοχές υπαρθρικού οστεοµυελικού οιδήµατος επιχωρίως στην επιγονατίδα (ICRS grade 4) και εστία οστεοµυελικού οιδήµατος επιχωρίως στο µηριαίο κόνδυλο καθώς και επιχείλια οστεόφυτα στον τελευταίο. - Εκφυλιστική ρήξη στο οπίσθιο κέρας του έσω µηνίσκου µε υπεξάρθρηµα αυτού. - Ηπιες αλλοιώσεις οστεοαρθρίτιδας µε ύδραρθρο και παρουσία µικρών επιχείλιων οστεοφύτων στους µηριαίους και κνηµιαίους κονδύλους καθώς και στη µεσοκονδύλια εντοµή, χωρίς στένωση του µεσαρθίου διαστήµατος. - Φυσιολογική είναι η απεικόνιση του έξω µηνίσκου, των πλαγίων συνδέσµων, των χιαστών, των τενόντων, του αρθρικού χόνδρου του µηριαίου και του λοιπού οστικού µυελού. - Παρουσία µικρής ραγείσας κύστης Βaker. "
+    },
+    {
+      "uid": "1.2.826.0.1.3680043.8.498.36924091633099385100942228071545017565",
+      "label": "PF OA",
+      "old": 0.98,
+      "new": 0.05,
+      "report": "COMPARISON:Prior imaging dating back to [Date].\n\nCLINICAL HISTORY:Recent total hip arthroplasty. Right knee pain.\n\nPROCEDURE:Multisequence, multiplanar unenhanced MRI of the right knee according to routine protocol.\n\nIMAGING FINDINGS:\n\nIntrasubstance degeneration posterior horn medial meniscus without tear. The anterior horn and body as well as posterior root are intact. The lateral meniscus is intact.\n\nIntact anterior cruciate ligament and posterior cruciate ligament.\n\nThe medial collateral ligament, posterior oblique ligament, fibular collateral ligament, and biceps femoris tendon insertion are intact. Mild popliteus tendinosis without tear. The iliotibial band is intact.\n\nThe TT-TG distance measures 6 mm, within normal limits. No femoral trochlear dysplasia. No patellofemoral subluxation. Mild quadriceps insertional tendinosis without tear. Mild proximal patellar tendinosis without tear.\n\nFissuring of articular cartilage at the patellar apex and along the lateral patellar facet with focal full thickness cartilage denuding at the periphery of the lateral patellar facet. Focal full thickness cartilage denuding lateral femoral trochlea near the central trochlea. There is a tiny focus of full-thickness cartilage denuding involving the posterior weightbearing aspect lateral tibial plateau. The remainder of the lateral femorotibial articular cartilage is relatively preserved. Preserved medial femorotibial articular cartilage. \n\nSmall knee joint effusion. Trace fluid in the deep infrapatellar recess. Small Baker's cyst. Regional musculature is within normal limits. No suspicious focal marrow signal alteration.\n\nIMPRESSION:\n1. No evidence of discrete meniscal, ligament, or tendon tear.\n2. Quadriceps and popliteus tendinosis, without tears.\n3. Moderate patellofemoral chondrosis consistent with moderate patellofemoral predominant osteoarthritis of the right knee."
+    },
+    {
+      "uid": "1.2.826.0.1.3680043.8.498.37030593568962187244853961673610373876",
+      "label": "PF OA",
+      "old": 0.025,
+      "new": 0.95,
+      "report": "ΤΕΧΝΙΚΗ Πραγµατοποιήθηκαν ακολουθίες Τ1, Τ2 και PD FS. ΕΥΡΗΜΑΤΑ Παθολογικό σήµα παρουσιάζει ο έσω µηνίσκος στο πλαίσιο εκφύλισής του χωρίς εικόνα ρήξης. Φυσιολογικός απεικονίζεται ο έξω µηνίσκος, ο οπίσθιος χιαστός και πλάγιοι σύνδεσµοι. Βλεννοειδής εκφύλιση παρατηρείται στον πρόσθιο χιαστό σύνδεσµο. Οίδηµα εντοπίζεται στο υπερεπιγονατιδικό και έσω παραεπιγονατιδικό λιπώδες στρώµα. Το εύρηµα συνηγορεί για σύνδροµο πρόσκρουσης της επιγονατίδας και του τετρακεφάλου τένοντα, επί του µηριαίου οστού. Φυσιολογικό σήµα έχει ο αρθρικός χόνδρος και ο οστικός µυελός. "
+    },
+    {
+      "uid": "1.2.826.0.1.3680043.8.498.37427993203943111265113924891058049338",
+      "label": "PF OA",
+      "old": 0.025,
+      "new": 0.95,
+      "report": "Diz eklemi içi sıvı miktarı normal. Çapraz ve yan bağlar normal. Medyal ve lateral menisküs normal. Eklem kıkırdakları ve kemikler normal. Ekstensör mekanizma korunmuş. Proksimal tibyofibular eklem normal."
+    },
+    {
+      "uid": "1.2.826.0.1.3680043.8.498.37485075271886447709158414670394650122",
+      "label": "PF OA",
+      "old": 0.975,
+      "new": 0.05,
+      "report": "MRI of right Knee with \n-Locator, SG PD FatSat, SG T2W FS, CO T2W FS, AX T2W FS, SG T1W\n\n\n> Small size of lateral meniscus with absent bow-tie sign, in favor of lateral meniscus tear.\n> Linear signal intensity in posterior horn of medial meniscus, without significant extending into the surface, in favor of  grade 2 intrasubstance signal of posterior horn of medial meniscus, maybe due to degeneration.\n> Wearing of articular cartilage and subchondral bone marrow edeama, especially at lateral aspect of knee joint; large spur formation.\n   Wearing articular cartilage of patella and spur, in favor of grade 3 patellar chondromalacia.\n> The contour of ACL and PCL is in a straight line but increase signal intensity inside, in favor of grade 1 injury.\n> Both medial & lateral collateral ligaments appear to be within normal.\n> Joint effusion and suprapatellar bursitis with thick suprapatellar, lateral and medial plicae; hypertrophy of the synovium, indicative of synovitis.\n\nImpression: \n1. Lateral meniscus tear.\n2. Osteoarthritis of right knee joint, more severe at lateral compartment.\n3. Synovitis of right knee and complex patellar plicae and suprapatellar burisitis.\n4. Grade 3 patellar chondromalacia.\n5. Grade 1 injury of ACL and PCL.\nSuggest correlation with clinical manifestation and further management\n"
+    },
+    {
+      "uid": "1.2.826.0.1.3680043.8.498.37007302166102452703965686598524467188",
+      "label": "Effusion",
+      "old": 0.94,
+      "new": 0.05,
+      "report": "ΤΕΧΝΙΚΗ Η εξέταση έγινε µε ακολουθίες παλµών Τ1 και πυκνότητας πρωτονίων µε καταστολή του σήµατος του λίπους. ΕΥΡΗΜΑΤΑ - Ευρήµατα σοβαρής οστεοαρθρίτιδας της επιγονατιδοµηριαίας άρθρωσης µε µεγάλης έκτασης ολικού πάχους έλλειµµα του αρθρικού χόνδου της επιγονατίδας κατά το έξω τµήµα της µε πολλαπλές περιοχές υπαρθρικού οστεοµυελικού οιδήµατος επιχωρίως στην επιγονατίδα (ICRS grade 4) και εστία οστεοµυελικού οιδήµατος επιχωρίως στο µηριαίο κόνδυλο καθώς και επιχείλια οστεόφυτα στον τελευταίο. - Εκφυλιστική ρήξη στο οπίσθιο κέρας του έσω µηνίσκου µε υπεξάρθρηµα αυτού. - Ηπιες αλλοιώσεις οστεοαρθρίτιδας µε ύδραρθρο και παρουσία µικρών επιχείλιων οστεοφύτων στους µηριαίους και κνηµιαίους κονδύλους καθώς και στη µεσοκονδύλια εντοµή, χωρίς στένωση του µεσαρθίου διαστήµατος. - Φυσιολογική είναι η απεικόνιση του έξω µηνίσκου, των πλαγίων συνδέσµων, των χιαστών, των τενόντων, του αρθρικού χόνδρου του µηριαίου και του λοιπού οστικού µυελού. - Παρουσία µικρής ραγείσας κύστης Βaker. "
+    },
+    {
+      "uid": "1.2.826.0.1.3680043.8.498.36924091633099385100942228071545017565",
+      "label": "Effusion",
+      "old": 0.925,
+      "new": 0.05,
+      "report": "COMPARISON:Prior imaging dating back to [Date].\n\nCLINICAL HISTORY:Recent total hip arthroplasty. Right knee pain.\n\nPROCEDURE:Multisequence, multiplanar unenhanced MRI of the right knee according to routine protocol.\n\nIMAGING FINDINGS:\n\nIntrasubstance degeneration posterior horn medial meniscus without tear. The anterior horn and body as well as posterior root are intact. The lateral meniscus is intact.\n\nIntact anterior cruciate ligament and posterior cruciate ligament.\n\nThe medial collateral ligament, posterior oblique ligament, fibular collateral ligament, and biceps femoris tendon insertion are intact. Mild popliteus tendinosis without tear. The iliotibial band is intact.\n\nThe TT-TG distance measures 6 mm, within normal limits. No femoral trochlear dysplasia. No patellofemoral subluxation. Mild quadriceps insertional tendinosis without tear. Mild proximal patellar tendinosis without tear.\n\nFissuring of articular cartilage at the patellar apex and along the lateral patellar facet with focal full thickness cartilage denuding at the periphery of the lateral patellar facet. Focal full thickness cartilage denuding lateral femoral trochlea near the central trochlea. There is a tiny focus of full-thickness cartilage denuding involving the posterior weightbearing aspect lateral tibial plateau. The remainder of the lateral femorotibial articular cartilage is relatively preserved. Preserved medial femorotibial articular cartilage. \n\nSmall knee joint effusion. Trace fluid in the deep infrapatellar recess. Small Baker's cyst. Regional musculature is within normal limits. No suspicious focal marrow signal alteration.\n\nIMPRESSION:\n1. No evidence of discrete meniscal, ligament, or tendon tear.\n2. Quadriceps and popliteus tendinosis, without tears.\n3. Moderate patellofemoral chondrosis consistent with moderate patellofemoral predominant osteoarthritis of the right knee."
+    },
+    {
+      "uid": "1.2.826.0.1.3680043.8.498.37519350121906786941281770770693979271",
+      "label": "Effusion",
+      "old": 0.925,
+      "new": 0.05,
+      "report": "Exam Type: MRI KNEE LEFT WO CONTRAST\nExam Date and Time: [DATE] [TIME]\nIndication: [REDACTED]. Pain at the outer aspect. \nComparison: [REDACTED].\n\nTECHNIQUE:\nMRI of the left knee was performed on a 1.5 Tesla system with a dedicated knee coil in three planes (axial, sagittal, and coronal), using a standard non-contrast protocol.\n\nFINDINGS:\nOSSEOUS STRUCTURES:\nAlignment is anatomic. No acute fracture or bone bruise. Background marrow signal is normal without infiltrative marrow process. No aggressive osseous lesions.\n\nJOINT SPACE:\nSmall joint effusion. No intra-articular bodies. Small, partially ruptured Baker's cyst with synovial proliferation.\n\nMEDIAL COMPARTMENT:\nMedial meniscus: Normal in morphology and signal.\nMedial compartment cartilage: Chondral fraying at the anterior weightbearing medial femoral condyle. The tibial plateau cartilage is intact. No full-thickness defects.\n\nLATERAL COMPARTMENT:\nLateral meniscus: Normal in morphology and signal.\nLateral compartment cartilage: No focal cartilage defects.\n\nPATELLOFEMORAL COMPARTMENT:\nPatellofemoral compartment cartilage: Diffuse partial-thickness patellar cartilage loss with small areas of full-thickness fissuring at the medial facet with associated subchondral cystic change/edema. The trochlear cartilage is intact.\n\nCRUCIATE LIGAMENTS:\nAnterior cruciate ligament (ACL): Normal with both bundles intact.\nPosterior cruciate ligament (PCL): Normal.\n\nCOLLATERAL LIGAMENTS & POSTEROLATERAL CORNER:\nMedial collateral ligament (MCL): Normal.\nLateral collateral ligament (LCL) complex: Normal.\nPosterolateral corner structures: Normal.\n\nEXTENSOR MECHANISM:\nDistal quadriceps tendon: No tendinosis or tear.\nPatella tendon: No tendinosis or tear.\nMedial patellofemoral ligament (MPFL) and patellar retinacula: Normal.\nPatellofemoral tracking: No edema in superolateral Hoffa's fat pad. No lateral patellar tilt or translation. No patella alta. Normal patellar and trochlear morphology. Normal tibial tubercle-trochlear groove (TT-TG) distance measuring 11 mm.\n\nMUSCLES/TENDONS:\nNo acute muscle strain or muscle atrophy. Visualized tendons not previously discussed are intact without tendinosis or tear.\n\nSOFT TISSUES:\nNonspecific prepatellar subcutaneous edema about the knee. No soft tissue mass. Normal popliteal neurovascular bundle.\n\nIMPRESSION:\n\n1.\tModerate patellofemoral and mild medial compartment chondrosis.\n2.\tSmall joint effusion and small partially ruptured Baker's cyst.\n3.\tNo acute fracture, meniscal tear or ligamentous injury."
+    },
+    {
+      "uid": "1.2.826.0.1.3680043.8.498.65160241567146620406193593170843451582",
+      "label": "Effusion",
+      "old": 0.92,
+      "new": 0.05,
+      "report": "Antecedentes Clínicos:\nObs. Rotura quiste de Backer versus desgarro gemelar.\nHallazgos:\nLesión ósea medular metafisaria distal del fémur que mide aproximadamente 18 x 12 mm en sus ejes\nmayores, sin signos que sugieran agresividad local. No hay otras alteraciones de señal de la médula ósea.\nLigamentos cruzados y colaterales dentro de límites normales.\nMeniscos de morfología y señal conservada, sin criterios de rotura.\nÚlcera condral de espesor total de la zona de carga posterior del cóndilo femoral lateral que mide\naproximadamente 5 x 12 mm en sus ejes mediolateral y anteroposterior respectivamente.\nCondropatía superficial de la región central de la zona de carga del cóndilo femoral medial. El resto de los\ncartílagos femorotibiales y patelofemoral sin alteraciones.\nLeve a moderado derrame articular.\nPequeño quiste poplíteo. Esto se asocia a engrosamiento y aumento de señal del tendón del gastrocnemio\nmedial en su inserción proximal con rotura parcial en su unión miotendínea con fenómenos reparativos\nparciales regionales. Impresiona extenderse en aproximadamente 23 mm en su eje cefalocaudal y\naproximadamente 7 mm en el eje transverso mayor. Esto se asocia a edema de la musculatura regional y a\nleve cantidad de liquido intermuscular hacia cefálico y caudal. El resto de la musculatura y tendones\nregionales sin alteraciones.\nTendones cuadricipital, rotuliano, tendones de la pata de ganso, bíceps femoral y banda iliotibial dentro de\nlímites normales.\nImpresión:\nCondropatía grado 3 de la zona de carga del cóndilo femoral lateral.\nLeve a moderado derrame articular. Pequeño quiste poplíteo con probable filtración.\nTendinosis con rotura parcial de la unión miotendínea del gastrocnemio medial asociado a edema de la\nmusculatura y leve cantidad de liquido intermuscular hacia cefálico y cauda"
+    },
+    {
+      "uid": "1.2.826.0.1.3680043.8.498.10713285016170190922777298047146228811",
+      "label": "Effusion",
+      "old": 0.91,
+      "new": 0.05,
+      "report": "Technique: MRI of the knee. ACL normal. MCL normal. Medial meniscus normal. Lateral meniscus normal. Medial and patelofemoral compartment OA. Lateral compartment normal.No baker's cyst. Mild effusion. Conclusion: Medial and patelofemoral compartment OA."
+    },
+    {
+      "uid": "1.2.826.0.1.3680043.8.498.15103255966832759925770334719703425755",
+      "label": "Synovitis",
+      "old": 0.975,
+      "new": 0.3,
+      "report": "ΤΕΧΝΙΚΗ: Η εξέταση πραγµατοποιήθηκε µε ακολουθίες Τ1 σε στεφανιαίο επίπεδο και PDFS σε τρία επίπεδα. EYΡΗΜΑΤΑ: - Από τον έλεγχο του έξω διαµερίσµατος παρατηρούνται εκφυλιστική ρήξη στο οπίσθιο κέρας και υπεξάρθρηµα του έξω µηνίσκου, µε διάβρωση του αρθρικού χόνδρου (ICRS grade IV στο κνηµιαίο πλατώ), επιχείλια οστεόφυτα και µικρής έκτασης υποχόνδρινο οστεοµυελικό οίδηµα στην πρόσθια µοίρα του έξω κνηµιαίου κονδύλου. - Από τον έλεγχο του έσω διαµερίσµατος παρατηρούνται εκφυλιστική ρήξη στο σώµα/οπίσθιο κέρας και υπεξάρθρηµα του έσω µηνίσκου, µε λέπτυνση του αρθρικού χόνδρου (ICRS grade IΙΙ) και επιχείλια οστεόφυτα. - Φυσιολογικοί απεικονίζονται οι πλάγιοι σύνδεσµοι και οι χιαστοί σύνδεσµοι. - Από τον έλεγχο του πρόσθιου διαµερίσµατος, παρατηρούνται µικρές διαβρώσεις του αρθρικού χόνδρου στην έσω τροχιλία. - Παρατηρείται µεγάλη ενδαρθρική συλλογή υγρού µε λαχνόµορφες προσεκβολές (φυλλόµορφο λίπωµα - lipoma arborescens). - Μικρή συνοβιακή κύστη στην έσω γνιακή κοιλότητα. - Στο έλυτρο του ιγνυακού τένοντα, παρατηρείται τενοντοελυτρίτιδα, υµενίτιδα και ξένο σώµα 12mm. - Επικουρικό οστάριο οs fabella. ΣΥΜΠΕΡΑΣΜΑ: - Εκφυλιστική οστεοαρθρίτιδα έσω και έξω διαµέρίσµατος µε εκφυλιστική ρήξη των µηνίσκων. - Μεγάλης έκτασης ενδαρθρική συλλογή υγρού και φυλλόµορφο λίπωµα του υµένα."
+    },
+    {
+      "uid": "1.2.826.0.1.3680043.8.498.10029520033957968044048068502185417806",
+      "label": "Synovitis",
+      "old": 0.97,
+      "new": 0.3,
+      "report": "    The study reveals anterior tibial translation.  Mild bone contusion at posterior lateral proximal tibia is observed.  \n  -  Hyperintense disrupted proximal MCL with focal fluid is noted.  \n    Medial bulging medial meniscus with myxoid change in entire of the anterior to posterior horn is observed.  Massive radial tear at posterior root is detected.    \n -  Mild hyperintense proximal FCL and proximal popliteus tendon are observed.  Hyperintense distal biceps femoris tendon is noted.     \n   Horizontal tear at anterior horn lateral meniscus, with complex tear at meniscal body  \n and radial tear at posterior root of the lateral meniscus are detected.  \n -   Loss of signal of entire of the ACL.  Hyperintense proximal PCL with Loss of distal part PCL is noted.     \n -  Diffuse thinning articular cartilage along the medial and lateral tibiofemoral and PF joint is observed.  \n    Small full-thickness cartilaginous defect, about 3mm., at posterior lateral tibial plateau with subchondral bone edema is noted.   \n   Fissuring cartilage at patellar apex without subchondral bone lesion is noted.  \n  \n - Moderate joint effusion with fluid distended suprapatellar bursa with thickened synovial tissue are observed.  \n - Quadriceps and patellar tendons are intact.  \n - Fat atrophic change of the muscles, less than 50% muscle volume loss;  predominantly involved vastus  muscles is observed.      - Complete tear of ACL and PCL \n    - High grade partial tear at proximal MCL  \n    - Proximal FCL sprain, proximal popliteus tendon strain, distal biceps femoris tendon strain \n    -  Myxoid change of the medial meniscus with radial tear at posterior horn \n    -  Horizontal tear at anterior horn lateral meniscus, with complex tear at meniscal body  \n and radial tear at posterior root of the lateral meniscus \n   -  Chondrosis of the medial and lateral tibiofemoral and PF joint \n   -  Fissuring cartilage at patellar apex without subchondral bone lesion, Chondropathy grade2 \n   -  Small full-thickness cartilaginous defect, about 3mm., at posterior lateral tibial plateau with  \n       subchondral bone edema, chondropathy grade4. \n    - Mild synovitis of the knee and PF joint.   \n    -  Fat atrophic change of the muscles, less than 50% muscle volume loss;  predominantly involved \n        vastus muscles, Hamstring, anterior and posterior compartment of the proximal leg, "
+    },
+    {
+      "uid": "1.2.826.0.1.3680043.8.498.10271567891603078238024189515805908561",
+      "label": "Synovitis",
+      "old": 0.97,
+      "new": 0.3,
+      "report": "MRI of left Knee with \n-Locator, SG PD FatSat, SG T2W FS, SG T1W, CO T2W FS, AX T2W FS\n\n\n\n> The contour of ACL in a straight line and increase signal intensity inside on F/S T2WI, in favor of grade 1 injury or degeneration..\n> The contour of PCL appears to be within normal, no abnormal signal intensity is noted.\n> Linear signal intensity in  medial meniscus, with extending into the surface of posterior horn of medial meniscus, in favor of tear.\n> Linear signal intensity in anterior horn of lateral meniscus, with extending into the surface, in favor of tear.\n> Both medial & lateral collateral ligaments appear to be within normal.\n> Subchondral bone marrow edema/cysts and irregular thining of intra-articular cartilage over lateral patellofemoral joint and medial femorotibial joint, reflecting osteoarthritis. Subchondral hypointensity line noted on T1WI and F/S T2WI in anterior medial tibial plateau, in favor of small osteonecrosis.\n> Joint effusion and suprapatellar bursitis with suprapatellar and thick medial plicae; hypertrophy of the synovium, indicative of synovitis.\n> Increased fat stranding  along the pes anserinus, R/O paratendinitis of pes anserinus.\n> Tendinosis of quadriceps tendon.\nImpression: \n1. Osteoarthrits of left knee , major at lateral patellofemoral joint and medial femorotibial joint.\n2. In favor of small osteonecrosis of right anterior medial tibial plateua.\n3. Degeneration of meniscus and tear of posterior horn of medial meniscus and anterior horn of lateral meniscus.\n4. Mild synovitis of left and and patellar plicae.\n5. Grade 1 injury or degeneration of ACL.\n6. Subcutanoeous edema over anterior aspect of left knee and mild paratendinitis of pes anserinus.\n\n\n"
+    },
+    {
+      "uid": "1.2.826.0.1.3680043.8.498.12296624595750602443033689366743784387",
+      "label": "Synovitis",
+      "old": 0.97,
+      "new": 0.3,
+      "report": "ΜΤ ΑΡΙΣΤΕΡΟΥ ΓΟΝΑΤΟΣ ΤΕΧΝΙΚΗ: Η εξέταση πραγµατοποιήθηκε µε ακολουθίες pd fs, pd, T1, Τ2med2d. EYΡΗΜΑΤΑ - Aναγνωρίζεται η παρουσία ιστού επί τα εκτός και σε επαφή µε αµφότερους του µηριαίους κονδύλους, που χαρακτηρίζονται από µικτής έντασης σήµα, παρουσία διαβρώσεων στον εφαπτώµενο φλοιό, κυρίως κατά τον έξω µηριαίο κόνδυλο, καθώς και υπέγερση - κατά τόπους ασαφοποίηση αµφοτέρων των πλαγίων συνδέσµων. Αντίστοιχης υφής ιστός παρατηρείται και στην πρόσθια µοίρα της άρθρωσης του γόνατος κατά το εν τω βάθει τµήµα του υποεπιγοατιδικού λιπώδους σώµατος σε επαφή µε το ασαφοποιηµένο πρόσθιο κέρας του έξω µηνίσκου Τα ανωτέρω ευρήµατα σε συνδυασµό και το κλινικόεργαστηριακό ιστορικό αποδίδονται σε µαζικές εναποθέσεις κρυστάλλων στο πλαίσιο τοφώδους ουρικής αρθρίτιδας. - Αναγνωρίζεται µέτρια ποσότητα ενδαρθρικής συλλογής υγρού µε συνοδό κατά τόπους προβολή του αρθρικού υµένα. Συνυπάρχει ευµεγέθης πολύχωρη συνοβιακή κύστη Baker κ-ο διάστασης 5.2 cm. Υγρικη διαπότιση πέριξ του γαστροκνηµίου µυός αποδίδεται σε προηγηθείσα ρήξη κύστης Baker. - Φυσιολογικά απεικονίζονται τα λοιπά τµήµατα των µηνίσκων, καθώς και οι χιαστοί σύνδεσµοι. - Εντός του φυσιολογικού ελέγχεται ο αρθρικός χόνδρος. - Με σήµα εντός του φυσιολογικού ελέγχεται ο οστικός µυελός. - Αναγνωρίζεται ανωµαλία της παρυφής του αρθρικού χόνδρου της επιγονατίδας , στο πλαίσιο χονδροπάθειας (Grade II).- Χωρίς άλλα ευρήµατα δυσλειτουργίας του εκτατικού µηχανισµού."
+    },
+    {
+      "uid": "1.2.826.0.1.3680043.8.498.13280017707177438711374726939683941320",
+      "label": "Synovitis",
+      "old": 0.97,
+      "new": 0.3,
+      "report": " In the medial compartment, there is tear at the posterior hornroot of the medial meniscus. There is displaced meniscal fragment into the medial gutter. There is diffuse high grade chondrosis (lmore than 50% thickness cartilage loss) along weightbaring medial femoral condyle and medial tibial plateau. There is subchondral edema. Osteophytes are present.  \n The lateral compartment, the lateral meniscus is not torn. There is focal high grade chondral defect (more than 50% thickness cartilage loss) with subchondral edema at mid lateral tibial plateau (about 1.6* 1.8 cm).  \n The patellofemoral joint, there is diffuse low grade  chondrosis (less than 50% thickness cartilage loss) along medial patellar facet and medial trochlea. There is subchondral edema. Osteophytes are present. The medial patellofemoral ligament is intact.  \n In the intercondylar notch, the anterior cruciate ligament is intact. The posterior cruciate ligament is intact. There is no tibial translation. \n The medial collateral ligament complexes are intact. The posteromedial oblique ligament is intact.  \n The lateral collateral ligament complexes are intact. The popliteofibular ligament is intact. The meniscopopliteal fascicles are intact.  \n The extensor mechanism is normal.  \n Minimal amount of left knee effusion with synovitis is present. A 2.4* 3.2* 8 cm baker' s cyst at the posteromedial aspect of the left knee.  Medial tibiofemoral and mild patellofemoral compartmental osteoarthritis fo the left knee by evidence of chondrosis, subchondral edema, and osteophytes. \n  Focal high grade chondral defect (more than 50% thickness cartilage loss) with subchondral edema at mid lateral tibial plateau (about 1.6* 1.8 cm).  \n  Tear at the posterior hornroot of the medial meniscus. (note: displaced meniscal fragment into the medial gutter). \n  Minimal amount of left knee effusion with synovitis. \n  A 2.4* 3.2* 8 cm baker' s cyst at the posteromedial aspect of the left knee."
+    },
+    {
+      "uid": "1.2.826.0.1.3680043.8.498.37519350121906786941281770770693979271",
+      "label": "Baker's",
+      "old": 0.96,
+      "new": 0.05,
+      "report": "Exam Type: MRI KNEE LEFT WO CONTRAST\nExam Date and Time: [DATE] [TIME]\nIndication: [REDACTED]. Pain at the outer aspect. \nComparison: [REDACTED].\n\nTECHNIQUE:\nMRI of the left knee was performed on a 1.5 Tesla system with a dedicated knee coil in three planes (axial, sagittal, and coronal), using a standard non-contrast protocol.\n\nFINDINGS:\nOSSEOUS STRUCTURES:\nAlignment is anatomic. No acute fracture or bone bruise. Background marrow signal is normal without infiltrative marrow process. No aggressive osseous lesions.\n\nJOINT SPACE:\nSmall joint effusion. No intra-articular bodies. Small, partially ruptured Baker's cyst with synovial proliferation.\n\nMEDIAL COMPARTMENT:\nMedial meniscus: Normal in morphology and signal.\nMedial compartment cartilage: Chondral fraying at the anterior weightbearing medial femoral condyle. The tibial plateau cartilage is intact. No full-thickness defects.\n\nLATERAL COMPARTMENT:\nLateral meniscus: Normal in morphology and signal.\nLateral compartment cartilage: No focal cartilage defects.\n\nPATELLOFEMORAL COMPARTMENT:\nPatellofemoral compartment cartilage: Diffuse partial-thickness patellar cartilage loss with small areas of full-thickness fissuring at the medial facet with associated subchondral cystic change/edema. The trochlear cartilage is intact.\n\nCRUCIATE LIGAMENTS:\nAnterior cruciate ligament (ACL): Normal with both bundles intact.\nPosterior cruciate ligament (PCL): Normal.\n\nCOLLATERAL LIGAMENTS & POSTEROLATERAL CORNER:\nMedial collateral ligament (MCL): Normal.\nLateral collateral ligament (LCL) complex: Normal.\nPosterolateral corner structures: Normal.\n\nEXTENSOR MECHANISM:\nDistal quadriceps tendon: No tendinosis or tear.\nPatella tendon: No tendinosis or tear.\nMedial patellofemoral ligament (MPFL) and patellar retinacula: Normal.\nPatellofemoral tracking: No edema in superolateral Hoffa's fat pad. No lateral patellar tilt or translation. No patella alta. Normal patellar and trochlear morphology. Normal tibial tubercle-trochlear groove (TT-TG) distance measuring 11 mm.\n\nMUSCLES/TENDONS:\nNo acute muscle strain or muscle atrophy. Visualized tendons not previously discussed are intact without tendinosis or tear.\n\nSOFT TISSUES:\nNonspecific prepatellar subcutaneous edema about the knee. No soft tissue mass. Normal popliteal neurovascular bundle.\n\nIMPRESSION:\n\n1.\tModerate patellofemoral and mild medial compartment chondrosis.\n2.\tSmall joint effusion and small partially ruptured Baker's cyst.\n3.\tNo acute fracture, meniscal tear or ligamentous injury."
+    },
+    {
+      "uid": "1.2.826.0.1.3680043.8.498.13297973188397662905314777604089528518",
+      "label": "Baker's",
+      "old": 0.95,
+      "new": 0.05,
+      "report": "Medyal>lateral femoral tibyal kompartmanlardaki dejeneratif eklem hastalığı tam kata ulaşan eklem kıkırdağı kaybı ve dejenerasyonu, hafif subkondral medüller fibrovasküler değişiklikler ve marjinal osteofitlerle karakterize. Diz eklemi içi sıvı miktarı minimal artmış. Gastroknemyus-semimembranozus bursasındaki sıvı koleksiyonu sızdırıyor. Çapraz ve yan bağlar normal. Medyale 3 mm ekstrude medyal menisküsün arka boynuzundaki yaygın yapı içi dejenerasyon inferiyor eklem yüzeyine yırtık biçiminde ulaşıyor. Diskoid özellikteki lateral menisküsteki horizontal klivaj yırtığı serbest kenara ulaşıyor. Ekstensör mekanizma korunmuş."
+    },
+    {
+      "uid": "1.2.826.0.1.3680043.8.498.37007302166102452703965686598524467188",
+      "label": "Baker's",
+      "old": 0.95,
+      "new": 0.05,
+      "report": "ΤΕΧΝΙΚΗ Η εξέταση έγινε µε ακολουθίες παλµών Τ1 και πυκνότητας πρωτονίων µε καταστολή του σήµατος του λίπους. ΕΥΡΗΜΑΤΑ - Ευρήµατα σοβαρής οστεοαρθρίτιδας της επιγονατιδοµηριαίας άρθρωσης µε µεγάλης έκτασης ολικού πάχους έλλειµµα του αρθρικού χόνδου της επιγονατίδας κατά το έξω τµήµα της µε πολλαπλές περιοχές υπαρθρικού οστεοµυελικού οιδήµατος επιχωρίως στην επιγονατίδα (ICRS grade 4) και εστία οστεοµυελικού οιδήµατος επιχωρίως στο µηριαίο κόνδυλο καθώς και επιχείλια οστεόφυτα στον τελευταίο. - Εκφυλιστική ρήξη στο οπίσθιο κέρας του έσω µηνίσκου µε υπεξάρθρηµα αυτού. - Ηπιες αλλοιώσεις οστεοαρθρίτιδας µε ύδραρθρο και παρουσία µικρών επιχείλιων οστεοφύτων στους µηριαίους και κνηµιαίους κονδύλους καθώς και στη µεσοκονδύλια εντοµή, χωρίς στένωση του µεσαρθίου διαστήµατος. - Φυσιολογική είναι η απεικόνιση του έξω µηνίσκου, των πλαγίων συνδέσµων, των χιαστών, των τενόντων, του αρθρικού χόνδρου του µηριαίου και του λοιπού οστικού µυελού. - Παρουσία µικρής ραγείσας κύστης Βaker. "
+    },
+    {
+      "uid": "1.2.826.0.1.3680043.8.498.75419034794059601820999512200601915669",
+      "label": "Baker's",
+      "old": 0.93,
+      "new": 0.05,
+      "report": "Na seriji MR presjeka lijevog koljena nalazi se uredna morfologija i intenziteti signala kolateralnih\nligamenata, prednjeg i stražnjeg križnog ligamenta, iliotibijalnog traktusa, patelarnog ligamenta i\ntetive m. kvadricepsa.\nHorizontalna ruptura stražnjeg roga medijalnog meniska.\nHondromalacija patelarne hrskavice 1. stupnja i trohlearne 3. stupnja, hondromalacija 3-4.\nstupnja hrskavice medijalnog i 1. stupnja lateralnog kondila femura u FT zglobu - početne OA promjene uz sitne osteofite.\nOstale prikazane artikulacijske hrskavice urednih su intenziteta signala.\nDegenerativne promjene hvatišta medijalne glave m. gastrocnemius za femur uz formirane\nganglion ciste.\nManji izljev u koljenu, predominantno suprapatelarno i u lat. recesusu. Kranijalno usmjerena\nBakerova cista duljine oko 3cm.\nOstale prikazane koštane, mekotkivne i neurovaskularne strukture uredne su morfologije i\nintenziteta signala."
+    },
+    {
+      "uid": "1.2.826.0.1.3680043.8.498.13099702881219862576749493772702888064",
+      "label": "Baker's",
+      "old": 0.91,
+      "new": 0.05,
+      "report": "Mediales Kompartiment:\nRegelrechtes Knochenmarksignal. Intakter Knorpel. Mukoide Degeneration des Innenmeniskus in der Pars intermedia und des Hinterhorns mit Auffaserung am freien Rand des Innenmeniskushinterhorns (Serie 5/ Image 23-25 ohne Nachweis einer Rissbildung. Gering Flüssigkeit angrenzend an das MCL sowie geringe Signalalterationen der posteromedialen Kapsel.\n\nLaterales Kompartiment:\nRegelrechtes Knochenmarksignal. Intakter Knorpel. Mukoide Degeneration des Außenmeniskusvorderhorns, ansonstern intakter Außenmeniskus ohne Rissbildung. Parameniskale Zysten angrenzend an den Außenmeniskus. Intaktes LCL. \n\nFemoropatellares Gleitlager:\nRegelrechtes Knochenmarksignal. Fokaler bis über die subchondrale Grenzlamelle hinaus reichender Knorpeldefekt im oberen Patellafirst (Serie 6/ Image 19, Outerbridge Grad 4). Gegenüberliegend diskrete oberflächliche Chondropathie der Trochlea (Serie 4/ Image 15). Regelrechte Darstellung des Lig. patellae. Regelrechte Darstellung des Hoffa`schen Fettkörpers.\n\nKreuzbänder:\nIntakte Kreuzbänder.\n\nMuskulatur und übrige Weichteile:\nMäßiger Gelenkerguss. Kleine Bakerzyste. Regelrechtes flow void in den miterfassten Gefäßen."
+    },
+    {
+      "uid": "1.2.826.0.1.3680043.8.498.37879265071349098151803248077034280617",
+      "label": "Contusion",
+      "old": 0.985,
+      "new": 0.05,
+      "report": "MRI of left Knee with \n-Locator, SG PD FatSat, SG T2W FS, SG T1W, CO T2W FS, AX T2W FS\n\n* The contour of ACL not in a straight line and increase signal intensity inside, in favor of tear.\n  Laxity contour of MCL with increased signal intensity on F/S T2WI, in favor of partial tear.\n> The contour of PCL and LCL in a straight line and increase signal intensity inside PCL and proximal LCL on F/S T2WI, in favor of grade 1 injury.\n> Some joint effusion and  suprapatellar bursitis with suprapatellar, lateral and medial plica; mild hypertrophy of the synovium, indicative of mild synovitis.\n> Abnormal signal intensity is noted in proximal tibia ( more prominent at posterior tibial plateau and intercondylar eminance) and distal femur, which shows low signal intensity on T1WI and high signal intensity on T2WI, in favor of bone contusion.\n  Suspicious of mild impaction of lateral femoral condyle. \n   > Linear signal intensity in posterior horn of lateral meniscus, and unclear contour of central portion, in favor of bucket handle tear of lateral meniscus.\n> Bone marrow edema over low pole of patella and mild increased signal intensity of patellar tendon on F/S T2WI, in favor of grade 1  injury.\n  Mild laxity of medial patellar retinuaculum with increased singal intensity on F/S T2WI, in favor of grade 2 injury.\n  Howevere, no dislocation of patella in this study.\n> Mild muscle edema over vastus lateralis and medialis muscle and subcutaneous edema.\nImpression: \n1. C/W ACL tear.\t\n2. High grade partial tear of MCL.\n3. Grade 1-2 injury of PCL and grade 1 injury of proximal LCL.\n4. C/W bucket handle tear of posterior horn of lateral meniscus. \n5. Bone contusion of left proximal tibia and distal femur and low pole patella.\n6. R/O transient patellar dislocation with impaction of lateral femoral condyle and low pole of patella and suspicious of partial tear of medial patellar retinaculum.\n7. Synovitis and patellar plicae of left knee and small Baker's cyst.  \n8. Mild muscle edema over vastus lateralis and medialis muscle and subcutaneous edema.  \nSuggest correlation with clinical manifestation\n"
+    },
+    {
+      "uid": "1.2.826.0.1.3680043.8.498.87018440624359538250658207994111333051",
+      "label": "Contusion",
+      "old": 0.98,
+      "new": 0.05,
+      "report": "Τεχνική: Η εξέταση πραγµατοποιήθηκε µε ακολουθίες παλµών Τ1, πυκνότητας πρωτονίων µε καταστολή του σήµατος του λίπους και Τ2 βαθµιδωτής ηχούς υψηλής ευκρινείας. Ευρήµατα: - Παρατηρείται έντονο οστεοµυελικό οίδηµα στην πρόσθια επιφάνεια του έσω µηριαίου κονδύλου καθώς και στην πρόσθια επιφάνεια του έσω κνηµιαίου κονδύλου, µε συνοδές περιεχόµενες περιοχές χαµηλής έντασης σήµατοςσε Τ1 ακολουθία που πιθανολογούν την παρουσία µικροδοκιδωδων καταγµάτων. Ηπιο οστεοµυελικό οίδηµα αναγνωρίζεται επίσης στην οπίσθια επιφάνεια του έσω και έξω κνηµιαίου κονδύλου. - Από τον έλεγχο του εκτατικού µηχανισµού παρατηρείται έντονο παθολογικό σήµα πέριξ του ασαφοποιηµένου έσω καθεκτικού συνδέσµου της επιγονατίδας, η οποία ελέγχεται σε ήπια έξω πλάγια υπεξαρθρηµατική θέση. Συνυπάρχει διάχυτο παθολογικό σήµα στον έσω πλατύ µύ παρακείµενα του προαναφερθέντος οστικού οιδήµατος. Τα ανωτέρω είναι απότοκα κάκωσης ισούψώς µε συνοδό ρήξη του έσω καθεκτικού συνδέσµου. Μικρές αιµορραγικές συλλογές επιπολής του έσω καθεκτικού συνδέσµου. Οριακά υψηλή θέση της επιγονατίδας (patella alta - Insall-salvai index 1,5) και αβαθής τροχιλία. - Αναγνωρίζεται ικανή ποσότητα ύδραρθου. - Ο αρθρικός χόνδρος, οι µηνίσκοι, οι χιαστοί και πλάγιοι σύνδεσµοι ελέγχονται χωρίς παθολογικά ευρήµατα. Ακέραια ελέγχεται η λαγονοκνηµιαία ταινία. - Παρουσία επικουρικού οσταρίου παρά την κεφαλή της περόνης (parafibula)."
+    },
+    {
+      "uid": "1.2.826.0.1.3680043.8.498.11159546221032123495135103648570690656",
+      "label": "Contusion",
+      "old": 0.975,
+      "new": 0.05,
+      "report": "Antecedentes Clínicos:\nRodilla traumática aguda izquierda.\nHallazgos:\nEdema óseo asociado a fracturas trabeculares en la región periférica y anterior del platillo tibial\nlateral. También se observa edema óseo pequeñas fracturas trabeculares de la espina tibial\nmedial. No hay otras alteraciones de señal de la médula ósea.\nLigamentos cruzados y colaterales dentro de límites normales.\nMeniscos de morfología y señal conservada, sin criterios categóricos de rotura.\nÚlceras condrales focales de espesor total del aspecto posterior del cóndilo femoral lateral de 6 x\n12 mm con cambios óseos secundarios El resto de los cartílagos femorotibiales y patelofemorales\nsin alteraciones significativas. No hay significativo derrame articular ni quistes poplíteos.\nAumento de señal del tercio proximal del tendón rotuliano, sin signos de rotura. Tendón\ncuadricipital, tendones de la pata de ganso, bíceps femoral y banda iliotibial dentro de límites\nnormales.\nEdema del paquete adiposo retro cuadricipital suprarrotuliano.\nNo hay alteraciones de señal de la grasa de Hoffa\nImpresión:\nEdema asociado a fracturas trabeculares de la región periférica y anterior del platillo tibial lateral.\nPequeñas fracturas trabeculares de la espina tibial medial.\nCondropatía focal grado 4 del aspecto posterior del cóndilo femoral lateral con cambios óseos\nsecundarios.\nTendinosis rotuliana proximal. Edema el paquete adiposo retro cuadricipital suprarrotuliano"
+    },
+    {
+      "uid": "1.2.826.0.1.3680043.8.498.11497761063752461132736045914751707046",
+      "label": "Contusion",
+      "old": 0.975,
+      "new": 0.05,
+      "report": "МР находка: МР данни за малък ставен излив. Вижда се изразен костномозъчен едем в латералния кондил на тибията. На фона на едема се изобразява фрактурна линия, без дислокация на костния фрагмент. Налице е дискретно прекъсване на контура на компактата на мястото на фрактурата, без белези на вклиняване. Надлежащия артикулиращ хрущял е с непрекъсната цялост, запазена конгруентност и непроменена сигнална характеристика. Наличие на малка костна киста , субкортикално в медиалния кондил на фемура. Нормално изобразяване на медиалния и латералния менискус. Кръстните връзки са със запазена цялост. Медиалният и латералният колатерален лигамент са със запазена цялост. Сухожилие на м. квадрицепс феморис, лигамент на пателата – нормално изобразяване. Няма МР данни за едем на меките тъкани на коляното. Поплитеална ямка – б.о.  Заключение: МР данни за фрактура на латерален кондил на лявата тибия. Няма данни за дислокация на костния фрагмент. Запазена конгриентност на прилежащия артикулиращ ставен хрущял. Малък ставен излив. "
+    },
+    {
+      "uid": "1.2.826.0.1.3680043.8.498.37046961643473249831189497076699393868",
+      "label": "Contusion",
+      "old": 0.975,
+      "new": 0.05,
+      "report": "Técnica: RMN de la rodilla. Resultados: Rotura completa de LCA. Rotura menisco externo. Contusión ósea femorotibial. Derrame. Impresión: Rotura completa de LCA. Rotura menisco externo. Contusión ósea femorotibial. Derrame."
+    },
+    {
+      "uid": "1.2.826.0.1.3680043.8.498.30662407196303880392459287553277761223",
+      "label": "Fracture",
+      "old": 0.94,
+      "new": 0.05,
+      "report": "Obilniji postkontuzijski koštani edem lateralnog kondila femura i lateralnog tibijalnog platoa, u\nobje zone subhondralno vidljiva hipointenzivna linearna zona s blagom impresijom kortikalne kosti\nte se ne mogu isključiti manje osteohondralne lezije bez separacije (IIa).\nManji areal koštanog edema vidljiv je u medijalnom rubu medijalnog kondila femura anteriorno.\nFokalni edem u području femoralne insercije prednjeg križnog ligamenta koji je potpuno\nrupturiran u proksimalnoj trećini, a vlakna se prate položena prema straga i dijelom prema\nlateralnom kompartmentu zgloba. Manji defekt kortikalisa medijalnog tuberkula interkondilarne\neminencije u smislu manje avulzije.\nStražnji križni ligament urednog signala te se prati u kontinuitetu.\nVidljiva je distenzija Humphreyevog ligamenta pri femoralnoj inserciji, Wrisbergov ligament\nprimjerenog prikaza.\nDistenzija stražnjeg korijena lateralnog meniska uz kosu rupturu meniska pri spoju stražnjeg\nkorijena i stražnjeg roga meniska.\nU sklopu opisanog nalazi se diskontinuitet anteroinferiornog meniskopoplitealnog snopića i izljev\nu hijatusu tetive poplitealnog mišića. Edem posterolateralnog dijela zglobne čahure.\nMedijalni menisk bez znakova degeneracije ili rupture.\nManja parcijalna ruptura lateralnog kolateralnog ligamenta u proksimalnoj trećini.\nEdem unutarnjeg snopa vlakana medijalnog kolateralnog ligamenta u smislu distenzije\nmeniskofemoralnih sveza.\nDefekt vlakana proksimalnog dijela tetive lateralne glave m. gastrocnemius u smislu manje\nparcijalne rupture.\nUredan intenzitet signala hvatišta tetive kvadricepsa i patelarnog ligamenta.\nHondromalacija I-II. stupnja hrskavice lateralnog platoa tibije.\nUredan intenzitet signala preostale femoralne i tibijalne hrskavice.\nUredan intenzitet signala patelarne hrskavice.\nUredna je kongruencija prikazanih zglobnih tijela.\nUmjeren izljev u zglobnom prostoru.\nManja Baker cista."
+    },
+    {
+      "uid": "1.2.826.0.1.3680043.8.498.75547515925579172661099437338637082554",
+      "label": "Fracture",
+      "old": 0.9799999999999975,
+      "new": 0.1,
+      "report": "Erhaltene Artikulation im linken Kniegelenk. Aus der CT Vordiagnostik bekannter mehrfragmentärer knöcherner HKB Ausriss aus der dorsalen Eminentia intercondylaris mit Dislokation der Fragmente um bis zu 1 cm. Angrenzend entsprechendes Bone Bruise. Des Weiteren intraossäre T2 Signalanhebungen am ventralen Tibiaplateau medialseitig und lateralseitig (4/14) sowie am posterolateralen Tibiaplateau angrenzend an das proximale Tibiofibulargelenk (3/121). Am medialen Tibiaplateau ventral mit winziger Impaktierung subcortikal (1010/70). Patella zentriert stehend. Unauffälliger Knorpelbelag retropatellar und in der Trochlea. Auch femorotibial jeweils unauffälliger regelrechter Knorpelbelag. Innenmeniskus intakt. Signalalteration des Außenmeniskus nahe der Wurzel (8/24, 3/87 oder 5/19). Vorderes Kreuzband intakt. Kollateralbänder durchgehend abgrenzbar. Ausgeprägte Hämarthros. Plica mediopatellaris. Diffuse Einblutungen periartikulär. Intramuskuläre Einblutung in den Musculus popliteus (4/26)."
+    },
+    {
+      "uid": "1.2.826.0.1.3680043.8.498.27796604203156439069742212039368371002",
+      "label": "Fracture",
+      "old": 0.97,
+      "new": 0.1,
+      "report": "Exam Type: MRI KNEE RIGHT WO CONTRAST\nExam Date and Time: [DATE] [TIME]\nIndication: Right knee pain. [REDACTED].\nComparison: No relevant prior studies available for comparison.\n\nTECHNIQUE:\nMRI of the right knee was performed on a 1.5 Tesla system with a dedicated knee coil in three planes (axial, sagittal, and coronal), using a standard non-contrast protocol.\n\nFINDINGS:\nOSSEOUS STRUCTURES:\nAlignment is anatomic. Focal osteochondral injury at the medial tibial plateau near the medial joint line with adjacent confluent bone marrow edema. No focal osseous lesion. Tricompartmental marginal osteophytosis.\n\nJOINT SPACE:\nSmall joint effusion. Small leaking Baker's cyst with internal calcific body. Multiple intra-articular bodies, including a 1.1 cm ossific body at the anterior joint recess and a 0.8 cm ossific body at the posterior joint recess. Post arthroscopy scarring of Hoffa's fat pad.\n\nMEDIAL COMPARTMENT:\nMedial meniscus: Diffuse complex degenerative tear of the medial meniscus, with maceration and complete radial tear at the posterior horn-posterior root junction. Posterior medial displacement of a meniscal flap in the region of the posterior root. Severe meniscal extrusion.\nMedial compartment cartilage: Diffuse articular cartilage irregularity with confluent regions of full-thickness cartilage loss at the weightbearing aspect of the joint.\n\nLATERAL COMPARTMENT:\nLateral meniscus: No tear.\nLateral compartment cartilage: Diffuse articular cartilage irregularity with areas of high-grade fissuring at the weightbearing aspect of the joint.\n\nPATELLOFEMORAL COMPARTMENT:\nPatellofemoral compartment cartilage: Confluent full-thickness articular cartilage loss at the lateral patellar facet and lateral trochlea. Articular surface remodeling at the lateral patellar facet. High-grade articular cartilage loss at the medial trochlea and medial facet.\n\nCRUCIATE LIGAMENTS:\nAnterior cruciate ligament (ACL): No tear.\nPosterior cruciate ligament (PCL): No tear.\n\nCOLLATERAL LIGAMENTS & POSTEROLATERAL CORNER:\nMedial collateral ligament (MCL): Scarring.\nLateral collateral ligament (LCL) complex: Normal.\nPosterolateral corner structures: Normal.\n\nEXTENSOR MECHANISM:\nExtensor Apparatus: Normal quadriceps tendon. Normal patellar tendon. Fragmentation of the tibial tubercle, reflecting the chronic sequela of remote Osgood-Schlatter disease.\nMedial patellofemoral ligament (MPFL) and patellar retinacula: Normal.\nPatellofemoral tracking: Lateral patellar tilt and translation. No patella alta. Tibial tubercle-trochlear groove (TT-TG) distance is 18 mm, borderline elevated.\n\nMUSCLES/TENDONS:\nNo disproportionate muscle atrophy. Visualized tendons not previously discussed are intact.\n\nSOFT TISSUES:\nNonspecific prepatellar and scattered subcutaneous edema about the knee. No soft tissue mass. Normal popliteal neurovascular bundle.\n\nIMPRESSION:\n\n1.\tSmall subchondral insufficiency fracture at the medial tibial plateau near the medial joint line with associated confluent bone marrow edema. No significant articular surface depression.\n2.\tTricompartmental osteoarthritis, worst at the patellofemoral and medial tibiofemoral compartments, where it is severe. Small knee joint effusion with multiple ossific intra-articular bodies measuring up to 1.1 cm. Small leaking Baker's cyst.\n3.\tComplex degenerative tearing of the medial meniscus with dominant radial tear at the posterior horn-posterior root junction. Displacement of a meniscal flap to the posteromedial joint recess."
+    },
+    {
+      "uid": "1.2.826.0.1.3680043.8.498.37879265071349098151803248077034280617",
+      "label": "Fracture",
+      "old": 0.96,
+      "new": 0.1,
+      "report": "MRI of left Knee with \n-Locator, SG PD FatSat, SG T2W FS, SG T1W, CO T2W FS, AX T2W FS\n\n* The contour of ACL not in a straight line and increase signal intensity inside, in favor of tear.\n  Laxity contour of MCL with increased signal intensity on F/S T2WI, in favor of partial tear.\n> The contour of PCL and LCL in a straight line and increase signal intensity inside PCL and proximal LCL on F/S T2WI, in favor of grade 1 injury.\n> Some joint effusion and  suprapatellar bursitis with suprapatellar, lateral and medial plica; mild hypertrophy of the synovium, indicative of mild synovitis.\n> Abnormal signal intensity is noted in proximal tibia ( more prominent at posterior tibial plateau and intercondylar eminance) and distal femur, which shows low signal intensity on T1WI and high signal intensity on T2WI, in favor of bone contusion.\n  Suspicious of mild impaction of lateral femoral condyle. \n   > Linear signal intensity in posterior horn of lateral meniscus, and unclear contour of central portion, in favor of bucket handle tear of lateral meniscus.\n> Bone marrow edema over low pole of patella and mild increased signal intensity of patellar tendon on F/S T2WI, in favor of grade 1  injury.\n  Mild laxity of medial patellar retinuaculum with increased singal intensity on F/S T2WI, in favor of grade 2 injury.\n  Howevere, no dislocation of patella in this study.\n> Mild muscle edema over vastus lateralis and medialis muscle and subcutaneous edema.\nImpression: \n1. C/W ACL tear.\t\n2. High grade partial tear of MCL.\n3. Grade 1-2 injury of PCL and grade 1 injury of proximal LCL.\n4. C/W bucket handle tear of posterior horn of lateral meniscus. \n5. Bone contusion of left proximal tibia and distal femur and low pole patella.\n6. R/O transient patellar dislocation with impaction of lateral femoral condyle and low pole of patella and suspicious of partial tear of medial patellar retinaculum.\n7. Synovitis and patellar plicae of left knee and small Baker's cyst.  \n8. Mild muscle edema over vastus lateralis and medialis muscle and subcutaneous edema.  \nSuggest correlation with clinical manifestation\n"
+    },
+    {
+      "uid": "1.2.826.0.1.3680043.8.498.41057428195711190931490429649014776496",
+      "label": "Fracture",
+      "old": 0.94,
+      "new": 0.1,
+      "report": "MRI of left Knee with \n-Locator, SG PD FatSat, CO T2W FS, SG T1W, SG T2W FS, AX T2W FS\n\n> The contour of ACL and  MCL are not in a straight line and increase signal intensity inside, in favor of tear.\n> The contour of PCL and LCL appear to be within normal, no abnormal signal intensity is noted.\n> No evidence of tear is noted in either medial or lateral meniscus.\n> Abnormal signal intensity is noted in proximal tibia and distal femur, which shows low signal intensity on T1WI and high signal intensity on T2WI, in favor of bone contusion.\n    Suspicious of relatively depressed contour of lateral femoral condyle, R/O occult impacted fracture. (srs: 8001, Img:21)\n> Joint effusion with relatively increased signal intensity on T1WI and suprapatellar bursitis with suprapatellar and medial plicae.\n> Subcutaneous edema around knee; mild intermuscular fat stranding over popliteal fossa and proximal leg.\n\nImpression: \n1. Tear of ACL and Grade 2-3 injury of MCL.\n2. Bone contusion in distal femur and proximal tibia, R/O occult impacted fracture at lateral femoral condyle\n3. Hemarthrosis of left knee joint with suprapatellar bursitis and patellar plicae.\nSuggest correlation with clinical manifestation\n\n   "
+    }
+  ]
+}

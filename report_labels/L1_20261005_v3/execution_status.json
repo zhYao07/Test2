@@ -1,0 +1,8 @@
+{
+  "status": "STOPPED_QUALITY_REGRESSION",
+  "completed_reports": 8,
+  "full_started": false,
+  "superseded_by": "L1_20261005_v4",
+  "reason": "Limited negative ABSENT incorrectly mapped to definite NO; stopped before full extraction; superseded by schema/prompt 1.2 and mapper 1.1",
+  "raw_responses_preserved": true
+}

@@ -1,0 +1,4563 @@
+{
+  "created_at": "2026-10-05T05:46:07.783659+00:00",
+  "scope": "TEXT_AUDIT_NOT_MRI_TRUTH",
+  "studies": 57,
+  "report_scope_counts": {
+    "KNEE": 57
+  },
+  "unique_uids": 57,
+  "expected_label_rows": 684,
+  "actual_label_rows": 684,
+  "parse_success_rate": 1.0,
+  "parse_error_studies": 0,
+  "critical_items": 36,
+  "evidence_quotes": 1473,
+  "unmatched_evidence_quotes": 0,
+  "evidence_match_rate": 1.0,
+  "unique_extracted_reports": 57,
+  "duplicate_requests_saved": 0,
+  "retry_counts": {
+    "0": 43,
+    "1": 14
+  },
+  "usage": {
+    "prompt_tokens": 1140715,
+    "completion_tokens": 243890,
+    "total_tokens": 1384605
+  },
+  "language_by_category": {
+    "ALL": {
+      "ACL": {
+        "n": 57,
+        "report_status_counts": {
+          "ABSENT": 40,
+          "PRESENT": 14,
+          "UNCERTAIN": 3
+        },
+        "report_status_rates": {
+          "ABSENT": 0.7017543859649122,
+          "PRESENT": 0.24561403508771928,
+          "UNCERTAIN": 0.05263157894736842
+        },
+        "criteria_counts": {
+          "NO": 47,
+          "YES": 4,
+          "UNKNOWN": 6
+        },
+        "supervised_n": 53,
+        "total_weight": 51.5,
+        "review_n": 25,
+        "review_rate": 0.43859649122807015,
+        "soft_score_summary": {
+          "n": 53,
+          "min": 0.05,
+          "max": 0.95,
+          "mean": 0.12075471698113208,
+          "bins_0_025_05_075_1": [
+            49,
+            0,
+            0,
+            4
+          ]
+        }
+      },
+      "MCL": {
+        "n": 57,
+        "report_status_counts": {
+          "ABSENT": 43,
+          "PRESENT": 10,
+          "UNCERTAIN": 2,
+          "NOT_MENTIONED": 2
+        },
+        "report_status_rates": {
+          "ABSENT": 0.7543859649122807,
+          "PRESENT": 0.17543859649122806,
+          "UNCERTAIN": 0.03508771929824561,
+          "NOT_MENTIONED": 0.03508771929824561
+        },
+        "criteria_counts": {
+          "NO": 49,
+          "UNKNOWN": 8
+        },
+        "supervised_n": 53,
+        "total_weight": 50.0,
+        "review_n": 18,
+        "review_rate": 0.3157894736842105,
+        "soft_score_summary": {
+          "n": 53,
+          "min": 0.01,
+          "max": 0.4,
+          "mean": 0.05584905660377359,
+          "bins_0_025_05_075_1": [
+            52,
+            1,
+            0,
+            0
+          ]
+        }
+      },
+      "Medial Meniscus": {
+        "n": 57,
+        "report_status_counts": {
+          "ABSENT": 20,
+          "PRESENT": 32,
+          "UNCERTAIN": 4,
+          "NOT_MENTIONED": 1
+        },
+        "report_status_rates": {
+          "ABSENT": 0.3508771929824561,
+          "PRESENT": 0.5614035087719298,
+          "UNCERTAIN": 0.07017543859649122,
+          "NOT_MENTIONED": 0.017543859649122806
+        },
+        "criteria_counts": {
+          "NO": 26,
+          "YES": 19,
+          "UNKNOWN": 12
+        },
+        "supervised_n": 51,
+        "total_weight": 46.5,
+        "review_n": 30,
+        "review_rate": 0.5263157894736842,
+        "soft_score_summary": {
+          "n": 51,
+          "min": 0.03,
+          "max": 0.95,
+          "mean": 0.40352941176470586,
+          "bins_0_025_05_075_1": [
+            30,
+            1,
+            1,
+            19
+          ]
+        }
+      },
+      "Lateral Meniscus": {
+        "n": 57,
+        "report_status_counts": {
+          "ABSENT": 34,
+          "PRESENT": 18,
+          "UNCERTAIN": 4,
+          "NOT_MENTIONED": 1
+        },
+        "report_status_rates": {
+          "ABSENT": 0.5964912280701754,
+          "PRESENT": 0.3157894736842105,
+          "UNCERTAIN": 0.07017543859649122,
+          "NOT_MENTIONED": 0.017543859649122806
+        },
+        "criteria_counts": {
+          "NO": 37,
+          "UNKNOWN": 8,
+          "YES": 12
+        },
+        "supervised_n": 51,
+        "total_weight": 48.75,
+        "review_n": 20,
+        "review_rate": 0.3508771929824561,
+        "soft_score_summary": {
+          "n": 51,
+          "min": 0.05,
+          "max": 0.95,
+          "mean": 0.28627450980392155,
+          "bins_0_025_05_075_1": [
+            36,
+            2,
+            1,
+            12
+          ]
+        }
+      },
+      "Medial OA": {
+        "n": 57,
+        "report_status_counts": {
+          "ABSENT": 25,
+          "PRESENT": 18,
+          "NOT_MENTIONED": 12,
+          "UNCERTAIN": 2
+        },
+        "report_status_rates": {
+          "ABSENT": 0.43859649122807015,
+          "PRESENT": 0.3157894736842105,
+          "NOT_MENTIONED": 0.21052631578947367,
+          "UNCERTAIN": 0.03508771929824561
+        },
+        "criteria_counts": {
+          "NO": 17,
+          "UNKNOWN": 40
+        },
+        "supervised_n": 19,
+        "total_weight": 16.75,
+        "review_n": 38,
+        "review_rate": 0.6666666666666666,
+        "soft_score_summary": {
+          "n": 19,
+          "min": 0.05,
+          "max": 0.9,
+          "mean": 0.18157894736842106,
+          "bins_0_025_05_075_1": [
+            16,
+            0,
+            0,
+            3
+          ]
+        }
+      },
+      "Lateral OA": {
+        "n": 57,
+        "report_status_counts": {
+          "ABSENT": 29,
+          "PRESENT": 12,
+          "NOT_MENTIONED": 14,
+          "UNCERTAIN": 2
+        },
+        "report_status_rates": {
+          "ABSENT": 0.5087719298245614,
+          "PRESENT": 0.21052631578947367,
+          "NOT_MENTIONED": 0.24561403508771928,
+          "UNCERTAIN": 0.03508771929824561
+        },
+        "criteria_counts": {
+          "NO": 19,
+          "UNKNOWN": 38
+        },
+        "supervised_n": 20,
+        "total_weight": 18.5,
+        "review_n": 34,
+        "review_rate": 0.5964912280701754,
+        "soft_score_summary": {
+          "n": 20,
+          "min": 0.05,
+          "max": 0.6,
+          "mean": 0.0775,
+          "bins_0_025_05_075_1": [
+            19,
+            0,
+            1,
+            0
+          ]
+        }
+      },
+      "PF OA": {
+        "n": 57,
+        "report_status_counts": {
+          "PRESENT": 28,
+          "ABSENT": 24,
+          "NOT_MENTIONED": 5
+        },
+        "report_status_rates": {
+          "PRESENT": 0.49122807017543857,
+          "ABSENT": 0.42105263157894735,
+          "NOT_MENTIONED": 0.08771929824561403
+        },
+        "criteria_counts": {
+          "UNKNOWN": 43,
+          "NO": 13,
+          "YES": 1
+        },
+        "supervised_n": 20,
+        "total_weight": 15.5,
+        "review_n": 43,
+        "review_rate": 0.7543859649122807,
+        "soft_score_summary": {
+          "n": 20,
+          "min": 0.05,
+          "max": 0.95,
+          "mean": 0.24,
+          "bins_0_025_05_075_1": [
+            14,
+            1,
+            3,
+            2
+          ]
+        }
+      },
+      "Effusion": {
+        "n": 57,
+        "report_status_counts": {
+          "PRESENT": 37,
+          "ABSENT": 18,
+          "NOT_MENTIONED": 2
+        },
+        "report_status_rates": {
+          "PRESENT": 0.6491228070175439,
+          "ABSENT": 0.3157894736842105,
+          "NOT_MENTIONED": 0.03508771929824561
+        },
+        "criteria_counts": {
+          "NO": 30,
+          "UNKNOWN": 26,
+          "YES": 1
+        },
+        "supervised_n": 37,
+        "total_weight": 30.25,
+        "review_n": 43,
+        "review_rate": 0.7543859649122807,
+        "soft_score_summary": {
+          "n": 37,
+          "min": 0.05,
+          "max": 0.95,
+          "mean": 0.23783783783783785,
+          "bins_0_025_05_075_1": [
+            27,
+            1,
+            3,
+            6
+          ]
+        }
+      },
+      "Synovitis": {
+        "n": 57,
+        "report_status_counts": {
+          "NOT_MENTIONED": 44,
+          "PRESENT": 12,
+          "ABSENT": 1
+        },
+        "report_status_rates": {
+          "NOT_MENTIONED": 0.7719298245614035,
+          "PRESENT": 0.21052631578947367,
+          "ABSENT": 0.017543859649122806
+        },
+        "criteria_counts": {
+          "UNKNOWN": 45,
+          "YES": 12
+        },
+        "supervised_n": 12,
+        "total_weight": 12.0,
+        "review_n": 5,
+        "review_rate": 0.08771929824561403,
+        "soft_score_summary": {
+          "n": 12,
+          "min": 0.95,
+          "max": 0.95,
+          "mean": 0.95,
+          "bins_0_025_05_075_1": [
+            0,
+            0,
+            0,
+            12
+          ]
+        }
+      },
+      "Baker's": {
+        "n": 57,
+        "report_status_counts": {
+          "NOT_MENTIONED": 25,
+          "ABSENT": 16,
+          "PRESENT": 15,
+          "UNCERTAIN": 1
+        },
+        "report_status_rates": {
+          "NOT_MENTIONED": 0.43859649122807015,
+          "ABSENT": 0.2807017543859649,
+          "PRESENT": 0.2631578947368421,
+          "UNCERTAIN": 0.017543859649122806
+        },
+        "criteria_counts": {
+          "UNKNOWN": 32,
+          "NO": 22,
+          "YES": 3
+        },
+        "supervised_n": 25,
+        "total_weight": 24.25,
+        "review_n": 18,
+        "review_rate": 0.3157894736842105,
+        "soft_score_summary": {
+          "n": 25,
+          "min": 0.05,
+          "max": 0.95,
+          "mean": 0.19,
+          "bins_0_025_05_075_1": [
+            21,
+            0,
+            0,
+            4
+          ]
+        }
+      },
+      "Contusion": {
+        "n": 57,
+        "report_status_counts": {
+          "NOT_MENTIONED": 20,
+          "ABSENT": 19,
+          "PRESENT": 9,
+          "UNCERTAIN": 9
+        },
+        "report_status_rates": {
+          "NOT_MENTIONED": 0.3508771929824561,
+          "ABSENT": 0.3333333333333333,
+          "PRESENT": 0.15789473684210525,
+          "UNCERTAIN": 0.15789473684210525
+        },
+        "criteria_counts": {
+          "UNKNOWN": 36,
+          "NO": 19,
+          "YES": 2
+        },
+        "supervised_n": 21,
+        "total_weight": 18.0,
+        "review_n": 31,
+        "review_rate": 0.543859649122807,
+        "soft_score_summary": {
+          "n": 21,
+          "min": 0.02,
+          "max": 0.95,
+          "mean": 0.22952380952380952,
+          "bins_0_025_05_075_1": [
+            16,
+            1,
+            0,
+            4
+          ]
+        }
+      },
+      "Fracture": {
+        "n": 57,
+        "report_status_counts": {
+          "UNCERTAIN": 2,
+          "ABSENT": 13,
+          "NOT_MENTIONED": 39,
+          "PRESENT": 3
+        },
+        "report_status_rates": {
+          "UNCERTAIN": 0.03508771929824561,
+          "ABSENT": 0.22807017543859648,
+          "NOT_MENTIONED": 0.6842105263157895,
+          "PRESENT": 0.05263157894736842
+        },
+        "criteria_counts": {
+          "UNKNOWN": 45,
+          "NO": 12
+        },
+        "supervised_n": 13,
+        "total_weight": 12.25,
+        "review_n": 8,
+        "review_rate": 0.14035087719298245,
+        "soft_score_summary": {
+          "n": 13,
+          "min": 0.05,
+          "max": 0.8,
+          "mean": 0.1076923076923077,
+          "bins_0_025_05_075_1": [
+            12,
+            0,
+            0,
+            1
+          ]
+        }
+      }
+    },
+    "el": {
+      "ACL": {
+        "n": 5,
+        "report_status_counts": {
+          "ABSENT": 4,
+          "PRESENT": 1
+        },
+        "report_status_rates": {
+          "ABSENT": 0.8,
+          "PRESENT": 0.2
+        },
+        "criteria_counts": {
+          "NO": 4,
+          "YES": 1
+        },
+        "supervised_n": 5,
+        "total_weight": 5.0,
+        "review_n": 1,
+        "review_rate": 0.2,
+        "soft_score_summary": {
+          "n": 5,
+          "min": 0.05,
+          "max": 0.95,
+          "mean": 0.22999999999999998,
+          "bins_0_025_05_075_1": [
+            4,
+            0,
+            0,
+            1
+          ]
+        }
+      },
+      "MCL": {
+        "n": 5,
+        "report_status_counts": {
+          "ABSENT": 5
+        },
+        "report_status_rates": {
+          "ABSENT": 1.0
+        },
+        "criteria_counts": {
+          "NO": 5
+        },
+        "supervised_n": 5,
+        "total_weight": 5.0,
+        "review_n": 1,
+        "review_rate": 0.2,
+        "soft_score_summary": {
+          "n": 5,
+          "min": 0.05,
+          "max": 0.05,
+          "mean": 0.05,
+          "bins_0_025_05_075_1": [
+            5,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "Medial Meniscus": {
+        "n": 5,
+        "report_status_counts": {
+          "ABSENT": 3,
+          "PRESENT": 2
+        },
+        "report_status_rates": {
+          "ABSENT": 0.6,
+          "PRESENT": 0.4
+        },
+        "criteria_counts": {
+          "NO": 3,
+          "YES": 2
+        },
+        "supervised_n": 5,
+        "total_weight": 5.0,
+        "review_n": 1,
+        "review_rate": 0.2,
+        "soft_score_summary": {
+          "n": 5,
+          "min": 0.05,
+          "max": 0.95,
+          "mean": 0.41,
+          "bins_0_025_05_075_1": [
+            3,
+            0,
+            0,
+            2
+          ]
+        }
+      },
+      "Lateral Meniscus": {
+        "n": 5,
+        "report_status_counts": {
+          "ABSENT": 4,
+          "NOT_MENTIONED": 1
+        },
+        "report_status_rates": {
+          "ABSENT": 0.8,
+          "NOT_MENTIONED": 0.2
+        },
+        "criteria_counts": {
+          "NO": 3,
+          "UNKNOWN": 2
+        },
+        "supervised_n": 3,
+        "total_weight": 3.0,
+        "review_n": 1,
+        "review_rate": 0.2,
+        "soft_score_summary": {
+          "n": 3,
+          "min": 0.05,
+          "max": 0.05,
+          "mean": 0.05,
+          "bins_0_025_05_075_1": [
+            3,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "Medial OA": {
+        "n": 5,
+        "report_status_counts": {
+          "ABSENT": 4,
+          "PRESENT": 1
+        },
+        "report_status_rates": {
+          "ABSENT": 0.8,
+          "PRESENT": 0.2
+        },
+        "criteria_counts": {
+          "NO": 3,
+          "UNKNOWN": 2
+        },
+        "supervised_n": 3,
+        "total_weight": 3.0,
+        "review_n": 2,
+        "review_rate": 0.4,
+        "soft_score_summary": {
+          "n": 3,
+          "min": 0.05,
+          "max": 0.05,
+          "mean": 0.05,
+          "bins_0_025_05_075_1": [
+            3,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "Lateral OA": {
+        "n": 5,
+        "report_status_counts": {
+          "ABSENT": 5
+        },
+        "report_status_rates": {
+          "ABSENT": 1.0
+        },
+        "criteria_counts": {
+          "NO": 4,
+          "UNKNOWN": 1
+        },
+        "supervised_n": 4,
+        "total_weight": 4.0,
+        "review_n": 2,
+        "review_rate": 0.4,
+        "soft_score_summary": {
+          "n": 4,
+          "min": 0.05,
+          "max": 0.05,
+          "mean": 0.05,
+          "bins_0_025_05_075_1": [
+            4,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "PF OA": {
+        "n": 5,
+        "report_status_counts": {
+          "PRESENT": 1,
+          "ABSENT": 4
+        },
+        "report_status_rates": {
+          "PRESENT": 0.2,
+          "ABSENT": 0.8
+        },
+        "criteria_counts": {
+          "UNKNOWN": 3,
+          "NO": 2
+        },
+        "supervised_n": 2,
+        "total_weight": 2.0,
+        "review_n": 3,
+        "review_rate": 0.6,
+        "soft_score_summary": {
+          "n": 2,
+          "min": 0.05,
+          "max": 0.05,
+          "mean": 0.05,
+          "bins_0_025_05_075_1": [
+            2,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "Effusion": {
+        "n": 5,
+        "report_status_counts": {
+          "PRESENT": 4,
+          "ABSENT": 1
+        },
+        "report_status_rates": {
+          "PRESENT": 0.8,
+          "ABSENT": 0.2
+        },
+        "criteria_counts": {
+          "NO": 4,
+          "UNKNOWN": 1
+        },
+        "supervised_n": 5,
+        "total_weight": 4.25,
+        "review_n": 4,
+        "review_rate": 0.8,
+        "soft_score_summary": {
+          "n": 5,
+          "min": 0.05,
+          "max": 0.8,
+          "mean": 0.2,
+          "bins_0_025_05_075_1": [
+            4,
+            0,
+            0,
+            1
+          ]
+        }
+      },
+      "Synovitis": {
+        "n": 5,
+        "report_status_counts": {
+          "NOT_MENTIONED": 4,
+          "PRESENT": 1
+        },
+        "report_status_rates": {
+          "NOT_MENTIONED": 0.8,
+          "PRESENT": 0.2
+        },
+        "criteria_counts": {
+          "UNKNOWN": 4,
+          "YES": 1
+        },
+        "supervised_n": 1,
+        "total_weight": 1.0,
+        "review_n": 2,
+        "review_rate": 0.4,
+        "soft_score_summary": {
+          "n": 1,
+          "min": 0.95,
+          "max": 0.95,
+          "mean": 0.95,
+          "bins_0_025_05_075_1": [
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      },
+      "Baker's": {
+        "n": 5,
+        "report_status_counts": {
+          "NOT_MENTIONED": 4,
+          "PRESENT": 1
+        },
+        "report_status_rates": {
+          "NOT_MENTIONED": 0.8,
+          "PRESENT": 0.2
+        },
+        "criteria_counts": {
+          "UNKNOWN": 4,
+          "YES": 1
+        },
+        "supervised_n": 1,
+        "total_weight": 1.0,
+        "review_n": 1,
+        "review_rate": 0.2,
+        "soft_score_summary": {
+          "n": 1,
+          "min": 0.95,
+          "max": 0.95,
+          "mean": 0.95,
+          "bins_0_025_05_075_1": [
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      },
+      "Contusion": {
+        "n": 5,
+        "report_status_counts": {
+          "NOT_MENTIONED": 2,
+          "ABSENT": 2,
+          "UNCERTAIN": 1
+        },
+        "report_status_rates": {
+          "NOT_MENTIONED": 0.4,
+          "ABSENT": 0.4,
+          "UNCERTAIN": 0.2
+        },
+        "criteria_counts": {
+          "UNKNOWN": 3,
+          "NO": 2
+        },
+        "supervised_n": 3,
+        "total_weight": 2.25,
+        "review_n": 1,
+        "review_rate": 0.2,
+        "soft_score_summary": {
+          "n": 3,
+          "min": 0.02,
+          "max": 0.05,
+          "mean": 0.04,
+          "bins_0_025_05_075_1": [
+            3,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "Fracture": {
+        "n": 5,
+        "report_status_counts": {
+          "UNCERTAIN": 1,
+          "NOT_MENTIONED": 3,
+          "PRESENT": 1
+        },
+        "report_status_rates": {
+          "UNCERTAIN": 0.2,
+          "NOT_MENTIONED": 0.6,
+          "PRESENT": 0.2
+        },
+        "criteria_counts": {
+          "UNKNOWN": 5
+        },
+        "supervised_n": 0,
+        "total_weight": 0.0,
+        "review_n": 2,
+        "review_rate": 0.4,
+        "soft_score_summary": {
+          "n": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "bins_0_025_05_075_1": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "en": {
+      "ACL": {
+        "n": 20,
+        "report_status_counts": {
+          "ABSENT": 14,
+          "PRESENT": 4,
+          "UNCERTAIN": 2
+        },
+        "report_status_rates": {
+          "ABSENT": 0.7,
+          "PRESENT": 0.2,
+          "UNCERTAIN": 0.1
+        },
+        "criteria_counts": {
+          "NO": 16,
+          "YES": 1,
+          "UNKNOWN": 3
+        },
+        "supervised_n": 17,
+        "total_weight": 17.0,
+        "review_n": 10,
+        "review_rate": 0.5,
+        "soft_score_summary": {
+          "n": 17,
+          "min": 0.05,
+          "max": 0.95,
+          "mean": 0.10294117647058823,
+          "bins_0_025_05_075_1": [
+            16,
+            0,
+            0,
+            1
+          ]
+        }
+      },
+      "MCL": {
+        "n": 20,
+        "report_status_counts": {
+          "ABSENT": 15,
+          "PRESENT": 4,
+          "UNCERTAIN": 1
+        },
+        "report_status_rates": {
+          "ABSENT": 0.75,
+          "PRESENT": 0.2,
+          "UNCERTAIN": 0.05
+        },
+        "criteria_counts": {
+          "NO": 17,
+          "UNKNOWN": 3
+        },
+        "supervised_n": 19,
+        "total_weight": 17.5,
+        "review_n": 6,
+        "review_rate": 0.3,
+        "soft_score_summary": {
+          "n": 19,
+          "min": 0.01,
+          "max": 0.05,
+          "mean": 0.04789473684210527,
+          "bins_0_025_05_075_1": [
+            19,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "Medial Meniscus": {
+        "n": 20,
+        "report_status_counts": {
+          "ABSENT": 10,
+          "PRESENT": 7,
+          "UNCERTAIN": 3
+        },
+        "report_status_rates": {
+          "ABSENT": 0.5,
+          "PRESENT": 0.35,
+          "UNCERTAIN": 0.15
+        },
+        "criteria_counts": {
+          "NO": 11,
+          "YES": 6,
+          "UNKNOWN": 3
+        },
+        "supervised_n": 19,
+        "total_weight": 17.5,
+        "review_n": 9,
+        "review_rate": 0.45,
+        "soft_score_summary": {
+          "n": 19,
+          "min": 0.05,
+          "max": 0.95,
+          "mean": 0.3605263157894737,
+          "bins_0_025_05_075_1": [
+            12,
+            0,
+            1,
+            6
+          ]
+        }
+      },
+      "Lateral Meniscus": {
+        "n": 20,
+        "report_status_counts": {
+          "ABSENT": 13,
+          "PRESENT": 4,
+          "UNCERTAIN": 3
+        },
+        "report_status_rates": {
+          "ABSENT": 0.65,
+          "PRESENT": 0.2,
+          "UNCERTAIN": 0.15
+        },
+        "criteria_counts": {
+          "NO": 12,
+          "YES": 4,
+          "UNKNOWN": 4
+        },
+        "supervised_n": 16,
+        "total_weight": 15.25,
+        "review_n": 8,
+        "review_rate": 0.4,
+        "soft_score_summary": {
+          "n": 16,
+          "min": 0.05,
+          "max": 0.95,
+          "mean": 0.3,
+          "bins_0_025_05_075_1": [
+            11,
+            1,
+            0,
+            4
+          ]
+        }
+      },
+      "Medial OA": {
+        "n": 20,
+        "report_status_counts": {
+          "ABSENT": 9,
+          "NOT_MENTIONED": 6,
+          "PRESENT": 5
+        },
+        "report_status_rates": {
+          "ABSENT": 0.45,
+          "NOT_MENTIONED": 0.3,
+          "PRESENT": 0.25
+        },
+        "criteria_counts": {
+          "UNKNOWN": 13,
+          "NO": 7
+        },
+        "supervised_n": 7,
+        "total_weight": 6.25,
+        "review_n": 14,
+        "review_rate": 0.7,
+        "soft_score_summary": {
+          "n": 7,
+          "min": 0.05,
+          "max": 0.9,
+          "mean": 0.17142857142857143,
+          "bins_0_025_05_075_1": [
+            6,
+            0,
+            0,
+            1
+          ]
+        }
+      },
+      "Lateral OA": {
+        "n": 20,
+        "report_status_counts": {
+          "ABSENT": 11,
+          "NOT_MENTIONED": 6,
+          "PRESENT": 3
+        },
+        "report_status_rates": {
+          "ABSENT": 0.55,
+          "NOT_MENTIONED": 0.3,
+          "PRESENT": 0.15
+        },
+        "criteria_counts": {
+          "UNKNOWN": 13,
+          "NO": 7
+        },
+        "supervised_n": 6,
+        "total_weight": 6.0,
+        "review_n": 12,
+        "review_rate": 0.6,
+        "soft_score_summary": {
+          "n": 6,
+          "min": 0.05,
+          "max": 0.05,
+          "mean": 0.05,
+          "bins_0_025_05_075_1": [
+            6,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "PF OA": {
+        "n": 20,
+        "report_status_counts": {
+          "ABSENT": 10,
+          "PRESENT": 10
+        },
+        "report_status_rates": {
+          "ABSENT": 0.5,
+          "PRESENT": 0.5
+        },
+        "criteria_counts": {
+          "UNKNOWN": 12,
+          "NO": 8
+        },
+        "supervised_n": 11,
+        "total_weight": 8.75,
+        "review_n": 14,
+        "review_rate": 0.7,
+        "soft_score_summary": {
+          "n": 11,
+          "min": 0.05,
+          "max": 0.85,
+          "mean": 0.17727272727272728,
+          "bins_0_025_05_075_1": [
+            9,
+            0,
+            1,
+            1
+          ]
+        }
+      },
+      "Effusion": {
+        "n": 20,
+        "report_status_counts": {
+          "ABSENT": 7,
+          "PRESENT": 13
+        },
+        "report_status_rates": {
+          "ABSENT": 0.35,
+          "PRESENT": 0.65
+        },
+        "criteria_counts": {
+          "NO": 9,
+          "UNKNOWN": 11
+        },
+        "supervised_n": 9,
+        "total_weight": 7.5,
+        "review_n": 15,
+        "review_rate": 0.75,
+        "soft_score_summary": {
+          "n": 9,
+          "min": 0.05,
+          "max": 0.9,
+          "mean": 0.19444444444444445,
+          "bins_0_025_05_075_1": [
+            7,
+            0,
+            1,
+            1
+          ]
+        }
+      },
+      "Synovitis": {
+        "n": 20,
+        "report_status_counts": {
+          "NOT_MENTIONED": 14,
+          "PRESENT": 6
+        },
+        "report_status_rates": {
+          "NOT_MENTIONED": 0.7,
+          "PRESENT": 0.3
+        },
+        "criteria_counts": {
+          "UNKNOWN": 14,
+          "YES": 6
+        },
+        "supervised_n": 6,
+        "total_weight": 6.0,
+        "review_n": 1,
+        "review_rate": 0.05,
+        "soft_score_summary": {
+          "n": 6,
+          "min": 0.95,
+          "max": 0.95,
+          "mean": 0.95,
+          "bins_0_025_05_075_1": [
+            0,
+            0,
+            0,
+            6
+          ]
+        }
+      },
+      "Baker's": {
+        "n": 20,
+        "report_status_counts": {
+          "ABSENT": 7,
+          "PRESENT": 4,
+          "NOT_MENTIONED": 9
+        },
+        "report_status_rates": {
+          "ABSENT": 0.35,
+          "PRESENT": 0.2,
+          "NOT_MENTIONED": 0.45
+        },
+        "criteria_counts": {
+          "NO": 10,
+          "UNKNOWN": 9,
+          "YES": 1
+        },
+        "supervised_n": 10,
+        "total_weight": 10.0,
+        "review_n": 4,
+        "review_rate": 0.2,
+        "soft_score_summary": {
+          "n": 10,
+          "min": 0.05,
+          "max": 0.95,
+          "mean": 0.13999999999999999,
+          "bins_0_025_05_075_1": [
+            9,
+            0,
+            0,
+            1
+          ]
+        }
+      },
+      "Contusion": {
+        "n": 20,
+        "report_status_counts": {
+          "ABSENT": 6,
+          "PRESENT": 4,
+          "NOT_MENTIONED": 9,
+          "UNCERTAIN": 1
+        },
+        "report_status_rates": {
+          "ABSENT": 0.3,
+          "PRESENT": 0.2,
+          "NOT_MENTIONED": 0.45,
+          "UNCERTAIN": 0.05
+        },
+        "criteria_counts": {
+          "NO": 6,
+          "YES": 2,
+          "UNKNOWN": 12
+        },
+        "supervised_n": 9,
+        "total_weight": 8.25,
+        "review_n": 10,
+        "review_rate": 0.5,
+        "soft_score_summary": {
+          "n": 9,
+          "min": 0.05,
+          "max": 0.95,
+          "mean": 0.28888888888888886,
+          "bins_0_025_05_075_1": [
+            6,
+            1,
+            0,
+            2
+          ]
+        }
+      },
+      "Fracture": {
+        "n": 20,
+        "report_status_counts": {
+          "ABSENT": 8,
+          "NOT_MENTIONED": 10,
+          "PRESENT": 2
+        },
+        "report_status_rates": {
+          "ABSENT": 0.4,
+          "NOT_MENTIONED": 0.5,
+          "PRESENT": 0.1
+        },
+        "criteria_counts": {
+          "NO": 8,
+          "UNKNOWN": 12
+        },
+        "supervised_n": 9,
+        "total_weight": 8.25,
+        "review_n": 3,
+        "review_rate": 0.15,
+        "soft_score_summary": {
+          "n": 9,
+          "min": 0.05,
+          "max": 0.8,
+          "mean": 0.13333333333333333,
+          "bins_0_025_05_075_1": [
+            8,
+            0,
+            0,
+            1
+          ]
+        }
+      }
+    },
+    "es": {
+      "ACL": {
+        "n": 3,
+        "report_status_counts": {
+          "ABSENT": 3
+        },
+        "report_status_rates": {
+          "ABSENT": 1.0
+        },
+        "criteria_counts": {
+          "NO": 3
+        },
+        "supervised_n": 3,
+        "total_weight": 3.0,
+        "review_n": 1,
+        "review_rate": 0.3333333333333333,
+        "soft_score_summary": {
+          "n": 3,
+          "min": 0.05,
+          "max": 0.05,
+          "mean": 0.05,
+          "bins_0_025_05_075_1": [
+            3,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "MCL": {
+        "n": 3,
+        "report_status_counts": {
+          "ABSENT": 2,
+          "PRESENT": 1
+        },
+        "report_status_rates": {
+          "ABSENT": 0.6666666666666666,
+          "PRESENT": 0.3333333333333333
+        },
+        "criteria_counts": {
+          "NO": 2,
+          "UNKNOWN": 1
+        },
+        "supervised_n": 3,
+        "total_weight": 2.25,
+        "review_n": 1,
+        "review_rate": 0.3333333333333333,
+        "soft_score_summary": {
+          "n": 3,
+          "min": 0.05,
+          "max": 0.4,
+          "mean": 0.16666666666666669,
+          "bins_0_025_05_075_1": [
+            2,
+            1,
+            0,
+            0
+          ]
+        }
+      },
+      "Medial Meniscus": {
+        "n": 3,
+        "report_status_counts": {
+          "PRESENT": 2,
+          "ABSENT": 1
+        },
+        "report_status_rates": {
+          "PRESENT": 0.6666666666666666,
+          "ABSENT": 0.3333333333333333
+        },
+        "criteria_counts": {
+          "YES": 1,
+          "UNKNOWN": 1,
+          "NO": 1
+        },
+        "supervised_n": 3,
+        "total_weight": 2.25,
+        "review_n": 2,
+        "review_rate": 0.6666666666666666,
+        "soft_score_summary": {
+          "n": 3,
+          "min": 0.05,
+          "max": 0.95,
+          "mean": 0.3833333333333333,
+          "bins_0_025_05_075_1": [
+            2,
+            0,
+            0,
+            1
+          ]
+        }
+      },
+      "Lateral Meniscus": {
+        "n": 3,
+        "report_status_counts": {
+          "PRESENT": 2,
+          "ABSENT": 1
+        },
+        "report_status_rates": {
+          "PRESENT": 0.6666666666666666,
+          "ABSENT": 0.3333333333333333
+        },
+        "criteria_counts": {
+          "NO": 2,
+          "YES": 1
+        },
+        "supervised_n": 3,
+        "total_weight": 3.0,
+        "review_n": 1,
+        "review_rate": 0.3333333333333333,
+        "soft_score_summary": {
+          "n": 3,
+          "min": 0.05,
+          "max": 0.95,
+          "mean": 0.35,
+          "bins_0_025_05_075_1": [
+            2,
+            0,
+            0,
+            1
+          ]
+        }
+      },
+      "Medial OA": {
+        "n": 3,
+        "report_status_counts": {
+          "PRESENT": 2,
+          "ABSENT": 1
+        },
+        "report_status_rates": {
+          "PRESENT": 0.6666666666666666,
+          "ABSENT": 0.3333333333333333
+        },
+        "criteria_counts": {
+          "UNKNOWN": 2,
+          "NO": 1
+        },
+        "supervised_n": 2,
+        "total_weight": 1.25,
+        "review_n": 2,
+        "review_rate": 0.6666666666666666,
+        "soft_score_summary": {
+          "n": 2,
+          "min": 0.05,
+          "max": 0.9,
+          "mean": 0.47500000000000003,
+          "bins_0_025_05_075_1": [
+            1,
+            0,
+            0,
+            1
+          ]
+        }
+      },
+      "Lateral OA": {
+        "n": 3,
+        "report_status_counts": {
+          "PRESENT": 2,
+          "ABSENT": 1
+        },
+        "report_status_rates": {
+          "PRESENT": 0.6666666666666666,
+          "ABSENT": 0.3333333333333333
+        },
+        "criteria_counts": {
+          "NO": 2,
+          "UNKNOWN": 1
+        },
+        "supervised_n": 2,
+        "total_weight": 2.0,
+        "review_n": 2,
+        "review_rate": 0.6666666666666666,
+        "soft_score_summary": {
+          "n": 2,
+          "min": 0.05,
+          "max": 0.05,
+          "mean": 0.05,
+          "bins_0_025_05_075_1": [
+            2,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "PF OA": {
+        "n": 3,
+        "report_status_counts": {
+          "PRESENT": 2,
+          "ABSENT": 1
+        },
+        "report_status_rates": {
+          "PRESENT": 0.6666666666666666,
+          "ABSENT": 0.3333333333333333
+        },
+        "criteria_counts": {
+          "UNKNOWN": 2,
+          "NO": 1
+        },
+        "supervised_n": 2,
+        "total_weight": 1.25,
+        "review_n": 2,
+        "review_rate": 0.6666666666666666,
+        "soft_score_summary": {
+          "n": 2,
+          "min": 0.05,
+          "max": 0.65,
+          "mean": 0.35000000000000003,
+          "bins_0_025_05_075_1": [
+            1,
+            0,
+            1,
+            0
+          ]
+        }
+      },
+      "Effusion": {
+        "n": 3,
+        "report_status_counts": {
+          "PRESENT": 2,
+          "ABSENT": 1
+        },
+        "report_status_rates": {
+          "PRESENT": 0.6666666666666666,
+          "ABSENT": 0.3333333333333333
+        },
+        "criteria_counts": {
+          "UNKNOWN": 1,
+          "NO": 2
+        },
+        "supervised_n": 3,
+        "total_weight": 2.25,
+        "review_n": 3,
+        "review_rate": 1.0,
+        "soft_score_summary": {
+          "n": 3,
+          "min": 0.05,
+          "max": 0.45,
+          "mean": 0.18333333333333335,
+          "bins_0_025_05_075_1": [
+            2,
+            1,
+            0,
+            0
+          ]
+        }
+      },
+      "Synovitis": {
+        "n": 3,
+        "report_status_counts": {
+          "PRESENT": 2,
+          "NOT_MENTIONED": 1
+        },
+        "report_status_rates": {
+          "PRESENT": 0.6666666666666666,
+          "NOT_MENTIONED": 0.3333333333333333
+        },
+        "criteria_counts": {
+          "YES": 2,
+          "UNKNOWN": 1
+        },
+        "supervised_n": 2,
+        "total_weight": 2.0,
+        "review_n": 0,
+        "review_rate": 0.0,
+        "soft_score_summary": {
+          "n": 2,
+          "min": 0.95,
+          "max": 0.95,
+          "mean": 0.95,
+          "bins_0_025_05_075_1": [
+            0,
+            0,
+            0,
+            2
+          ]
+        }
+      },
+      "Baker's": {
+        "n": 3,
+        "report_status_counts": {
+          "ABSENT": 1,
+          "NOT_MENTIONED": 1,
+          "PRESENT": 1
+        },
+        "report_status_rates": {
+          "ABSENT": 0.3333333333333333,
+          "NOT_MENTIONED": 0.3333333333333333,
+          "PRESENT": 0.3333333333333333
+        },
+        "criteria_counts": {
+          "NO": 2,
+          "UNKNOWN": 1
+        },
+        "supervised_n": 2,
+        "total_weight": 2.0,
+        "review_n": 2,
+        "review_rate": 0.6666666666666666,
+        "soft_score_summary": {
+          "n": 2,
+          "min": 0.05,
+          "max": 0.05,
+          "mean": 0.05,
+          "bins_0_025_05_075_1": [
+            2,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "Contusion": {
+        "n": 3,
+        "report_status_counts": {
+          "PRESENT": 1,
+          "ABSENT": 2
+        },
+        "report_status_rates": {
+          "PRESENT": 0.3333333333333333,
+          "ABSENT": 0.6666666666666666
+        },
+        "criteria_counts": {
+          "NO": 2,
+          "UNKNOWN": 1
+        },
+        "supervised_n": 1,
+        "total_weight": 1.0,
+        "review_n": 3,
+        "review_rate": 1.0,
+        "soft_score_summary": {
+          "n": 1,
+          "min": 0.05,
+          "max": 0.05,
+          "mean": 0.05,
+          "bins_0_025_05_075_1": [
+            1,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "Fracture": {
+        "n": 3,
+        "report_status_counts": {
+          "NOT_MENTIONED": 3
+        },
+        "report_status_rates": {
+          "NOT_MENTIONED": 1.0
+        },
+        "criteria_counts": {
+          "UNKNOWN": 3
+        },
+        "supervised_n": 0,
+        "total_weight": 0.0,
+        "review_n": 0,
+        "review_rate": 0.0,
+        "soft_score_summary": {
+          "n": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "bins_0_025_05_075_1": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "tr": {
+      "ACL": {
+        "n": 6,
+        "report_status_counts": {
+          "PRESENT": 3,
+          "ABSENT": 3
+        },
+        "report_status_rates": {
+          "PRESENT": 0.5,
+          "ABSENT": 0.5
+        },
+        "criteria_counts": {
+          "NO": 6
+        },
+        "supervised_n": 6,
+        "total_weight": 6.0,
+        "review_n": 3,
+        "review_rate": 0.5,
+        "soft_score_summary": {
+          "n": 6,
+          "min": 0.05,
+          "max": 0.05,
+          "mean": 0.05,
+          "bins_0_025_05_075_1": [
+            6,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "MCL": {
+        "n": 6,
+        "report_status_counts": {
+          "PRESENT": 2,
+          "UNCERTAIN": 1,
+          "ABSENT": 3
+        },
+        "report_status_rates": {
+          "PRESENT": 0.3333333333333333,
+          "UNCERTAIN": 0.16666666666666666,
+          "ABSENT": 0.5
+        },
+        "criteria_counts": {
+          "NO": 5,
+          "UNKNOWN": 1
+        },
+        "supervised_n": 6,
+        "total_weight": 5.25,
+        "review_n": 3,
+        "review_rate": 0.5,
+        "soft_score_summary": {
+          "n": 6,
+          "min": 0.05,
+          "max": 0.05,
+          "mean": 0.05,
+          "bins_0_025_05_075_1": [
+            6,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "Medial Meniscus": {
+        "n": 6,
+        "report_status_counts": {
+          "PRESENT": 6
+        },
+        "report_status_rates": {
+          "PRESENT": 1.0
+        },
+        "criteria_counts": {
+          "UNKNOWN": 2,
+          "YES": 3,
+          "NO": 1
+        },
+        "supervised_n": 4,
+        "total_weight": 4.0,
+        "review_n": 5,
+        "review_rate": 0.8333333333333334,
+        "soft_score_summary": {
+          "n": 4,
+          "min": 0.05,
+          "max": 0.95,
+          "mean": 0.725,
+          "bins_0_025_05_075_1": [
+            1,
+            0,
+            0,
+            3
+          ]
+        }
+      },
+      "Lateral Meniscus": {
+        "n": 6,
+        "report_status_counts": {
+          "PRESENT": 3,
+          "UNCERTAIN": 1,
+          "ABSENT": 2
+        },
+        "report_status_rates": {
+          "PRESENT": 0.5,
+          "UNCERTAIN": 0.16666666666666666,
+          "ABSENT": 0.3333333333333333
+        },
+        "criteria_counts": {
+          "NO": 4,
+          "UNKNOWN": 1,
+          "YES": 1
+        },
+        "supervised_n": 6,
+        "total_weight": 5.25,
+        "review_n": 4,
+        "review_rate": 0.6666666666666666,
+        "soft_score_summary": {
+          "n": 6,
+          "min": 0.05,
+          "max": 0.95,
+          "mean": 0.29166666666666663,
+          "bins_0_025_05_075_1": [
+            4,
+            0,
+            1,
+            1
+          ]
+        }
+      },
+      "Medial OA": {
+        "n": 6,
+        "report_status_counts": {
+          "PRESENT": 2,
+          "UNCERTAIN": 1,
+          "NOT_MENTIONED": 3
+        },
+        "report_status_rates": {
+          "PRESENT": 0.3333333333333333,
+          "UNCERTAIN": 0.16666666666666666,
+          "NOT_MENTIONED": 0.5
+        },
+        "criteria_counts": {
+          "UNKNOWN": 6
+        },
+        "supervised_n": 0,
+        "total_weight": 0.0,
+        "review_n": 3,
+        "review_rate": 0.5,
+        "soft_score_summary": {
+          "n": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "bins_0_025_05_075_1": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "Lateral OA": {
+        "n": 6,
+        "report_status_counts": {
+          "PRESENT": 2,
+          "UNCERTAIN": 1,
+          "NOT_MENTIONED": 3
+        },
+        "report_status_rates": {
+          "PRESENT": 0.3333333333333333,
+          "UNCERTAIN": 0.16666666666666666,
+          "NOT_MENTIONED": 0.5
+        },
+        "criteria_counts": {
+          "UNKNOWN": 6
+        },
+        "supervised_n": 0,
+        "total_weight": 0.0,
+        "review_n": 3,
+        "review_rate": 0.5,
+        "soft_score_summary": {
+          "n": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "bins_0_025_05_075_1": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "PF OA": {
+        "n": 6,
+        "report_status_counts": {
+          "PRESENT": 4,
+          "NOT_MENTIONED": 2
+        },
+        "report_status_rates": {
+          "PRESENT": 0.6666666666666666,
+          "NOT_MENTIONED": 0.3333333333333333
+        },
+        "criteria_counts": {
+          "UNKNOWN": 6
+        },
+        "supervised_n": 0,
+        "total_weight": 0.0,
+        "review_n": 4,
+        "review_rate": 0.6666666666666666,
+        "soft_score_summary": {
+          "n": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "bins_0_025_05_075_1": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "Effusion": {
+        "n": 6,
+        "report_status_counts": {
+          "PRESENT": 5,
+          "ABSENT": 1
+        },
+        "report_status_rates": {
+          "PRESENT": 0.8333333333333334,
+          "ABSENT": 0.16666666666666666
+        },
+        "criteria_counts": {
+          "UNKNOWN": 3,
+          "NO": 3
+        },
+        "supervised_n": 3,
+        "total_weight": 3.0,
+        "review_n": 5,
+        "review_rate": 0.8333333333333334,
+        "soft_score_summary": {
+          "n": 3,
+          "min": 0.05,
+          "max": 0.05,
+          "mean": 0.05,
+          "bins_0_025_05_075_1": [
+            3,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "Synovitis": {
+        "n": 6,
+        "report_status_counts": {
+          "PRESENT": 1,
+          "NOT_MENTIONED": 5
+        },
+        "report_status_rates": {
+          "PRESENT": 0.16666666666666666,
+          "NOT_MENTIONED": 0.8333333333333334
+        },
+        "criteria_counts": {
+          "YES": 1,
+          "UNKNOWN": 5
+        },
+        "supervised_n": 1,
+        "total_weight": 1.0,
+        "review_n": 1,
+        "review_rate": 0.16666666666666666,
+        "soft_score_summary": {
+          "n": 1,
+          "min": 0.95,
+          "max": 0.95,
+          "mean": 0.95,
+          "bins_0_025_05_075_1": [
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      },
+      "Baker's": {
+        "n": 6,
+        "report_status_counts": {
+          "NOT_MENTIONED": 3,
+          "PRESENT": 3
+        },
+        "report_status_rates": {
+          "NOT_MENTIONED": 0.5,
+          "PRESENT": 0.5
+        },
+        "criteria_counts": {
+          "UNKNOWN": 6
+        },
+        "supervised_n": 0,
+        "total_weight": 0.0,
+        "review_n": 4,
+        "review_rate": 0.6666666666666666,
+        "soft_score_summary": {
+          "n": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "bins_0_025_05_075_1": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "Contusion": {
+        "n": 6,
+        "report_status_counts": {
+          "UNCERTAIN": 2,
+          "NOT_MENTIONED": 3,
+          "ABSENT": 1
+        },
+        "report_status_rates": {
+          "UNCERTAIN": 0.3333333333333333,
+          "NOT_MENTIONED": 0.5,
+          "ABSENT": 0.16666666666666666
+        },
+        "criteria_counts": {
+          "UNKNOWN": 6
+        },
+        "supervised_n": 0,
+        "total_weight": 0.0,
+        "review_n": 3,
+        "review_rate": 0.5,
+        "soft_score_summary": {
+          "n": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "bins_0_025_05_075_1": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "Fracture": {
+        "n": 6,
+        "report_status_counts": {
+          "NOT_MENTIONED": 6
+        },
+        "report_status_rates": {
+          "NOT_MENTIONED": 1.0
+        },
+        "criteria_counts": {
+          "UNKNOWN": 6
+        },
+        "supervised_n": 0,
+        "total_weight": 0.0,
+        "review_n": 0,
+        "review_rate": 0.0,
+        "soft_score_summary": {
+          "n": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "bins_0_025_05_075_1": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "fr": {
+      "ACL": {
+        "n": 4,
+        "report_status_counts": {
+          "ABSENT": 4
+        },
+        "report_status_rates": {
+          "ABSENT": 1.0
+        },
+        "criteria_counts": {
+          "NO": 4
+        },
+        "supervised_n": 4,
+        "total_weight": 4.0,
+        "review_n": 2,
+        "review_rate": 0.5,
+        "soft_score_summary": {
+          "n": 4,
+          "min": 0.05,
+          "max": 0.05,
+          "mean": 0.05,
+          "bins_0_025_05_075_1": [
+            4,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "MCL": {
+        "n": 4,
+        "report_status_counts": {
+          "ABSENT": 4
+        },
+        "report_status_rates": {
+          "ABSENT": 1.0
+        },
+        "criteria_counts": {
+          "NO": 4
+        },
+        "supervised_n": 4,
+        "total_weight": 4.0,
+        "review_n": 2,
+        "review_rate": 0.5,
+        "soft_score_summary": {
+          "n": 4,
+          "min": 0.05,
+          "max": 0.05,
+          "mean": 0.05,
+          "bins_0_025_05_075_1": [
+            4,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "Medial Meniscus": {
+        "n": 4,
+        "report_status_counts": {
+          "ABSENT": 2,
+          "PRESENT": 2
+        },
+        "report_status_rates": {
+          "ABSENT": 0.5,
+          "PRESENT": 0.5
+        },
+        "criteria_counts": {
+          "NO": 3,
+          "YES": 1
+        },
+        "supervised_n": 4,
+        "total_weight": 4.0,
+        "review_n": 3,
+        "review_rate": 0.75,
+        "soft_score_summary": {
+          "n": 4,
+          "min": 0.05,
+          "max": 0.95,
+          "mean": 0.27499999999999997,
+          "bins_0_025_05_075_1": [
+            3,
+            0,
+            0,
+            1
+          ]
+        }
+      },
+      "Lateral Meniscus": {
+        "n": 4,
+        "report_status_counts": {
+          "ABSENT": 4
+        },
+        "report_status_rates": {
+          "ABSENT": 1.0
+        },
+        "criteria_counts": {
+          "NO": 4
+        },
+        "supervised_n": 4,
+        "total_weight": 4.0,
+        "review_n": 1,
+        "review_rate": 0.25,
+        "soft_score_summary": {
+          "n": 4,
+          "min": 0.05,
+          "max": 0.05,
+          "mean": 0.05,
+          "bins_0_025_05_075_1": [
+            4,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "Medial OA": {
+        "n": 4,
+        "report_status_counts": {
+          "ABSENT": 2,
+          "PRESENT": 2
+        },
+        "report_status_rates": {
+          "ABSENT": 0.5,
+          "PRESENT": 0.5
+        },
+        "criteria_counts": {
+          "UNKNOWN": 4
+        },
+        "supervised_n": 0,
+        "total_weight": 0.0,
+        "review_n": 4,
+        "review_rate": 1.0,
+        "soft_score_summary": {
+          "n": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "bins_0_025_05_075_1": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "Lateral OA": {
+        "n": 4,
+        "report_status_counts": {
+          "ABSENT": 2,
+          "PRESENT": 1,
+          "NOT_MENTIONED": 1
+        },
+        "report_status_rates": {
+          "ABSENT": 0.5,
+          "PRESENT": 0.25,
+          "NOT_MENTIONED": 0.25
+        },
+        "criteria_counts": {
+          "UNKNOWN": 3,
+          "NO": 1
+        },
+        "supervised_n": 1,
+        "total_weight": 1.0,
+        "review_n": 3,
+        "review_rate": 0.75,
+        "soft_score_summary": {
+          "n": 1,
+          "min": 0.05,
+          "max": 0.05,
+          "mean": 0.05,
+          "bins_0_025_05_075_1": [
+            1,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "PF OA": {
+        "n": 4,
+        "report_status_counts": {
+          "ABSENT": 2,
+          "PRESENT": 2
+        },
+        "report_status_rates": {
+          "ABSENT": 0.5,
+          "PRESENT": 0.5
+        },
+        "criteria_counts": {
+          "UNKNOWN": 3,
+          "NO": 1
+        },
+        "supervised_n": 1,
+        "total_weight": 1.0,
+        "review_n": 4,
+        "review_rate": 1.0,
+        "soft_score_summary": {
+          "n": 1,
+          "min": 0.05,
+          "max": 0.05,
+          "mean": 0.05,
+          "bins_0_025_05_075_1": [
+            1,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "Effusion": {
+        "n": 4,
+        "report_status_counts": {
+          "ABSENT": 2,
+          "PRESENT": 2
+        },
+        "report_status_rates": {
+          "ABSENT": 0.5,
+          "PRESENT": 0.5
+        },
+        "criteria_counts": {
+          "NO": 3,
+          "UNKNOWN": 1
+        },
+        "supervised_n": 4,
+        "total_weight": 3.25,
+        "review_n": 4,
+        "review_rate": 1.0,
+        "soft_score_summary": {
+          "n": 4,
+          "min": 0.05,
+          "max": 0.75,
+          "mean": 0.225,
+          "bins_0_025_05_075_1": [
+            3,
+            0,
+            0,
+            1
+          ]
+        }
+      },
+      "Synovitis": {
+        "n": 4,
+        "report_status_counts": {
+          "NOT_MENTIONED": 4
+        },
+        "report_status_rates": {
+          "NOT_MENTIONED": 1.0
+        },
+        "criteria_counts": {
+          "UNKNOWN": 4
+        },
+        "supervised_n": 0,
+        "total_weight": 0.0,
+        "review_n": 0,
+        "review_rate": 0.0,
+        "soft_score_summary": {
+          "n": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "bins_0_025_05_075_1": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "Baker's": {
+        "n": 4,
+        "report_status_counts": {
+          "ABSENT": 3,
+          "PRESENT": 1
+        },
+        "report_status_rates": {
+          "ABSENT": 0.75,
+          "PRESENT": 0.25
+        },
+        "criteria_counts": {
+          "NO": 4
+        },
+        "supervised_n": 4,
+        "total_weight": 4.0,
+        "review_n": 1,
+        "review_rate": 0.25,
+        "soft_score_summary": {
+          "n": 4,
+          "min": 0.05,
+          "max": 0.05,
+          "mean": 0.05,
+          "bins_0_025_05_075_1": [
+            4,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "Contusion": {
+        "n": 4,
+        "report_status_counts": {
+          "ABSENT": 3,
+          "NOT_MENTIONED": 1
+        },
+        "report_status_rates": {
+          "ABSENT": 0.75,
+          "NOT_MENTIONED": 0.25
+        },
+        "criteria_counts": {
+          "NO": 3,
+          "UNKNOWN": 1
+        },
+        "supervised_n": 2,
+        "total_weight": 2.0,
+        "review_n": 1,
+        "review_rate": 0.25,
+        "soft_score_summary": {
+          "n": 2,
+          "min": 0.05,
+          "max": 0.05,
+          "mean": 0.05,
+          "bins_0_025_05_075_1": [
+            2,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "Fracture": {
+        "n": 4,
+        "report_status_counts": {
+          "NOT_MENTIONED": 2,
+          "ABSENT": 2
+        },
+        "report_status_rates": {
+          "NOT_MENTIONED": 0.5,
+          "ABSENT": 0.5
+        },
+        "criteria_counts": {
+          "UNKNOWN": 2,
+          "NO": 2
+        },
+        "supervised_n": 2,
+        "total_weight": 2.0,
+        "review_n": 0,
+        "review_rate": 0.0,
+        "soft_score_summary": {
+          "n": 2,
+          "min": 0.05,
+          "max": 0.05,
+          "mean": 0.05,
+          "bins_0_025_05_075_1": [
+            2,
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "nl": {
+      "ACL": {
+        "n": 6,
+        "report_status_counts": {
+          "ABSENT": 6
+        },
+        "report_status_rates": {
+          "ABSENT": 1.0
+        },
+        "criteria_counts": {
+          "NO": 6
+        },
+        "supervised_n": 6,
+        "total_weight": 6.0,
+        "review_n": 1,
+        "review_rate": 0.16666666666666666,
+        "soft_score_summary": {
+          "n": 6,
+          "min": 0.05,
+          "max": 0.05,
+          "mean": 0.05,
+          "bins_0_025_05_075_1": [
+            6,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "MCL": {
+        "n": 6,
+        "report_status_counts": {
+          "NOT_MENTIONED": 1,
+          "ABSENT": 5
+        },
+        "report_status_rates": {
+          "NOT_MENTIONED": 0.16666666666666666,
+          "ABSENT": 0.8333333333333334
+        },
+        "criteria_counts": {
+          "UNKNOWN": 1,
+          "NO": 5
+        },
+        "supervised_n": 5,
+        "total_weight": 5.0,
+        "review_n": 1,
+        "review_rate": 0.16666666666666666,
+        "soft_score_summary": {
+          "n": 5,
+          "min": 0.05,
+          "max": 0.05,
+          "mean": 0.05,
+          "bins_0_025_05_075_1": [
+            5,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "Medial Meniscus": {
+        "n": 6,
+        "report_status_counts": {
+          "ABSENT": 2,
+          "PRESENT": 3,
+          "NOT_MENTIONED": 1
+        },
+        "report_status_rates": {
+          "ABSENT": 0.3333333333333333,
+          "PRESENT": 0.5,
+          "NOT_MENTIONED": 0.16666666666666666
+        },
+        "criteria_counts": {
+          "NO": 4,
+          "UNKNOWN": 2
+        },
+        "supervised_n": 5,
+        "total_weight": 4.25,
+        "review_n": 3,
+        "review_rate": 0.5,
+        "soft_score_summary": {
+          "n": 5,
+          "min": 0.03,
+          "max": 0.05,
+          "mean": 0.046,
+          "bins_0_025_05_075_1": [
+            5,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "Lateral Meniscus": {
+        "n": 6,
+        "report_status_counts": {
+          "ABSENT": 5,
+          "PRESENT": 1
+        },
+        "report_status_rates": {
+          "ABSENT": 0.8333333333333334,
+          "PRESENT": 0.16666666666666666
+        },
+        "criteria_counts": {
+          "NO": 5,
+          "YES": 1
+        },
+        "supervised_n": 6,
+        "total_weight": 6.0,
+        "review_n": 0,
+        "review_rate": 0.0,
+        "soft_score_summary": {
+          "n": 6,
+          "min": 0.05,
+          "max": 0.95,
+          "mean": 0.19999999999999998,
+          "bins_0_025_05_075_1": [
+            5,
+            0,
+            0,
+            1
+          ]
+        }
+      },
+      "Medial OA": {
+        "n": 6,
+        "report_status_counts": {
+          "NOT_MENTIONED": 3,
+          "ABSENT": 3
+        },
+        "report_status_rates": {
+          "NOT_MENTIONED": 0.5,
+          "ABSENT": 0.5
+        },
+        "criteria_counts": {
+          "UNKNOWN": 5,
+          "NO": 1
+        },
+        "supervised_n": 1,
+        "total_weight": 1.0,
+        "review_n": 2,
+        "review_rate": 0.3333333333333333,
+        "soft_score_summary": {
+          "n": 1,
+          "min": 0.05,
+          "max": 0.05,
+          "mean": 0.05,
+          "bins_0_025_05_075_1": [
+            1,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "Lateral OA": {
+        "n": 6,
+        "report_status_counts": {
+          "NOT_MENTIONED": 3,
+          "ABSENT": 3
+        },
+        "report_status_rates": {
+          "NOT_MENTIONED": 0.5,
+          "ABSENT": 0.5
+        },
+        "criteria_counts": {
+          "UNKNOWN": 5,
+          "NO": 1
+        },
+        "supervised_n": 1,
+        "total_weight": 1.0,
+        "review_n": 2,
+        "review_rate": 0.3333333333333333,
+        "soft_score_summary": {
+          "n": 1,
+          "min": 0.05,
+          "max": 0.05,
+          "mean": 0.05,
+          "bins_0_025_05_075_1": [
+            1,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "PF OA": {
+        "n": 6,
+        "report_status_counts": {
+          "PRESENT": 3,
+          "ABSENT": 2,
+          "NOT_MENTIONED": 1
+        },
+        "report_status_rates": {
+          "PRESENT": 0.5,
+          "ABSENT": 0.3333333333333333,
+          "NOT_MENTIONED": 0.16666666666666666
+        },
+        "criteria_counts": {
+          "UNKNOWN": 6
+        },
+        "supervised_n": 0,
+        "total_weight": 0.0,
+        "review_n": 5,
+        "review_rate": 0.8333333333333334,
+        "soft_score_summary": {
+          "n": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "bins_0_025_05_075_1": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "Effusion": {
+        "n": 6,
+        "report_status_counts": {
+          "PRESENT": 1,
+          "ABSENT": 4,
+          "NOT_MENTIONED": 1
+        },
+        "report_status_rates": {
+          "PRESENT": 0.16666666666666666,
+          "ABSENT": 0.6666666666666666,
+          "NOT_MENTIONED": 0.16666666666666666
+        },
+        "criteria_counts": {
+          "YES": 1,
+          "NO": 3,
+          "UNKNOWN": 2
+        },
+        "supervised_n": 3,
+        "total_weight": 3.0,
+        "review_n": 2,
+        "review_rate": 0.3333333333333333,
+        "soft_score_summary": {
+          "n": 3,
+          "min": 0.05,
+          "max": 0.95,
+          "mean": 0.35,
+          "bins_0_025_05_075_1": [
+            2,
+            0,
+            0,
+            1
+          ]
+        }
+      },
+      "Synovitis": {
+        "n": 6,
+        "report_status_counts": {
+          "NOT_MENTIONED": 6
+        },
+        "report_status_rates": {
+          "NOT_MENTIONED": 1.0
+        },
+        "criteria_counts": {
+          "UNKNOWN": 6
+        },
+        "supervised_n": 0,
+        "total_weight": 0.0,
+        "review_n": 0,
+        "review_rate": 0.0,
+        "soft_score_summary": {
+          "n": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "bins_0_025_05_075_1": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "Baker's": {
+        "n": 6,
+        "report_status_counts": {
+          "PRESENT": 2,
+          "NOT_MENTIONED": 2,
+          "ABSENT": 1,
+          "UNCERTAIN": 1
+        },
+        "report_status_rates": {
+          "PRESENT": 0.3333333333333333,
+          "NOT_MENTIONED": 0.3333333333333333,
+          "ABSENT": 0.16666666666666666,
+          "UNCERTAIN": 0.16666666666666666
+        },
+        "criteria_counts": {
+          "YES": 1,
+          "UNKNOWN": 3,
+          "NO": 2
+        },
+        "supervised_n": 3,
+        "total_weight": 3.0,
+        "review_n": 2,
+        "review_rate": 0.3333333333333333,
+        "soft_score_summary": {
+          "n": 3,
+          "min": 0.05,
+          "max": 0.95,
+          "mean": 0.35,
+          "bins_0_025_05_075_1": [
+            2,
+            0,
+            0,
+            1
+          ]
+        }
+      },
+      "Contusion": {
+        "n": 6,
+        "report_status_counts": {
+          "UNCERTAIN": 1,
+          "ABSENT": 3,
+          "NOT_MENTIONED": 1,
+          "PRESENT": 1
+        },
+        "report_status_rates": {
+          "UNCERTAIN": 0.16666666666666666,
+          "ABSENT": 0.5,
+          "NOT_MENTIONED": 0.16666666666666666,
+          "PRESENT": 0.16666666666666666
+        },
+        "criteria_counts": {
+          "UNKNOWN": 3,
+          "NO": 3
+        },
+        "supervised_n": 2,
+        "total_weight": 2.0,
+        "review_n": 3,
+        "review_rate": 0.5,
+        "soft_score_summary": {
+          "n": 2,
+          "min": 0.05,
+          "max": 0.05,
+          "mean": 0.05,
+          "bins_0_025_05_075_1": [
+            2,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "Fracture": {
+        "n": 6,
+        "report_status_counts": {
+          "NOT_MENTIONED": 5,
+          "UNCERTAIN": 1
+        },
+        "report_status_rates": {
+          "NOT_MENTIONED": 0.8333333333333334,
+          "UNCERTAIN": 0.16666666666666666
+        },
+        "criteria_counts": {
+          "UNKNOWN": 6
+        },
+        "supervised_n": 0,
+        "total_weight": 0.0,
+        "review_n": 1,
+        "review_rate": 0.16666666666666666,
+        "soft_score_summary": {
+          "n": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "bins_0_025_05_075_1": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "de": {
+      "ACL": {
+        "n": 3,
+        "report_status_counts": {
+          "PRESENT": 1,
+          "ABSENT": 2
+        },
+        "report_status_rates": {
+          "PRESENT": 0.3333333333333333,
+          "ABSENT": 0.6666666666666666
+        },
+        "criteria_counts": {
+          "NO": 3
+        },
+        "supervised_n": 3,
+        "total_weight": 3.0,
+        "review_n": 1,
+        "review_rate": 0.3333333333333333,
+        "soft_score_summary": {
+          "n": 3,
+          "min": 0.05,
+          "max": 0.05,
+          "mean": 0.05,
+          "bins_0_025_05_075_1": [
+            3,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "MCL": {
+        "n": 3,
+        "report_status_counts": {
+          "ABSENT": 2,
+          "PRESENT": 1
+        },
+        "report_status_rates": {
+          "ABSENT": 0.6666666666666666,
+          "PRESENT": 0.3333333333333333
+        },
+        "criteria_counts": {
+          "NO": 3
+        },
+        "supervised_n": 3,
+        "total_weight": 3.0,
+        "review_n": 1,
+        "review_rate": 0.3333333333333333,
+        "soft_score_summary": {
+          "n": 3,
+          "min": 0.05,
+          "max": 0.05,
+          "mean": 0.05,
+          "bins_0_025_05_075_1": [
+            3,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "Medial Meniscus": {
+        "n": 3,
+        "report_status_counts": {
+          "PRESENT": 2,
+          "ABSENT": 1
+        },
+        "report_status_rates": {
+          "PRESENT": 0.6666666666666666,
+          "ABSENT": 0.3333333333333333
+        },
+        "criteria_counts": {
+          "YES": 2,
+          "NO": 1
+        },
+        "supervised_n": 3,
+        "total_weight": 3.0,
+        "review_n": 1,
+        "review_rate": 0.3333333333333333,
+        "soft_score_summary": {
+          "n": 3,
+          "min": 0.05,
+          "max": 0.95,
+          "mean": 0.65,
+          "bins_0_025_05_075_1": [
+            1,
+            0,
+            0,
+            2
+          ]
+        }
+      },
+      "Lateral Meniscus": {
+        "n": 3,
+        "report_status_counts": {
+          "PRESENT": 1,
+          "ABSENT": 2
+        },
+        "report_status_rates": {
+          "PRESENT": 0.3333333333333333,
+          "ABSENT": 0.6666666666666666
+        },
+        "criteria_counts": {
+          "UNKNOWN": 1,
+          "NO": 2
+        },
+        "supervised_n": 3,
+        "total_weight": 2.25,
+        "review_n": 1,
+        "review_rate": 0.3333333333333333,
+        "soft_score_summary": {
+          "n": 3,
+          "min": 0.05,
+          "max": 0.35,
+          "mean": 0.15,
+          "bins_0_025_05_075_1": [
+            2,
+            1,
+            0,
+            0
+          ]
+        }
+      },
+      "Medial OA": {
+        "n": 3,
+        "report_status_counts": {
+          "PRESENT": 2,
+          "ABSENT": 1
+        },
+        "report_status_rates": {
+          "PRESENT": 0.6666666666666666,
+          "ABSENT": 0.3333333333333333
+        },
+        "criteria_counts": {
+          "NO": 1,
+          "UNKNOWN": 2
+        },
+        "supervised_n": 1,
+        "total_weight": 1.0,
+        "review_n": 3,
+        "review_rate": 1.0,
+        "soft_score_summary": {
+          "n": 1,
+          "min": 0.05,
+          "max": 0.05,
+          "mean": 0.05,
+          "bins_0_025_05_075_1": [
+            1,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "Lateral OA": {
+        "n": 3,
+        "report_status_counts": {
+          "PRESENT": 1,
+          "ABSENT": 2
+        },
+        "report_status_rates": {
+          "PRESENT": 0.3333333333333333,
+          "ABSENT": 0.6666666666666666
+        },
+        "criteria_counts": {
+          "UNKNOWN": 2,
+          "NO": 1
+        },
+        "supervised_n": 2,
+        "total_weight": 1.25,
+        "review_n": 3,
+        "review_rate": 1.0,
+        "soft_score_summary": {
+          "n": 2,
+          "min": 0.05,
+          "max": 0.6,
+          "mean": 0.325,
+          "bins_0_025_05_075_1": [
+            1,
+            0,
+            1,
+            0
+          ]
+        }
+      },
+      "PF OA": {
+        "n": 3,
+        "report_status_counts": {
+          "PRESENT": 2,
+          "ABSENT": 1
+        },
+        "report_status_rates": {
+          "PRESENT": 0.6666666666666666,
+          "ABSENT": 0.3333333333333333
+        },
+        "criteria_counts": {
+          "UNKNOWN": 2,
+          "NO": 1
+        },
+        "supervised_n": 2,
+        "total_weight": 1.25,
+        "review_n": 3,
+        "review_rate": 1.0,
+        "soft_score_summary": {
+          "n": 2,
+          "min": 0.05,
+          "max": 0.45,
+          "mean": 0.25,
+          "bins_0_025_05_075_1": [
+            1,
+            1,
+            0,
+            0
+          ]
+        }
+      },
+      "Effusion": {
+        "n": 3,
+        "report_status_counts": {
+          "PRESENT": 2,
+          "ABSENT": 1
+        },
+        "report_status_rates": {
+          "PRESENT": 0.6666666666666666,
+          "ABSENT": 0.3333333333333333
+        },
+        "criteria_counts": {
+          "NO": 3
+        },
+        "supervised_n": 3,
+        "total_weight": 3.0,
+        "review_n": 2,
+        "review_rate": 0.6666666666666666,
+        "soft_score_summary": {
+          "n": 3,
+          "min": 0.05,
+          "max": 0.05,
+          "mean": 0.05,
+          "bins_0_025_05_075_1": [
+            3,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "Synovitis": {
+        "n": 3,
+        "report_status_counts": {
+          "PRESENT": 1,
+          "NOT_MENTIONED": 1,
+          "ABSENT": 1
+        },
+        "report_status_rates": {
+          "PRESENT": 0.3333333333333333,
+          "NOT_MENTIONED": 0.3333333333333333,
+          "ABSENT": 0.3333333333333333
+        },
+        "criteria_counts": {
+          "YES": 1,
+          "UNKNOWN": 2
+        },
+        "supervised_n": 1,
+        "total_weight": 1.0,
+        "review_n": 1,
+        "review_rate": 0.3333333333333333,
+        "soft_score_summary": {
+          "n": 1,
+          "min": 0.95,
+          "max": 0.95,
+          "mean": 0.95,
+          "bins_0_025_05_075_1": [
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      },
+      "Baker's": {
+        "n": 3,
+        "report_status_counts": {
+          "PRESENT": 1,
+          "NOT_MENTIONED": 2
+        },
+        "report_status_rates": {
+          "PRESENT": 0.3333333333333333,
+          "NOT_MENTIONED": 0.6666666666666666
+        },
+        "criteria_counts": {
+          "UNKNOWN": 3
+        },
+        "supervised_n": 1,
+        "total_weight": 0.25,
+        "review_n": 1,
+        "review_rate": 0.3333333333333333,
+        "soft_score_summary": {
+          "n": 1,
+          "min": 0.85,
+          "max": 0.85,
+          "mean": 0.85,
+          "bins_0_025_05_075_1": [
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      },
+      "Contusion": {
+        "n": 3,
+        "report_status_counts": {
+          "NOT_MENTIONED": 2,
+          "UNCERTAIN": 1
+        },
+        "report_status_rates": {
+          "NOT_MENTIONED": 0.6666666666666666,
+          "UNCERTAIN": 0.3333333333333333
+        },
+        "criteria_counts": {
+          "UNKNOWN": 3
+        },
+        "supervised_n": 0,
+        "total_weight": 0.0,
+        "review_n": 2,
+        "review_rate": 0.6666666666666666,
+        "soft_score_summary": {
+          "n": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "bins_0_025_05_075_1": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "Fracture": {
+        "n": 3,
+        "report_status_counts": {
+          "NOT_MENTIONED": 2,
+          "ABSENT": 1
+        },
+        "report_status_rates": {
+          "NOT_MENTIONED": 0.6666666666666666,
+          "ABSENT": 0.3333333333333333
+        },
+        "criteria_counts": {
+          "UNKNOWN": 2,
+          "NO": 1
+        },
+        "supervised_n": 1,
+        "total_weight": 1.0,
+        "review_n": 0,
+        "review_rate": 0.0,
+        "soft_score_summary": {
+          "n": 1,
+          "min": 0.05,
+          "max": 0.05,
+          "mean": 0.05,
+          "bins_0_025_05_075_1": [
+            1,
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "hr_sr_bs": {
+      "ACL": {
+        "n": 5,
+        "report_status_counts": {
+          "PRESENT": 2,
+          "ABSENT": 2,
+          "UNCERTAIN": 1
+        },
+        "report_status_rates": {
+          "PRESENT": 0.4,
+          "ABSENT": 0.4,
+          "UNCERTAIN": 0.2
+        },
+        "criteria_counts": {
+          "UNKNOWN": 3,
+          "NO": 2
+        },
+        "supervised_n": 4,
+        "total_weight": 2.5,
+        "review_n": 4,
+        "review_rate": 0.8,
+        "soft_score_summary": {
+          "n": 4,
+          "min": 0.05,
+          "max": 0.15,
+          "mean": 0.0875,
+          "bins_0_025_05_075_1": [
+            4,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "MCL": {
+        "n": 5,
+        "report_status_counts": {
+          "ABSENT": 4,
+          "PRESENT": 1
+        },
+        "report_status_rates": {
+          "ABSENT": 0.8,
+          "PRESENT": 0.2
+        },
+        "criteria_counts": {
+          "NO": 4,
+          "UNKNOWN": 1
+        },
+        "supervised_n": 4,
+        "total_weight": 4.0,
+        "review_n": 1,
+        "review_rate": 0.2,
+        "soft_score_summary": {
+          "n": 4,
+          "min": 0.05,
+          "max": 0.05,
+          "mean": 0.05,
+          "bins_0_025_05_075_1": [
+            4,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "Medial Meniscus": {
+        "n": 5,
+        "report_status_counts": {
+          "PRESENT": 4,
+          "ABSENT": 1
+        },
+        "report_status_rates": {
+          "PRESENT": 0.8,
+          "ABSENT": 0.2
+        },
+        "criteria_counts": {
+          "UNKNOWN": 1,
+          "YES": 3,
+          "NO": 1
+        },
+        "supervised_n": 4,
+        "total_weight": 4.0,
+        "review_n": 1,
+        "review_rate": 0.2,
+        "soft_score_summary": {
+          "n": 4,
+          "min": 0.05,
+          "max": 0.95,
+          "mean": 0.725,
+          "bins_0_025_05_075_1": [
+            1,
+            0,
+            0,
+            3
+          ]
+        }
+      },
+      "Lateral Meniscus": {
+        "n": 5,
+        "report_status_counts": {
+          "ABSENT": 2,
+          "PRESENT": 3
+        },
+        "report_status_rates": {
+          "ABSENT": 0.4,
+          "PRESENT": 0.6
+        },
+        "criteria_counts": {
+          "NO": 3,
+          "YES": 2
+        },
+        "supervised_n": 5,
+        "total_weight": 5.0,
+        "review_n": 1,
+        "review_rate": 0.2,
+        "soft_score_summary": {
+          "n": 5,
+          "min": 0.05,
+          "max": 0.95,
+          "mean": 0.41,
+          "bins_0_025_05_075_1": [
+            3,
+            0,
+            0,
+            2
+          ]
+        }
+      },
+      "Medial OA": {
+        "n": 5,
+        "report_status_counts": {
+          "PRESENT": 4,
+          "ABSENT": 1
+        },
+        "report_status_rates": {
+          "PRESENT": 0.8,
+          "ABSENT": 0.2
+        },
+        "criteria_counts": {
+          "NO": 2,
+          "UNKNOWN": 3
+        },
+        "supervised_n": 3,
+        "total_weight": 2.25,
+        "review_n": 5,
+        "review_rate": 1.0,
+        "soft_score_summary": {
+          "n": 3,
+          "min": 0.05,
+          "max": 0.85,
+          "mean": 0.31666666666666665,
+          "bins_0_025_05_075_1": [
+            2,
+            0,
+            0,
+            1
+          ]
+        }
+      },
+      "Lateral OA": {
+        "n": 5,
+        "report_status_counts": {
+          "NOT_MENTIONED": 1,
+          "PRESENT": 3,
+          "ABSENT": 1
+        },
+        "report_status_rates": {
+          "NOT_MENTIONED": 0.2,
+          "PRESENT": 0.6,
+          "ABSENT": 0.2
+        },
+        "criteria_counts": {
+          "UNKNOWN": 4,
+          "NO": 1
+        },
+        "supervised_n": 2,
+        "total_weight": 1.25,
+        "review_n": 4,
+        "review_rate": 0.8,
+        "soft_score_summary": {
+          "n": 2,
+          "min": 0.05,
+          "max": 0.05,
+          "mean": 0.05,
+          "bins_0_025_05_075_1": [
+            2,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "PF OA": {
+        "n": 5,
+        "report_status_counts": {
+          "NOT_MENTIONED": 2,
+          "PRESENT": 2,
+          "ABSENT": 1
+        },
+        "report_status_rates": {
+          "NOT_MENTIONED": 0.4,
+          "PRESENT": 0.4,
+          "ABSENT": 0.2
+        },
+        "criteria_counts": {
+          "UNKNOWN": 5
+        },
+        "supervised_n": 1,
+        "total_weight": 0.25,
+        "review_n": 3,
+        "review_rate": 0.6,
+        "soft_score_summary": {
+          "n": 1,
+          "min": 0.55,
+          "max": 0.55,
+          "mean": 0.55,
+          "bins_0_025_05_075_1": [
+            0,
+            0,
+            1,
+            0
+          ]
+        }
+      },
+      "Effusion": {
+        "n": 5,
+        "report_status_counts": {
+          "PRESENT": 4,
+          "NOT_MENTIONED": 1
+        },
+        "report_status_rates": {
+          "PRESENT": 0.8,
+          "NOT_MENTIONED": 0.2
+        },
+        "criteria_counts": {
+          "UNKNOWN": 4,
+          "NO": 1
+        },
+        "supervised_n": 3,
+        "total_weight": 1.5,
+        "review_n": 4,
+        "review_rate": 0.8,
+        "soft_score_summary": {
+          "n": 3,
+          "min": 0.05,
+          "max": 0.7,
+          "mean": 0.4833333333333333,
+          "bins_0_025_05_075_1": [
+            1,
+            0,
+            2,
+            0
+          ]
+        }
+      },
+      "Synovitis": {
+        "n": 5,
+        "report_status_counts": {
+          "NOT_MENTIONED": 4,
+          "PRESENT": 1
+        },
+        "report_status_rates": {
+          "NOT_MENTIONED": 0.8,
+          "PRESENT": 0.2
+        },
+        "criteria_counts": {
+          "UNKNOWN": 4,
+          "YES": 1
+        },
+        "supervised_n": 1,
+        "total_weight": 1.0,
+        "review_n": 0,
+        "review_rate": 0.0,
+        "soft_score_summary": {
+          "n": 1,
+          "min": 0.95,
+          "max": 0.95,
+          "mean": 0.95,
+          "bins_0_025_05_075_1": [
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      },
+      "Baker's": {
+        "n": 5,
+        "report_status_counts": {
+          "ABSENT": 2,
+          "PRESENT": 2,
+          "NOT_MENTIONED": 1
+        },
+        "report_status_rates": {
+          "ABSENT": 0.4,
+          "PRESENT": 0.4,
+          "NOT_MENTIONED": 0.2
+        },
+        "criteria_counts": {
+          "NO": 2,
+          "UNKNOWN": 3
+        },
+        "supervised_n": 2,
+        "total_weight": 2.0,
+        "review_n": 3,
+        "review_rate": 0.6,
+        "soft_score_summary": {
+          "n": 2,
+          "min": 0.05,
+          "max": 0.05,
+          "mean": 0.05,
+          "bins_0_025_05_075_1": [
+            2,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "Contusion": {
+        "n": 5,
+        "report_status_counts": {
+          "NOT_MENTIONED": 2,
+          "UNCERTAIN": 1,
+          "ABSENT": 1,
+          "PRESENT": 1
+        },
+        "report_status_rates": {
+          "NOT_MENTIONED": 0.4,
+          "UNCERTAIN": 0.2,
+          "ABSENT": 0.2,
+          "PRESENT": 0.2
+        },
+        "criteria_counts": {
+          "UNKNOWN": 3,
+          "NO": 2
+        },
+        "supervised_n": 2,
+        "total_weight": 2.0,
+        "review_n": 3,
+        "review_rate": 0.6,
+        "soft_score_summary": {
+          "n": 2,
+          "min": 0.05,
+          "max": 0.05,
+          "mean": 0.05,
+          "bins_0_025_05_075_1": [
+            2,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "Fracture": {
+        "n": 5,
+        "report_status_counts": {
+          "NOT_MENTIONED": 4,
+          "ABSENT": 1
+        },
+        "report_status_rates": {
+          "NOT_MENTIONED": 0.8,
+          "ABSENT": 0.2
+        },
+        "criteria_counts": {
+          "UNKNOWN": 4,
+          "NO": 1
+        },
+        "supervised_n": 1,
+        "total_weight": 1.0,
+        "review_n": 1,
+        "review_rate": 0.2,
+        "soft_score_summary": {
+          "n": 1,
+          "min": 0.05,
+          "max": 0.05,
+          "mean": 0.05,
+          "bins_0_025_05_075_1": [
+            1,
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "UNKNOWN": {
+      "ACL": {
+        "n": 2,
+        "report_status_counts": {
+          "PRESENT": 1,
+          "ABSENT": 1
+        },
+        "report_status_rates": {
+          "PRESENT": 0.5,
+          "ABSENT": 0.5
+        },
+        "criteria_counts": {
+          "YES": 1,
+          "NO": 1
+        },
+        "supervised_n": 2,
+        "total_weight": 2.0,
+        "review_n": 1,
+        "review_rate": 0.5,
+        "soft_score_summary": {
+          "n": 2,
+          "min": 0.05,
+          "max": 0.95,
+          "mean": 0.5,
+          "bins_0_025_05_075_1": [
+            1,
+            0,
+            0,
+            1
+          ]
+        }
+      },
+      "MCL": {
+        "n": 2,
+        "report_status_counts": {
+          "NOT_MENTIONED": 1,
+          "ABSENT": 1
+        },
+        "report_status_rates": {
+          "NOT_MENTIONED": 0.5,
+          "ABSENT": 0.5
+        },
+        "criteria_counts": {
+          "UNKNOWN": 1,
+          "NO": 1
+        },
+        "supervised_n": 1,
+        "total_weight": 1.0,
+        "review_n": 1,
+        "review_rate": 0.5,
+        "soft_score_summary": {
+          "n": 1,
+          "min": 0.05,
+          "max": 0.05,
+          "mean": 0.05,
+          "bins_0_025_05_075_1": [
+            1,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "Medial Meniscus": {
+        "n": 2,
+        "report_status_counts": {
+          "PRESENT": 2
+        },
+        "report_status_rates": {
+          "PRESENT": 1.0
+        },
+        "criteria_counts": {
+          "YES": 1,
+          "UNKNOWN": 1
+        },
+        "supervised_n": 1,
+        "total_weight": 1.0,
+        "review_n": 2,
+        "review_rate": 1.0,
+        "soft_score_summary": {
+          "n": 1,
+          "min": 0.95,
+          "max": 0.95,
+          "mean": 0.95,
+          "bins_0_025_05_075_1": [
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      },
+      "Lateral Meniscus": {
+        "n": 2,
+        "report_status_counts": {
+          "PRESENT": 2
+        },
+        "report_status_rates": {
+          "PRESENT": 1.0
+        },
+        "criteria_counts": {
+          "YES": 2
+        },
+        "supervised_n": 2,
+        "total_weight": 2.0,
+        "review_n": 1,
+        "review_rate": 0.5,
+        "soft_score_summary": {
+          "n": 2,
+          "min": 0.95,
+          "max": 0.95,
+          "mean": 0.95,
+          "bins_0_025_05_075_1": [
+            0,
+            0,
+            0,
+            2
+          ]
+        }
+      },
+      "Medial OA": {
+        "n": 2,
+        "report_status_counts": {
+          "ABSENT": 2
+        },
+        "report_status_rates": {
+          "ABSENT": 1.0
+        },
+        "criteria_counts": {
+          "UNKNOWN": 2
+        },
+        "supervised_n": 0,
+        "total_weight": 0.0,
+        "review_n": 2,
+        "review_rate": 1.0,
+        "soft_score_summary": {
+          "n": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "bins_0_025_05_075_1": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "Lateral OA": {
+        "n": 2,
+        "report_status_counts": {
+          "ABSENT": 2
+        },
+        "report_status_rates": {
+          "ABSENT": 1.0
+        },
+        "criteria_counts": {
+          "UNKNOWN": 2
+        },
+        "supervised_n": 0,
+        "total_weight": 0.0,
+        "review_n": 2,
+        "review_rate": 1.0,
+        "soft_score_summary": {
+          "n": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "bins_0_025_05_075_1": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "PF OA": {
+        "n": 2,
+        "report_status_counts": {
+          "ABSENT": 2
+        },
+        "report_status_rates": {
+          "ABSENT": 1.0
+        },
+        "criteria_counts": {
+          "UNKNOWN": 2
+        },
+        "supervised_n": 0,
+        "total_weight": 0.0,
+        "review_n": 2,
+        "review_rate": 1.0,
+        "soft_score_summary": {
+          "n": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "bins_0_025_05_075_1": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "Effusion": {
+        "n": 2,
+        "report_status_counts": {
+          "PRESENT": 2
+        },
+        "report_status_rates": {
+          "PRESENT": 1.0
+        },
+        "criteria_counts": {
+          "UNKNOWN": 2
+        },
+        "supervised_n": 1,
+        "total_weight": 0.25,
+        "review_n": 2,
+        "review_rate": 1.0,
+        "soft_score_summary": {
+          "n": 1,
+          "min": 0.8,
+          "max": 0.8,
+          "mean": 0.8,
+          "bins_0_025_05_075_1": [
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      },
+      "Synovitis": {
+        "n": 2,
+        "report_status_counts": {
+          "NOT_MENTIONED": 2
+        },
+        "report_status_rates": {
+          "NOT_MENTIONED": 1.0
+        },
+        "criteria_counts": {
+          "UNKNOWN": 2
+        },
+        "supervised_n": 0,
+        "total_weight": 0.0,
+        "review_n": 0,
+        "review_rate": 0.0,
+        "soft_score_summary": {
+          "n": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "bins_0_025_05_075_1": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "Baker's": {
+        "n": 2,
+        "report_status_counts": {
+          "NOT_MENTIONED": 2
+        },
+        "report_status_rates": {
+          "NOT_MENTIONED": 1.0
+        },
+        "criteria_counts": {
+          "UNKNOWN": 2
+        },
+        "supervised_n": 0,
+        "total_weight": 0.0,
+        "review_n": 0,
+        "review_rate": 0.0,
+        "soft_score_summary": {
+          "n": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "bins_0_025_05_075_1": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "Contusion": {
+        "n": 2,
+        "report_status_counts": {
+          "UNCERTAIN": 1,
+          "ABSENT": 1
+        },
+        "report_status_rates": {
+          "UNCERTAIN": 0.5,
+          "ABSENT": 0.5
+        },
+        "criteria_counts": {
+          "UNKNOWN": 1,
+          "NO": 1
+        },
+        "supervised_n": 0,
+        "total_weight": 0.0,
+        "review_n": 2,
+        "review_rate": 1.0,
+        "soft_score_summary": {
+          "n": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "bins_0_025_05_075_1": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "Fracture": {
+        "n": 2,
+        "report_status_counts": {
+          "NOT_MENTIONED": 2
+        },
+        "report_status_rates": {
+          "NOT_MENTIONED": 1.0
+        },
+        "criteria_counts": {
+          "UNKNOWN": 2
+        },
+        "supervised_n": 0,
+        "total_weight": 0.0,
+        "review_n": 0,
+        "review_rate": 0.0,
+        "soft_score_summary": {
+          "n": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "bins_0_025_05_075_1": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "bg": {
+      "ACL": {
+        "n": 2,
+        "report_status_counts": {
+          "PRESENT": 1,
+          "ABSENT": 1
+        },
+        "report_status_rates": {
+          "PRESENT": 0.5,
+          "ABSENT": 0.5
+        },
+        "criteria_counts": {
+          "NO": 2
+        },
+        "supervised_n": 2,
+        "total_weight": 2.0,
+        "review_n": 1,
+        "review_rate": 0.5,
+        "soft_score_summary": {
+          "n": 2,
+          "min": 0.05,
+          "max": 0.05,
+          "mean": 0.05,
+          "bins_0_025_05_075_1": [
+            2,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "MCL": {
+        "n": 2,
+        "report_status_counts": {
+          "ABSENT": 2
+        },
+        "report_status_rates": {
+          "ABSENT": 1.0
+        },
+        "criteria_counts": {
+          "NO": 2
+        },
+        "supervised_n": 2,
+        "total_weight": 2.0,
+        "review_n": 0,
+        "review_rate": 0.0,
+        "soft_score_summary": {
+          "n": 2,
+          "min": 0.05,
+          "max": 0.05,
+          "mean": 0.05,
+          "bins_0_025_05_075_1": [
+            2,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "Medial Meniscus": {
+        "n": 2,
+        "report_status_counts": {
+          "PRESENT": 2
+        },
+        "report_status_rates": {
+          "PRESENT": 1.0
+        },
+        "criteria_counts": {
+          "NO": 1,
+          "UNKNOWN": 1
+        },
+        "supervised_n": 2,
+        "total_weight": 1.25,
+        "review_n": 2,
+        "review_rate": 1.0,
+        "soft_score_summary": {
+          "n": 2,
+          "min": 0.05,
+          "max": 0.2,
+          "mean": 0.125,
+          "bins_0_025_05_075_1": [
+            2,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "Lateral Meniscus": {
+        "n": 2,
+        "report_status_counts": {
+          "ABSENT": 1,
+          "PRESENT": 1
+        },
+        "report_status_rates": {
+          "ABSENT": 0.5,
+          "PRESENT": 0.5
+        },
+        "criteria_counts": {
+          "NO": 2
+        },
+        "supervised_n": 2,
+        "total_weight": 2.0,
+        "review_n": 1,
+        "review_rate": 0.5,
+        "soft_score_summary": {
+          "n": 2,
+          "min": 0.05,
+          "max": 0.05,
+          "mean": 0.05,
+          "bins_0_025_05_075_1": [
+            2,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "Medial OA": {
+        "n": 2,
+        "report_status_counts": {
+          "ABSENT": 2
+        },
+        "report_status_rates": {
+          "ABSENT": 1.0
+        },
+        "criteria_counts": {
+          "NO": 2
+        },
+        "supervised_n": 2,
+        "total_weight": 2.0,
+        "review_n": 0,
+        "review_rate": 0.0,
+        "soft_score_summary": {
+          "n": 2,
+          "min": 0.05,
+          "max": 0.05,
+          "mean": 0.05,
+          "bins_0_025_05_075_1": [
+            2,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "Lateral OA": {
+        "n": 2,
+        "report_status_counts": {
+          "ABSENT": 2
+        },
+        "report_status_rates": {
+          "ABSENT": 1.0
+        },
+        "criteria_counts": {
+          "NO": 2
+        },
+        "supervised_n": 2,
+        "total_weight": 2.0,
+        "review_n": 0,
+        "review_rate": 0.0,
+        "soft_score_summary": {
+          "n": 2,
+          "min": 0.05,
+          "max": 0.05,
+          "mean": 0.05,
+          "bins_0_025_05_075_1": [
+            2,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "PF OA": {
+        "n": 2,
+        "report_status_counts": {
+          "PRESENT": 1,
+          "ABSENT": 1
+        },
+        "report_status_rates": {
+          "PRESENT": 0.5,
+          "ABSENT": 0.5
+        },
+        "criteria_counts": {
+          "UNKNOWN": 2
+        },
+        "supervised_n": 0,
+        "total_weight": 0.0,
+        "review_n": 2,
+        "review_rate": 1.0,
+        "soft_score_summary": {
+          "n": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "bins_0_025_05_075_1": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "Effusion": {
+        "n": 2,
+        "report_status_counts": {
+          "PRESENT": 1,
+          "ABSENT": 1
+        },
+        "report_status_rates": {
+          "PRESENT": 0.5,
+          "ABSENT": 0.5
+        },
+        "criteria_counts": {
+          "NO": 2
+        },
+        "supervised_n": 2,
+        "total_weight": 2.0,
+        "review_n": 1,
+        "review_rate": 0.5,
+        "soft_score_summary": {
+          "n": 2,
+          "min": 0.05,
+          "max": 0.05,
+          "mean": 0.05,
+          "bins_0_025_05_075_1": [
+            2,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "Synovitis": {
+        "n": 2,
+        "report_status_counts": {
+          "NOT_MENTIONED": 2
+        },
+        "report_status_rates": {
+          "NOT_MENTIONED": 1.0
+        },
+        "criteria_counts": {
+          "UNKNOWN": 2
+        },
+        "supervised_n": 0,
+        "total_weight": 0.0,
+        "review_n": 0,
+        "review_rate": 0.0,
+        "soft_score_summary": {
+          "n": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "bins_0_025_05_075_1": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "Baker's": {
+        "n": 2,
+        "report_status_counts": {
+          "ABSENT": 1,
+          "NOT_MENTIONED": 1
+        },
+        "report_status_rates": {
+          "ABSENT": 0.5,
+          "NOT_MENTIONED": 0.5
+        },
+        "criteria_counts": {
+          "NO": 1,
+          "UNKNOWN": 1
+        },
+        "supervised_n": 1,
+        "total_weight": 1.0,
+        "review_n": 0,
+        "review_rate": 0.0,
+        "soft_score_summary": {
+          "n": 1,
+          "min": 0.05,
+          "max": 0.05,
+          "mean": 0.05,
+          "bins_0_025_05_075_1": [
+            1,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "Contusion": {
+        "n": 2,
+        "report_status_counts": {
+          "UNCERTAIN": 1,
+          "PRESENT": 1
+        },
+        "report_status_rates": {
+          "UNCERTAIN": 0.5,
+          "PRESENT": 0.5
+        },
+        "criteria_counts": {
+          "UNKNOWN": 2
+        },
+        "supervised_n": 1,
+        "total_weight": 0.25,
+        "review_n": 2,
+        "review_rate": 1.0,
+        "soft_score_summary": {
+          "n": 1,
+          "min": 0.8,
+          "max": 0.8,
+          "mean": 0.8,
+          "bins_0_025_05_075_1": [
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      },
+      "Fracture": {
+        "n": 2,
+        "report_status_counts": {
+          "ABSENT": 1,
+          "NOT_MENTIONED": 1
+        },
+        "report_status_rates": {
+          "ABSENT": 0.5,
+          "NOT_MENTIONED": 0.5
+        },
+        "criteria_counts": {
+          "UNKNOWN": 2
+        },
+        "supervised_n": 0,
+        "total_weight": 0.0,
+        "review_n": 1,
+        "review_rate": 0.5,
+        "soft_score_summary": {
+          "n": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "bins_0_025_05_075_1": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "pt": {
+      "ACL": {
+        "n": 1,
+        "report_status_counts": {
+          "PRESENT": 1
+        },
+        "report_status_rates": {
+          "PRESENT": 1.0
+        },
+        "criteria_counts": {
+          "YES": 1
+        },
+        "supervised_n": 1,
+        "total_weight": 1.0,
+        "review_n": 0,
+        "review_rate": 0.0,
+        "soft_score_summary": {
+          "n": 1,
+          "min": 0.95,
+          "max": 0.95,
+          "mean": 0.95,
+          "bins_0_025_05_075_1": [
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      },
+      "MCL": {
+        "n": 1,
+        "report_status_counts": {
+          "PRESENT": 1
+        },
+        "report_status_rates": {
+          "PRESENT": 1.0
+        },
+        "criteria_counts": {
+          "NO": 1
+        },
+        "supervised_n": 1,
+        "total_weight": 1.0,
+        "review_n": 1,
+        "review_rate": 1.0,
+        "soft_score_summary": {
+          "n": 1,
+          "min": 0.05,
+          "max": 0.05,
+          "mean": 0.05,
+          "bins_0_025_05_075_1": [
+            1,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "Medial Meniscus": {
+        "n": 1,
+        "report_status_counts": {
+          "UNCERTAIN": 1
+        },
+        "report_status_rates": {
+          "UNCERTAIN": 1.0
+        },
+        "criteria_counts": {
+          "UNKNOWN": 1
+        },
+        "supervised_n": 1,
+        "total_weight": 0.25,
+        "review_n": 1,
+        "review_rate": 1.0,
+        "soft_score_summary": {
+          "n": 1,
+          "min": 0.25,
+          "max": 0.25,
+          "mean": 0.25,
+          "bins_0_025_05_075_1": [
+            0,
+            1,
+            0,
+            0
+          ]
+        }
+      },
+      "Lateral Meniscus": {
+        "n": 1,
+        "report_status_counts": {
+          "PRESENT": 1
+        },
+        "report_status_rates": {
+          "PRESENT": 1.0
+        },
+        "criteria_counts": {
+          "YES": 1
+        },
+        "supervised_n": 1,
+        "total_weight": 1.0,
+        "review_n": 1,
+        "review_rate": 1.0,
+        "soft_score_summary": {
+          "n": 1,
+          "min": 0.95,
+          "max": 0.95,
+          "mean": 0.95,
+          "bins_0_025_05_075_1": [
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      },
+      "Medial OA": {
+        "n": 1,
+        "report_status_counts": {
+          "UNCERTAIN": 1
+        },
+        "report_status_rates": {
+          "UNCERTAIN": 1.0
+        },
+        "criteria_counts": {
+          "UNKNOWN": 1
+        },
+        "supervised_n": 0,
+        "total_weight": 0.0,
+        "review_n": 1,
+        "review_rate": 1.0,
+        "soft_score_summary": {
+          "n": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "bins_0_025_05_075_1": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "Lateral OA": {
+        "n": 1,
+        "report_status_counts": {
+          "UNCERTAIN": 1
+        },
+        "report_status_rates": {
+          "UNCERTAIN": 1.0
+        },
+        "criteria_counts": {
+          "UNKNOWN": 1
+        },
+        "supervised_n": 0,
+        "total_weight": 0.0,
+        "review_n": 1,
+        "review_rate": 1.0,
+        "soft_score_summary": {
+          "n": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "bins_0_025_05_075_1": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "PF OA": {
+        "n": 1,
+        "report_status_counts": {
+          "PRESENT": 1
+        },
+        "report_status_rates": {
+          "PRESENT": 1.0
+        },
+        "criteria_counts": {
+          "YES": 1
+        },
+        "supervised_n": 1,
+        "total_weight": 1.0,
+        "review_n": 1,
+        "review_rate": 1.0,
+        "soft_score_summary": {
+          "n": 1,
+          "min": 0.95,
+          "max": 0.95,
+          "mean": 0.95,
+          "bins_0_025_05_075_1": [
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      },
+      "Effusion": {
+        "n": 1,
+        "report_status_counts": {
+          "PRESENT": 1
+        },
+        "report_status_rates": {
+          "PRESENT": 1.0
+        },
+        "criteria_counts": {
+          "UNKNOWN": 1
+        },
+        "supervised_n": 1,
+        "total_weight": 0.25,
+        "review_n": 1,
+        "review_rate": 1.0,
+        "soft_score_summary": {
+          "n": 1,
+          "min": 0.9,
+          "max": 0.9,
+          "mean": 0.9,
+          "bins_0_025_05_075_1": [
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      },
+      "Synovitis": {
+        "n": 1,
+        "report_status_counts": {
+          "NOT_MENTIONED": 1
+        },
+        "report_status_rates": {
+          "NOT_MENTIONED": 1.0
+        },
+        "criteria_counts": {
+          "UNKNOWN": 1
+        },
+        "supervised_n": 0,
+        "total_weight": 0.0,
+        "review_n": 0,
+        "review_rate": 0.0,
+        "soft_score_summary": {
+          "n": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "bins_0_025_05_075_1": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "Baker's": {
+        "n": 1,
+        "report_status_counts": {
+          "ABSENT": 1
+        },
+        "report_status_rates": {
+          "ABSENT": 1.0
+        },
+        "criteria_counts": {
+          "NO": 1
+        },
+        "supervised_n": 1,
+        "total_weight": 1.0,
+        "review_n": 0,
+        "review_rate": 0.0,
+        "soft_score_summary": {
+          "n": 1,
+          "min": 0.05,
+          "max": 0.05,
+          "mean": 0.05,
+          "bins_0_025_05_075_1": [
+            1,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "Contusion": {
+        "n": 1,
+        "report_status_counts": {
+          "PRESENT": 1
+        },
+        "report_status_rates": {
+          "PRESENT": 1.0
+        },
+        "criteria_counts": {
+          "UNKNOWN": 1
+        },
+        "supervised_n": 1,
+        "total_weight": 0.25,
+        "review_n": 1,
+        "review_rate": 1.0,
+        "soft_score_summary": {
+          "n": 1,
+          "min": 0.95,
+          "max": 0.95,
+          "mean": 0.95,
+          "bins_0_025_05_075_1": [
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      },
+      "Fracture": {
+        "n": 1,
+        "report_status_counts": {
+          "NOT_MENTIONED": 1
+        },
+        "report_status_rates": {
+          "NOT_MENTIONED": 1.0
+        },
+        "criteria_counts": {
+          "UNKNOWN": 1
+        },
+        "supervised_n": 0,
+        "total_weight": 0.0,
+        "review_n": 0,
+        "review_rate": 0.0,
+        "soft_score_summary": {
+          "n": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "bins_0_025_05_075_1": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    }
+  },
+  "note": "Targets and language margins are uncalibrated. No co-occurrence, synovitis completion or image teacher used.",
+  "partial_diagnostic": {
+    "status": "STOPPED_QUALITY_REGRESSION_NOT_A_COMPLETE_180_REPORT_PILOT",
+    "completed_reports": 57,
+    "reviewed_items": 684,
+    "masked_items": 54,
+    "semantic_failed_items": 18,
+    "eligible_items": {
+      "ACL": 57,
+      "MCL": 55,
+      "Medial Meniscus": 56,
+      "Lateral Meniscus": 56,
+      "Medial OA": 45,
+      "Lateral OA": 44,
+      "PF OA": 52,
+      "Effusion": 55,
+      "Fracture": 18,
+      "Synovitis": 13,
+      "Contusion": 42,
+      "Baker's": 32
+    },
+    "failed_items": {
+      "ACL": 0,
+      "MCL": 0,
+      "Medial Meniscus": 0,
+      "Lateral Meniscus": 1,
+      "Medial OA": 1,
+      "Lateral OA": 2,
+      "PF OA": 0,
+      "Effusion": 3,
+      "Fracture": 0,
+      "Synovitis": 0,
+      "Contusion": 9,
+      "Baker's": 2
+    },
+    "partial_class_error_rates": {
+      "ACL": 0.0,
+      "MCL": 0.0,
+      "Medial Meniscus": 0.0,
+      "Lateral Meniscus": 0.017857142857142856,
+      "Medial OA": 0.022222222222222223,
+      "Lateral OA": 0.045454545454545456,
+      "PF OA": 0.0,
+      "Effusion": 0.05454545454545454,
+      "Fracture": 0.0,
+      "Synovitis": 0.0,
+      "Contusion": 0.21428571428571427,
+      "Baker's": 0.0625
+    },
+    "full_started": false,
+    "reason": "Contusion description omissions, qualified-negative expansion and causal inference exceed per-class gate in interim semantic audit",
+    "superseded_by": "L1_20261005_v5",
+    "reviewer_type": "Independent GPT-6.1 Sol model text review; not physician or MRI truth"
+  }
+}

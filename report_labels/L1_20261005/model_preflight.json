@@ -1,0 +1,20 @@
+{
+  "checked_at": "2026-10-05T04:03:50.678493+00:00",
+  "ready": false,
+  "missing": [
+    "base_url",
+    "model",
+    "model_version",
+    "environment:RSNA_LLM_API_KEY"
+  ],
+  "model": "SET_FIXED_MULTILINGUAL_MODEL_ID",
+  "model_version": "SET_PROVIDER_SNAPSHOT_OR_LOCAL_REVISION",
+  "api_key_env": "RSNA_LLM_API_KEY",
+  "credential_present": false,
+  "local_runtime": {
+    "torch": false,
+    "transformers": false
+  },
+  "status": "BLOCKED_MODEL_CONFIGURATION",
+  "note": "No secret values recorded. Readiness does not prove endpoint/model availability."
+}
