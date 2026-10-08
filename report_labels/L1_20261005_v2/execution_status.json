@@ -1,7 +1,0 @@
-{
-  "updated_at": "2026-10-05T04:31:34.273239+00:00",
-  "status": "SUPERSEDED_BEFORE_COMPLETED_REPORTS",
-  "replacement": "F:\\Kaggle\\RSNA\\report_labels\\L1_20261005_v3",
-  "reason": "Avoid WebSocket timeout and include other-body-part report audit",
-  "original_labels_unchanged": true
-}

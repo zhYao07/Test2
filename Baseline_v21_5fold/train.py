@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Train Baseline_v21: RadImageNet ResNet50 with v14 series selection and fusion."""
+"""Train Baseline_v21_5fold: RadImageNet ResNet50 with v14 series selection and fusion."""
 
 import atexit
 from copy import deepcopy
@@ -36,6 +36,9 @@ from rsna_data import (DEFAULT_CROP_MM, DEFAULT_IMAGE_SIZE, DEFAULT_ROOT, LABELS
                        series_selection_report, QUALITY_COLUMNS)
 from rsna_model import ARCHITECTURE, BACKBONE_SPEC, RSNARadImageNet, predict_batch
 
+
+from cv_split import N_FOLDS, make_manifest, fold_metadata, distribution_table
+from cv_results import auc_report, summarize
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 
@@ -195,6 +198,9 @@ def parse_args():
     swa_group.add_argument("--swa", dest="swa", action="store_true", help="Average top3 EMA epochs by validation Macro AUC into swa.pt")
     swa_group.add_argument("--no-swa", dest="swa", action="store_false", help="Disable top3 EMA averaging (default)")
     parser.set_defaults(swa=False)
+    parser.add_argument("--fold", type=int, choices=range(1, 6), help="Train only fold 1..5; default trains all five")
+    parser.add_argument("--split-seed", type=int, default=42)
+    parser.add_argument("--split-only", action="store_true", help="Export split without loading DICOM or pretrained weights")
     parser.add_argument("--seed", type=int, default=42)
     parser.add_argument("--log-interval", type=int, default=20)
     args = parser.parse_args()
@@ -204,8 +210,10 @@ def parse_args():
         parser.error("--ema-decay must be in [0, 1)")
     if args.series_quality_workers < 1 or not 0 <= args.coverage_quantile <= 1:
         parser.error("--series-quality-workers must be >=1 and --coverage-quantile in [0,1]")
-    if args.init_checkpoint and args.resume:
-        parser.error("--init-checkpoint and --resume are mutually exclusive")
+    if args.init_checkpoint:
+        parser.error("Five-fold training must start from RadImageNet pretrained weights; --init-checkpoint is disabled")
+    if args.resume and args.fold is None:
+        parser.error("--resume requires --fold 1..5")
     if args.swa and args.no_ema:
         parser.error("--swa requires EMA; remove --no-ema or use --no-swa")
     return args
@@ -449,7 +457,7 @@ def train_epoch(model, loader, sampler, optimizer, scheduler, scaler, pos_weight
 
 
 @torch.no_grad()
-def validate(model, loader, device, args, distributed, world_size):
+def validate(model, loader, device, args, distributed, world_size, return_predictions=False):
     # 验证阶段不建梯度图；各进程先收集自己的 Study 预测，再汇总算 AUC。
     model.eval()
     local = {"uid": [], "pred": [], "target": [], "mask": [], "weight": []}
@@ -491,6 +499,13 @@ def validate(model, loader, device, args, distributed, world_size):
     # 某标签若只有单一类别，其 AUC 为 NaN；宏平均跳过 NaN。
     macro_auc = float(np.nanmean(list(aucs.values())))
 
+    if return_predictions:
+        frame = pd.DataFrame(predictions, columns=LABELS)
+        frame.insert(0, "StudyInstanceUID", uids)
+        frame = frame.sort_values("StudyInstanceUID").reset_index(drop=True)
+        if len(frame) != len(loader.dataset):
+            raise ValueError("Validation predictions do not cover the complete dataset")
+        return macro_auc, aucs, frame
     return macro_auc, aucs
 
 
@@ -556,7 +571,8 @@ def save_checkpoint(path, model, optimizer, scheduler, scaler, epoch, best_auc, 
         "validation_history": history,
         "architecture": ARCHITECTURE, "slots": SLOTS, "candidate_budgets": CANDIDATE_BUDGETS,
         "backbone_spec": BACKBONE_SPEC,
-        "series_selection": args.series_selection,
+        "series_selection": args.series_selection, "cross_validation": args.cross_validation,
+        "validation_set": "gold58",
     }, path)
 
 
@@ -566,7 +582,8 @@ def save_inference_checkpoint(path, state, args, **metadata):
     torch.save({"model": state, "weights_type": "swa_ema_top3", "args": vars(args),
                 "architecture": ARCHITECTURE, "backbone_spec": BACKBONE_SPEC,
                 "slots": SLOTS, "candidate_budgets": CANDIDATE_BUDGETS,
-                "series_selection": args.series_selection, **metadata}, temporary)
+                "series_selection": args.series_selection, "cross_validation": args.cross_validation,
+                "validation_set": "gold58", **metadata}, temporary)
     temporary.replace(path)
 
 
@@ -575,11 +592,13 @@ def validate_resume_checkpoint(checkpoint, args):
         checkpoint.get("candidate_budgets") != CANDIDATE_BUDGETS or
         checkpoint.get("backbone_spec") != BACKBONE_SPEC):
         raise ValueError("--resume requires a matching Baseline_v21 RadImageNet ResNet50 checkpoint")
+    if checkpoint.get("cross_validation") != args.cross_validation:
+        raise ValueError("Resume fold membership, split seed or target-label fingerprint mismatch")
     validate_series_selection_config(checkpoint.get("series_selection"))
     if checkpoint["series_selection"] != args.series_selection:
         raise ValueError("Resume series selection config differs from current training header statistics")
     saved = checkpoint.get("args", {})
-    for name in ("train_windows", "span_lo", "span_hi", "image_size", "crop_mm", "backbone_mode", "no_metadata", "seed", "no_ema", "ema_decay", "radimagenet_sha256"):
+    for name in ("train_windows", "span_lo", "span_hi", "image_size", "crop_mm", "backbone_mode", "no_metadata", "seed", "no_ema", "ema_decay", "radimagenet_sha256", "epochs", "batch_size", "accum_steps", "head_lr", "backbone_lr", "weight_decay", "warmup_ratio", "amp", "no_pos_weight", "encoder_chunk_size", "grad_clip"):
         if saved.get(name) != getattr(args, name):
             raise ValueError(f"Resume configuration mismatch: {name}")
 
@@ -640,46 +659,23 @@ def finalize_swa(swa, ema, valid_loader, device, args, distributed, world_size, 
         print(f"SWA EMA top3: sources={swa.sources()} val_macro_auc={swa_auc:.5f}", flush=True)
 
 
-def main():
-    # 初始化运行环境：解析参数、选择单卡/DDP、设置每个进程的设备和随机种子。
-    args = parse_args()
-    distributed, local_rank, rank, world_size = setup_distributed()
+def train_fold(args, distributed, local_rank, rank, world_size, train_series_df, studies, manifest, fold):
+    args = deepcopy(args)
+    args.cross_validation = fold_metadata(manifest, fold)
+    best_path = args.output_dir / f"fold{fold + 1}.pt"
+    args.output_dir = args.output_dir / f"fold_{fold}"
+    if args.resume:
+        if args.resume.resolve().parent not in (args.output_dir.resolve(), args.output_dir.parent.resolve()):
+            raise ValueError("Resume checkpoint must be in the selected fold directory or output root")
+    elif best_path.exists() or any((args.output_dir / name).exists() for name in ("last.pt", "fold_metrics.json", "swa.pt")):
+        raise ValueError(f"Fold {fold + 1} output exists; use --resume or a new output directory")
     device = torch.device(f"cuda:{local_rank}" if torch.cuda.is_available() else "cpu")
     set_seed(args.seed, rank)
-    # 允许 CUDA 矩阵计算使用 TF32，以提高支持该格式的 GPU 上的吞吐。
-    torch.backends.cuda.matmul.fp32_precision = "tf32"
-    torch.backends.cudnn.conv.fp32_precision = "tf32"
-
-    # Fail before the header scan if the local pretrained weights are missing.
-    args.radimagenet_weights = args.radimagenet_weights.expanduser().resolve()
-    if not args.radimagenet_weights.is_file():
-        raise FileNotFoundError(f"RadImageNet ResNet50 weights not found: {args.radimagenet_weights}")
-    digest = hashlib.sha256()
-    with args.radimagenet_weights.open("rb") as handle:
-        for block in iter(lambda: handle.read(1024 * 1024), b""):
-            digest.update(block)
-    args.radimagenet_sha256 = digest.hexdigest()
-    # 读取影像序列元数据并定位标签 CSV。
-    args.cache_dir = args.cache_dir.expanduser()
-    quality_cache = None if args.no_cache else args.cache_dir / "series_quality"
-    if rank == 0:
-        print(f"input cache: {'disabled' if args.no_cache else args.cache_dir}", flush=True)
-        print(f"series quality cache: {quality_cache if quality_cache is not None else 'disabled'}", flush=True)
-    metadata = distributed_metadata(args.data_root, distributed, rank, quality_cache, args.series_quality_workers)
-    train_df, train_series_df = metadata[0], metadata[1]
-    args.labels_csv = resolve_labels_csv(args.labels_csv, args.data_root)
-    # 官方 12 标签全部齐全的 Study 作为验证集；其余含弱标签的 Study 作为训练集。
-    studies = prepare_studies(train_df, args.labels_csv)
-    gold_columns = [f"gold__{label}" for label in LABELS]
-    is_gold = studies[gold_columns].notna().all(axis=1)
-    train_studies = studies[~is_gold].reset_index(drop=True)
-    valid_studies = studies[is_gold].reset_index(drop=True)
+    train_studies = studies[studies.StudyInstanceUID.isin(args.cross_validation["train_uids"])].reset_index(drop=True)
+    oof_studies = studies[studies.StudyInstanceUID.isin(args.cross_validation["valid_uids"])].reset_index(drop=True)
+    valid_studies = studies[studies.StudyInstanceUID.isin(args.cross_validation["gold_uids"])].reset_index(drop=True).copy()
     for label in LABELS:
-        # 验证目标强制取官方真值，不用合并后的弱标签列。
         valid_studies[label] = valid_studies[f"gold__{label}"].astype(np.float32)
-    # 明确约束验证集大小，防止标签文件变化造成无声的数据划分变化。
-    if len(valid_studies) != 58:
-        raise ValueError(f"Expected 58 fully labeled validation studies, found {len(valid_studies)}")
     # 验证 Study 的图像 header 可用于自身选序列，但不参与覆盖阈值拟合。
     threshold_series = train_series_df[train_series_df.StudyInstanceUID.isin(train_studies.StudyInstanceUID)]
     args.series_selection = make_series_selection_config(threshold_series, args.coverage_quantile)
@@ -704,6 +700,10 @@ def main():
     valid_sampler = DistributedSampler(valid_dataset, shuffle=False, drop_last=False) if distributed else None
     train_loader = make_loader(train_dataset, args.batch_size, args.num_workers, train_sampler, True, False)
     valid_loader = make_loader(valid_dataset, args.batch_size, args.num_workers, valid_sampler, False, False)
+
+    oof_dataset = KneeDataset(oof_studies, train_series_df, train=False, **dataset_kwargs)
+    oof_sampler = DistributedSampler(oof_dataset, shuffle=False, drop_last=False) if distributed else None
+    oof_loader = make_loader(oof_dataset, args.batch_size, args.num_workers, oof_sampler, False, False)
 
     # init_checkpoint 在 build_model 中仅加载权重；resume 则在这里恢复完整训练状态。
     model = build_model(args, distributed, rank).to(device)
@@ -752,10 +752,18 @@ def main():
     if rank == 0:
         # 仅主进程写文件，避免多卡同时写同一路径。
         output_dir.mkdir(parents=True, exist_ok=True)
+        write_json(output_dir / "cv.json", args.cross_validation)
+        membership = studies[["StudyInstanceUID"]].copy()
+        membership["split"] = membership.StudyInstanceUID.map({
+            **dict.fromkeys(args.cross_validation["train_uids"], "train"),
+            **dict.fromkeys(args.cross_validation["valid_uids"], "weak_oof"),
+            **dict.fromkeys(args.cross_validation["gold_uids"], "gold_valid")})
+        membership.to_csv(output_dir / "data_split.csv", index=False, lineterminator="\n")
         report = series_selection_report(train_series_df, args.series_selection, args.crop_mm, args.image_size)
         report["split"] = report.StudyInstanceUID.map(
             {**dict.fromkeys(train_studies.StudyInstanceUID.astype(str), "train"),
-             **dict.fromkeys(valid_studies.StudyInstanceUID.astype(str), "valid")})
+             **dict.fromkeys(valid_studies.StudyInstanceUID.astype(str), "gold_valid"),
+             **dict.fromkeys(oof_studies.StudyInstanceUID.astype(str), "weak_oof")})
         report.to_csv(output_dir / "series_selection.csv", index=False, lineterminator="\n")
         train_series_df[["StudyInstanceUID", "SeriesInstanceUID", "Anatomical_Plane", *QUALITY_COLUMNS]].to_csv(
             output_dir / "series_quality.csv", index=False, lineterminator="\n")
@@ -788,7 +796,7 @@ def main():
         print(f"SWA: {'top3 EMA by validation Macro AUC' if args.swa else 'disabled'}", flush=True)
         print("trainable parameters:", sum(parameter.numel() for parameter in raw_model.parameters() if parameter.requires_grad))
 
-    # 每轮训练后立即验证；按本地 Macro AUC 选择 best.pt。
+    # 每轮用同一批 gold58 验证，按 Macro AUC 选择 fold1.pt..fold5.pt。
     training_start = time.perf_counter()
     for epoch in range(start_epoch, args.epochs):
         epoch_start = time.perf_counter()
@@ -813,11 +821,14 @@ def main():
                 flush=True,
             )
             print(json.dumps(aucs, ensure_ascii=False, indent=2))
+            if not np.isfinite(macro_auc):
+                raise ValueError("No finite gold validation macro AUC; cannot select best checkpoint")
             improved = macro_auc > best_auc
             best_auc = max(best_auc, macro_auc)
             # 历史中同时保存总体 AUC 与每个标签的 AUC，方便分析类别间差异。
             history.append({
                 "epoch": epoch + 1,
+                "validation_set": "gold58",
                 "weights_type": "ema" if ema is not None else "raw",
                 "ema_updates": ema.num_updates if ema is not None else 0,
                 "train_loss": json_score(train_loss),
@@ -827,10 +838,10 @@ def main():
             })
             write_json(history_path, history)
             plot_loss_curve(history, output_dir / "loss_curve.png")
-            # last.pt 每轮覆盖；best.pt 仅在验证指标刷新时覆盖。
+            # last.pt 每轮覆盖；fold 权重仅在金标验证指标刷新时覆盖。
             save_checkpoint(output_dir / "last.pt", model, optimizer, scheduler, scaler, epoch, best_auc, args, history, ema, swa)
             if improved:
-                save_checkpoint(output_dir / "best.pt", model, optimizer, scheduler, scaler, epoch, best_auc, args, history, ema, swa)
+                save_checkpoint(best_path, model, optimizer, scheduler, scaler, epoch, best_auc, args, history, ema, swa)
             if swa_changed:
                 print(f"SWA EMA candidates: {swa.sources()}", flush=True)
                 if len(swa.entries) == 3:
@@ -845,6 +856,93 @@ def main():
 
     if args.swa:
         finalize_swa(swa, ema, valid_loader, device, args, distributed, world_size, rank, output_dir)
+    if distributed:
+        dist.barrier()
+    # Reload the gold-selected best weights to export weak OOF and gold predictions.
+    best_checkpoint = torch.load(best_path, map_location="cpu", weights_only=False)
+    validate_resume_checkpoint(best_checkpoint, args)
+    evaluation_model = ema.model if ema is not None else model
+    target_model = evaluation_model.module if isinstance(evaluation_model, DDP) else evaluation_model
+    target_model.load_state_dict(best_checkpoint["model"], strict=True)
+    best_epoch = int(best_checkpoint["epoch"]) + 1
+    del best_checkpoint
+    _, _, oof = validate(evaluation_model, oof_loader, device, args, distributed, world_size, return_predictions=True)
+    _, _, gold = validate(evaluation_model, valid_loader, device, args, distributed, world_size, return_predictions=True)
+    if rank == 0:
+        weak_metrics = auc_report(oof_studies, oof)
+        gold_metrics = auc_report(valid_studies, gold)
+        if not set(oof.StudyInstanceUID) == set(args.cross_validation["valid_uids"]):
+            raise ValueError("OOF export includes non-validation studies")
+        for frame, name in ((oof, "oof_predictions.csv"), (gold, "gold_predictions.csv")):
+            frame.insert(1, "fold", fold)
+            frame.to_csv(output_dir / name, index=False, lineterminator="\n")
+        write_json(output_dir / "fold_metrics.json", dict(cross_validation=args.cross_validation,
+                   best_epoch=best_epoch, selection_metric="gold58_macro_auc",
+                   weak_validation=weak_metrics, gold_holdout=gold_metrics))
+        print(f"fold={fold + 1} best epoch={best_epoch}: weak AUC={weak_metrics['macro_auc']} | gold AUC={gold_metrics['macro_auc']}", flush=True)
+    if distributed:
+        dist.barrier()
+
+
+def write_cv_manifest(output_dir, studies, table, manifest):
+    output_dir.mkdir(parents=True, exist_ok=True)
+    path = output_dir / "cv_manifest.json"
+    if path.exists() and json.loads(path.read_text(encoding="utf-8")) != manifest:
+        raise ValueError("Output directory has a different CV split/label fingerprint")
+    write_json(path, manifest)
+    table.to_csv(output_dir / "folds.csv", index=False, lineterminator="\n")
+    studies.to_csv(output_dir / "cv_targets.csv", index=False, lineterminator="\n")
+    distribution_table(studies, table, LABELS).to_csv(output_dir / "split_distribution.csv", index=False, lineterminator="\n")
+
+
+def main():
+    args = parse_args()
+    args.labels_csv = resolve_labels_csv(args.labels_csv, args.data_root)
+    # Split preview needs CSVs only; no DICOM scan or pretrained model load.
+    train_df = pd.read_csv(args.data_root / "train.csv", dtype={"StudyInstanceUID": str})
+    studies = prepare_studies(train_df, args.labels_csv)
+    table, manifest = make_manifest(studies, LABELS, args.split_seed)
+    if args.split_only:
+        if int(os.environ.get("RANK", "0")) == 0:
+            write_cv_manifest(args.output_dir, studies, table, manifest)
+            print(table.groupby(["split", "fold"]).size().to_string())
+        return
+    distributed, local_rank, rank, world_size = setup_distributed()
+    if rank == 0:
+        write_cv_manifest(args.output_dir, studies, table, manifest)
+    if distributed:
+        dist.barrier()
+    torch.backends.cuda.matmul.fp32_precision = "tf32"
+    torch.backends.cudnn.conv.fp32_precision = "tf32"
+    # Fail before the header scan if the local pretrained weights are missing.
+    args.radimagenet_weights = args.radimagenet_weights.expanduser().resolve()
+    if not args.radimagenet_weights.is_file():
+        raise FileNotFoundError(f"RadImageNet ResNet50 weights not found: {args.radimagenet_weights}")
+    digest = hashlib.sha256()
+    with args.radimagenet_weights.open("rb") as handle:
+        for block in iter(lambda: handle.read(1024 * 1024), b""):
+            digest.update(block)
+    args.radimagenet_sha256 = digest.hexdigest()
+    # 读取影像序列元数据并定位标签 CSV。
+    args.cache_dir = args.cache_dir.expanduser()
+    quality_cache = None if args.no_cache else args.cache_dir / "series_quality"
+    if rank == 0:
+        print(f"input cache: {'disabled' if args.no_cache else args.cache_dir}", flush=True)
+        print(f"series quality cache: {quality_cache if quality_cache is not None else 'disabled'}", flush=True)
+    metadata = distributed_metadata(args.data_root, distributed, rank, quality_cache, args.series_quality_workers)
+    folds = range(N_FOLDS) if args.fold is None else [args.fold - 1]
+    for fold in folds:
+        train_fold(args, distributed, local_rank, rank, world_size, metadata[1], studies, manifest, fold)
+        import gc
+        gc.collect()
+        if torch.cuda.is_available():
+            torch.cuda.empty_cache()
+    if rank == 0:
+        if all((args.output_dir / f"fold_{fold}" / "fold_metrics.json").is_file() for fold in range(N_FOLDS)):
+            report = summarize(args.output_dir, studies, manifest)
+            print(f"Weak OOF AUC={report['weak_oof']['macro_auc']} | gold ensemble AUC={report['gold_holdout_ensemble']['macro_auc']}", flush=True)
+        else:
+            print("Fold complete. Full OOF/gold ensemble summary will be written when all five folds finish.", flush=True)
     if distributed:
         dist.barrier()
     cleanup_distributed()

@@ -30,7 +30,6 @@
 torchrun --standalone --nproc_per_node=4 train.py \
   --output-dir ./outputs/layer34_backbone2e-3_imsz224_layer34 \
   --cache-dir ../Baseline_v20/input_cache \
-  --series-quality-cache-dir /root/RSNA/series_quality_cache \
   --image-size 224 \
   --backbone-mode layer3+layer4 \
   --epochs 20 \
@@ -45,7 +44,7 @@ torchrun --standalone --nproc_per_node=4 train.py \
 
 原预处理缓存存储未归一化到 backbone 的 `[0,1]` 输入，因此可以复用 v14/v10 输入缓存；选中不同序列时，原缓存 key 会隔离。质量排序诊断与 coverage 阈值拟合规则也完全沿用 v14。
 
-上面的命令分别使用 `/root/RSNA/Baseline_v20/input_cache` 和 `/root/RSNA/series_quality_cache`。已确认 v20 与 v21 的输入预处理、缓存 schema/key、序列质量缓存规则一致；相同数据路径、文件信息、预处理参数及所选序列时可以复用现有缓存。`--series-quality-cache-dir` 指向直接保存质量 JSON 的目录，不再追加 `series_quality` 子目录。不指定该参数时，保持旧行为，使用 `--cache-dir/series_quality`；`--no-cache` 同时关闭两种缓存。Kaggle notebook 的推理仍不写磁盘缓存，无需修改。
+两个缓存统一由 `--cache-dir` 管理：图像 `.pt` 直接保存在该目录，序列质量 JSON 保存在其 `series_quality/` 子目录。上面的命令对应 `/root/RSNA/Baseline_v20/input_cache` 及其 `series_quality/` 子目录；不再提供 `--series-quality-cache-dir` 参数。已确认 v20 与 v21 的输入预处理、缓存 schema/key、序列质量缓存规则一致；相同数据路径、文件信息、预处理参数及所选序列时可以复用现有缓存。改变 `image-size` 会生成新的图像缓存，序列质量缓存仍可复用。若旧质量 JSON 位于独立目录，需将其复制到 `--cache-dir/series_quality/` 才能复用。`--no-cache` 同时关闭两种缓存。Kaggle notebook 的推理仍不写磁盘缓存，无需修改。
 
 ## Checkpoint 与 Kaggle 推理
 
@@ -90,14 +89,15 @@ Top3 候选变化且已经凑齐三份时，就更新 `swa.pt`，以便训练中
 
 ## 验证
 
-从仓库根目录执行：
+从仓库根目录检查行尾：
 
 ```bash
-python -m unittest discover -s Baseline_v21 -p 'test_*.py' -v
 python tools/check_line_endings.py
 ```
 
-回归检查覆盖官方示例参数布局与特征一致性（含 336×336）、缺失/损坏/含分类头的权重拒绝、四种解冻范围及梯度、BN 统计固定、单窗口尾部 chunk、缺失 slot、分块一致性、优化器与 EMA 更新、checkpoint 保存/恢复、v14 checkpoint 拒绝，以及 notebook 与模型/数据代码的一致性。通过字节比较确认数据代码与 v14 完全相同，AST 比较确认窗口聚合和完整 forward 的后续运算保持一致。
+本目录的 `test_*.py` 测试文件已移除，以下保留此前的验证记录。
+
+此前回归检查覆盖官方示例参数布局与特征一致性（含 336×336）、缺失/损坏/含分类头的权重拒绝、四种解冻范围及梯度、BN 统计固定、单窗口尾部 chunk、缺失 slot、分块一致性、优化器与 EMA 更新、checkpoint 保存/恢复、v14 checkpoint 拒绝，以及 notebook 与模型/数据代码的一致性。通过字节比较确认数据代码与 v14 完全相同，AST 比较确认窗口聚合和完整 forward 的后续运算保持一致。
 
 此前使用 PyTorch 2.9.0 CPU / torchvision 0.24.0 完成全部 11 项回归测试，新增覆盖 Top3 EMA 排序、等权平均、EMA/原始权重区分、独立快照、续训恢复、融合导出、广播流程和 notebook 中的融合模型加载及前向。多卡广播使用 mock 检查流程，尚未实测 NCCL。另用下载的真实官方权重验证 318 个参数/buffer 的完整加载和 336×336 特征前向，并以默认 256 维聚合头、64×64 合成窗口完成 `layer3+layer4 + no-metadata` 的 BCE 反向、有限梯度检查、优化器更新、EMA 和完整 checkpoint 恢复；这不代表已测量 336×336 训练显存。
 
